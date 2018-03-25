@@ -1,0 +1,404 @@
+#en_US
+#This is the Main language configuration file
+#
+#If you want to color code the text then I recommend you visit http://www.minecraftwiki.net/wiki/Formatting_codes#Color_codes
+#To create the § symbol which is used for assigning a color to the following text press Alt + 21 on Windows. For other OSes, view the above link.
+#This file needs to be UTF-8 encoded to work with MC 1.7+
+
+#==========
+#= Blocks =
+#==========
+//Tallow Candles
+tile.blockTallowCandle.name=Tallow Candle
+tile.blockTallowCandleOff.name=Extinguished Tallow Candle
+//Road
+tile.blockRoadIgEx.Andesite.name=Andesite Road
+tile.blockRoadIgEx.Basalt.name=Basalt Road
+tile.blockRoadSed.Chalk.name=Chalk Road
+tile.blockRoadSed.Chert.name=Chert Road
+tile.blockRoadSed.Claystone.name=Claystone Road
+tile.blockRoadSed.Conglomerate.name=Conglomerate Road
+tile.blockRoadIgEx.Dacite.name=Dacite Road
+tile.blockRoadIgIn.Diorite.name=Diorite Road
+tile.blockRoadSed.Dolomite.name=Dolomite Road
+tile.blockRoadIgIn.Gabbro.name=Gabbro Road
+tile.blockRoadMM.Gneiss.name=Gneiss Road
+tile.blockRoadIgIn.Granite.name=Granite Road
+tile.blockRoadSed.Limestone.name=Limestone Road
+tile.blockRoadMM.Marble.name=Marble Road
+tile.blockRoadMM.Phyllite.name=Phyllite Road
+tile.blockRoadMM.Quartzite.name=Quartzite Road
+tile.blockRoadIgEx.Rhyolite.name=Rhyolite Road
+tile.blockRoadSed.Rock Salt.name=Rock Salt Road
+tile.blockRoadMM.Schist.name=Schist Road
+tile.blockRoadSed.Shale.name=Shale Road
+tile.blockRoadMM.Slate.name=Slate Road
+//Other Things
+tile.blockFruitPress.name=Fruit Press
+
+#=========
+#= Items = 
+#=========
+//Basic Items
+item.CasingBrass.name=Brass Casing
+item.CasingIron.name=Wrought Iron Casing
+item.CasingRoseGold.name=Rose Gold Casing
+item.Gear.name=Wrought Iron Gear
+item.CaseinGlue.name=Casein Glue
+item.PistonBase.name=Piston Base
+item.Circuit.name=Crude Circuit
+item.DeerTendon.name=Tendon
+item.SinewFiber.name=Sinew Fiber
+item.SinewString.name=Sinew String
+item.SinewBowString.name=Sinew Bow String
+item.BowLimb.name=Bow Limb
+item.Suet.name=Suet
+item.BowlSuet.name=Bowl of Suet
+item.BowlTallow.0.name=Bowl of Tallow
+item.BowlTallow.1.name=Bowl of Tallow
+item.BowlTallow.2.name=Bowl of Tallow
+item.BrownDye.name=Brown Dye
+item.IronDust.name=Iron Dust
+item.BottleFruitJuice.name=Fruit Juice
+item.BottleFruitWine.name=Fruit Wine
+item.BottleSugar.name=Sugar in a Bottle
+item.BottleJuiceApple.name=Apple Juice
+item.BottleJuiceOrange.name=Orange Juice
+item.BottleJuiceLemon.name=Lemon Juice
+item.BottleLemonade.name=Lemonade
+item.BottleJuiceOnion.name=Onion Juice
+item.BottleSoyMilk.name=Soy Milk
+item.SoyPaste.name=Soybean Paste
+item.BucketHotWater.name=Wooden Bucket (Hot Water)
+//Bows and Such
+item.LongBow.name=Longbow
+item.CrossBow.name=Crossbow
+//Tallow Candle Dyes
+item.TallowDye.Black.name=Dyed Tallow (Black)
+item.TallowDye.Red.name=Dyed Tallow (Red)
+item.TallowDye.Green.name=Dyed Tallow (Green)
+item.TallowDye.Brown.name=Dyed Tallow (Brown)
+item.TallowDye.Blue.name=Dyed Tallow (Blue)
+item.TallowDye.Purple.name=Dyed Tallow (Purple)
+item.TallowDye.Cyan.name=Dyed Tallow (Cyan)
+item.TallowDye.LightGray.name=Dyed Tallow (LightGray)
+item.TallowDye.Gray.name=Dyed Tallow (Gray)
+item.TallowDye.Pink.name=Dyed Tallow (Pink)
+item.TallowDye.Lime.name=Dyed Tallow (Lime)
+item.TallowDye.Yellow.name=Dyed Tallow (Yellow)
+item.TallowDye.LightBlue.name=Dyed Tallow (LightBlue)
+item.TallowDye.Magenta.name=Dyed Tallow (Magenta)
+item.TallowDye.Orange.name=Dyed Tallow (Orange)
+
+//Bolts
+item.Bolt_BismuthBronze.name=Bismuth Bronze Bolt
+item.Bolt_BlackBronze.name=Black Bronze Bolt
+item.Bolt_BlackSteel.name=Black Steel Bolt
+item.Bolt_BlueSteel.name=Blue Steel Bolt
+item.Bolt_Bronze.name=Bronze Bolt
+item.Bolt_Copper.name=Copper Bolt
+item.Bolt_RedSteel.name=Red Steel Bolt
+item.Bolt_Steel.name=Steel Bolt
+item.Bolt_WroughtIron.name=Wrought Iron Bolt
+
+//Bolt Heads
+item.Bolt_BismuthBronze_Head.name=Bismuth Bronze Bolt Head
+item.Bolt_BlackBronze_Head.name=Black Bronze Bolt Head
+item.Bolt_BlackSteel_Head.name=Black Steel Bolt Head
+item.Bolt_BlueSteel_Head.name=Blue Steel Bolt Head
+item.Bolt_Bronze_Head.name=Bronze Bolt Head
+item.Bolt_Copper_Head.name=Copper Bolt Head
+item.Bolt_RedSteel_Head.name=Red Steel Bolt Head
+item.Bolt_Steel_Head.name=Steel Bolt Head
+item.Bolt_WroughtIron_Head.name=Wrought Iron Bolt Head
+
+//Arrows
+item.Arrow_BismuthBronze.name=Bismuth Bronze Arrow
+item.Arrow_BlackBronze.name=Black Bronze Arrow
+item.Arrow_BlackSteel.name=Black Steel Arrow
+item.Arrow_BlueSteel.name=Blue Steel Arrow
+item.Arrow_Bronze.name=Bronze Arrow
+item.Arrow_Copper.name=Copper Arrow
+item.Arrow_RedSteel.name=Red Steel Arrow
+item.Arrow_Steel.name=Steel Arrow
+item.Arrow_WroughtIron.name=Wrought Iron Arrow
+
+//Arrow Heads
+item.Arrow_BismuthBronze_Head.name=Bismuth Bronze Arrow Head
+item.Arrow_BlackBronze_Head.name=Black Bronze Arrow Head
+item.Arrow_BlackSteel_Head.name=Black Steel Arrow Head
+item.Arrow_BlueSteel_Head.name=Blue Steel Arrow Head
+item.Arrow_Bronze_Head.name=Bronze Arrow Head
+item.Arrow_Copper_Head.name=Copper Arrow Head
+item.Arrow_RedSteel_Head.name=Red Steel Arrow Head
+item.Arrow_Steel_Head.name=Steel Arrow Head
+item.Arrow_WroughtIron_Head.name=Wrought Iron Arrow Head
+
+//Halberds
+item.Halberd_BismuthBronze.name=Bismuth Bronze Halberd
+item.Halberd_BlackBronze.name=Black Bronze Halberd
+item.Halberd_BlackSteel.name=Black Steel Halberd
+item.Halberd_BlueSteel.name=Blue Steel Halberd
+item.Halberd_Bronze.name=Bronze Halberd
+item.Halberd_Copper.name=Copper Halberd
+item.Halberd_RedSteel.name=Red Steel Halberd
+item.Halberd_Steel.name=Steel Halberd
+item.Halberd_WroughtIron.name=Wrought Iron Halberd
+
+//Halberd Tool Heads
+item.Halberd_BismuthBronze_Head.name=Bismuth Bronze Halberd Head
+item.Halberd_BlackBronze_Head.name=Black Bronze Halberd Head
+item.Halberd_BlackSteel_Head.name=Black Steel Halberd Head
+item.Halberd_BlueSteel_Head.name=Blue Steel Halberd Head
+item.Halberd_Bronze_Head.name=Bronze Halberd Head
+item.Halberd_Copper_Head.name=Copper Halberd Head
+item.Halberd_RedSteel_Head.name=Red Steel Halberd Head
+item.Halberd_Steel_Head.name=Steel Halberd Head
+item.Halberd_WroughtIron_Head.name=Wrought Iron Halberd Head
+
+//War Hammers
+item.WarHammer_BismuthBronze.name=Bismuth Bronze War Hammer
+item.WarHammer_BlackBronze.name=Black Bronze War Hammer
+item.WarHammer_BlackSteel.name=Black Steel War Hammer
+item.WarHammer_BlueSteel.name=Blue Steel War Hammer
+item.WarHammer_Bronze.name=Bronze War Hammer
+item.WarHammer_Copper.name=Copper War Hammer
+item.WarHammer_RedSteel.name=Red Steel War Hammer
+item.WarHammer_Steel.name=Steel War Hammer
+item.WarHammer_WroughtIron.name=Wrought Iron War Hammer
+
+//War Hammer Heads
+item.WarHammer_BismuthBronze_Head.name=Bismuth Bronze War Hammer Head
+item.WarHammer_BlackBronze_Head.name=Black Bronze War Hammer Head
+item.WarHammer_BlackSteel_Head.name=Black Steel War Hammer Head
+item.WarHammer_BlueSteel_Head.name=Blue Steel War Hammer Head
+item.WarHammer_Bronze_Head.name=Bronze War Hammer Head
+item.WarHammer_Copper_Head.name=Copper War Hammer Head
+item.WarHammer_RedSteel_Head.name=Red Steel War Hammer Head
+item.WarHammer_Steel_Head.name=Steel War Hammer Head
+item.WarHammer_WroughtIron_Head.name=Wrought Iron War Hammer Head
+
+//Poniards
+item.Poniard_BismuthBronze.name=Bismuth Bronze Poniard
+item.Poniard_BlackBronze.name=Black Bronze Poniard
+item.Poniard_BlackSteel.name=Black Steel Poniard
+item.Poniard_BlueSteel.name=Blue Steel Poniard
+item.Poniard_Bronze.name=Bronze Poniard
+item.Poniard_Copper.name=Copper Poniard
+item.Poniard_RedSteel.name=Red Steel Poniard
+item.Poniard_Steel.name=Steel Poniard
+item.Poniard_WroughtIron.name=Wrought Iron Poniard
+
+//Poniard Blades
+item.Poniard_BismuthBronze_Head.name=Bismuth Bronze Poniard Blade
+item.Poniard_BlackBronze_Head.name=Black Bronze Poniard Blade
+item.Poniard_BlackSteel_Head.name=Black Steel Poniard Blade
+item.Poniard_BlueSteel_Head.name=Blue Steel Poniard Blade
+item.Poniard_Bronze_Head.name=Bronze Poniard Blade
+item.Poniard_Copper_Head.name=Copper Poniard Blade
+item.Poniard_RedSteel_Head.name=Red Steel Poniard Blade
+item.Poniard_Steel_Head.name=Steel Poniard Blade
+item.Poniard_WroughtIron_Head.name=Wrought Iron Poniard Blade
+
+//Pottery Molds
+item.itemHalberd_Mold.Clay_Mold_Halberd.name=Clay Halberd Mold
+item.itemHalberd_Mold.Ceramic_Mold_Halberd.name=Halberd Mold
+item.itemHalberd_Mold.Ceramic_Mold_Halberd_Copper.name=Halberd Mold (Copper)
+item.itemHalberd_Mold.Ceramic_Mold_Halberd_Bronze.name=Halberd Mold (Bronze)
+item.itemHalberd_Mold.Ceramic_Mold_Halberd_BlackBronze.name=Halberd Mold (Black Bronze)
+item.itemHalberd_Mold.Ceramic_Mold_Halberd_BismuthBronze.name=Halberd Mold (Bismuth Bronze)
+
+item.itemWarHammer_Mold.Clay_Mold_WarHammer.name=Clay War Hammer Mold
+item.itemWarHammer_Mold.Ceramic_Mold_WarHammer.name=War Hammer Mold
+item.itemWarHammer_Mold.Ceramic_Mold_WarHammer_Copper.name=War Hammer Mold (Copper)
+item.itemWarHammer_Mold.Ceramic_Mold_WarHammer_Bronze.name=War Hammer Mold (Bronze)
+item.itemWarHammer_Mold.Ceramic_Mold_WarHammer_BlackBronze.name=War Hammer Mold (Black Bronze)
+item.itemWarHammer_Mold.Ceramic_Mold_WarHammer_BismuthBronze.name=War Hammer Mold (Bismuth Bronze)
+
+item.itemPoniard_Mold.Clay_Mold_Poniard.name=Clay Poniard Mold
+item.itemPoniard_Mold.Ceramic_Mold_Poniard.name=Poniard Mold
+item.itemPoniard_Mold.Ceramic_Mold_Poniard_Copper.name=Poniard Mold (Copper)
+item.itemPoniard_Mold.Ceramic_Mold_Poniard_Bronze.name=Poniard Mold (Bronze)
+item.itemPoniard_Mold.Ceramic_Mold_Poniard_BlackBronze.name=Poniard Mold (Black Bronze)
+item.itemPoniard_Mold.Ceramic_Mold_Poniard_BismuthBronze.name=Poniard Mold (Bismuth Bronze)
+
+item.itemBolt_Mold.Clay_Mold_Bolt.name=Clay Bolt Mold
+item.itemBolt_Mold.Ceramic_Mold_Bolt.name=Bolt Mold
+item.itemBolt_Mold.Ceramic_Mold_Bolt_Copper.name=Bolt Mold (Copper)
+item.itemBolt_Mold.Ceramic_Mold_Bolt_Bronze.name=Bolt Mold (Bronze)
+item.itemBolt_Mold.Ceramic_Mold_Bolt_BlackBronze.name=Bolt Mold (Black Bronze)
+item.itemBolt_Mold.Ceramic_Mold_Bolt_BismuthBronze.name=Bolt Mold (Bismuth Bronze)
+
+item.itemArrow_Mold.Clay_Mold_Arrow.name=Clay Arrow Mold
+item.itemArrow_Mold.Ceramic_Mold_Arrow.name=Arrow Mold
+item.itemArrow_Mold.Ceramic_Mold_Arrow_Copper.name=Arrow Mold (Copper)
+item.itemArrow_Mold.Ceramic_Mold_Arrow_Bronze.name=Arrow Mold (Bronze)
+item.itemArrow_Mold.Ceramic_Mold_Arrow_BlackBronze.name=Arrow Mold (Black Bronze)
+item.itemArrow_Mold.Ceramic_Mold_Arrow_BismuthBronze.name=Arrow Mold (Bismuth Bronze)
+
+//Armor
+item.Coil_BismuthBronze.name=Bismuth Bronze Coil
+item.Coil_BlackBronze.name=Black Bronze Coil
+item.Coil_BlackSteel.name=Black Steel Coil
+item.Coil_BlueSteel.name=Blue Steel Coil
+item.Coil_Bronze.name=Bronze Coil
+item.Coil_Copper.name=Copper Coil
+item.Coil_WroughtIron.name=Wrought Iron Coil
+item.Coil_RedSteel.name=Red Steel Coil
+item.Coil_Steel.name=Steel Coil
+
+item.Link_BismuthBronze.name=Bismuth Bronze Link
+item.Link_BlackBronze.name=Black Bronze Link
+item.Link_BlackSteel.name=Black Steel Link
+item.Link_BlueSteel.name=Blue Steel Link
+item.Link_Bronze.name=Bronze Link
+item.Link_Copper.name=Copper Link
+item.Link_WroughtIron.name=Wrought Iron Link
+item.Link_RedSteel.name=Red Steel Link
+item.Link_Steel.name=Steel Link
+
+item.Chain_Square_BismuthBronze.name=Bismuth Bronze Chain Square
+item.Chain_Square_BlackBronze.name=Black Bronze Chain Square
+item.Chain_Square_BlackSteel.name=Black Steel Chain Square
+item.Chain_Square_BlueSteel.name=Blue Steel Chain Square
+item.Chain_Square_Bronze.name=Bronze Chain Square
+item.Chain_Square_Copper.name=Copper Chain Square
+item.Chain_Square_WroughtIron.name=Wrought Iron Chain Square
+item.Chain_Square_RedSteel.name=Red Steel Chain Square
+item.Chain_Square_Steel.name=Steel Chain Square
+
+item.Chain_Sheet_BismuthBronze.name=Bismuth Bronze Chain Sheet
+item.Chain_Sheet_BlackBronze.name=Black Bronze Chain Sheet
+item.Chain_Sheet_BlackSteel.name=Black Steel Chain Sheet
+item.Chain_Sheet_BlueSteel.name=Blue Steel Chain Sheet
+item.Chain_Sheet_Bronze.name=Bronze Chain Sheet
+item.Chain_Sheet_Copper.name=Copper Chain Sheet
+item.Chain_Sheet_WroughtIron.name=Wrought Iron Chain Sheet
+item.Chain_Sheet_RedSteel.name=Red Steel Chain Sheet
+item.Chain_Sheet_Steel.name=Steel Chain Sheet
+
+item.BismuthBronze_Chain_Greaves.name=Bismuth Bronze Chain Chausses
+item.BlackBronze_Chain_Greaves.name=Black Bronze Chain Chausses
+item.BlackSteel_Chain_Greaves.name=Black Steel Chain Chausses
+item.BlueSteel_Chain_Greaves.name=Blue Steel Chain Chausses
+item.Bronze_Chain_Greaves.name=Bronze Chain Chausses
+item.Copper_Chain_Greaves.name=Copper Chain Chausses
+item.WroughtIron_Chain_Greaves.name=Wrought Iron Chain Chausses
+item.RedSteel_Chain_Greaves.name=Red Steel Chain Chausses
+item.Steel_Chain_Greaves.name=Steel Chain Chausses
+
+item.BismuthBronze_Chain_Chestplate.name=Bismuth Bronze Chain Hauberk
+item.BlackBronze_Chain_Chestplate.name=Black Bronze Chain Hauberk
+item.BlackSteel_Chain_Chestplate.name=Black Steel Chain Hauberk
+item.BlueSteel_Chain_Chestplate.name=Blue Steel Chain Hauberk
+item.Bronze_Chain_Chestplate.name=Bronze Chain Hauberk
+item.Copper_Chain_Chestplate.name=Copper Chain Hauberk
+item.WroughtIron_Chain_Chestplate.name=Wrought Iron Chain Hauberk
+item.RedSteel_Chain_Chestplate.name=Red Steel Chain Hauberk
+item.Steel_Chain_Chestplate.name=Steel Chain Hauberk
+
+item.BismuthBronze_Chain_Helmet.name=Bismuth Bronze Chain Coif
+item.BlackBronze_Chain_Helmet.name=Black Bronze Chain Coif
+item.BlackSteel_Chain_Helmet.name=Black Steel Chain Coif
+item.BlueSteel_Chain_Helmet.name=Blue Steel Chain Coif
+item.Bronze_Chain_Helmet.name=Bronze Chain Coif
+item.Copper_Chain_Helmet.name=Copper Chain Coif
+item.WroughtIron_Chain_Helmet.name=Wrought Iron Chain Coif
+item.RedSteel_Chain_Helmet.name=Red Steel Chain Coif
+item.Steel_Chain_Helmet.name=Steel Chain Coif
+
+#=======
+#= GUI =
+#=======
+//Anvil Plans
+gui.plans.casing=Casing
+gui.plans.clockgear=Gear
+gui.plans.coil=Coil
+gui.plans.link=Link
+gui.plans.pistonhead=Piston Head
+gui.plans.pistonshaft=Piston Shaft
+gui.plans.circuit=Circuit
+gui.plans.halberd=Halberd Head
+gui.plans.warhammer=War Hammer Head
+gui.plans.poniard=Poniard Blade
+gui.plans.bolt=Bolt Head
+gui.plans.arrow=Arrow Head
+
+#===========
+#= Fluids =
+#===========
+
+fluid.fruitjuice=Fruit Juice
+fluid.fruitwine=Fruit Wine
+fluid.juiceapple=Apple Juice
+fluid.juiceorange=Orange Juice
+fluid.juicelemon=Lemon Juice
+fluid.lemonade=Lemonade
+fluid.soymilk=Soy Milk
+fluid.waterhot=Hot Water
+fluid.juiceonion=Onion Juice
+
+#=================
+#= Achievements =
+#=================
+
+achievement.HalberdAchievement=You got a halBEARD!
+achievement.HalberdAchievement.desc=Craft a Halberd.
+achievement.WarHammerAchievement=Smashin' Skulls!
+achievement.WarHammerAchievement.desc=Craft a War Hammer.
+achievement.PoniardAchievement=You're an assassin Ezio!
+achievement.PoniardAchievement.desc=Craft a poniard.
+
+achievement.SinewAchievement=Ewww Stringy!
+achievement.SinewAchievement.desc=Harvest Sinew from a deer, horse, or something else with legs.
+achievement.LongbowAchievement=I wouldn't flee, I'd shoot.
+achievement.LongbowAchievement.desc=Craft a Longbow.
+achievement.CrossbowAchievement=Watch your mouth, Sunshine.
+achievement.CrossbowAchievement.desc=Craft a Crossbow.
+
+achievement.ChainArmorAchievement=Chained Up!
+achievement.ChainArmorAchievement.desc=Craft a piece of chain armor.
+
+achievement.SuetAchievement=It jiggles!
+achievement.SuetAchievement.desc=Harvest suet from a sheep, bear, or cow.
+achievement.CandleAchievement=Waxy!
+achievement.CandleAchievement.desc=Craft a tallow candle.
+
+achievement.RedstoneTileAchievement=Wired!
+achievement.RedstoneTileAchievement.desc=Craft a redstone repeator or comparator using a crude circuit.
+achievement.PistonAchievement=Move it! Move it!
+achievement.PistonAchievement.desc=Craft a piston.
+
+achievement.FruitPressAchievement=Stomp your feet!
+achievement.FruitPressAchievement.desc=Craft a fruit press.
+achievement.WineAchievement=Happy Kitty, Sleepy Kitty, Drunk Kitty
+achievement.WineAchievement.desc=Drink fruit wine.
+achievement.SugarAchievement=Sugar, Sugar!
+achievement.SugarAchievement.desc=Get the sugar out of a bottle.
+achievement.JuiceOrangeAchievement=Bright and Early!
+achievement.JuiceOrangeAchievement.desc=Drink orange juice.
+achievement.JuiceLemonAchievement=Lemon Head!
+achievement.JuiceLemonAchievement.desc=Drink lemon juice.
+achievement.LemonadeAchievement=A Summer Day!
+achievement.LemonadeAchievement.desc=Drink lemonade.
+
+#===========
+#= Strings =
+#===========
+
+
+#========
+#= Misc =
+#========
+
+#== Creative Tabs ==
+
+
+#=========
+#= WAILA =
+#=========
+
+#== Tooltips ==
+
+
+#== Options ==

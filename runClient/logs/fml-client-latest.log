@@ -1,0 +1,582 @@
+[15:12:34] [main/DEBUG] [FML/]: Injecting tracing printstreams for STDOUT/STDERR.
+[15:12:34] [main/INFO] [FML/]: Forge Mod Loader version 7.99.36.1558 for Minecraft 1.7.10 loading
+[15:12:34] [main/INFO] [FML/]: Java is Java HotSpot(TM) 64-Bit Server VM, version 1.7.0_80, running on Windows 8.1:amd64:6.3, installed at C:\Program Files\Java\jre7
+[15:12:34] [main/DEBUG] [FML/]: Java classpath at launch is G:\Modding\TFC Addons\TFCraft-0.79.29\bin;C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\codechicken\CodeChickenCore\1.7.10-1.0.4.35\b7165acdf6b414123d49bde2c9a92561cc33c669\CodeChickenCore-1.7.10-1.0.4.35-dev.jar;C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\codechicken\CodeChickenLib\1.7.10-1.1.3.127\ef00b332b40c0ebfc42ed5720d6d5b8f4de0eeb4\CodeChickenLib-1.7.10-1.1.3.127-dev.jar;C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\codechicken\NotEnoughItems\1.7.10-1.0.4.95\23f2772674f1feda9449baf757d1ca245004470e\NotEnoughItems-1.7.10-1.0.4.95-dev.jar;G:\Modding\TFC Addons\TFCraft-0.79.29\build\dirtyArtifacts\forgeSrc-1.7.10-10.13.4.1558-1.7.10.jar;C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\net.minecraft\launchwrapper\1.12\111e7bea9c968cdb3d06ef4632bf7ff0824d0f36\launchwrapper-1.12.jar;C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\com.google.code.findbugs\jsr305\1.3.9\40719ea6961c0cb6afaeb6a921eaa1f6afd4cfdf\jsr305-1.3.9.jar;C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\org.ow2.asm\asm-debug-all\5.0.3\f9e364ae2a66ce2a543012a4668856e84e5dab74\asm-debug-all-5.0.3.jar;C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\com.typesafe.akka\akka-actor_2.11\2.3.3\ed62e9fc709ca0f2ff1a3220daa8b70a2870078e\akka-actor_2.11-2.3.3.jar;C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\com.typesafe\config\1.2.1\f771f71fdae3df231bcd54d5ca2d57f0bf93f467\config-1.2.1.jar;C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\org.scala-lang\scala-actors-migration_2.11\1.1.0\dfa8bc42b181d5b9f1a5dd147f8ae308b893eb6f\scala-actors-migration_2.11-1.1.0.jar;C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\org.scala-lang\scala-compiler\2.11.1\56ea2e6c025e0821f28d73ca271218b8dd04926a\scala-compiler-2.11.1.jar;C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\org.scala-lang.plugins\scala-continuations-library_2.11\1.0.2\e517c53a7e9acd6b1668c5a35eccbaa3bab9aac\scala-continuations-library_2.11-1.0.2.jar;C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\org.scala-lang.plugins\scala-continuations-plugin_2.11.1\1.0.2\f361a3283452c57fa30c1ee69448995de23c60f7\scala-continuations-plugin_2.11.1-1.0.2.jar;C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\org.scala-lang\scala-library\2.11.1\e11da23da3eabab9f4777b9220e60d44c1aab6a\scala-library-2.11.1.jar;C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\org.scala-lang\scala-parser-combinators_2.11\1.0.1\f05d7345bf5a58924f2837c6c1f4d73a938e1ff0\scala-parser-combinators_2.11-1.0.1.jar;C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\org.scala-lang\scala-reflect\2.11.1\6580347e61cc7f8e802941e7fde40fa83b8badeb\scala-reflect-2.11.1.jar;C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\org.scala-lang\scala-swing_2.11\1.0.1\b1cdd92bd47b1e1837139c1c53020e86bb9112ae\scala-swing_2.11-1.0.1.jar;C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\org.scala-lang\scala-xml_2.11\1.0.2\7a80ec00aec122fba7cd4e0d4cdd87ff7e4cb6d0\scala-xml_2.11-1.0.2.jar;C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\net.sf.jopt-simple\jopt-simple\4.5\6065cc95c661255349c1d0756657be17c29a4fd3\jopt-simple-4.5.jar;C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\lzma\lzma\0.0.1\521616dc7487b42bef0e803bd2fa3faf668101d7\lzma-0.0.1.jar;C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\com.mojang\realms\1.3.5\807ae355ee63583becd7ea60e76aab1532bb42e\realms-1.3.5.jar;C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\org.apache.commons\commons-compress\1.8.1\a698750c16740fd5b3871425f4cb3bbaa87f529d\commons-compress-1.8.1.jar;C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\org.apache.httpcomponents\httpclient\4.3.3\18f4247ff4572a074444572cee34647c43e7c9c7\httpclient-4.3.3.jar;C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\commons-logging\commons-logging\1.1.3\f6f66e966c70a83ffbdb6f17a0919eaf7c8aca7f\commons-logging-1.1.3.jar;C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\org.apache.httpcomponents\httpcore\4.3.2\31fbbff1ddbf98f3aa7377c94d33b0447c646b6e\httpcore-4.3.2.jar;C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\java3d\vecmath\1.3.1\a0ae4f51da409fa0c20fa0ca59e6bbc9413ae71d\vecmath-1.3.1.jar;C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\net.sf.trove4j\trove4j\3.0.3\42ccaf4761f0dfdfa805c9e340d99a755907e2dd\trove4j-3.0.3.jar;C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\com.ibm.icu\icu4j-core-mojang\51.2\63d216a9311cca6be337c1e458e587f99d382b84\icu4j-core-mojang-51.2.jar;C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\com.paulscode\codecjorbis\20101023\c73b5636faf089d9f00e8732a829577de25237ee\codecjorbis-20101023.jar;C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\com.paulscode\codecwav\20101023\12f031cfe88fef5c1dd36c563c0a3a69bd7261da\codecwav-20101023.jar;C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\com.paulscode\libraryjavasound\20101123\5c5e304366f75f9eaa2e8cca546a1fb6109348b3\libraryjavasound-20101123.jar;C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\com.paulscode\librarylwjglopenal\20100824\73e80d0794c39665aec3f62eee88ca91676674ef\librarylwjglopenal-20100824.jar;C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\com.paulscode\soundsystem\20120107\419c05fe9be71f792b2d76cfc9b67f1ed0fec7f6\soundsystem-20120107.jar;C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\io.netty\netty-all\4.0.10.Final\9e50bd52ffe257a0e2cd8d971688d6ce7d174325\netty-all-4.0.10.Final.jar;C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\com.google.guava\guava\17.0\9c6ef172e8de35fd8d4d8783e4821e57cdef7445\guava-17.0.jar;C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\org.apache.commons\commons-lang3\3.3.2\90a3822c38ec8c996e84c16a3477ef632cbc87a3\commons-lang3-3.3.2.jar;C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\commons-io\commons-io\2.4\b1b6ea3b7e4aa4f492509a4952029cd8e48019ad\commons-io-2.4.jar;C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\commons-codec\commons-codec\1.9\9ce04e34240f674bc72680f8b843b1457383161a\commons-codec-1.9.jar;C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput\2.0.5\39c7796b469a600f72380316f6b1f11db6c2c7c4\jinput-2.0.5.jar;C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\net.java.jutils\jutils\1.0.0\e12fe1fda814bd348c1579329c86943d2cd3c6a6\jutils-1.0.0.jar;C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.2.4\a60a5e993c98c864010053cb901b7eab25306568\gson-2.2.4.jar;C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\com.mojang\authlib\1.5.16\ef1582b11fd0943d069cdcb72e99008ac209a283\authlib-1.5.16.jar;C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\org.apache.logging.log4j\log4j-api\2.0-beta9\1dd66e68cccd907880229f9e2de1314bd13ff785\log4j-api-2.0-beta9.jar;C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\org.apache.logging.log4j\log4j-core\2.0-beta9\678861ba1b2e1fccb594bb0ca03114bb05da9695\log4j-core-2.0-beta9.jar;C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\org.lwjgl.lwjgl\lwjgl\2.9.1\f58c5aabcef0e41718a564be9f8e412fff8db847\lwjgl-2.9.1.jar;C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\org.lwjgl.lwjgl\lwjgl_util\2.9.1\290d7ba8a1bd9566f5ddf16ad06f09af5ec9b20e\lwjgl_util-2.9.1.jar;C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\tv.twitch\twitch\5.16\1f55f009c61637c10c0acfb8b5ffc600f30044b4\twitch-5.16.jar;C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\org.scala-lang\scala-actors\2.11.0\8ccfb6541de179bb1c4d45cf414acee069b7f78b\scala-actors-2.11.0.jar;C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\org.scala-lang.modules\scala-xml_2.11\1.0.2\820fbca7e524b530fdadc594c39d49a21ea0337e\scala-xml_2.11-1.0.2.jar;C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\org.scala-lang.modules\scala-parser-combinators_2.11\1.0.1\f05d7345bf5a58924f2837c6c1f4d73a938e1ff0\scala-parser-combinators_2.11-1.0.1.jar;C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput-platform\2.0.5\7ff832a6eb9ab6a767f1ade2b548092d0fa64795\jinput-platform-2.0.5-natives-linux.jar;C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput-platform\2.0.5\385ee093e01f587f30ee1c8a2ee7d408fd732e16\jinput-platform-2.0.5-natives-windows.jar;C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput-platform\2.0.5\53f9c919f34d2ca9de8c51fc4e1e8282029a9232\jinput-platform-2.0.5-natives-osx.jar;C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\tv.twitch\twitch-platform\5.16\7c6affe439099806a4f552da14c42f9d643d8b23\twitch-platform-5.16-natives-windows-32.jar;C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\tv.twitch\twitch-platform\5.16\39d0c3d363735b4785598e0e7fbf8297c706a9f9\twitch-platform-5.16-natives-windows-64.jar;C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\tv.twitch\twitch-platform\5.16\62503ee712766cf77f97252e5902786fd834b8c5\twitch-platform-5.16-natives-osx.jar;C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\tv.twitch\twitch-external-platform\4.5\18215140f010c05b9f86ef6f0f8871954d2ccebf\twitch-external-platform-4.5-natives-windows-32.jar;C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\tv.twitch\twitch-external-platform\4.5\c3cde57891b935d41b6680a9c5e1502eeab76d86\twitch-external-platform-4.5-natives-windows-64.jar;C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\org.lwjgl.lwjgl\lwjgl-platform\2.9.1\4c517eca808522457dd95ee8fc1fbcdbb602efbe\lwjgl-platform-2.9.1-natives-windows.jar;C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\org.lwjgl.lwjgl\lwjgl-platform\2.9.1\aa9aae879af8eb378e22cfc64db56ec2ca9a44d1\lwjgl-platform-2.9.1-natives-linux.jar;C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\org.lwjgl.lwjgl\lwjgl-platform\2.9.1\2d12c83fdfbc04ecabf02c7bc8cc54d034f0daac\lwjgl-platform-2.9.1-natives-osx.jar;G:\Modding\TFC Addons\Dev Files\Waila-1.5.11-RC2-NONEI_1.7.10-dev.jar;C:\Users\Jared Jarvis\.gradle\caches\minecraft\net\minecraftforge\forge\1.7.10-10.13.4.1558-1.7.10\start;G:\Modding\TFC Addons\TFCTemplateMod\bin;C:\Users\Jared Jarvis\.gradle\caches\minecraft\net\minecraftforge\forge\1.7.10-10.13.2.1291\forgeSrc-1.7.10-10.13.2.1291.jar;C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\net.minecraft\launchwrapper\1.11\9c0592c6e1e9ea296a70948081bd4cc84dda1289\launchwrapper-1.11.jar;C:\Users\Jared Jarvis\.gradle\caches\minecraft\net\minecraftforge\forge\1.7.10-10.13.2.1291\start
+[15:12:34] [main/DEBUG] [FML/]: Java library path at launch is C:\Program Files\Java\jre7\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jre7/bin/server;C:/Program Files/Java/jre7/bin;C:/Program Files/Java/jre7/lib/amd64;C:\Program Files\Java\jre7\bin;C:\Program Files\Java\jre-9.0.4\bin;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;c:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Users\Jared Jarvis\AppData\Local\Microsoft\WindowsApps;;G:\Modding\eclipse;;.;C:/Users/Jared Jarvis/.gradle/caches/minecraft/net/minecraft/minecraft_natives/1.7.10
+[15:12:34] [main/INFO] [FML/]: Managed to load a deobfuscated Minecraft name- we are in a deobfuscated environment. Skipping runtime deobfuscation
+[15:12:34] [main/DEBUG] [FML/]: Instantiating coremod class FMLCorePlugin
+[15:12:34] [main/DEBUG] [FML/]: Added access transformer class cpw.mods.fml.common.asm.transformers.AccessTransformer to enqueued access transformers
+[15:12:34] [main/DEBUG] [FML/]: Enqueued coremod FMLCorePlugin
+[15:12:34] [main/DEBUG] [FML/]: Instantiating coremod class FMLForgePlugin
+[15:12:34] [main/DEBUG] [FML/]: Added access transformer class net.minecraftforge.transformers.ForgeAccessTransformer to enqueued access transformers
+[15:12:34] [main/DEBUG] [FML/]: Enqueued coremod FMLForgePlugin
+[15:12:34] [main/DEBUG] [FML/]: All fundamental core mods are successfully located
+[15:12:34] [main/INFO] [FML/]: Found a command line coremod : codechicken.nei.asm.NEICorePlugin
+[15:12:34] [main/DEBUG] [FML/]: Instantiating coremod class NEICorePlugin
+[15:12:34] [main/WARN] [FML/]: The coremod codechicken.nei.asm.NEICorePlugin does not have a MCVersion annotation, it may cause issues with this version of Minecraft
+[15:12:34] [main/DEBUG] [FML/]: Enqueued coremod NEICorePlugin
+[15:12:34] [main/INFO] [FML/]: Found a command line coremod : com.bioxx.tfc.TFCASMLoadingPlugin
+[15:12:34] [main/DEBUG] [FML/]: Instantiating coremod class TFCASMLoadingPlugin
+[15:12:34] [main/WARN] [FML/]: The coremod com.bioxx.tfc.TFCASMLoadingPlugin does not have a MCVersion annotation, it may cause issues with this version of Minecraft
+[15:12:34] [main/DEBUG] [FML/]: Enqueued coremod TFCASMLoadingPlugin
+[15:12:34] [main/INFO] [FML/]: Found a command line coremod : codechicken.core.launch.CodeChickenCorePlugin
+[15:12:34] [main/DEBUG] [FML/]: Instantiating coremod class CodeChickenCorePlugin
+[15:12:34] [main/WARN] [FML/]: The coremod codechicken.core.launch.CodeChickenCorePlugin does not have a MCVersion annotation, it may cause issues with this version of Minecraft
+[15:12:34] [main/DEBUG] [FML/]: Added access transformer class codechicken.core.asm.CodeChickenAccessTransformer to enqueued access transformers
+[15:12:34] [main/DEBUG] [FML/]: Enqueued coremod CodeChickenCorePlugin
+[15:12:34] [main/DEBUG] [FML/]: Attempting to load commandline specified mods, relative to G:\Modding\TFC Addons\TFCTemplateMod\runClient\.
+[15:12:34] [main/DEBUG] [FML/]: Discovering coremods
+[15:12:34] [main/DEBUG] [FML/]: Examining for coremod candidacy TerraFirmaCraftNEIplugin-1.7.10-1.5.3.25.jar
+[15:12:34] [main/DEBUG] [FML/]: Not found coremod data in TerraFirmaCraftNEIplugin-1.7.10-1.5.3.25.jar
+[15:12:34] [main/INFO] [LaunchWrapper/]: Calling tweak class net.minecraftforge.gradle.tweakers.CoremodTweaker
+[15:12:34] [main/INFO] [GradleStart/]: Injecting location in coremod cpw.mods.fml.relauncher.FMLCorePlugin
+[15:12:34] [main/INFO] [GradleStart/]: Injecting location in coremod net.minecraftforge.classloading.FMLForgePlugin
+[15:12:34] [main/INFO] [GradleStart/]: Injecting location in coremod codechicken.core.asm.MCPDeobfuscationTransformer.LoadPlugin
+[15:12:34] [main/INFO] [GradleStart/]: Injecting location in coremod codechicken.nei.asm.NEICorePlugin
+[15:12:34] [main/INFO] [GradleStart/]: Injecting location in coremod com.bioxx.tfc.TFCASMLoadingPlugin
+[15:12:34] [main/INFO] [GradleStart/]: Injecting location in coremod codechicken.core.launch.CodeChickenCorePlugin
+[15:12:34] [main/INFO] [LaunchWrapper/]: Loading tweak class name cpw.mods.fml.common.launcher.FMLInjectionAndSortingTweaker
+[15:12:34] [main/INFO] [LaunchWrapper/]: Loading tweak class name cpw.mods.fml.common.launcher.FMLDeobfTweaker
+[15:12:34] [main/INFO] [LaunchWrapper/]: Loading tweak class name net.minecraftforge.gradle.tweakers.AccessTransformerTweaker
+[15:12:34] [main/INFO] [LaunchWrapper/]: Calling tweak class cpw.mods.fml.common.launcher.FMLInjectionAndSortingTweaker
+[15:12:34] [main/INFO] [LaunchWrapper/]: Calling tweak class cpw.mods.fml.common.launcher.FMLInjectionAndSortingTweaker
+[15:12:34] [main/INFO] [LaunchWrapper/]: Calling tweak class cpw.mods.fml.relauncher.CoreModManager$FMLPluginWrapper
+[15:12:34] [main/DEBUG] [FML/]: Injecting coremod FMLCorePlugin {cpw.mods.fml.relauncher.FMLCorePlugin} class transformers
+[15:12:34] [main/TRACE] [FML/]: Registering transformer cpw.mods.fml.common.asm.transformers.MarkerTransformer
+[15:12:34] [main/TRACE] [FML/]: Registering transformer cpw.mods.fml.common.asm.transformers.SideTransformer
+[15:12:34] [main/TRACE] [FML/]: Registering transformer cpw.mods.fml.common.asm.transformers.EventSubscriptionTransformer
+[15:12:34] [main/DEBUG] [FML/]: Injection complete
+[15:12:34] [main/DEBUG] [FML/]: Running coremod plugin for FMLCorePlugin {cpw.mods.fml.relauncher.FMLCorePlugin}
+[15:12:34] [main/DEBUG] [FML/]: Running coremod plugin FMLCorePlugin
+[15:12:34] [main/ERROR] [FML/]: The binary patch set is missing. Either you are in a development environment, or things are not going to work!
+[15:12:37] [main/ERROR] [FML/]: FML appears to be missing any signature data. This is not a good thing
+[15:12:37] [main/DEBUG] [FML/]: Coremod plugin class FMLCorePlugin run successfully
+[15:12:37] [main/INFO] [LaunchWrapper/]: Calling tweak class cpw.mods.fml.relauncher.CoreModManager$FMLPluginWrapper
+[15:12:37] [main/DEBUG] [FML/]: Injecting coremod FMLForgePlugin {net.minecraftforge.classloading.FMLForgePlugin} class transformers
+[15:12:37] [main/TRACE] [FML/]: Registering transformer net.minecraftforge.classloading.FluidIdTransformer
+[15:12:37] [main/DEBUG] [FML/]: Injection complete
+[15:12:37] [main/DEBUG] [FML/]: Running coremod plugin for FMLForgePlugin {net.minecraftforge.classloading.FMLForgePlugin}
+[15:12:37] [main/DEBUG] [FML/]: Running coremod plugin FMLForgePlugin
+[15:12:37] [main/DEBUG] [FML/]: Coremod plugin class FMLForgePlugin run successfully
+[15:12:37] [main/INFO] [LaunchWrapper/]: Calling tweak class cpw.mods.fml.relauncher.CoreModManager$FMLPluginWrapper
+[15:12:37] [main/DEBUG] [FML/]: Injecting coremod CCCDeobfPlugin {codechicken.core.asm.MCPDeobfuscationTransformer$LoadPlugin} class transformers
+[15:12:37] [main/DEBUG] [FML/]: Injection complete
+[15:12:37] [main/DEBUG] [FML/]: Running coremod plugin for CCCDeobfPlugin {codechicken.core.asm.MCPDeobfuscationTransformer$LoadPlugin}
+[15:12:37] [main/DEBUG] [FML/]: Running coremod plugin CCCDeobfPlugin
+[15:12:37] [main/DEBUG] [FML/]: Coremod plugin class LoadPlugin run successfully
+[15:12:37] [main/INFO] [LaunchWrapper/]: Calling tweak class cpw.mods.fml.relauncher.CoreModManager$FMLPluginWrapper
+[15:12:37] [main/DEBUG] [FML/]: Injecting coremod NEICorePlugin {codechicken.nei.asm.NEICorePlugin} class transformers
+[15:12:38] [main/TRACE] [FML/]: Registering transformer codechicken.nei.asm.NEITransformer
+[15:12:38] [main/DEBUG] [FML/]: Injection complete
+[15:12:38] [main/DEBUG] [FML/]: Running coremod plugin for NEICorePlugin {codechicken.nei.asm.NEICorePlugin}
+[15:12:38] [main/DEBUG] [FML/]: Running coremod plugin NEICorePlugin
+[15:12:38] [main/DEBUG] [FML/]: Coremod plugin class NEICorePlugin run successfully
+[15:12:38] [main/INFO] [LaunchWrapper/]: Calling tweak class cpw.mods.fml.relauncher.CoreModManager$FMLPluginWrapper
+[15:12:38] [main/DEBUG] [FML/]: Injecting coremod TFCASMLoadingPlugin {com.bioxx.tfc.TFCASMLoadingPlugin} class transformers
+[15:12:38] [main/TRACE] [FML/]: Registering transformer com.bioxx.tfc.ASM.Transform.TF_EntityRenderer
+[15:12:38] [main/TRACE] [FML/]: Registering transformer com.bioxx.tfc.ASM.Transform.TF_RenderGlobal
+[15:12:38] [main/TRACE] [FML/]: Registering transformer com.bioxx.tfc.ASM.Transform.TF_EntityLeashKnot
+[15:12:38] [main/TRACE] [FML/]: Registering transformer com.bioxx.tfc.ASM.Transform.TF_EntityPlayerMP
+[15:12:38] [main/TRACE] [FML/]: Registering transformer com.bioxx.tfc.ASM.Transform.TF_EntityPlayer
+[15:12:38] [main/DEBUG] [FML/]: Injection complete
+[15:12:38] [main/DEBUG] [FML/]: Running coremod plugin for TFCASMLoadingPlugin {com.bioxx.tfc.TFCASMLoadingPlugin}
+[15:12:38] [main/DEBUG] [FML/]: Running coremod plugin TFCASMLoadingPlugin
+[15:12:38] [main/DEBUG] [FML/]: Coremod plugin class TFCASMLoadingPlugin run successfully
+[15:12:38] [main/INFO] [LaunchWrapper/]: Calling tweak class cpw.mods.fml.relauncher.CoreModManager$FMLPluginWrapper
+[15:12:38] [main/DEBUG] [FML/]: Injecting coremod CodeChickenCorePlugin {codechicken.core.launch.CodeChickenCorePlugin} class transformers
+[15:12:38] [main/TRACE] [FML/]: Registering transformer codechicken.lib.asm.ClassHeirachyManager
+[15:12:38] [main/TRACE] [FML/]: Registering transformer codechicken.core.asm.InterfaceDependancyTransformer
+[15:12:38] [main/TRACE] [FML/]: Registering transformer codechicken.core.asm.TweakTransformer
+[15:12:38] [main/TRACE] [FML/]: Registering transformer codechicken.core.asm.DelegatedTransformer
+[15:12:38] [main/TRACE] [FML/]: Registering transformer codechicken.core.asm.DefaultImplementationTransformer
+[15:12:38] [main/DEBUG] [FML/]: Injection complete
+[15:12:38] [main/DEBUG] [FML/]: Running coremod plugin for CodeChickenCorePlugin {codechicken.core.launch.CodeChickenCorePlugin}
+[15:12:38] [main/DEBUG] [FML/]: Running coremod plugin CodeChickenCorePlugin
+[15:12:38] [main/DEBUG] [FML/]: Coremod plugin class CodeChickenCorePlugin run successfully
+[15:12:38] [main/INFO] [LaunchWrapper/]: Calling tweak class cpw.mods.fml.common.launcher.FMLDeobfTweaker
+[15:12:38] [main/DEBUG] [FML/]: Loaded 57 rules from AccessTransformer config file fml_at.cfg
+[15:12:38] [main/DEBUG] [FML/]: Loaded 89 rules from AccessTransformer config file forge_at.cfg
+[15:12:38] [main/DEBUG] [FML/]: Loaded 57 rules from AccessTransformer config file fml_at.cfg
+[15:12:38] [main/DEBUG] [FML/]: Loaded 11 rules from AccessTransformer mod jar file C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\codechicken\NotEnoughItems\1.7.10-1.0.4.95\23f2772674f1feda9449baf757d1ca245004470e\NotEnoughItems-1.7.10-1.0.4.95-dev.jar!META-INF/nei_at.cfg
+
+[15:12:38] [main/DEBUG] [FML/]: Validating minecraft
+[15:12:39] [main/DEBUG] [FML/]: Minecraft validated, launching...
+[15:12:39] [main/INFO] [LaunchWrapper/]: Calling tweak class net.minecraftforge.gradle.tweakers.AccessTransformerTweaker
+[15:12:39] [main/DEBUG] [GradleStart/]: Reading CSV file: C:\Users\Jared Jarvis\.gradle\caches\minecraft\net\minecraftforge\forge\1.7.10-10.13.4.1558-1.7.10\unpacked\conf\fields.csv
+[15:12:39] [main/DEBUG] [GradleStart/]: Reading CSV file: C:\Users\Jared Jarvis\.gradle\caches\minecraft\net\minecraftforge\forge\1.7.10-10.13.4.1558-1.7.10\unpacked\conf\methods.csv
+[15:12:39] [main/INFO] [GradleStart/]: Remapping AccessTransformer rules...
+[15:12:39] [main/INFO] [LaunchWrapper/]: Loading tweak class name cpw.mods.fml.common.launcher.TerminalTweaker
+[15:12:39] [main/INFO] [LaunchWrapper/]: Calling tweak class cpw.mods.fml.common.launcher.TerminalTweaker
+[15:12:39] [main/INFO] [LaunchWrapper/]: Launching wrapped minecraft {net.minecraft.client.main.Main}
+[15:12:40] [main/INFO] [TerraFirmaCraft ASM/]: Attempting to Transform: net/minecraft/entity/player/EntityPlayer | Found 2 injections
+[15:12:40] [main/INFO] [TerraFirmaCraft ASM/]: Inserted: net/minecraft/entity/player/EntityPlayer : {moveEntityWithHeading | (FF)V}
+[15:12:40] [main/INFO] [TerraFirmaCraft ASM/]: Inserted: net/minecraft/entity/player/EntityPlayer : {getItemIcon | (Lnet/minecraft/item/ItemStack;I)Lnet/minecraft/util/IIcon;}
+[15:12:40] [main/INFO] [TerraFirmaCraft ASM/]: Attempting to Transform: net/minecraft/entity/player/EntityPlayer Complete
+[15:12:40] [main/DEBUG] [CCL ASM/]: Inserted super call into [net/minecraft/client/renderer/InventoryEffectRenderer.updateScreen()V]
+[15:12:40] [main/DEBUG] [CCL ASM/]: Writing method [net/minecraft/client/gui/inventory/GuiContainer.setWorldAndResolution(Lnet/minecraft/client/Minecraft;II)V]
+[15:12:40] [main/DEBUG] [CCL ASM/]: Writing method [net/minecraft/client/gui/inventory/GuiContainer.handleKeyboardInput()V]
+[15:12:40] [main/DEBUG] [CCL ASM/]: Writing method [net/minecraft/client/gui/inventory/GuiContainer.handleKeyboardInput()V]
+[15:12:40] [main/DEBUG] [CCL ASM/]: Writing method [net/minecraft/client/gui/inventory/GuiContainer.handleKeyboardInput()V]
+[15:12:40] [main/DEBUG] [CCL ASM/]: Writing method [net/minecraft/client/gui/inventory/GuiContainer.handleMouseInput()V]
+[15:12:40] [main/DEBUG] [CCL ASM/]: Writing method [net/minecraft/client/gui/inventory/GuiContainer.public_func_73869_a(CI)V]
+[15:12:40] [main/DEBUG] [CCL ASM/]: Writing method [net/minecraft/client/gui/inventory/GuiContainer.public_func_146984_a(Lnet/minecraft/inventory/Slot;III)V]
+[15:12:40] [main/DEBUG] [CCL ASM/]: Injecting before method [net/minecraft/client/gui/inventory/GuiContainer.drawScreen(IIF)V]
+[15:12:40] [main/DEBUG] [CCL ASM/]: Injecting after method [net/minecraft/client/gui/inventory/GuiContainer.drawScreen(IIF)V] @ 138 - 140
+[15:12:40] [main/DEBUG] [CCL ASM/]: Injecting after method [net/minecraft/client/gui/inventory/GuiContainer.drawScreen(IIF)V] @ 220 - 225
+[15:12:40] [main/DEBUG] [CCL ASM/]: Replacing method [net/minecraft/client/gui/inventory/GuiContainer.drawScreen(IIF)V] @ 444 - 470
+[15:12:40] [main/DEBUG] [CCL ASM/]: Replacing method [net/minecraft/client/gui/inventory/GuiContainer.drawItemStack(Lnet/minecraft/item/ItemStack;IILjava/lang/String;)V] @ 9 - 10
+[15:12:40] [main/DEBUG] [CCL ASM/]: Replacing method [net/minecraft/client/gui/inventory/GuiContainer.drawItemStack(Lnet/minecraft/item/ItemStack;IILjava/lang/String;)V] @ 14 - 15
+[15:12:40] [main/DEBUG] [CCL ASM/]: Replacing method [net/minecraft/client/gui/inventory/GuiContainer.func_146977_a(Lnet/minecraft/inventory/Slot;)V] @ 298 - 323
+[15:12:40] [main/DEBUG] [CCL ASM/]: Injecting before method [net/minecraft/client/gui/inventory/GuiContainer.mouseClicked(III)V]
+[15:12:40] [main/DEBUG] [CCL ASM/]: Replacing method [net/minecraft/client/gui/inventory/GuiContainer.mouseClicked(III)V] @ 259 - 260
+[15:12:40] [main/DEBUG] [CCL ASM/]: Replacing method [net/minecraft/client/gui/inventory/GuiContainer.mouseClicked(III)V] @ 331 - 332
+[15:12:40] [main/DEBUG] [CCL ASM/]: Replacing method [net/minecraft/client/gui/inventory/GuiContainer.mouseClickMove(IIIJ)V] @ 98 - 99
+[15:12:40] [main/DEBUG] [CCL ASM/]: Replacing method [net/minecraft/client/gui/inventory/GuiContainer.mouseClickMove(IIIJ)V] @ 107 - 108
+[15:12:40] [main/DEBUG] [CCL ASM/]: Replacing method [net/minecraft/client/gui/inventory/GuiContainer.mouseClickMove(IIIJ)V] @ 118 - 119
+[15:12:40] [main/DEBUG] [CCL ASM/]: Replacing method [net/minecraft/client/gui/inventory/GuiContainer.mouseMovedOrUp(III)V] @ 158 - 159
+[15:12:40] [main/DEBUG] [CCL ASM/]: Replacing method [net/minecraft/client/gui/inventory/GuiContainer.mouseMovedOrUp(III)V] @ 168 - 169
+[15:12:40] [main/DEBUG] [CCL ASM/]: Replacing method [net/minecraft/client/gui/inventory/GuiContainer.mouseMovedOrUp(III)V] @ 287 - 288
+[15:12:40] [main/DEBUG] [CCL ASM/]: Replacing method [net/minecraft/client/gui/inventory/GuiContainer.mouseMovedOrUp(III)V] @ 295 - 296
+[15:12:40] [main/DEBUG] [CCL ASM/]: Replacing method [net/minecraft/client/gui/inventory/GuiContainer.mouseMovedOrUp(III)V] @ 314 - 315
+[15:12:40] [main/DEBUG] [CCL ASM/]: Replacing method [net/minecraft/client/gui/inventory/GuiContainer.mouseMovedOrUp(III)V] @ 424 - 425
+[15:12:40] [main/DEBUG] [CCL ASM/]: Replacing method [net/minecraft/client/gui/inventory/GuiContainer.mouseMovedOrUp(III)V] @ 454 - 455
+[15:12:40] [main/DEBUG] [CCL ASM/]: Replacing method [net/minecraft/client/gui/inventory/GuiContainer.mouseMovedOrUp(III)V] @ 468 - 469
+[15:12:40] [main/DEBUG] [CCL ASM/]: Replacing method [net/minecraft/client/gui/inventory/GuiContainer.mouseMovedOrUp(III)V] @ 497 - 498
+[15:12:40] [main/DEBUG] [CCL ASM/]: Replacing method [net/minecraft/client/gui/inventory/GuiContainer.mouseMovedOrUp(III)V] @ 557 - 559
+[15:12:40] [main/DEBUG] [CCL ASM/]: Replacing method [net/minecraft/client/gui/inventory/GuiContainer.keyTyped(CI)V] @ 54 - 55
+[15:12:40] [main/DEBUG] [CCL ASM/]: Replacing method [net/minecraft/client/gui/inventory/GuiContainer.keyTyped(CI)V] @ 84 - 85
+[15:12:40] [main/DEBUG] [CCL ASM/]: Replacing method [net/minecraft/client/gui/inventory/GuiContainer.checkHotbarKeys(I)Z] @ 41 - 42
+[15:12:40] [main/DEBUG] [CCL ASM/]: Writing method [net/minecraft/client/gui/inventory/GuiContainer.managerHandleMouseClick(Lnet/minecraft/inventory/Slot;III)V]
+[15:12:40] [main/DEBUG] [CCL ASM/]: Injecting after method [net/minecraft/client/gui/inventory/GuiContainer.mouseClickMove(IIIJ)V] @ 14 - 15
+[15:12:40] [main/DEBUG] [CCL ASM/]: Injecting before method [net/minecraft/client/gui/inventory/GuiContainer.mouseMovedOrUp(III)V]
+[15:12:40] [main/DEBUG] [CCL ASM/]: NEI: Injecting mouseUp call
+[15:12:40] [main/DEBUG] [CCL ASM/]: Replacing method [net/minecraft/client/gui/inventory/GuiContainer.handleMouseClick(Lnet/minecraft/inventory/Slot;III)V] @ 10 - 26
+[15:12:40] [main/DEBUG] [CCL ASM/]: Injecting before method [net/minecraft/client/gui/inventory/GuiContainer.keyTyped(CI)V]
+[15:12:40] [main/DEBUG] [CCL ASM/]: Injecting after method [net/minecraft/client/gui/inventory/GuiContainer.updateScreen()V] @ 0 - 4
+[15:12:42] [main/DEBUG] [CCL ASM/]: Writing method [net/minecraft/block/Block.canBeReplacedByLeaves(Lnet/minecraft/world/IBlockAccess;III)Z]
+[15:12:42] [main/DEBUG] [CCL ASM/]: Writing method [net/minecraft/block/BlockMobSpawner.onBlockPlacedBy(Lnet/minecraft/world/World;IIILnet/minecraft/entity/EntityLivingBase;Lnet/minecraft/item/ItemStack;)V]
+[15:12:43] [main/DEBUG] [CCL ASM/]: Injecting before method [net/minecraft/nbt/NBTTagCompound.toString()Ljava/lang/String;] @ 51 - 55
+[15:12:43] [main/DEBUG] [CCL ASM/]: Injecting before method [net/minecraft/nbt/NBTTagList.toString()Ljava/lang/String;] @ 56 - 60
+[15:12:43] [main/INFO] [TerraFirmaCraft ASM/]: Attempting to Transform: net/minecraft/entity/player/EntityPlayerMP | Found 1 injections
+[15:12:43] [main/INFO] [TerraFirmaCraft ASM/]: Inserted: net/minecraft/entity/player/EntityPlayerMP : {onUpdateEntity | ()V}
+[15:12:43] [main/INFO] [TerraFirmaCraft ASM/]: Attempting to Transform: net/minecraft/entity/player/EntityPlayerMP Complete
+[15:12:43] [main/INFO] [TerraFirmaCraft ASM/]: Attempting to Transform: net/minecraft/entity/EntityLeashKnot | Found 1 injections
+[15:12:43] [main/INFO] [TerraFirmaCraft ASM/]: Inserted: net/minecraft/entity/EntityLeashKnot : {onValidSurface | ()Z}
+[15:12:43] [main/INFO] [TerraFirmaCraft ASM/]: Attempting to Transform: net/minecraft/entity/EntityLeashKnot Complete
+[15:12:44] [Client thread/DEBUG] [CCL ASM/]: Replacing method [net/minecraft/client/renderer/entity/RenderItem.renderGlint(IIIII)V] @ 7 - 16
+[15:12:45] [Client thread/DEBUG] [FML/]: Bar Finished: Loading Resource - LanguageManager took 0.074s
+[15:12:45] [Client thread/INFO] [STDOUT/]: [cpw.mods.fml.client.SplashProgress:start:188]: ---- Minecraft Crash Report ----
+// Why is it breaking :(
+
+Time: 3/24/18 3:12 PM
+Description: Loading screen debug info
+
+This is just a prompt for computer specs to be printed. THIS IS NOT A ERROR
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- System Details --
+Details:
+	Minecraft Version: 1.7.10
+	Operating System: Windows 8.1 (amd64) version 6.3
+	Java Version: 1.7.0_80, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 390852880 bytes (372 MB) / 705691648 bytes (673 MB) up to 3795320832 bytes (3619 MB)
+	JVM Flags: 0 total; 
+	AABB Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: 
+	GL info: ' Vendor: 'Intel' Version: '4.5.0 - Build 22.20.16.4771' Renderer: 'Intel(R) HD Graphics 520'
+[15:12:45] [Client thread/INFO] [MinecraftForge/]: Attempting early MinecraftForge initialization
+[15:12:45] [Client thread/INFO] [FML/]: MinecraftForge v10.13.4.1558 Initialized
+[15:12:45] [Client thread/INFO] [FML/]: Replaced 183 ore recipies
+[15:12:45] [Client thread/INFO] [MinecraftForge/]: Completed early MinecraftForge initialization
+[15:12:45] [Client thread/DEBUG] [FML/]: File G:\Modding\TFC Addons\TFCTemplateMod\runClient\config\injectedDependencies.json not found. No dependencies injected
+[15:12:45] [Client thread/DEBUG] [FML/]: Building injected Mod Containers [cpw.mods.fml.common.FMLContainer, net.minecraftforge.common.ForgeModContainer, codechicken.nei.NEIModContainer, com.bioxx.tfc.TerraFirmaCraftCore, codechicken.core.asm.CodeChickenCoreModContainer]
+[15:12:45] [Client thread/DEBUG] [FML/]: Attempting to load mods contained in the minecraft jar file and associated classes
+[15:12:45] [Client thread/DEBUG] [FML/]: Found a minecraft related directory at G:\Modding\TFC Addons\TFCraft-0.79.29\bin, examining for mod candidates
+[15:12:45] [Client thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\codechicken\CodeChickenCore\1.7.10-1.0.4.35\b7165acdf6b414123d49bde2c9a92561cc33c669\CodeChickenCore-1.7.10-1.0.4.35-dev.jar, examining for mod candidates
+[15:12:45] [Client thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\codechicken\CodeChickenLib\1.7.10-1.1.3.127\ef00b332b40c0ebfc42ed5720d6d5b8f4de0eeb4\CodeChickenLib-1.7.10-1.1.3.127-dev.jar, examining for mod candidates
+[15:12:45] [Client thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\codechicken\NotEnoughItems\1.7.10-1.0.4.95\23f2772674f1feda9449baf757d1ca245004470e\NotEnoughItems-1.7.10-1.0.4.95-dev.jar, examining for mod candidates
+[15:12:45] [Client thread/DEBUG] [FML/]: Found a minecraft related file at G:\Modding\TFC Addons\TFCraft-0.79.29\build\dirtyArtifacts\forgeSrc-1.7.10-10.13.4.1558-1.7.10.jar, examining for mod candidates
+[15:12:45] [Client thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\net.minecraft\launchwrapper\1.12\111e7bea9c968cdb3d06ef4632bf7ff0824d0f36\launchwrapper-1.12.jar, examining for mod candidates
+[15:12:45] [Client thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\com.google.code.findbugs\jsr305\1.3.9\40719ea6961c0cb6afaeb6a921eaa1f6afd4cfdf\jsr305-1.3.9.jar, examining for mod candidates
+[15:12:45] [Client thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\org.ow2.asm\asm-debug-all\5.0.3\f9e364ae2a66ce2a543012a4668856e84e5dab74\asm-debug-all-5.0.3.jar, examining for mod candidates
+[15:12:45] [Client thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\com.typesafe.akka\akka-actor_2.11\2.3.3\ed62e9fc709ca0f2ff1a3220daa8b70a2870078e\akka-actor_2.11-2.3.3.jar, examining for mod candidates
+[15:12:45] [Client thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\com.typesafe\config\1.2.1\f771f71fdae3df231bcd54d5ca2d57f0bf93f467\config-1.2.1.jar, examining for mod candidates
+[15:12:45] [Client thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\org.scala-lang\scala-actors-migration_2.11\1.1.0\dfa8bc42b181d5b9f1a5dd147f8ae308b893eb6f\scala-actors-migration_2.11-1.1.0.jar, examining for mod candidates
+[15:12:45] [Client thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\org.scala-lang\scala-compiler\2.11.1\56ea2e6c025e0821f28d73ca271218b8dd04926a\scala-compiler-2.11.1.jar, examining for mod candidates
+[15:12:45] [Client thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\org.scala-lang.plugins\scala-continuations-library_2.11\1.0.2\e517c53a7e9acd6b1668c5a35eccbaa3bab9aac\scala-continuations-library_2.11-1.0.2.jar, examining for mod candidates
+[15:12:45] [Client thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\org.scala-lang.plugins\scala-continuations-plugin_2.11.1\1.0.2\f361a3283452c57fa30c1ee69448995de23c60f7\scala-continuations-plugin_2.11.1-1.0.2.jar, examining for mod candidates
+[15:12:45] [Client thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\org.scala-lang\scala-library\2.11.1\e11da23da3eabab9f4777b9220e60d44c1aab6a\scala-library-2.11.1.jar, examining for mod candidates
+[15:12:45] [Client thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\org.scala-lang\scala-parser-combinators_2.11\1.0.1\f05d7345bf5a58924f2837c6c1f4d73a938e1ff0\scala-parser-combinators_2.11-1.0.1.jar, examining for mod candidates
+[15:12:45] [Client thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\org.scala-lang\scala-reflect\2.11.1\6580347e61cc7f8e802941e7fde40fa83b8badeb\scala-reflect-2.11.1.jar, examining for mod candidates
+[15:12:45] [Client thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\org.scala-lang\scala-swing_2.11\1.0.1\b1cdd92bd47b1e1837139c1c53020e86bb9112ae\scala-swing_2.11-1.0.1.jar, examining for mod candidates
+[15:12:45] [Client thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\org.scala-lang\scala-xml_2.11\1.0.2\7a80ec00aec122fba7cd4e0d4cdd87ff7e4cb6d0\scala-xml_2.11-1.0.2.jar, examining for mod candidates
+[15:12:45] [Client thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\net.sf.jopt-simple\jopt-simple\4.5\6065cc95c661255349c1d0756657be17c29a4fd3\jopt-simple-4.5.jar, examining for mod candidates
+[15:12:45] [Client thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\lzma\lzma\0.0.1\521616dc7487b42bef0e803bd2fa3faf668101d7\lzma-0.0.1.jar, examining for mod candidates
+[15:12:45] [Client thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\com.mojang\realms\1.3.5\807ae355ee63583becd7ea60e76aab1532bb42e\realms-1.3.5.jar, examining for mod candidates
+[15:12:45] [Client thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\org.apache.commons\commons-compress\1.8.1\a698750c16740fd5b3871425f4cb3bbaa87f529d\commons-compress-1.8.1.jar, examining for mod candidates
+[15:12:45] [Client thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\org.apache.httpcomponents\httpclient\4.3.3\18f4247ff4572a074444572cee34647c43e7c9c7\httpclient-4.3.3.jar, examining for mod candidates
+[15:12:45] [Client thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\commons-logging\commons-logging\1.1.3\f6f66e966c70a83ffbdb6f17a0919eaf7c8aca7f\commons-logging-1.1.3.jar, examining for mod candidates
+[15:12:45] [Client thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\org.apache.httpcomponents\httpcore\4.3.2\31fbbff1ddbf98f3aa7377c94d33b0447c646b6e\httpcore-4.3.2.jar, examining for mod candidates
+[15:12:45] [Client thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\java3d\vecmath\1.3.1\a0ae4f51da409fa0c20fa0ca59e6bbc9413ae71d\vecmath-1.3.1.jar, examining for mod candidates
+[15:12:45] [Client thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\net.sf.trove4j\trove4j\3.0.3\42ccaf4761f0dfdfa805c9e340d99a755907e2dd\trove4j-3.0.3.jar, examining for mod candidates
+[15:12:45] [Client thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\com.ibm.icu\icu4j-core-mojang\51.2\63d216a9311cca6be337c1e458e587f99d382b84\icu4j-core-mojang-51.2.jar, examining for mod candidates
+[15:12:45] [Client thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\com.paulscode\codecjorbis\20101023\c73b5636faf089d9f00e8732a829577de25237ee\codecjorbis-20101023.jar, examining for mod candidates
+[15:12:45] [Client thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\com.paulscode\codecwav\20101023\12f031cfe88fef5c1dd36c563c0a3a69bd7261da\codecwav-20101023.jar, examining for mod candidates
+[15:12:45] [Client thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\com.paulscode\libraryjavasound\20101123\5c5e304366f75f9eaa2e8cca546a1fb6109348b3\libraryjavasound-20101123.jar, examining for mod candidates
+[15:12:45] [Client thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\com.paulscode\librarylwjglopenal\20100824\73e80d0794c39665aec3f62eee88ca91676674ef\librarylwjglopenal-20100824.jar, examining for mod candidates
+[15:12:45] [Client thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\com.paulscode\soundsystem\20120107\419c05fe9be71f792b2d76cfc9b67f1ed0fec7f6\soundsystem-20120107.jar, examining for mod candidates
+[15:12:45] [Client thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\io.netty\netty-all\4.0.10.Final\9e50bd52ffe257a0e2cd8d971688d6ce7d174325\netty-all-4.0.10.Final.jar, examining for mod candidates
+[15:12:45] [Client thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\com.google.guava\guava\17.0\9c6ef172e8de35fd8d4d8783e4821e57cdef7445\guava-17.0.jar, examining for mod candidates
+[15:12:45] [Client thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\org.apache.commons\commons-lang3\3.3.2\90a3822c38ec8c996e84c16a3477ef632cbc87a3\commons-lang3-3.3.2.jar, examining for mod candidates
+[15:12:45] [Client thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\commons-io\commons-io\2.4\b1b6ea3b7e4aa4f492509a4952029cd8e48019ad\commons-io-2.4.jar, examining for mod candidates
+[15:12:45] [Client thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\commons-codec\commons-codec\1.9\9ce04e34240f674bc72680f8b843b1457383161a\commons-codec-1.9.jar, examining for mod candidates
+[15:12:45] [Client thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput\2.0.5\39c7796b469a600f72380316f6b1f11db6c2c7c4\jinput-2.0.5.jar, examining for mod candidates
+[15:12:45] [Client thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\net.java.jutils\jutils\1.0.0\e12fe1fda814bd348c1579329c86943d2cd3c6a6\jutils-1.0.0.jar, examining for mod candidates
+[15:12:45] [Client thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.2.4\a60a5e993c98c864010053cb901b7eab25306568\gson-2.2.4.jar, examining for mod candidates
+[15:12:45] [Client thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\com.mojang\authlib\1.5.16\ef1582b11fd0943d069cdcb72e99008ac209a283\authlib-1.5.16.jar, examining for mod candidates
+[15:12:45] [Client thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\org.apache.logging.log4j\log4j-api\2.0-beta9\1dd66e68cccd907880229f9e2de1314bd13ff785\log4j-api-2.0-beta9.jar, examining for mod candidates
+[15:12:45] [Client thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\org.apache.logging.log4j\log4j-core\2.0-beta9\678861ba1b2e1fccb594bb0ca03114bb05da9695\log4j-core-2.0-beta9.jar, examining for mod candidates
+[15:12:45] [Client thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\org.lwjgl.lwjgl\lwjgl\2.9.1\f58c5aabcef0e41718a564be9f8e412fff8db847\lwjgl-2.9.1.jar, examining for mod candidates
+[15:12:45] [Client thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\org.lwjgl.lwjgl\lwjgl_util\2.9.1\290d7ba8a1bd9566f5ddf16ad06f09af5ec9b20e\lwjgl_util-2.9.1.jar, examining for mod candidates
+[15:12:45] [Client thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\tv.twitch\twitch\5.16\1f55f009c61637c10c0acfb8b5ffc600f30044b4\twitch-5.16.jar, examining for mod candidates
+[15:12:45] [Client thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\org.scala-lang\scala-actors\2.11.0\8ccfb6541de179bb1c4d45cf414acee069b7f78b\scala-actors-2.11.0.jar, examining for mod candidates
+[15:12:45] [Client thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\org.scala-lang.modules\scala-xml_2.11\1.0.2\820fbca7e524b530fdadc594c39d49a21ea0337e\scala-xml_2.11-1.0.2.jar, examining for mod candidates
+[15:12:45] [Client thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\org.scala-lang.modules\scala-parser-combinators_2.11\1.0.1\f05d7345bf5a58924f2837c6c1f4d73a938e1ff0\scala-parser-combinators_2.11-1.0.1.jar, examining for mod candidates
+[15:12:45] [Client thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput-platform\2.0.5\7ff832a6eb9ab6a767f1ade2b548092d0fa64795\jinput-platform-2.0.5-natives-linux.jar, examining for mod candidates
+[15:12:45] [Client thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput-platform\2.0.5\385ee093e01f587f30ee1c8a2ee7d408fd732e16\jinput-platform-2.0.5-natives-windows.jar, examining for mod candidates
+[15:12:45] [Client thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput-platform\2.0.5\53f9c919f34d2ca9de8c51fc4e1e8282029a9232\jinput-platform-2.0.5-natives-osx.jar, examining for mod candidates
+[15:12:45] [Client thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\tv.twitch\twitch-platform\5.16\7c6affe439099806a4f552da14c42f9d643d8b23\twitch-platform-5.16-natives-windows-32.jar, examining for mod candidates
+[15:12:45] [Client thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\tv.twitch\twitch-platform\5.16\39d0c3d363735b4785598e0e7fbf8297c706a9f9\twitch-platform-5.16-natives-windows-64.jar, examining for mod candidates
+[15:12:45] [Client thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\tv.twitch\twitch-platform\5.16\62503ee712766cf77f97252e5902786fd834b8c5\twitch-platform-5.16-natives-osx.jar, examining for mod candidates
+[15:12:45] [Client thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\tv.twitch\twitch-external-platform\4.5\18215140f010c05b9f86ef6f0f8871954d2ccebf\twitch-external-platform-4.5-natives-windows-32.jar, examining for mod candidates
+[15:12:45] [Client thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\tv.twitch\twitch-external-platform\4.5\c3cde57891b935d41b6680a9c5e1502eeab76d86\twitch-external-platform-4.5-natives-windows-64.jar, examining for mod candidates
+[15:12:45] [Client thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\org.lwjgl.lwjgl\lwjgl-platform\2.9.1\4c517eca808522457dd95ee8fc1fbcdbb602efbe\lwjgl-platform-2.9.1-natives-windows.jar, examining for mod candidates
+[15:12:45] [Client thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\org.lwjgl.lwjgl\lwjgl-platform\2.9.1\aa9aae879af8eb378e22cfc64db56ec2ca9a44d1\lwjgl-platform-2.9.1-natives-linux.jar, examining for mod candidates
+[15:12:45] [Client thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\org.lwjgl.lwjgl\lwjgl-platform\2.9.1\2d12c83fdfbc04ecabf02c7bc8cc54d034f0daac\lwjgl-platform-2.9.1-natives-osx.jar, examining for mod candidates
+[15:12:45] [Client thread/DEBUG] [FML/]: Found a minecraft related file at G:\Modding\TFC Addons\Dev Files\Waila-1.5.11-RC2-NONEI_1.7.10-dev.jar, examining for mod candidates
+[15:12:45] [Client thread/DEBUG] [FML/]: Found a minecraft related directory at C:\Users\Jared Jarvis\.gradle\caches\minecraft\net\minecraftforge\forge\1.7.10-10.13.4.1558-1.7.10\start, examining for mod candidates
+[15:12:45] [Client thread/DEBUG] [FML/]: Found a minecraft related directory at G:\Modding\TFC Addons\TFCTemplateMod\bin, examining for mod candidates
+[15:12:45] [Client thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Jared Jarvis\.gradle\caches\minecraft\net\minecraftforge\forge\1.7.10-10.13.2.1291\forgeSrc-1.7.10-10.13.2.1291.jar, examining for mod candidates
+[15:12:45] [Client thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\Jared Jarvis\.gradle\caches\modules-2\files-2.1\net.minecraft\launchwrapper\1.11\9c0592c6e1e9ea296a70948081bd4cc84dda1289\launchwrapper-1.11.jar, examining for mod candidates
+[15:12:45] [Client thread/DEBUG] [FML/]: Found a minecraft related directory at C:\Users\Jared Jarvis\.gradle\caches\minecraft\net\minecraftforge\forge\1.7.10-10.13.2.1291\start, examining for mod candidates
+[15:12:45] [Client thread/DEBUG] [FML/]: Minecraft jar mods loaded successfully
+[15:12:45] [Client thread/INFO] [FML/]: Found 0 mods from the command line. Injecting into mod discoverer
+[15:12:45] [Client thread/INFO] [FML/]: Searching G:\Modding\TFC Addons\TFCTemplateMod\runClient\mods for mods
+[15:12:45] [Client thread/DEBUG] [FML/]: Found a candidate mod directory 1.7.10
+[15:12:45] [Client thread/INFO] [FML/]: Also searching G:\Modding\TFC Addons\TFCTemplateMod\runClient\mods\1.7.10 for mods
+[15:12:45] [Client thread/DEBUG] [FML/]: Found a candidate zip or jar file TerraFirmaCraftNEIplugin-1.7.10-1.5.3.25.jar
+[15:12:45] [Client thread/DEBUG] [FML/]: Examining directory bin for potential mods
+[15:12:45] [Client thread/DEBUG] [FML/]: Found an mcmod.info file in directory bin
+[15:12:45] [Client thread/TRACE] [FML/]: Recursing into package assets
+[15:12:45] [Client thread/TRACE] [FML/]: Recursing into package assets.terrafirmacraft
+[15:12:45] [Client thread/TRACE] [FML/]: Recursing into package assets.terrafirmacraft.lang
+[15:12:45] [Client thread/TRACE] [FML/]: Recursing into package assets.terrafirmacraft.shaders
+[15:12:45] [Client thread/TRACE] [FML/]: Recursing into package assets.terrafirmacraft.shaders.post
+[15:12:45] [Client thread/TRACE] [FML/]: Recursing into package assets.terrafirmacraft.shaders.program
+[15:12:45] [Client thread/TRACE] [FML/]: Recursing into package assets.terrafirmacraft.sounds
+[15:12:45] [Client thread/TRACE] [FML/]: Recursing into package assets.terrafirmacraft.sounds.music
+[15:12:45] [Client thread/TRACE] [FML/]: Recursing into package assets.terrafirmacraft.textures
+[15:12:45] [Client thread/TRACE] [FML/]: Recursing into package assets.terrafirmacraft.textures.blocks
+[15:12:45] [Client thread/TRACE] [FML/]: Recursing into package assets.terrafirmacraft.textures.blocks.clay
+[15:12:45] [Client thread/TRACE] [FML/]: Recursing into package assets.terrafirmacraft.textures.blocks.devices
+[15:12:46] [Client thread/TRACE] [FML/]: Recursing into package assets.terrafirmacraft.textures.blocks.farmland
+[15:12:46] [Client thread/TRACE] [FML/]: Recursing into package assets.terrafirmacraft.textures.blocks.metal
+[15:12:46] [Client thread/TRACE] [FML/]: Recursing into package assets.terrafirmacraft.textures.blocks.ores
+[15:12:46] [Client thread/TRACE] [FML/]: Recursing into package assets.terrafirmacraft.textures.blocks.plants
+[15:12:46] [Client thread/TRACE] [FML/]: Recursing into package assets.terrafirmacraft.textures.blocks.plants.crops
+[15:12:46] [Client thread/TRACE] [FML/]: Recursing into package assets.terrafirmacraft.textures.blocks.rocks
+[15:12:46] [Client thread/TRACE] [FML/]: Recursing into package assets.terrafirmacraft.textures.blocks.sand
+[15:12:46] [Client thread/TRACE] [FML/]: Recursing into package assets.terrafirmacraft.textures.blocks.soil
+[15:12:46] [Client thread/TRACE] [FML/]: Recursing into package assets.terrafirmacraft.textures.blocks.wood
+[15:12:46] [Client thread/TRACE] [FML/]: Recursing into package assets.terrafirmacraft.textures.blocks.wood.doors
+[15:12:46] [Client thread/TRACE] [FML/]: Recursing into package assets.terrafirmacraft.textures.blocks.wood.fruit trees
+[15:12:46] [Client thread/TRACE] [FML/]: Recursing into package assets.terrafirmacraft.textures.blocks.wood.trees
+[15:12:46] [Client thread/TRACE] [FML/]: Recursing into package assets.terrafirmacraft.textures.blocks.wood.WoodSheet
+[15:12:46] [Client thread/TRACE] [FML/]: Recursing into package assets.terrafirmacraft.textures.gui
+[15:12:46] [Client thread/TRACE] [FML/]: Recursing into package assets.terrafirmacraft.textures.items
+[15:12:46] [Client thread/TRACE] [FML/]: Recursing into package assets.terrafirmacraft.textures.items.armor
+[15:12:46] [Client thread/TRACE] [FML/]: Recursing into package assets.terrafirmacraft.textures.items.devices
+[15:12:46] [Client thread/TRACE] [FML/]: Recursing into package assets.terrafirmacraft.textures.items.devices.toolrack UNUSED
+[15:12:46] [Client thread/TRACE] [FML/]: Recursing into package assets.terrafirmacraft.textures.items.food
+[15:12:46] [Client thread/TRACE] [FML/]: Recursing into package assets.terrafirmacraft.textures.items.food.unused
+[15:12:46] [Client thread/TRACE] [FML/]: Recursing into package assets.terrafirmacraft.textures.items.gems
+[15:12:46] [Client thread/TRACE] [FML/]: Recursing into package assets.terrafirmacraft.textures.items.ingots
+[15:12:46] [Client thread/TRACE] [FML/]: Recursing into package assets.terrafirmacraft.textures.items.ore
+[15:12:46] [Client thread/TRACE] [FML/]: Recursing into package assets.terrafirmacraft.textures.items.plants
+[15:12:46] [Client thread/TRACE] [FML/]: Recursing into package assets.terrafirmacraft.textures.items.pottery
+[15:12:46] [Client thread/TRACE] [FML/]: Recursing into package assets.terrafirmacraft.textures.items.rocks
+[15:12:46] [Client thread/TRACE] [FML/]: Recursing into package assets.terrafirmacraft.textures.items.rocks.flatrocks
+[15:12:46] [Client thread/TRACE] [FML/]: Recursing into package assets.terrafirmacraft.textures.items.toolheads
+[15:12:46] [Client thread/TRACE] [FML/]: Recursing into package assets.terrafirmacraft.textures.items.toolheads.unused
+[15:12:46] [Client thread/TRACE] [FML/]: Recursing into package assets.terrafirmacraft.textures.items.tools
+[15:12:46] [Client thread/TRACE] [FML/]: Recursing into package assets.terrafirmacraft.textures.items.tools.unused
+[15:12:46] [Client thread/TRACE] [FML/]: Recursing into package assets.terrafirmacraft.textures.items.wood
+[15:12:47] [Client thread/TRACE] [FML/]: Recursing into package assets.terrafirmacraft.textures.items.wood.fruit trees
+[15:12:47] [Client thread/TRACE] [FML/]: Recursing into package assets.terrafirmacraft.textures.items.wood.unused
+[15:12:47] [Client thread/TRACE] [FML/]: Recursing into package assets.terrafirmacraft.textures.mob
+[15:12:47] [Client thread/TRACE] [FML/]: Recursing into package assets.terrafirmacraft.textures.models
+[15:12:47] [Client thread/TRACE] [FML/]: Recursing into package assets.terrafirmacraft.textures.models.armor
+[15:12:47] [Client thread/TRACE] [FML/]: Recursing into package assets.terrafirmacraft.textures.models.chest
+[15:12:47] [Client thread/TRACE] [FML/]: Recursing into package com
+[15:12:47] [Client thread/TRACE] [FML/]: Recursing into package com.bioxx
+[15:12:47] [Client thread/TRACE] [FML/]: Recursing into package com.bioxx.tfc
+[15:12:47] [Client thread/TRACE] [FML/]: Recursing into package com.bioxx.tfc.api
+[15:12:47] [Client thread/TRACE] [FML/]: Recursing into package com.bioxx.tfc.api.Constant
+[15:12:47] [Client thread/TRACE] [FML/]: Recursing into package com.bioxx.tfc.api.Crafting
+[15:12:47] [Client thread/TRACE] [FML/]: Recursing into package com.bioxx.tfc.api.Entities
+[15:12:47] [Client thread/TRACE] [FML/]: Recursing into package com.bioxx.tfc.api.Enums
+[15:12:47] [Client thread/TRACE] [FML/]: Recursing into package com.bioxx.tfc.api.Events
+[15:12:47] [Client thread/TRACE] [FML/]: Recursing into package com.bioxx.tfc.api.Interfaces
+[15:12:47] [Client thread/TRACE] [FML/]: Recursing into package com.bioxx.tfc.api.TileEntities
+[15:12:47] [Client thread/TRACE] [FML/]: Recursing into package com.bioxx.tfc.api.Tools
+[15:12:47] [Client thread/TRACE] [FML/]: Recursing into package com.bioxx.tfc.api.Util
+[15:12:47] [Client thread/TRACE] [FML/]: Recursing into package com.bioxx.tfc.ASM
+[15:12:47] [Client thread/TRACE] [FML/]: Recursing into package com.bioxx.tfc.ASM.Transform
+[15:12:47] [Client thread/TRACE] [FML/]: Recursing into package com.bioxx.tfc.Blocks
+[15:12:47] [Client thread/TRACE] [FML/]: Recursing into package com.bioxx.tfc.Blocks.Devices
+[15:12:47] [Client thread/TRACE] [FML/]: Recursing into package com.bioxx.tfc.Blocks.Flora
+[15:12:47] [Client thread/TRACE] [FML/]: Recursing into package com.bioxx.tfc.Blocks.Liquids
+[15:12:48] [Client thread/TRACE] [FML/]: Recursing into package com.bioxx.tfc.Blocks.Terrain
+[15:12:48] [Client thread/TRACE] [FML/]: Recursing into package com.bioxx.tfc.Blocks.Vanilla
+[15:12:48] [Client thread/TRACE] [FML/]: Recursing into package com.bioxx.tfc.Chunkdata
+[15:12:48] [Client thread/TRACE] [FML/]: Recursing into package com.bioxx.tfc.Commands
+[15:12:48] [Client thread/TRACE] [FML/]: Recursing into package com.bioxx.tfc.Containers
+[15:12:48] [Client thread/TRACE] [FML/]: Recursing into package com.bioxx.tfc.Containers.Slots
+[15:12:48] [Client thread/TRACE] [FML/]: Recursing into package com.bioxx.tfc.Core
+[15:12:48] [Client thread/TRACE] [FML/]: Recursing into package com.bioxx.tfc.Core.Config
+[15:12:48] [Client thread/TRACE] [FML/]: Recursing into package com.bioxx.tfc.Core.Metal
+[15:12:48] [Client thread/TRACE] [FML/]: Recursing into package com.bioxx.tfc.Core.Player
+[15:12:48] [Client thread/TRACE] [FML/]: Recursing into package com.bioxx.tfc.Core.Util
+[15:12:48] [Client thread/TRACE] [FML/]: Recursing into package com.bioxx.tfc.Effects
+[15:12:48] [Client thread/TRACE] [FML/]: Recursing into package com.bioxx.tfc.Entities
+[15:12:48] [Client thread/TRACE] [FML/]: Recursing into package com.bioxx.tfc.Entities.AI
+[15:12:48] [Client thread/TRACE] [FML/]: Recursing into package com.bioxx.tfc.Entities.Mobs
+[15:12:49] [Client thread/TRACE] [FML/]: Recursing into package com.bioxx.tfc.Food
+[15:12:49] [Client thread/TRACE] [FML/]: Recursing into package com.bioxx.tfc.GUI
+[15:12:49] [Client thread/TRACE] [FML/]: Recursing into package com.bioxx.tfc.Handlers
+[15:12:49] [Client thread/TRACE] [FML/]: Recursing into package com.bioxx.tfc.Handlers.Client
+[15:12:49] [Client thread/TRACE] [FML/]: Recursing into package com.bioxx.tfc.Handlers.Network
+[15:12:49] [Client thread/TRACE] [FML/]: Recursing into package com.bioxx.tfc.Items
+[15:12:49] [Client thread/TRACE] [FML/]: Recursing into package com.bioxx.tfc.Items.ItemBlocks
+[15:12:49] [Client thread/TRACE] [FML/]: Recursing into package com.bioxx.tfc.Items.Pottery
+[15:12:49] [Client thread/TRACE] [FML/]: Recursing into package com.bioxx.tfc.Items.Tools
+[15:12:49] [Client thread/TRACE] [FML/]: Recursing into package com.bioxx.tfc.Render
+[15:12:49] [Client thread/TRACE] [FML/]: Recursing into package com.bioxx.tfc.Render.Blocks
+[15:12:50] [Client thread/TRACE] [FML/]: Recursing into package com.bioxx.tfc.Render.Item
+[15:12:50] [Client thread/TRACE] [FML/]: Recursing into package com.bioxx.tfc.Render.Models
+[15:12:50] [Client thread/TRACE] [FML/]: Recursing into package com.bioxx.tfc.Render.TESR
+[15:12:50] [Client thread/DEBUG] [FML/]: Identified a mod of type Lcpw/mods/fml/common/Mod; (com.bioxx.tfc.TerraFirmaCraft) - loading
+[15:12:50] [Client thread/TRACE] [terrafirmacraft/]: Using mcmod dependency info : [] [Forge@[10.13.4.1448,)] []
+[15:12:50] [Client thread/TRACE] [FML/]: Recursing into package com.bioxx.tfc.TileEntities
+[15:12:50] [Client thread/TRACE] [FML/]: Recursing into package com.bioxx.tfc.Tools
+[15:12:50] [Client thread/TRACE] [FML/]: Recursing into package com.bioxx.tfc.WAILA
+[15:12:50] [Client thread/TRACE] [FML/]: Recursing into package com.bioxx.tfc.WorldGen
+[15:12:50] [Client thread/TRACE] [FML/]: Recursing into package com.bioxx.tfc.WorldGen.Data
+[15:12:50] [Client thread/TRACE] [FML/]: Recursing into package com.bioxx.tfc.WorldGen.Generators
+[15:12:50] [Client thread/TRACE] [FML/]: Recursing into package com.bioxx.tfc.WorldGen.Generators.Trees
+[15:12:50] [Client thread/TRACE] [FML/]: Recursing into package com.bioxx.tfc.WorldGen.GenLayers
+[15:12:50] [Client thread/TRACE] [FML/]: Recursing into package com.bioxx.tfc.WorldGen.GenLayers.Biome
+[15:12:50] [Client thread/TRACE] [FML/]: Recursing into package com.bioxx.tfc.WorldGen.GenLayers.DataLayers
+[15:12:50] [Client thread/TRACE] [FML/]: Recursing into package com.bioxx.tfc.WorldGen.GenLayers.DataLayers.Drainage
+[15:12:50] [Client thread/TRACE] [FML/]: Recursing into package com.bioxx.tfc.WorldGen.GenLayers.DataLayers.EVT
+[15:12:50] [Client thread/TRACE] [FML/]: Recursing into package com.bioxx.tfc.WorldGen.GenLayers.DataLayers.PH
+[15:12:50] [Client thread/TRACE] [FML/]: Recursing into package com.bioxx.tfc.WorldGen.GenLayers.DataLayers.Rain
+[15:12:50] [Client thread/TRACE] [FML/]: Recursing into package com.bioxx.tfc.WorldGen.GenLayers.DataLayers.Rock
+[15:12:50] [Client thread/TRACE] [FML/]: Recursing into package com.bioxx.tfc.WorldGen.GenLayers.DataLayers.Stability
+[15:12:50] [Client thread/TRACE] [FML/]: Recursing into package com.bioxx.tfc.WorldGen.GenLayers.DataLayers.Tree
+[15:12:50] [Client thread/TRACE] [FML/]: Recursing into package com.bioxx.tfc.WorldGen.GenLayers.River
+[15:12:50] [Client thread/TRACE] [FML/]: Recursing into package com.bioxx.tfc.WorldGen.MapGen
+[15:12:50] [Client thread/TRACE] [FML/]: Recursing into package META-INF
+[15:12:50] [Client thread/DEBUG] [FML/]: Examining file CodeChickenCore-1.7.10-1.0.4.35-dev.jar for potential mods
+[15:12:50] [Client thread/DEBUG] [FML/]: The mod container CodeChickenCore-1.7.10-1.0.4.35-dev.jar appears to be missing an mcmod.info file
+[15:12:50] [Client thread/DEBUG] [FML/]: Examining file CodeChickenLib-1.7.10-1.1.3.127-dev.jar for potential mods
+[15:12:50] [Client thread/DEBUG] [FML/]: The mod container CodeChickenLib-1.7.10-1.1.3.127-dev.jar appears to be missing an mcmod.info file
+[15:12:50] [Client thread/DEBUG] [FML/]: Examining file NotEnoughItems-1.7.10-1.0.4.95-dev.jar for potential mods
+[15:12:50] [Client thread/DEBUG] [FML/]: The mod container NotEnoughItems-1.7.10-1.0.4.95-dev.jar appears to be missing an mcmod.info file
+[15:12:50] [Client thread/DEBUG] [FML/]: Examining file forgeSrc-1.7.10-10.13.4.1558-1.7.10.jar for potential mods
+[15:12:50] [Client thread/DEBUG] [FML/]: The mod container forgeSrc-1.7.10-10.13.4.1558-1.7.10.jar appears to be missing an mcmod.info file
+[15:12:51] [Client thread/DEBUG] [FML/]: Examining file launchwrapper-1.12.jar for potential mods
+[15:12:51] [Client thread/DEBUG] [FML/]: The mod container launchwrapper-1.12.jar appears to be missing an mcmod.info file
+[15:12:51] [Client thread/DEBUG] [FML/]: Examining file jsr305-1.3.9.jar for potential mods
+[15:12:51] [Client thread/DEBUG] [FML/]: The mod container jsr305-1.3.9.jar appears to be missing an mcmod.info file
+[15:12:51] [Client thread/DEBUG] [FML/]: Examining file asm-debug-all-5.0.3.jar for potential mods
+[15:12:51] [Client thread/DEBUG] [FML/]: The mod container asm-debug-all-5.0.3.jar appears to be missing an mcmod.info file
+[15:12:51] [Client thread/DEBUG] [FML/]: Examining file akka-actor_2.11-2.3.3.jar for potential mods
+[15:12:51] [Client thread/DEBUG] [FML/]: The mod container akka-actor_2.11-2.3.3.jar appears to be missing an mcmod.info file
+[15:12:52] [Client thread/DEBUG] [FML/]: Examining file config-1.2.1.jar for potential mods
+[15:12:52] [Client thread/DEBUG] [FML/]: The mod container config-1.2.1.jar appears to be missing an mcmod.info file
+[15:12:52] [Client thread/DEBUG] [FML/]: Examining file scala-actors-migration_2.11-1.1.0.jar for potential mods
+[15:12:52] [Client thread/DEBUG] [FML/]: The mod container scala-actors-migration_2.11-1.1.0.jar appears to be missing an mcmod.info file
+[15:12:52] [Client thread/DEBUG] [FML/]: Examining file scala-compiler-2.11.1.jar for potential mods
+[15:12:52] [Client thread/DEBUG] [FML/]: The mod container scala-compiler-2.11.1.jar appears to be missing an mcmod.info file
+[15:12:54] [Client thread/DEBUG] [FML/]: Examining file scala-continuations-library_2.11-1.0.2.jar for potential mods
+[15:12:54] [Client thread/DEBUG] [FML/]: The mod container scala-continuations-library_2.11-1.0.2.jar appears to be missing an mcmod.info file
+[15:12:54] [Client thread/DEBUG] [FML/]: Examining file scala-continuations-plugin_2.11.1-1.0.2.jar for potential mods
+[15:12:54] [Client thread/DEBUG] [FML/]: The mod container scala-continuations-plugin_2.11.1-1.0.2.jar appears to be missing an mcmod.info file
+[15:12:54] [Client thread/DEBUG] [FML/]: Examining file scala-library-2.11.1.jar for potential mods
+[15:12:54] [Client thread/DEBUG] [FML/]: The mod container scala-library-2.11.1.jar appears to be missing an mcmod.info file
+[15:12:54] [Client thread/DEBUG] [FML/]: Examining file scala-parser-combinators_2.11-1.0.1.jar for potential mods
+[15:12:54] [Client thread/DEBUG] [FML/]: The mod container scala-parser-combinators_2.11-1.0.1.jar appears to be missing an mcmod.info file
+[15:12:54] [Client thread/DEBUG] [FML/]: Examining file scala-reflect-2.11.1.jar for potential mods
+[15:12:54] [Client thread/DEBUG] [FML/]: The mod container scala-reflect-2.11.1.jar appears to be missing an mcmod.info file
+[15:12:55] [Client thread/DEBUG] [FML/]: Examining file scala-swing_2.11-1.0.1.jar for potential mods
+[15:12:55] [Client thread/DEBUG] [FML/]: The mod container scala-swing_2.11-1.0.1.jar appears to be missing an mcmod.info file
+[15:12:55] [Client thread/DEBUG] [FML/]: Examining file scala-xml_2.11-1.0.2.jar for potential mods
+[15:12:55] [Client thread/DEBUG] [FML/]: The mod container scala-xml_2.11-1.0.2.jar appears to be missing an mcmod.info file
+[15:12:55] [Client thread/DEBUG] [FML/]: Examining file jopt-simple-4.5.jar for potential mods
+[15:12:55] [Client thread/DEBUG] [FML/]: The mod container jopt-simple-4.5.jar appears to be missing an mcmod.info file
+[15:12:55] [Client thread/DEBUG] [FML/]: Examining file lzma-0.0.1.jar for potential mods
+[15:12:55] [Client thread/DEBUG] [FML/]: The mod container lzma-0.0.1.jar appears to be missing an mcmod.info file
+[15:12:55] [Client thread/DEBUG] [FML/]: Examining file realms-1.3.5.jar for potential mods
+[15:12:55] [Client thread/DEBUG] [FML/]: The mod container realms-1.3.5.jar appears to be missing an mcmod.info file
+[15:12:55] [Client thread/DEBUG] [FML/]: Examining file commons-compress-1.8.1.jar for potential mods
+[15:12:55] [Client thread/DEBUG] [FML/]: The mod container commons-compress-1.8.1.jar appears to be missing an mcmod.info file
+[15:12:55] [Client thread/DEBUG] [FML/]: Examining file httpclient-4.3.3.jar for potential mods
+[15:12:55] [Client thread/DEBUG] [FML/]: The mod container httpclient-4.3.3.jar appears to be missing an mcmod.info file
+[15:12:55] [Client thread/DEBUG] [FML/]: Examining file commons-logging-1.1.3.jar for potential mods
+[15:12:55] [Client thread/DEBUG] [FML/]: The mod container commons-logging-1.1.3.jar appears to be missing an mcmod.info file
+[15:12:55] [Client thread/DEBUG] [FML/]: Examining file httpcore-4.3.2.jar for potential mods
+[15:12:55] [Client thread/DEBUG] [FML/]: The mod container httpcore-4.3.2.jar appears to be missing an mcmod.info file
+[15:12:55] [Client thread/DEBUG] [FML/]: Examining file vecmath-1.3.1.jar for potential mods
+[15:12:55] [Client thread/DEBUG] [FML/]: The mod container vecmath-1.3.1.jar appears to be missing an mcmod.info file
+[15:12:55] [Client thread/DEBUG] [FML/]: Examining file trove4j-3.0.3.jar for potential mods
+[15:12:55] [Client thread/DEBUG] [FML/]: The mod container trove4j-3.0.3.jar appears to be missing an mcmod.info file
+[15:12:55] [Client thread/DEBUG] [FML/]: Examining file icu4j-core-mojang-51.2.jar for potential mods
+[15:12:55] [Client thread/DEBUG] [FML/]: The mod container icu4j-core-mojang-51.2.jar appears to be missing an mcmod.info file
+[15:12:55] [Client thread/DEBUG] [FML/]: Examining file codecjorbis-20101023.jar for potential mods
+[15:12:55] [Client thread/DEBUG] [FML/]: The mod container codecjorbis-20101023.jar appears to be missing an mcmod.info file
+[15:12:55] [Client thread/DEBUG] [FML/]: Examining file codecwav-20101023.jar for potential mods
+[15:12:55] [Client thread/DEBUG] [FML/]: The mod container codecwav-20101023.jar appears to be missing an mcmod.info file
+[15:12:55] [Client thread/DEBUG] [FML/]: Examining file libraryjavasound-20101123.jar for potential mods
+[15:12:55] [Client thread/DEBUG] [FML/]: The mod container libraryjavasound-20101123.jar appears to be missing an mcmod.info file
+[15:12:55] [Client thread/DEBUG] [FML/]: Examining file librarylwjglopenal-20100824.jar for potential mods
+[15:12:55] [Client thread/DEBUG] [FML/]: The mod container librarylwjglopenal-20100824.jar appears to be missing an mcmod.info file
+[15:12:55] [Client thread/DEBUG] [FML/]: Examining file soundsystem-20120107.jar for potential mods
+[15:12:55] [Client thread/DEBUG] [FML/]: The mod container soundsystem-20120107.jar appears to be missing an mcmod.info file
+[15:12:55] [Client thread/DEBUG] [FML/]: Examining file netty-all-4.0.10.Final.jar for potential mods
+[15:12:55] [Client thread/DEBUG] [FML/]: The mod container netty-all-4.0.10.Final.jar appears to be missing an mcmod.info file
+[15:12:56] [Client thread/DEBUG] [FML/]: Examining file guava-17.0.jar for potential mods
+[15:12:56] [Client thread/DEBUG] [FML/]: The mod container guava-17.0.jar appears to be missing an mcmod.info file
+[15:12:56] [Client thread/DEBUG] [FML/]: Examining file commons-lang3-3.3.2.jar for potential mods
+[15:12:56] [Client thread/DEBUG] [FML/]: The mod container commons-lang3-3.3.2.jar appears to be missing an mcmod.info file
+[15:12:56] [Client thread/DEBUG] [FML/]: Examining file commons-io-2.4.jar for potential mods
+[15:12:56] [Client thread/DEBUG] [FML/]: The mod container commons-io-2.4.jar appears to be missing an mcmod.info file
+[15:12:56] [Client thread/DEBUG] [FML/]: Examining file commons-codec-1.9.jar for potential mods
+[15:12:56] [Client thread/DEBUG] [FML/]: The mod container commons-codec-1.9.jar appears to be missing an mcmod.info file
+[15:12:56] [Client thread/DEBUG] [FML/]: Examining file jinput-2.0.5.jar for potential mods
+[15:12:56] [Client thread/DEBUG] [FML/]: The mod container jinput-2.0.5.jar appears to be missing an mcmod.info file
+[15:12:56] [Client thread/DEBUG] [FML/]: Examining file jutils-1.0.0.jar for potential mods
+[15:12:56] [Client thread/DEBUG] [FML/]: The mod container jutils-1.0.0.jar appears to be missing an mcmod.info file
+[15:12:56] [Client thread/DEBUG] [FML/]: Examining file gson-2.2.4.jar for potential mods
+[15:12:56] [Client thread/DEBUG] [FML/]: The mod container gson-2.2.4.jar appears to be missing an mcmod.info file
+[15:12:56] [Client thread/DEBUG] [FML/]: Examining file authlib-1.5.16.jar for potential mods
+[15:12:56] [Client thread/DEBUG] [FML/]: The mod container authlib-1.5.16.jar appears to be missing an mcmod.info file
+[15:12:56] [Client thread/DEBUG] [FML/]: Examining file log4j-api-2.0-beta9.jar for potential mods
+[15:12:56] [Client thread/DEBUG] [FML/]: The mod container log4j-api-2.0-beta9.jar appears to be missing an mcmod.info file
+[15:12:56] [Client thread/DEBUG] [FML/]: Examining file log4j-core-2.0-beta9.jar for potential mods
+[15:12:56] [Client thread/DEBUG] [FML/]: The mod container log4j-core-2.0-beta9.jar appears to be missing an mcmod.info file
+[15:12:56] [Client thread/DEBUG] [FML/]: Examining file lwjgl-2.9.1.jar for potential mods
+[15:12:56] [Client thread/DEBUG] [FML/]: The mod container lwjgl-2.9.1.jar appears to be missing an mcmod.info file
+[15:12:56] [Client thread/DEBUG] [FML/]: Examining file lwjgl_util-2.9.1.jar for potential mods
+[15:12:56] [Client thread/DEBUG] [FML/]: The mod container lwjgl_util-2.9.1.jar appears to be missing an mcmod.info file
+[15:12:56] [Client thread/DEBUG] [FML/]: Examining file twitch-5.16.jar for potential mods
+[15:12:56] [Client thread/DEBUG] [FML/]: The mod container twitch-5.16.jar appears to be missing an mcmod.info file
+[15:12:56] [Client thread/DEBUG] [FML/]: Examining file scala-actors-2.11.0.jar for potential mods
+[15:12:56] [Client thread/DEBUG] [FML/]: The mod container scala-actors-2.11.0.jar appears to be missing an mcmod.info file
+[15:12:56] [Client thread/DEBUG] [FML/]: Examining file scala-xml_2.11-1.0.2.jar for potential mods
+[15:12:56] [Client thread/DEBUG] [FML/]: The mod container scala-xml_2.11-1.0.2.jar appears to be missing an mcmod.info file
+[15:12:56] [Client thread/DEBUG] [FML/]: Examining file scala-parser-combinators_2.11-1.0.1.jar for potential mods
+[15:12:56] [Client thread/DEBUG] [FML/]: The mod container scala-parser-combinators_2.11-1.0.1.jar appears to be missing an mcmod.info file
+[15:12:56] [Client thread/DEBUG] [FML/]: Examining file jinput-platform-2.0.5-natives-linux.jar for potential mods
+[15:12:56] [Client thread/DEBUG] [FML/]: The mod container jinput-platform-2.0.5-natives-linux.jar appears to be missing an mcmod.info file
+[15:12:56] [Client thread/DEBUG] [FML/]: Examining file jinput-platform-2.0.5-natives-windows.jar for potential mods
+[15:12:56] [Client thread/DEBUG] [FML/]: The mod container jinput-platform-2.0.5-natives-windows.jar appears to be missing an mcmod.info file
+[15:12:56] [Client thread/DEBUG] [FML/]: Examining file jinput-platform-2.0.5-natives-osx.jar for potential mods
+[15:12:56] [Client thread/DEBUG] [FML/]: The mod container jinput-platform-2.0.5-natives-osx.jar appears to be missing an mcmod.info file
+[15:12:56] [Client thread/DEBUG] [FML/]: Examining file twitch-platform-5.16-natives-windows-32.jar for potential mods
+[15:12:56] [Client thread/DEBUG] [FML/]: The mod container twitch-platform-5.16-natives-windows-32.jar appears to be missing an mcmod.info file
+[15:12:56] [Client thread/DEBUG] [FML/]: Examining file twitch-platform-5.16-natives-windows-64.jar for potential mods
+[15:12:56] [Client thread/DEBUG] [FML/]: The mod container twitch-platform-5.16-natives-windows-64.jar appears to be missing an mcmod.info file
+[15:12:56] [Client thread/DEBUG] [FML/]: Examining file twitch-platform-5.16-natives-osx.jar for potential mods
+[15:12:56] [Client thread/DEBUG] [FML/]: The mod container twitch-platform-5.16-natives-osx.jar appears to be missing an mcmod.info file
+[15:12:56] [Client thread/DEBUG] [FML/]: Examining file twitch-external-platform-4.5-natives-windows-32.jar for potential mods
+[15:12:56] [Client thread/DEBUG] [FML/]: The mod container twitch-external-platform-4.5-natives-windows-32.jar appears to be missing an mcmod.info file
+[15:12:56] [Client thread/DEBUG] [FML/]: Examining file twitch-external-platform-4.5-natives-windows-64.jar for potential mods
+[15:12:56] [Client thread/DEBUG] [FML/]: The mod container twitch-external-platform-4.5-natives-windows-64.jar appears to be missing an mcmod.info file
+[15:12:56] [Client thread/DEBUG] [FML/]: Examining file lwjgl-platform-2.9.1-natives-windows.jar for potential mods
+[15:12:56] [Client thread/DEBUG] [FML/]: The mod container lwjgl-platform-2.9.1-natives-windows.jar appears to be missing an mcmod.info file
+[15:12:56] [Client thread/DEBUG] [FML/]: Examining file lwjgl-platform-2.9.1-natives-linux.jar for potential mods
+[15:12:56] [Client thread/DEBUG] [FML/]: The mod container lwjgl-platform-2.9.1-natives-linux.jar appears to be missing an mcmod.info file
+[15:12:56] [Client thread/DEBUG] [FML/]: Examining file lwjgl-platform-2.9.1-natives-osx.jar for potential mods
+[15:12:56] [Client thread/DEBUG] [FML/]: The mod container lwjgl-platform-2.9.1-natives-osx.jar appears to be missing an mcmod.info file
+[15:12:56] [Client thread/DEBUG] [FML/]: Examining file Waila-1.5.11-RC2-NONEI_1.7.10-dev.jar for potential mods
+[15:12:56] [Client thread/TRACE] [FML/]: Located mcmod.info file in file Waila-1.5.11-RC2-NONEI_1.7.10-dev.jar
+[15:12:56] [Client thread/DEBUG] [FML/]: Identified a mod of type Lcpw/mods/fml/common/Mod; (mcp.mobius.waila.Waila) - loading
+[15:12:56] [Client thread/TRACE] [Waila/]: Parsed dependency info : [] [] []
+[15:12:56] [Client thread/DEBUG] [FML/]: Examining directory start for potential mods
+[15:12:56] [Client thread/DEBUG] [FML/]: No mcmod.info file found in directory start
+[15:12:56] [Client thread/TRACE] [FML/]: Recursing into package net
+[15:12:56] [Client thread/TRACE] [FML/]: Recursing into package net.minecraftforge
+[15:12:56] [Client thread/TRACE] [FML/]: Recursing into package net.minecraftforge.gradle
+[15:12:56] [Client thread/TRACE] [FML/]: Recursing into package net.minecraftforge.gradle.tweakers
+[15:12:56] [Client thread/DEBUG] [FML/]: Examining directory bin for potential mods
+[15:12:56] [Client thread/DEBUG] [FML/]: Found an mcmod.info file in directory bin
+[15:12:56] [Client thread/TRACE] [FML/]: Recursing into package assets
+[15:12:57] [Client thread/TRACE] [FML/]: Recursing into package assets.terrafirmacraft
+[15:12:57] [Client thread/TRACE] [FML/]: Recursing into package assets.terrafirmacraft.textures
+[15:12:57] [Client thread/TRACE] [FML/]: Recursing into package assets.terrafirmacraft.textures.items
+[15:12:57] [Client thread/TRACE] [FML/]: Recursing into package assets.terrafirmacraft.textures.items.food
+[15:12:57] [Client thread/TRACE] [FML/]: Recursing into package assets.tfcm
+[15:12:57] [Client thread/TRACE] [FML/]: Recursing into package assets.tfcm.lang
+[15:12:57] [Client thread/TRACE] [FML/]: Recursing into package assets.tfcm.textures
+[15:12:57] [Client thread/TRACE] [FML/]: Recursing into package assets.tfcm.textures.blocks
+[15:12:57] [Client thread/TRACE] [FML/]: Recursing into package assets.tfcm.textures.blocks.roads
+[15:12:57] [Client thread/TRACE] [FML/]: Recursing into package assets.tfcm.textures.gui
+[15:12:57] [Client thread/TRACE] [FML/]: Recursing into package assets.tfcm.textures.items
+[15:12:57] [Client thread/TRACE] [FML/]: Recursing into package assets.tfcm.textures.items.armor
+[15:12:57] [Client thread/TRACE] [FML/]: Recursing into package assets.tfcm.textures.items.pottery
+[15:12:57] [Client thread/TRACE] [FML/]: Recursing into package assets.tfcm.textures.items.projectileItems
+[15:12:57] [Client thread/TRACE] [FML/]: Recursing into package assets.tfcm.textures.items.toolheads
+[15:12:57] [Client thread/TRACE] [FML/]: Recursing into package assets.tfcm.textures.items.tools
+[15:12:57] [Client thread/TRACE] [FML/]: Recursing into package assets.tfcm.textures.models
+[15:12:57] [Client thread/TRACE] [FML/]: Recursing into package assets.tfcm.textures.models.armor
+[15:12:57] [Client thread/TRACE] [FML/]: Recursing into package assets.tfctemplatemod
+[15:12:57] [Client thread/TRACE] [FML/]: Recursing into package assets.tfctemplatemod.lang
+[15:12:57] [Client thread/TRACE] [FML/]: Recursing into package assets.tfctemplatemod.textures
+[15:12:57] [Client thread/TRACE] [FML/]: Recursing into package assets.tfctemplatemod.textures.blocks
+[15:12:57] [Client thread/TRACE] [FML/]: Recursing into package assets.tfctemplatemod.textures.gui
+[15:12:57] [Client thread/TRACE] [FML/]: Recursing into package assets.tfctemplatemod.textures.items
+[15:12:57] [Client thread/TRACE] [FML/]: Recursing into package assets.tfctemplatemod.textures.models
+[15:12:57] [Client thread/TRACE] [FML/]: Recursing into package META-INF
+[15:12:57] [Client thread/TRACE] [FML/]: Recursing into package terramisc
+[15:12:57] [Client thread/TRACE] [FML/]: Recursing into package terramisc.api
+[15:12:57] [Client thread/TRACE] [FML/]: Recursing into package terramisc.api.crafting
+[15:12:57] [Client thread/TRACE] [FML/]: Recursing into package terramisc.blocks
+[15:12:57] [Client thread/TRACE] [FML/]: Recursing into package terramisc.common
+[15:12:57] [Client thread/TRACE] [FML/]: Recursing into package terramisc.containers
+[15:12:57] [Client thread/TRACE] [FML/]: Recursing into package terramisc.containerslots
+[15:12:57] [Client thread/TRACE] [FML/]: Recursing into package terramisc.core
+[15:12:57] [Client thread/TRACE] [FML/]: Recursing into package terramisc.core.player
+[15:12:57] [Client thread/TRACE] [FML/]: Recursing into package terramisc.entities
+[15:12:57] [Client thread/TRACE] [FML/]: Recursing into package terramisc.events
+[15:12:57] [Client thread/TRACE] [FML/]: Recursing into package terramisc.gui
+[15:12:57] [Client thread/TRACE] [FML/]: Recursing into package terramisc.handlers
+[15:12:57] [Client thread/TRACE] [FML/]: Recursing into package terramisc.handlers.client
+[15:12:57] [Client thread/TRACE] [FML/]: Recursing into package terramisc.handlers.network
+[15:12:57] [Client thread/TRACE] [FML/]: Recursing into package terramisc.items
+[15:12:57] [Client thread/TRACE] [FML/]: Recursing into package terramisc.items.itemblocks
+[15:12:57] [Client thread/TRACE] [FML/]: Recursing into package terramisc.items.tools
+[15:12:57] [Client thread/TRACE] [FML/]: Recursing into package terramisc.items.weights
+[15:12:57] [Client thread/TRACE] [FML/]: Recursing into package terramisc.models
+[15:12:57] [Client thread/TRACE] [FML/]: Recursing into package terramisc.render
+[15:12:57] [Client thread/DEBUG] [FML/]: Identified a mod of type Lcpw/mods/fml/common/Mod; (terramisc.TerraMisc) - loading
+[15:12:57] [Client thread/TRACE] [tfcm/]: Using mcmod dependency info : [] [] []
+[15:12:57] [Client thread/TRACE] [FML/]: Recursing into package terramisc.tileentities
+[15:12:57] [Client thread/TRACE] [FML/]: Recursing into package terramisc.waila
+[15:12:57] [Client thread/DEBUG] [FML/]: Examining file forgeSrc-1.7.10-10.13.2.1291.jar for potential mods
+[15:12:57] [Client thread/DEBUG] [FML/]: The mod container forgeSrc-1.7.10-10.13.2.1291.jar appears to be missing an mcmod.info file

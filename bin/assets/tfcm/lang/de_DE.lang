@@ -1,0 +1,268 @@
+#de_DE
+#Das ist die deutsche Sprachkonfigurationsdatei, erstellt von BoneHawksEye.
+#
+#If you want to color code the text then I recommend you visit http://www.minecraftwiki.net/wiki/Formatting_codes#Color_codes
+#To create the ß symbol which is used for assigning a color to the following text press Alt + 21 on Windows. For other OSes, view the above link.
+#This file needs to be UTF-8 encoded to work with MC 1.7+
+
+#==========
+#= Blocks =
+#==========
+//Tallow Candles
+tile.blockTallowCandle.name=Talg-Kerze
+tile.blockTallowCandle_Red.name=Talg-Kerze (Rot)
+tile.blockTallowCandle_Yellow.name=Talg-Kerze (Gelb)
+tile.blockTallowCandle_Green.name=Talg-Kerze (Gr¸n)
+tile.blockTallowCandle_LightBlue.name=Talg-Kerze (Hellblau)
+tile.blockTallowCandle_Blue.name=Talg-Kerze (Blau)
+tile.blockTallowCandle_Purple.name=Talg-Kerze (Lila)
+tile.blockTallowCandle_Cyan.name=Talg-Kerze (T¸rkis)
+tile.blockTallowCandle_LightGray.name=Talg-Kerze (Hellgrau)
+tile.blockTallowCandle_Gray.name=Talg-Kerze (Grau)
+tile.blockTallowCandle_Pink.name=Talg-Kerze (Pink)
+tile.blockTallowCandle_Lime.name=Talg-Kerze (Hellgr¸n)
+tile.blockTallowCandle_Magenta.name=Talg-Kerze (Magenta)
+tile.blockTallowCandle_Orange.name=Talg-Kerze (Orange)
+tile.blockTallowCandle_Black.name=Talg-Kerze (Schwarz)
+tile.blockTallowCandle_Brown.name=Talg-Kerze (Braun)
+//Road
+tile.blockRoadIgEx.Andesite.name=Andesite-Straﬂe
+tile.blockRoadIgEx.Basalt.name=Basalt-Straﬂe
+tile.blockRoadSed.Chalk.name=Kreide-Straﬂe
+tile.blockRoadSed.Chert.name=Chert-Straﬂe
+tile.blockRoadSed.Claystone.name=Ton-Sraﬂe
+tile.blockRoadSed.Conglomerate.name=Konglomerat-Straﬂe
+tile.blockRoadIgEx.Dacite.name=Dazit-Straﬂe
+tile.blockRoadIgIn.Diorite.name=Diorit-Straﬂe
+tile.blockRoadSed.Dolomite.name=Dolomit-Straﬂe
+tile.blockRoadIgIn.Gabbro.name=Gabbro-Straﬂe
+tile.blockRoadMM.Gneiss.name=Gneis-Straﬂe
+tile.blockRoadIgIn.Granite.name=Granit-Straﬂe
+tile.blockRoadSed.Limestone.name=Kalk-Straﬂe
+tile.blockRoadMM.Marble.name=Marmor-Straﬂe
+tile.blockRoadMM.Phyllite.name=Phyllit-Straﬂe
+tile.blockRoadMM.Quartzite.name=Quartzite-Straﬂe
+tile.blockRoadIgEx.Rhyolite.name=Rhyolith-Straﬂe
+tile.blockRoadSed.Rock Salt.name=Steinsalz-Straﬂe
+tile.blockRoadMM.Schist.name=Glimmerschiefer-Straﬂe
+tile.blockRoadSed.Shale.name=÷lschiefer-Straﬂe
+tile.blockRoadMM.Slate.name=Schiefer-Straﬂe
+
+#=========
+#= Items = 
+#=========
+//Basic Items
+item.CompassCasing.name=Kompass Geh‰use
+item.ClockCasing.name=Uhr Geh‰use
+item.Spring.name=Feder
+item.Gear.name=Zahnrad
+item.ClockHand.name=Uhrzeiger
+item.CaseinGlue.name=Kaseinkleber
+item.PistonHead.name=Kolbenkopf
+item.PistonShaft.name=Kolbenschaft
+item.PistonBase.name=Kolbenboden
+item.RepeatorCircuit.name=Verst‰rker Schaltung
+item.ComparatorCircuit.name=Komparator Schaltung
+item.DeerTendon.name=Hirschsehne
+item.SinewFiber.name=Sehnenfaser
+item.SinewString.name=Sehnenfaden
+item.SinewBowString.name=Sehnen Bogensehne
+item.BowLimb.name=Wurfarm
+item.Suet.name=Nierenfett
+item.Tallow.name=Talg
+item.Wick.name=Kerzendocht
+item.BrownDye.name=Brauner Farbstoff
+item.BlackDye.name=Schwarzer Farbstoff
+item.IronDust.name=Eisenstaub
+//Bows and Such
+item.LongBow.name=Langbogen
+item.CrossBow.name=Armbrust
+//Halberds
+item.Halberd_BismuthBronze.name=Bismutbronze-Hellebarde
+item.Halberd_BlackBronze.name=Schwarze Bronze-Hellebarde
+item.Halberd_BlackSteel.name=Schwarze Stahl-Hellebarde
+item.Halberd_BlueSteel.name=Blaue Stahl-Hellebarde
+item.Halberd_Bronze.name=Bronze-Hellebarde
+item.Halberd_Copper.name=Kupfer-Hellebarde
+item.Halberd_RedSteel.name=Roter Stahl-Hellebarde
+item.Halberd_Steel.name=Stahl-Hellebarde
+item.Halberd_WroughtIron.name=Schmiedeeiserne Hellebarde
+//Halberd Tool Heads
+item.Halberd_BismuthBronze_Head.name=Bismutbronze-Hellebardenkopf
+item.Halberd_BlackBronze_Head.name=Schwarzer Bronze-Hellebardenkopf
+item.Halberd_BlackSteel_Head.name=Schwarzer Stahl-Hellebardenkopf
+item.Halberd_BlueSteel_Head.name=Blauer Stahl-Hellebardenkopf
+item.Halberd_Bronze_Head.name=Bronze-Hellebardenkopf
+item.Halberd_Copper_Head.name=Kupfer-Hellebardenkopf
+item.Halberd_RedSteel_Head.name=Roter Stahl-Hellebardenkopf
+item.Halberd_Steel_Head.name=Stahl-Hellebardenkopf
+item.Halberd_WroughtIron_Head.name=Schmiedeeiserner Hellebardenkopf
+//War Hammers
+item.WarHammer_BismuthBronze.name=Bismutbronze-Kriegshammer
+item.WarHammer_BlackBronze.name=Schwarzer Bronze-Kriegshammer
+item.WarHammer_BlackSteel.name=Schwarzer Stahl-Kriegshammer
+item.WarHammer_BlueSteel.name=Blauer Stahl-Kriegshammer
+item.WarHammer_Bronze.name=Bronze-Kriegshammer
+item.WarHammer_Copper.name=Kupfer-Kriegshammer
+item.WarHammer_RedSteel.name=Roter Stahl-Kriegshammer
+item.WarHammer_Steel.name=Stahl-Kriegshammer
+item.WarHammer_WroughtIron.name=Schmiedeeiserner Kriegshammer
+//War Hammer Heads
+item.WarHammer_BismuthBronze_Head.name=Bismutbronze-Kriegshammerkopf
+item.WarHammer_BlackBronze_Head.name=Schwarzer Bronze-Kriegshammerkopf
+item.WarHammer_BlackSteel_Head.name=Schwarzer Stahl-Kriegshammerkopf
+item.WarHammer_BlueSteel_Head.name=Blauer Stahl-Kriegshammerkopf
+item.WarHammer_Bronze_Head.name=Bronze-Kriegshammerkopf
+item.WarHammer_Copper_Head.name=Kupfer-Kriegshammerkopf
+item.WarHammer_RedSteel_Head.name=Roter Stahl-Kriegshammerkopf
+item.WarHammer_Steel_Head.name=Stahl-Kriegshammerkopf
+item.WarHammer_WroughtIron_Head.name=Schmiedeeiserner Kriegshammerkopf
+//Poniards
+item.Poniard_BismuthBronze.name=Bismutbronze-Poniard
+item.Poniard_BlackBronze.name=Schwarzer Bronze-Poniard
+item.Poniard_BlackSteel.name=Schwarzer Stahl-Poniard
+item.Poniard_BlueSteel.name=Blauer Stahl-Poniard
+item.Poniard_Bronze.name=Bronze-Poniard
+item.Poniard_Copper.name=Kupfer-Poniard
+item.Poniard_RedSteel.name=Roter Stahl-Poniard
+item.Poniard_Steel.name=Stahl-Poniard
+item.Poniard_WroughtIron.name=Schmiedeeiserner Poniard
+//Poniard Blades
+item.Poniard_BismuthBronze_Head.name=Bismutbronze-Poniardklinge
+item.Poniard_BlackBronze_Head.name=Schwarze Bronze-Poniardklinge
+item.Poniard_BlackSteel_Head.name=Schwarze Stahl-Poniardklinge
+item.Poniard_BlueSteel_Head.name=Blaue Stahl-Poniardklinge
+item.Poniard_Bronze_Head.name=Bronze-Poniardklinge
+item.Poniard_Copper_Head.name=Kupfer-Poniardklinge
+item.Poniard_RedSteel_Head.name=Rote Stahl-Poniardklinge
+item.Poniard_Steel_Head.name=Stahl-Poniardklinge
+item.Poniard_WroughtIron_Head.name=Schmiedeeiserne Poniardklinge
+//Pottery Molds
+item.itemHalberd_Mold.Clay_Mold_Halberd.name=Hellebardenform-Tonform
+item.itemHalberd_Mold.Ceramic_Mold_Halberd.name=Hellebarden-Keramikform
+item.itemHalberd_Mold.Ceramic_Mold_Halberd_Copper.name=Hellebarden-Keramikform (Kupfer)
+item.itemHalberd_Mold.Ceramic_Mold_Halberd_Bronze.name=Hellebarden-Keramikform (Bronze)
+item.itemHalberd_Mold.Ceramic_Mold_Halberd_BlackBronze.name=HHellebarden-Keramikform (Schwarze Bronze)
+item.itemHalberd_Mold.Ceramic_Mold_Halberd_BismuthBronze.name=Hellebarden-Keramikform (Bismutbronze)
+
+item.itemWarHammer_Mold.Clay_Mold_WarHammer.name=Kriegshammer-Tonform
+item.itemWarHammer_Mold.Ceramic_Mold_WarHammer.name=Kriegshammer-Keramikform
+item.itemWarHammer_Mold.Ceramic_Mold_WarHammer_Copper.name=Kriegshammer-Keramikform (Kupfer)
+item.itemWarHammer_Mold.Ceramic_Mold_WarHammer_Bronze.name=Kriegshammer-Keramikform (Bronze)
+item.itemWarHammer_Mold.Ceramic_Mold_WarHammer_BlackBronze.name=Kriegshammer-Keramikform (Schwarze Bronze)
+item.itemWarHammer_Mold.Ceramic_Mold_WarHammer_BismuthBronze.name=Kriegshammer-Keramikform (Bismutbronze)
+
+item.itemPoniard_Mold.Clay_Mold_Poniard.name=Poniard-Tonform
+item.itemPoniard_Mold.Ceramic_Mold_Poniard.name=Poniard-Keramikform
+item.itemPoniard_Mold.Ceramic_Mold_Poniard_Copper.name=Poniard-Keramikform (Kupfer)
+item.itemPoniard_Mold.Ceramic_Mold_Poniard_Bronze.name=Poniard-Keramikform (Bronze)
+item.itemPoniard_Mold.Ceramic_Mold_Poniard_BlackBronze.name=Poniard-Keramikform (Schwarze Bronze)
+item.itemPoniard_Mold.Ceramic_Mold_Poniard_BismuthBronze.name=Poniard-Keramikform (Bismutbronze)
+
+//Armor
+item.Coil.BismuthBronze.name=Bismutbronze-Spule
+item.Coil.BlackBronze.name=Schwarze Bronze-Spule
+item.Coil.BlackSteel.name=Schwarze Stahl-Spule
+item.Coil.BlueSteel.name=Blaue Stahl-Spule
+item.Coil.Bronze.name=Bronze-Spule
+item.Coil.Copper.name=Kupfer-Spule
+item.Coil.WroughtIron.name=Schmiedeeiserne Spule
+item.Coil.RedSteel.name=Rote Stahl-Spule
+item.Coil.Steel.name=Stahl-Spule
+
+item.Link.BismuthBronze.name=Bismutbronze-Kettenglied
+item.Link.BlackBronze.name=Schwarzes Bronze-Kettenglied
+item.Link.BlackSteel.name=Schwarzes Stahl-Kettenglied
+item.Link.BlueSteel.name=Blaues Stahl-Kettenglied
+item.Link.Bronze.name=Bronze-Kettenglied
+item.Link.Copper.name=Kupfer-Kettenglied
+item.Link.WroughtIron.name=Schmiedeeisernees Kettenglied
+item.Link.RedSteel.name=Rotes Stahl-Kettenglied
+item.Link.Steel.name=Stahl-Kettenglied
+
+item.Chain_Square.BismuthBronze.name=Bismutbronze-Kettenquadrat
+item.Chain_Square.BlackBronze.name=Schwarzes Bronze-Kettenquadrat
+item.Chain_Square.BlackSteel.name=Schwarzes Stahl-Kettenquadrat
+item.Chain_Square.BlueSteel.name=Blaues Stahl-Kettenquadrat
+item.Chain_Square.Bronze.name=Bronze-Kettenquadrat
+item.Chain_Square.Copper.name=Kupfer-Kettenquadrat
+item.Chain_Square.WroughtIron.name=Schmiedeeisernes Kettenquadrat
+item.Chain_Square.RedSteel.name=Rotes Stahl-Kettenquadrat
+item.Chain_Square.Steel.name=Stahl-Kettenquadrat
+
+item.Chain_Sheet.BismuthBronze.name=Bismutbronze-Kettengewebe
+item.Chain_Sheet.BlackBronze.name=Schwarzes Bronze-Kettengewebe
+item.Chain_Sheet.BlackSteel.name=Schwarzes Stahl-Kettengewebe
+item.Chain_Sheet.BlueSteel.name=Blaues Stahl-Kettengewebe
+item.Chain_Sheet.Bronze.name=Bronze-Kettengewebe
+item.Chain_Sheet.Copper.name=Kupfer-Kettengewebe
+item.Chain_Sheet.WroughtIron.name=Schmiedeeisernes Kettengewebe
+item.Chain_Sheet.RedSteel.name=Rotes Stahl-Kettengewebe
+item.Chain_Sheet.Steel.name=Stahl-Kettengewebe
+
+item.BismuthBronze_Chain_Greaves.name=Bismutbronze-Kettenbeinlinge
+item.BlackBronze_Chain_Greaves.name=Schwarze Bronze-Kettenbeinlinge
+item.BlackSteel_Chain_Greaves.name=Schwarze Stahl-Kettenbeinlinge
+item.BlueSteel_Chain_Greaves.name=Blaue Stahl-Kettenbeinlinge
+item.Bronze_Chain_Greaves.name=Bronze-Kettenbeinlinge
+item.Copper_Chain_Greaves.name=Kupfer-Kettenbeinlinge
+item.WroughtIron_Chain_Greaves.name=Schmiedeeiserne Kettenbeinlinge
+item.RedSteel_Chain_Greaves.name=Rote Stahl-Kettenbeinlinge
+item.Steel_Chain_Greaves.name=Stahl-Kettennbeinlinge
+
+item.BismuthBronze_Chain_Chestplate.name=Bismutbronze-Kettengewand
+item.BlackBronze_Chain_Chestplate.name=Schwarzes Bronze-Kettengewand
+item.BlackSteel_Chain_Chestplate.name=Schwarzes Stahl-Kettengewand
+item.BlueSteel_Chain_Chestplate.name=Blaues Stahl-Kettengewand
+item.Bronze_Chain_Chestplate.name=Bronze-Kettengewand
+item.Copper_Chain_Chestplate.name=Kupfer-Kettengewand
+item.WroughtIron_Chain_Chestplate.name=Schmiedeeisernes Kettengewand
+item.RedSteel_Chain_Chestplate.name=Rotes Stahl-Kettengewand
+item.Steel_Chain_Chestplate.name=Stahl-Kettengewand
+
+item.BismuthBronze_Chain_Helmet.name=Bismutbronze-Kettenhaube
+item.BlackBronze_Chain_Helmet.name=Schwarze Bronze-Kettenhaube
+item.BlackSteel_Chain_Helmet.name=Schwarze Stahl-Kettenhaube
+item.BlueSteel_Chain_Helmet.name=Blaue Stahl-Kettenhaube
+item.Bronze_Chain_Helmet.name=Bronze-Kettenhaube
+item.Copper_Chain_Helmet.name=Kupfer-Kettenhaube
+item.WroughtIron_Chain_Helmet.name=Schmiedeeiserne Kettenhaube
+item.RedSteel_Chain_Helmet.name=Rote Stahl-Kettenhaube
+item.Steel_Chain_Helmet.name=Stahl-Kettenhaube
+
+#=======
+#= GUI =
+#=======
+gui.plans.casing=Geh‰use
+gui.plans.clockgear=Uhrzahnrad
+gui.plans.clockspring=Uhrfeder
+gui.plans.clockhands=Uhrzeiger
+gui.plans.pistonhead=Kolbenkopf
+gui.plans.pistonshaft=Kolbenschaft
+gui.plans.repeater=Verst‰rker Schaltung
+gui.plans.comparator=Komparator Schaltung
+gui.plans.halberd=Hellebardenkopf
+gui.plans.warhammer=Kriegshammerkopf
+gui.plans.poniard=Poniardklinge
+
+
+#===========
+#= Strings =
+#===========
+
+
+#========
+#= Misc =
+#========
+
+#== Creative Tabs ==
+
+
+#=========
+#= WAILA =
+#=========
+
+#== Tooltips ==
+
+
+#== Options ==

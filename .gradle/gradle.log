@@ -1,0 +1,29 @@
+****************************
+ Powered By MCP:             
+ http://modcoderpack.com/    
+ Searge, ProfMobius, Fesh0r, 
+ R4wk, ZeuX, IngisKahn, bspkrs
+ MCP Data version : unknown
+****************************
+:compileApiJava UP-TO-DATE
+:processApiResources UP-TO-DATE
+:apiClasses UP-TO-DATE
+:sourceMainJava UP-TO-DATE
+:compileJava
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Could not resolve all dependencies for configuration ':compile'.
+> Could not resolve mcp.mobius.waila:Waila:1.5.11-RC2-NONEI_1.7.10.
+  Required by:
+      TerraMisc:TFCTemplateMod:0.13.0
+   > Could not GET 'https://www.mobiusstrip.eu/maven/mcp/mobius/waila/Waila/1.5.11-RC2-NONEI_1.7.10/Waila-1.5.11-RC2-NONEI_1.7.10.pom'.
+      > peer not authenticated
+
+* Try:
+Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output.
+
+BUILD FAILED
+
+Total time: 10.259 secs

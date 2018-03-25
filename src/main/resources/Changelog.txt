@@ -1,0 +1,8 @@
+Changelog
+---------
+0.13.0 (0.79.29)
+
+-Tweaked coil recipe to be one ingot, to one coil; this is to fix the stacking coil/lost metal issue.
+-Tweak: Soy Milk now removes potion effects from the player.
+-Added Onion Juice (eg. "Ratt" repellent), can be thrown to inflict the poison effect.
+-Fixed some minor issues with achievements.
