@@ -8,6 +8,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
+import terramisc.blocks.BlockClayTFCM;
 import terramisc.blocks.BlockTallowCandle;
 import terramisc.core.TFCMBlocks;
 import terramisc.core.TFCMOptions;
@@ -47,6 +48,11 @@ public class TFCMWailaData implements IWailaDataProvider
 			currenttip = candleBody(itemStack, currenttip, accessor, config);
 		}
 		
+		if (block == TFCMBlocks.blockClay)
+		{
+			currenttip = clayBody(itemStack, currenttip, accessor, config);
+		}
+		
 		return currenttip;
 	}
 
@@ -70,6 +76,9 @@ public class TFCMWailaData implements IWailaDataProvider
 	{
 		reg.registerBodyProvider(new TFCMWailaData(), BlockTallowCandle.class);
 		reg.registerNBTProvider(new TFCMWailaData(), BlockTallowCandle.class);
+		
+		reg.registerBodyProvider(new TFCMWailaData(), BlockClayTFCM.class);
+		reg.registerNBTProvider(new TFCMWailaData(), BlockClayTFCM.class);
 	}
 	
 	public List<String> candleBody(ItemStack itemStack, List<String> currenttip, IWailaDataAccessor accessor, IWailaConfigHandler config)
@@ -91,6 +100,26 @@ public class TFCMWailaData implements IWailaDataProvider
 				currenttip.add("Color:" + color);
 			}
 		}
+		return currenttip;
+	}
+	
+	public List<String> clayBody(ItemStack itemStack, List<String> currenttip, IWailaDataAccessor accessor, IWailaConfigHandler config) 
+	{
+		NBTTagCompound tag = accessor.getNBTData();
+		//long startTime = tag.getLong("StartTime");
+		int bakingTime = tag.getInteger("BakingTime");
+		boolean canBake = tag.getBoolean("CanBake");
+		
+		if(canBake == true)
+		{
+			currenttip.add("Baking");
+		}
+		
+		if(bakingTime < 6F)
+		{
+			currenttip.add((6 - bakingTime) + " " + TFC_Core.translate("gui.hoursRemaining") + " (" + Helper.roundNumber((100f * bakingTime) / 6, 10) + "%)");
+		}
+		
 		return currenttip;
 	}
 }

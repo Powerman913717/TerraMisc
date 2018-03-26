@@ -1,8 +1,7 @@
 Changelog
 ---------
-0.13.0 (0.79.29)
+0.14.0 (0.79.29)
 
--Tweaked coil recipe to be one ingot, to one coil; this is to fix the stacking coil/lost metal issue.
--Tweak: Soy Milk now removes potion effects from the player.
--Added Onion Juice (eg. "Ratt" repellent), can be thrown to inflict the poison effect.
--Fixed some minor issues with achievements.
+-Made code public on Github.
+-Added a Wet Clay Block, can be baked near open flames or lava source blocks, to produce hardened clay.
+-Fixed Size and Weight information not being displayed on the Sugar Bottle Item.

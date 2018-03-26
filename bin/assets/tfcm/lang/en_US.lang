@@ -33,6 +33,24 @@ tile.blockRoadSed.Rock Salt.name=Rock Salt Road
 tile.blockRoadMM.Schist.name=Schist Road
 tile.blockRoadSed.Shale.name=Shale Road
 tile.blockRoadMM.Slate.name=Slate Road
+//Stained Clay
+tile.blockClay.name=Clay Block
+tile.blockStainedClay.hardened_clay.name=Hardened Clay
+tile.blockStainedClay.hardened_clay_stained_black.name=Black Stained Clay
+tile.blockStainedClay.hardened_clay_stained_red.name=Red Stained Clay
+tile.blockStainedClay.hardened_clay_stained_green.name=Green Stained Clay
+tile.blockStainedClay.hardened_clay_stained_brown.name=Brown Stained Clay
+tile.blockStainedClay.hardened_clay_stained_blue.name=Blue Stained Clay
+tile.blockStainedClay.hardened_clay_stained_purple.name=Purple Stained Clay
+tile.blockStainedClay.hardened_clay_stained_cyan.name=Cyan Stained Clay
+tile.blockStainedClay.hardened_clay_stained_silver.name=Light Gray Stained Clay
+tile.blockStainedClay.hardened_clay_stained_gray.name=Gray Stained Clay
+tile.blockStainedClay.hardened_clay_stained_pink.name=Pink Stained Clay
+tile.blockStainedClay.hardened_clay_stained_lime.name=Lime Stained Clay
+tile.blockStainedClay.hardened_clay_stained_yellow.name=Yellow Stained Clay
+tile.blockStainedClay.hardened_clay_stained_light_blue.name=Light Blue Stained Clay
+tile.blockStainedClay.hardened_clay_stained_magenta.name=Magenta Stained Clay
+tile.blockStainedClay.hardened_clay_stained_orange.name=Orange Stained Clay
 //Other Things
 tile.blockFruitPress.name=Fruit Press
 

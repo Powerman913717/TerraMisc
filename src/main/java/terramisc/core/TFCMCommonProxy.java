@@ -2,6 +2,12 @@ package terramisc.core;
 
 import java.io.File;
 
+import com.bioxx.tfc.api.TFCItems;
+
+import cpw.mods.fml.common.FMLCommonHandler;
+import cpw.mods.fml.common.event.FMLInterModComms;
+import cpw.mods.fml.common.network.NetworkRegistry;
+import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.item.ItemStack;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.world.World;
@@ -10,13 +16,7 @@ import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fluids.FluidStack;
 import terramisc.tileentities.TEFruitPress;
 import terramisc.tileentities.TETallowCandle;
-
-import com.bioxx.tfc.api.TFCItems;
-
-import cpw.mods.fml.common.FMLCommonHandler;
-import cpw.mods.fml.common.event.FMLInterModComms;
-import cpw.mods.fml.common.network.NetworkRegistry;
-import cpw.mods.fml.common.registry.GameRegistry;
+import terramisc.tileentities.TEWetClay;
 
 public class TFCMCommonProxy
 {
@@ -97,6 +97,7 @@ public class TFCMCommonProxy
 	public void registerTileEntities(boolean flag)
 	{
 		// non TESR registers
+		GameRegistry.registerTileEntity(TEWetClay.class, "WetClay");
 
 		if (flag)
 		{

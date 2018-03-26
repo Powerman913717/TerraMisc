@@ -8,8 +8,10 @@ import net.minecraft.world.World;
 import terramisc.core.TFCMAchievements;
 import terramisc.items.weights.ItemWeightSmallHeavy;
 
+import com.bioxx.tfc.Core.TFC_Core;
 import com.bioxx.tfc.Food.ItemFoodTFC;
 import com.bioxx.tfc.api.TFCItems;
+import com.bioxx.tfc.api.Interfaces.ISize;
 
 public class ItemBottleSugar extends ItemWeightSmallHeavy
 {
@@ -57,6 +59,10 @@ public class ItemBottleSugar extends ItemWeightSmallHeavy
 	@Override
 	public void addInformation(ItemStack is, EntityPlayer player, List arraylist, boolean flag) 
 	{
+		if(((ISize)is.getItem()).getSize(is)!= null && ((ISize)is.getItem()).getWeight(is) != null && ((ISize)is.getItem()).getReach(is)!= null)
+			arraylist.add("\u2696" + TFC_Core.translate("gui.Weight." + ((ISize)is.getItem()).getWeight(is).getName()) + " \u21F2" + 
+					TFC_Core.translate("gui.Size." + ((ISize)is.getItem()).getSize(is).getName().replace(" ", "")));
+		
 		arraylist.add("Right click to remove sugar from bottle.");
 	}
 	

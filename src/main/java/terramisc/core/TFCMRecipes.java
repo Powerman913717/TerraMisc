@@ -315,6 +315,24 @@ public class TFCMRecipes
 		GameRegistry.addRecipe(new ItemStack(TFCMItems.itemSinewString), new Object[]{"F","F","F", 'F', TFCMItems.itemSinewFiber});
 		GameRegistry.addRecipe(new ItemStack(TFCMItems.itemSinewBowString), new Object[]{"SSS", 'S', TFCMItems.itemSinewString});
 		GameRegistry.addRecipe(new ItemStack(TFCMBlocks.blockTallowCandle), new Object[]{"W","T", 'W', TFCItems.woolYarn, 'T', TallowBowl});
+			//Clay
+		GameRegistry.addRecipe(new ItemStack(TFCMBlocks.blockClay), new Object[]{"CC", "CC", 'C', TFCItems.clayBall});
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(TFCMBlocks.blockStainedClay, 8, 1), new Object[]{"CCC", "CDC", "CCC", 'C', TFCMBlocks.blockStainedClay, 'D', "dyeBlack"}));
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(TFCMBlocks.blockStainedClay, 8, 2), new Object[]{"CCC", "CDC", "CCC", 'C', TFCMBlocks.blockStainedClay, 'D', "dyeRed"}));
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(TFCMBlocks.blockStainedClay, 8, 3), new Object[]{"CCC", "CDC", "CCC", 'C', TFCMBlocks.blockStainedClay, 'D', "dyeGreen"}));
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(TFCMBlocks.blockStainedClay, 8, 4), new Object[]{"CCC", "CDC", "CCC", 'C', TFCMBlocks.blockStainedClay, 'D', "dyeBrown"}));
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(TFCMBlocks.blockStainedClay, 8, 5), new Object[]{"CCC", "CDC", "CCC", 'C', TFCMBlocks.blockStainedClay, 'D', "dyeBlue"}));
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(TFCMBlocks.blockStainedClay, 8, 6), new Object[]{"CCC", "CDC", "CCC", 'C', TFCMBlocks.blockStainedClay, 'D', "dyePurple"}));
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(TFCMBlocks.blockStainedClay, 8, 7), new Object[]{"CCC", "CDC", "CCC", 'C', TFCMBlocks.blockStainedClay, 'D', "dyeCyan"}));
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(TFCMBlocks.blockStainedClay, 8, 8), new Object[]{"CCC", "CDC", "CCC", 'C', TFCMBlocks.blockStainedClay, 'D', "dyeSilver"}));
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(TFCMBlocks.blockStainedClay, 8, 9), new Object[]{"CCC", "CDC", "CCC", 'C', TFCMBlocks.blockStainedClay, 'D', "dyeGray"}));
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(TFCMBlocks.blockStainedClay, 8, 10), new Object[]{"CCC", "CDC", "CCC", 'C', TFCMBlocks.blockStainedClay, 'D', "dyePink"}));
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(TFCMBlocks.blockStainedClay, 8, 11), new Object[]{"CCC", "CDC", "CCC", 'C', TFCMBlocks.blockStainedClay, 'D', "dyeLime"}));
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(TFCMBlocks.blockStainedClay, 8, 12), new Object[]{"CCC", "CDC", "CCC", 'C', TFCMBlocks.blockStainedClay, 'D', "dyeYellow"}));
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(TFCMBlocks.blockStainedClay, 8, 13), new Object[]{"CCC", "CDC", "CCC", 'C', TFCMBlocks.blockStainedClay, 'D', "dyeLightBlue"}));
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(TFCMBlocks.blockStainedClay, 8, 14), new Object[]{"CCC", "CDC", "CCC", 'C', TFCMBlocks.blockStainedClay, 'D', "dyeMagenta"}));
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(TFCMBlocks.blockStainedClay, 8, 15), new Object[]{"CCC", "CDC", "CCC", 'C', TFCMBlocks.blockStainedClay, 'D', "dyeOrange"}));
+		
 			//Shapeless candle dyes
 		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(TFCMItems.itemTallowDye, 1, 0), "dyeBlack", TallowBowl));
 		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(TFCMItems.itemTallowDye, 1, 1), "dyeRed", TallowBowl));

@@ -1,3 +1,30 @@
-[15:12:31] [main/INFO]: Logging in with username & password
-[15:12:41] [main/INFO]: Setting user: Powerman913717
-[15:12:44] [Client thread/INFO]: LWJGL Version: 2.9.1
+[22:05:49] [main/INFO]: Logging in with username & password
+[22:05:57] [main/INFO]: Setting user: Powerman913717
+[22:05:59] [Client thread/INFO]: LWJGL Version: 2.9.1
+[22:06:10] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Not Enough Items, FMLFileResourcePack:TerraFirmaCraft, FMLFileResourcePack:Waila, FMLFileResourcePack:TerraMisc, FMLFileResourcePack:TerraFirmaCraftNEIplugin
+[22:06:13] [Sound Library Loader/INFO]: Sound engine started
+[22:06:15] [Client thread/INFO]: Created: 16x16 textures/blocks-atlas
+[22:06:15] [Client thread/INFO]: Created: 16x16 textures/items-atlas
+[22:06:16] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Not Enough Items, FMLFileResourcePack:TerraFirmaCraft, FMLFileResourcePack:Waila, FMLFileResourcePack:TerraMisc, FMLFileResourcePack:TerraFirmaCraftNEIplugin
+[22:06:18] [Client thread/INFO]: Created: 1024x512 textures/items-atlas
+[22:06:20] [Client thread/INFO]: Created: 1024x512 textures/blocks-atlas
+[22:06:21] [Sound Library Loader/INFO]: Sound engine started
+[22:06:29] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
+[22:06:29] [Server thread/INFO]: Generating keypair
+[22:06:29] [Server thread/INFO]: Preparing start region for level 0
+[22:06:30] [Server thread/INFO]: Changing view distance to 9, from 10
+[22:06:31] [Server thread/INFO]: Powerman913717[local:E:347b4907] logged in with entity id 123 at (1554.154075739234, 149.0, -14745.449543786723)
+[22:06:31] [Server thread/INFO]: Powerman913717 joined the game
+[22:06:35] [Client thread/INFO]: [CHAT] Version 1.0.7.47 of CodeChickenCore is available
+[22:06:35] [Client thread/INFO]: [CHAT] Version 1.0.5.120 of NotEnoughItems is available
+[22:09:21] [Server thread/INFO]: Saving and pausing game...
+[22:09:21] [Server thread/INFO]: Saving chunks for level 'New World'/DEFAULT
+[22:09:21] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[22:09:21] [Server thread/INFO]: Saving chunks for level 'New World'/DEFAULT
+[22:09:21] [Server thread/INFO]: Stopping server
+[22:09:21] [Server thread/INFO]: Saving players
+[22:09:21] [Server thread/INFO]: Saving worlds
+[22:09:21] [Server thread/INFO]: Saving chunks for level 'New World'/DEFAULT
+[22:09:21] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[22:09:21] [Server thread/INFO]: Saving chunks for level 'New World'/DEFAULT
+[22:09:23] [Client thread/INFO]: Stopping!
