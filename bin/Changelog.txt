@@ -2,6 +2,11 @@ Changelog
 ---------
 0.14.0 (0.79.29)
 
--Made code public on Github.
--Added a Wet Clay Block, can be baked near open flames or lava source blocks, to produce hardened clay.
--Fixed Size and Weight information not being displayed on the Sugar Bottle Item.
+-Tweak: Road Blocks are now refered to as Tiles, this is just a change made in the lang file.
+-Fix: Size and Weight information not being displayed on the Sugar Bottle Item.
+-Fix: ToolTips/WAILA information now localizes on the Quiver, Crossbow, and Tallow Candles.
+-Added: Source code to Github. https://github.com/Powerman913717/terramisc
+-Added: A Wet Clay Block, can be baked near open flames or lava source blocks, to produce hardened clay.
+-Added:	Breaking wild pumpkins no longer drops a block but instead drops food. (Wild Pumpkins yeild around 10 ounces)
+		-Pumpkin blocks can be placed from pumpkin food items at a rate of 80 ounces per block.
+-Added: Bears now drop a meat item, which can be cooked and used in meals.

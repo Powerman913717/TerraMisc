@@ -2,25 +2,36 @@ package terramisc.core;
 
 import java.io.File;
 
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
-import net.minecraft.item.Item;
-import net.minecraft.world.World;
-import net.minecraftforge.client.MinecraftForgeClient;
-import terramisc.render.ItemCrossbowRender;
-import terramisc.render.ItemLongbowRender;
-import terramisc.render.ItemPolearmRender;
-import terramisc.render.TESRFruitPress;
-import terramisc.render.TESRTallowCandle;
-import terramisc.render.TESRTallowCandleItem;
-import terramisc.render.TESRTallowCandleItemIntial;
-import terramisc.tileentities.TEFruitPress;
-import terramisc.tileentities.TETallowCandle;
+import com.bioxx.tfc.api.TFCBlocks;
+import com.bioxx.tfc.api.TFCOptions;
+
+import codechicken.nei.api.API;
 import cpw.mods.fml.client.registry.ClientRegistry;
+import cpw.mods.fml.client.registry.RenderingRegistry;
 import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.world.World;
+import net.minecraftforge.client.MinecraftForgeClient;
+import terramisc.render.CropRender;
+import terramisc.render.ItemCrossbowRender;
+import terramisc.render.ItemLongbowRender;
+import terramisc.render.ItemPolearmRender;
+import terramisc.render.TESRBrickOven;
+import terramisc.render.TESRFruitPress;
+import terramisc.render.TESRSoupKettle;
+import terramisc.render.TESRTallowCandle;
+import terramisc.render.TESRTallowCandleItem;
+import terramisc.render.TESRTallowCandleItemIntial;
+import terramisc.tileentities.TEBrickOven;
+import terramisc.tileentities.TEFruitPress;
+import terramisc.tileentities.TESoupKettle;
+import terramisc.tileentities.TETallowCandle;
 
 public class TFCMClientProxy extends TFCMCommonProxy
 {
@@ -52,29 +63,14 @@ public class TFCMClientProxy extends TFCMCommonProxy
 	@Override
 	public void hideNEIItems()
 	{
-		if (Loader.isModLoaded(TFCMDetails.MODID_NEI))
+		if (Loader.isModLoaded(TFCMDetails.MODID_NEI) && TFCOptions.enableNEIHiding)
 		{
-			/*Arrows
-			API.hideItem(new ItemStack(ModItems.itemArrow_BismuthBronze_Head));
-			API.hideItem(new ItemStack(ModItems.itemArrow_BlackBronze_Head));
-			API.hideItem(new ItemStack(ModItems.itemArrow_BlackSteel_Head));
-			API.hideItem(new ItemStack(ModItems.itemArrow_BlueSteel_Head));
-			API.hideItem(new ItemStack(ModItems.itemArrow_Bronze_Head));
-			API.hideItem(new ItemStack(ModItems.itemArrow_Copper_Head));
-			API.hideItem(new ItemStack(ModItems.itemArrow_RedSteel_Head));
-			API.hideItem(new ItemStack(ModItems.itemArrow_Steel_Head));
-			API.hideItem(new ItemStack(ModItems.itemArrow_WroughtIron_Head));
-			API.hideItem(new ItemStack(ModItems.itemArrow_Mold));
-			API.hideItem(new ItemStack(ModItems.itemArrow_BismuthBronze));
-			API.hideItem(new ItemStack(ModItems.itemArrow_BlackBronze));
-			API.hideItem(new ItemStack(ModItems.itemArrow_BlackSteel));
-			API.hideItem(new ItemStack(ModItems.itemArrow_BlueSteel));
-			API.hideItem(new ItemStack(ModItems.itemArrow_Bronze));
-			API.hideItem(new ItemStack(ModItems.itemArrow_Copper));
-			API.hideItem(new ItemStack(ModItems.itemArrow_RedSteel));
-			API.hideItem(new ItemStack(ModItems.itemArrow_Steel));
-			API.hideItem(new ItemStack(ModItems.itemArrow_WroughtIron));
-			*/
+			API.hideItem(new ItemStack(TFCMBlocks.blockTallowCandle));
+			
+			API.hideItem(new ItemStack(TFCBlocks.pumpkin));
+			API.hideItem(new ItemStack(TFCBlocks.litPumpkin));
+			
+			API.hideItem(new ItemStack(TFCMBlocks.blockPumpkinLantern));
 		}
 	}
 
@@ -119,28 +115,28 @@ public class TFCMClientProxy extends TFCMCommonProxy
 	public void registerRenderInformation()
 	{
 		//Other Items
-		MinecraftForgeClient.registerItemRenderer(TFCMItems.itemLongBow, new ItemLongbowRender());
-		MinecraftForgeClient.registerItemRenderer(TFCMItems.itemCrossBow, new ItemCrossbowRender());
+		MinecraftForgeClient.registerItemRenderer(TFCMItems.longBow, new ItemLongbowRender());
+		MinecraftForgeClient.registerItemRenderer(TFCMItems.crossBow, new ItemCrossbowRender());
 		//Halberds
-		MinecraftForgeClient.registerItemRenderer(TFCMItems.itemHalberd_BismuthBronze, new ItemPolearmRender());
-		MinecraftForgeClient.registerItemRenderer(TFCMItems.itemHalberd_BlackBronze, new ItemPolearmRender());
-		MinecraftForgeClient.registerItemRenderer(TFCMItems.itemHalberd_BlackSteel, new ItemPolearmRender());
-		MinecraftForgeClient.registerItemRenderer(TFCMItems.itemHalberd_BlueSteel, new ItemPolearmRender());
-		MinecraftForgeClient.registerItemRenderer(TFCMItems.itemHalberd_Bronze, new ItemPolearmRender());
-		MinecraftForgeClient.registerItemRenderer(TFCMItems.itemHalberd_Copper, new ItemPolearmRender());
-		MinecraftForgeClient.registerItemRenderer(TFCMItems.itemHalberd_RedSteel, new ItemPolearmRender());
-		MinecraftForgeClient.registerItemRenderer(TFCMItems.itemHalberd_Steel, new ItemPolearmRender());
-		MinecraftForgeClient.registerItemRenderer(TFCMItems.itemHalberd_WroughtIron, new ItemPolearmRender());
+		MinecraftForgeClient.registerItemRenderer(TFCMItems.halberd_BismuthBronze, new ItemPolearmRender());
+		MinecraftForgeClient.registerItemRenderer(TFCMItems.halberd_BlackBronze, new ItemPolearmRender());
+		MinecraftForgeClient.registerItemRenderer(TFCMItems.halberd_BlackSteel, new ItemPolearmRender());
+		MinecraftForgeClient.registerItemRenderer(TFCMItems.halberd_BlueSteel, new ItemPolearmRender());
+		MinecraftForgeClient.registerItemRenderer(TFCMItems.halberd_Bronze, new ItemPolearmRender());
+		MinecraftForgeClient.registerItemRenderer(TFCMItems.halberd_Copper, new ItemPolearmRender());
+		MinecraftForgeClient.registerItemRenderer(TFCMItems.halberd_RedSteel, new ItemPolearmRender());
+		MinecraftForgeClient.registerItemRenderer(TFCMItems.halberd_Steel, new ItemPolearmRender());
+		MinecraftForgeClient.registerItemRenderer(TFCMItems.halberd_WroughtIron, new ItemPolearmRender());
 		//War Hammers
-		MinecraftForgeClient.registerItemRenderer(TFCMItems.itemWarHammer_BismuthBronze, new ItemPolearmRender());
-		MinecraftForgeClient.registerItemRenderer(TFCMItems.itemWarHammer_BlackBronze, new ItemPolearmRender());
-		MinecraftForgeClient.registerItemRenderer(TFCMItems.itemWarHammer_BlackSteel, new ItemPolearmRender());
-		MinecraftForgeClient.registerItemRenderer(TFCMItems.itemWarHammer_BlueSteel, new ItemPolearmRender());
-		MinecraftForgeClient.registerItemRenderer(TFCMItems.itemWarHammer_Bronze, new ItemPolearmRender());
-		MinecraftForgeClient.registerItemRenderer(TFCMItems.itemWarHammer_Copper, new ItemPolearmRender());
-		MinecraftForgeClient.registerItemRenderer(TFCMItems.itemWarHammer_RedSteel, new ItemPolearmRender());
-		MinecraftForgeClient.registerItemRenderer(TFCMItems.itemWarHammer_Steel, new ItemPolearmRender());
-		MinecraftForgeClient.registerItemRenderer(TFCMItems.itemWarHammer_WroughtIron, new ItemPolearmRender());
+		MinecraftForgeClient.registerItemRenderer(TFCMItems.warHammer_BismuthBronze, new ItemPolearmRender());
+		MinecraftForgeClient.registerItemRenderer(TFCMItems.warHammer_BlackBronze, new ItemPolearmRender());
+		MinecraftForgeClient.registerItemRenderer(TFCMItems.warHammer_BlackSteel, new ItemPolearmRender());
+		MinecraftForgeClient.registerItemRenderer(TFCMItems.warHammer_BlueSteel, new ItemPolearmRender());
+		MinecraftForgeClient.registerItemRenderer(TFCMItems.warHammer_Bronze, new ItemPolearmRender());
+		MinecraftForgeClient.registerItemRenderer(TFCMItems.warHammer_Copper, new ItemPolearmRender());
+		MinecraftForgeClient.registerItemRenderer(TFCMItems.warHammer_RedSteel, new ItemPolearmRender());
+		MinecraftForgeClient.registerItemRenderer(TFCMItems.warHammer_Steel, new ItemPolearmRender());
+		MinecraftForgeClient.registerItemRenderer(TFCMItems.warHammer_WroughtIron, new ItemPolearmRender());
 		//Tallow Candle
 			//Render Registering
 		TileEntitySpecialRenderer render = new TESRTallowCandle();
@@ -152,6 +148,8 @@ public class TFCMClientProxy extends TFCMCommonProxy
 		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(TFCMBlocks.blockTallowCandleOff), new TESRTallowCandleItem(render2, new TETallowCandle()));
 			//Screen Overlay for custom quiver
 		//MinecraftForge.EVENT_BUS.register(new RenderQuiverOverlayHandler());
+		
+		RenderingRegistry.registerBlockHandler(TFCMBlocks.cropRenderId = RenderingRegistry.getNextAvailableRenderId(), new CropRender());
 	}
 	
 	@Override
@@ -162,6 +160,8 @@ public class TFCMClientProxy extends TFCMCommonProxy
 		// TESR registers
 		ClientRegistry.registerTileEntity(TETallowCandle.class, "TallowCandleTESR", new TESRTallowCandle());
 		ClientRegistry.registerTileEntity(TEFruitPress.class, "FruitPressTESR", new TESRFruitPress());
+		ClientRegistry.registerTileEntity(TEBrickOven.class, "BrickOvenTESR", new TESRBrickOven());
+		ClientRegistry.registerTileEntity(TESoupKettle.class, "SoupKettleTESR", new TESRSoupKettle());
 	}
 
 	@Override

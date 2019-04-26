@@ -3,9 +3,9 @@ package terramisc.handlers;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.event.entity.player.EntityItemPickupEvent;
-import terramisc.items.ItemCustomQuiver;
 import terramisc.items.tools.ItemCustomArrow;
 import terramisc.items.tools.ItemCustomBolt;
+import terramisc.items.tools.ItemCustomQuiver;
 
 import com.bioxx.tfc.Core.Player.InventoryPlayerTFC;
 

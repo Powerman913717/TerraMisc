@@ -34,12 +34,12 @@ public class EventListener
 			 event.player.addStat(TFCMAchievements.achPoniard, 1);
 		 }
 		 
-		 if(event.crafting.getItem() == TFCMItems.itemLongBow)
+		 if(event.crafting.getItem() == TFCMItems.longBow)
 		 {
 			 event.player.addStat(TFCMAchievements.achLongbow, 1);
 		 }
 		 
-		 if(event.crafting.getItem() == TFCMItems.itemCrossBow)
+		 if(event.crafting.getItem() == TFCMItems.crossBow)
 		 {
 			 event.player.addStat(TFCMAchievements.achCrossbow, 1);
 		 }
@@ -78,12 +78,12 @@ public class EventListener
 	@SubscribeEvent
 	 public void pickup(ItemPickupEvent event)
 	 {
-		 if(event.pickedUp.getEntityItem().getItem() == TFCMItems.itemDeerTendon)
+		 if(event.pickedUp.getEntityItem().getItem() == TFCMItems.deerTendon)
 		 {
 			 event.player.addStat(TFCMAchievements.achSinew, 1);
 		 }
 		 
-		 if(event.pickedUp.getEntityItem().getItem() == TFCMItems.itemSuet)
+		 if(event.pickedUp.getEntityItem().getItem() == TFCMItems.suet)
 		 {
 			 event.player.addStat(TFCMAchievements.achSuet, 1);
 		 }

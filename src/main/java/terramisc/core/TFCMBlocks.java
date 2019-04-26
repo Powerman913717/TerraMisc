@@ -1,10 +1,17 @@
 package terramisc.core;
 
+import com.bioxx.tfc.Items.ItemBlocks.ItemTerraBlock;
+
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraft.init.Blocks;
 import terramisc.blocks.BlockClayTFCM;
-import terramisc.blocks.BlockFruitPress;
+import terramisc.blocks.BlockCropTFCM;
+import terramisc.blocks.BlockFoodPumpkin;
+import terramisc.blocks.BlockPumpkinLantern;
+import terramisc.blocks.BlockPumpkinLanternOff;
+import terramisc.blocks.BlockPumpkinTFCM;
 import terramisc.blocks.BlockRoadIgEx;
 import terramisc.blocks.BlockRoadIgIn;
 import terramisc.blocks.BlockRoadMM;
@@ -12,9 +19,16 @@ import terramisc.blocks.BlockRoadSed;
 import terramisc.blocks.BlockStainedClayTFCM;
 import terramisc.blocks.BlockTallowCandle;
 import terramisc.blocks.BlockTallowCandleOff;
+import terramisc.blocks.devices.BlockBrickOven;
+import terramisc.blocks.devices.BlockFruitPress;
+import terramisc.blocks.devices.BlockSoupKettle;
+import terramisc.items.itemblocks.ItemBlockStainedClayTFCM;
+import terramisc.items.itemblocks.ItemBlockWetClay;
 
 public class TFCMBlocks 
 {
+	public static int cropRenderId;
+	
 	//Candles
 	public static Block blockTallowCandle;
 	public static Block blockTallowCandleOff;
@@ -25,8 +39,18 @@ public class TFCMBlocks
 	public static Block blockRoadMM;
 	public static Block blockRoadSed;
 	
-	//Devices
+	//Food Devices
 	public static Block blockFruitPress;
+	public static Block blockBrickOven;
+	public static Block blockSoupKettle;
+	
+	//Food blockCrops
+	public static Block blockPumpkin;
+	public static Block blockPumpkinCarved;
+	public static Block blockPumpkinLantern;
+	public static Block blockPumpkinLanternOff;
+	
+	public static Block blockCrops;
 	
 	//Decoration
 	public static Block blockClay;
@@ -59,12 +83,37 @@ public class TFCMBlocks
 		blockRoadSed = new BlockRoadSed().setHardness(14F).setBlockName("blockRoadSed");
 		GameRegistry.registerBlock(blockRoadSed, terramisc.items.itemblocks.ItemBlockRoadBlock.class, "blockRoadSed");
 	
+		//Food Devices
 		blockFruitPress = new BlockFruitPress().setHardness(2F).setBlockName("blockFruitPress");
 		GameRegistry.registerBlock(blockFruitPress, "blockFruitPress");
+		blockBrickOven = new BlockBrickOven().setHardness(14F).setBlockName("blockBrickOven");
+		GameRegistry.registerBlock(blockBrickOven, ItemTerraBlock.class, "blockBrickOven");
+		blockSoupKettle = new BlockSoupKettle().setHardness(8F).setBlockName("blockSoupKettle");
+		GameRegistry.registerBlock(blockSoupKettle, ItemTerraBlock.class, "blockSoupKettle");
 		
+		//Food blockCrops
+		blockPumpkin = new BlockFoodPumpkin(false, false).setHardness(1.0F).setStepSound(Block.soundTypeWood).setBlockName("blockPumpkin");
+		GameRegistry.registerBlock(blockPumpkin, ItemTerraBlock.class, "blockPumpkin");
+		blockPumpkinCarved = new BlockPumpkinTFCM(true, false).setHardness(1.0F).setStepSound(Block.soundTypeWood).setBlockName("blockPumpkinCarved");
+		GameRegistry.registerBlock(blockPumpkinCarved, ItemTerraBlock.class, "blockPumpkinCarved");
+		blockPumpkinLantern = new BlockPumpkinLantern(true, true).setHardness(1.0F).setStepSound(Block.soundTypeWood).setBlockName("blockPumpkinLantern");
+		GameRegistry.registerBlock(blockPumpkinLantern, ItemTerraBlock.class, "blockPumpkinLantern");
+		blockPumpkinLanternOff = new BlockPumpkinLanternOff(true, false).setHardness(1.0F).setStepSound(Block.soundTypeWood).setBlockName("blockPumpkinLanternOff");
+		GameRegistry.registerBlock(blockPumpkinLanternOff, ItemTerraBlock.class, "blockPumpkinLanternOff");
+		
+		blockCrops = new BlockCropTFCM().setBlockName("blockCrops").setHardness(0.3F).setStepSound(Block.soundTypeGrass);
+		GameRegistry.registerBlock(blockCrops, "blockCrops");
+		
+		//Decoration
 		blockClay = new BlockClayTFCM().setBlockName("blockClay");
-		GameRegistry.registerBlock(blockClay, terramisc.items.itemblocks.ItemBlockWetClay.class, "blockClay");
+		GameRegistry.registerBlock(blockClay, ItemBlockWetClay.class, "blockClay");
 		blockStainedClay = new BlockStainedClayTFCM(Material.rock).setBlockName("blockStainedClay");
-		GameRegistry.registerBlock(blockStainedClay, terramisc.items.itemblocks.ItemBlockStainedClayTFCM.class,"blockStainedClay");
+		GameRegistry.registerBlock(blockStainedClay, ItemBlockStainedClayTFCM.class,"blockStainedClay");
+	}
+
+	
+	public static void setupFire()
+	{
+		Blocks.fire.setFireInfo(blockCrops, 20, 20);
 	}
 }

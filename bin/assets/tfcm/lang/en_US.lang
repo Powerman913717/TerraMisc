@@ -12,27 +12,27 @@
 tile.blockTallowCandle.name=Tallow Candle
 tile.blockTallowCandleOff.name=Extinguished Tallow Candle
 //Road
-tile.blockRoadIgEx.Andesite.name=Andesite Road
-tile.blockRoadIgEx.Basalt.name=Basalt Road
-tile.blockRoadSed.Chalk.name=Chalk Road
-tile.blockRoadSed.Chert.name=Chert Road
-tile.blockRoadSed.Claystone.name=Claystone Road
-tile.blockRoadSed.Conglomerate.name=Conglomerate Road
-tile.blockRoadIgEx.Dacite.name=Dacite Road
-tile.blockRoadIgIn.Diorite.name=Diorite Road
-tile.blockRoadSed.Dolomite.name=Dolomite Road
-tile.blockRoadIgIn.Gabbro.name=Gabbro Road
-tile.blockRoadMM.Gneiss.name=Gneiss Road
-tile.blockRoadIgIn.Granite.name=Granite Road
-tile.blockRoadSed.Limestone.name=Limestone Road
-tile.blockRoadMM.Marble.name=Marble Road
-tile.blockRoadMM.Phyllite.name=Phyllite Road
-tile.blockRoadMM.Quartzite.name=Quartzite Road
-tile.blockRoadIgEx.Rhyolite.name=Rhyolite Road
-tile.blockRoadSed.Rock Salt.name=Rock Salt Road
-tile.blockRoadMM.Schist.name=Schist Road
-tile.blockRoadSed.Shale.name=Shale Road
-tile.blockRoadMM.Slate.name=Slate Road
+tile.blockRoadIgEx.Andesite.name=Andesite Tiles
+tile.blockRoadIgEx.Basalt.name=Basalt Tiles
+tile.blockRoadSed.Chalk.name=Chalk Tiles
+tile.blockRoadSed.Chert.name=Chert Tiles
+tile.blockRoadSed.Claystone.name=Claystone Tiles
+tile.blockRoadSed.Conglomerate.name=Conglomerate Tiles
+tile.blockRoadIgEx.Dacite.name=Dacite Tiles
+tile.blockRoadIgIn.Diorite.name=Diorite Tiles
+tile.blockRoadSed.Dolomite.name=Dolomite Tiles
+tile.blockRoadIgIn.Gabbro.name=Gabbro Tiles
+tile.blockRoadMM.Gneiss.name=Gneiss Tiles
+tile.blockRoadIgIn.Granite.name=Granite Tiles
+tile.blockRoadSed.Limestone.name=Limestone Tiles
+tile.blockRoadMM.Marble.name=Marble Tiles
+tile.blockRoadMM.Phyllite.name=Phyllite Tiles
+tile.blockRoadMM.Quartzite.name=Quartzite Tiles
+tile.blockRoadIgEx.Rhyolite.name=Rhyolite Tiles
+tile.blockRoadSed.Rock Salt.name=Rock Salt Tiles
+tile.blockRoadMM.Schist.name=Schist Tiles
+tile.blockRoadSed.Shale.name=Shale Tiles
+tile.blockRoadMM.Slate.name=Slate Tiles
 //Stained Clay
 tile.blockClay.name=Clay Block
 tile.blockStainedClay.hardened_clay.name=Hardened Clay
@@ -86,8 +86,12 @@ item.BottleJuiceLemon.name=Lemon Juice
 item.BottleLemonade.name=Lemonade
 item.BottleJuiceOnion.name=Onion Juice
 item.BottleSoyMilk.name=Soy Milk
-item.SoyPaste.name=Soybean Paste
 item.BucketHotWater.name=Wooden Bucket (Hot Water)
+item.SoyPaste.name=Soybean Paste
+item.Pumpkin.name=Pumpkin
+item.PumpkinMeat.name=Pumpkin Meat
+item.Pie.name=Pie
+item.Bear.name=Bear Meat
 //Bows and Such
 item.LongBow.name=Longbow
 item.CrossBow.name=Crossbow
@@ -341,6 +345,15 @@ gui.plans.warhammer=War Hammer Head
 gui.plans.poniard=Poniard Blade
 gui.plans.bolt=Bolt Head
 gui.plans.arrow=Arrow Head
+
+//WAILA and ToolTips
+gui.crossbow.bolts=Bolts
+gui.crossbow.loaded=Loaded
+gui.crossbow.unloaded=Unloaded
+gui.tallowcandle.color=Color:
+gui.clay.isBaking=Baking
+gui.clay.baking=Bake near open flames or lava.
+gui.pumpkinHarvesting=Break to harvest for food.
 
 #===========
 #= Fluids =

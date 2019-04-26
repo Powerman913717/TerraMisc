@@ -1,14 +1,17 @@
 package terramisc.handlers;
 
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.tileentity.TileEntity;
-import net.minecraft.world.World;
-import terramisc.containers.ContainerCustomQuiver;
-import terramisc.tileentities.TEFruitPress;
-
 import com.bioxx.tfc.Containers.ContainerHopper;
 
 import cpw.mods.fml.common.network.IGuiHandler;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.tileentity.TileEntity;
+import net.minecraft.world.World;
+import terramisc.containers.ContainerBrickOven;
+import terramisc.containers.ContainerCustomQuiver;
+import terramisc.containers.ContainerSoupKettle;
+import terramisc.tileentities.TEBrickOven;
+import terramisc.tileentities.TEFruitPress;
+import terramisc.tileentities.TESoupKettle;
 
 public class TFCMGuiHandler implements IGuiHandler
 {
@@ -28,6 +31,22 @@ public class TFCMGuiHandler implements IGuiHandler
 			case 2:
 			{
 				return new ContainerCustomQuiver(player.inventory, world, x, y, z);
+			}
+			case 3:
+			{
+				return new ContainerBrickOven(player.inventory, ((TEBrickOven) te), world, x, y, z, 0);
+			}
+			case 4:
+			{
+				return new ContainerBrickOven(player.inventory, ((TEBrickOven) te), world, x, y, z, 1);
+			}
+			case 5:
+			{
+				return new ContainerSoupKettle(player.inventory, ((TESoupKettle) te), world, x, y, z, 0);
+			}
+			case 6:
+			{
+				return new ContainerSoupKettle(player.inventory, ((TESoupKettle) te), world, x, y, z, 1);
 			}
 			default:
 			{

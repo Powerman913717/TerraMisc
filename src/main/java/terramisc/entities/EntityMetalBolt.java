@@ -10,7 +10,7 @@ import com.bioxx.tfc.api.Enums.EnumDamageType;
 
 public class EntityMetalBolt  extends EntityProjectileTFC 
 {
-	public Item pickupItem = TFCMItems.itemBolt_Copper;
+	public Item pickupItem = TFCMItems.bolt_Copper;
 	
 	public EntityMetalBolt(World par1World) 
 	{

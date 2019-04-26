@@ -2,23 +2,6 @@ package terramisc;
 
 import java.io.File;
 
-import net.minecraftforge.common.MinecraftForge;
-import terramisc.core.TFCMAchievements;
-import terramisc.core.TFCMBlocks;
-import terramisc.core.TFCMCommonProxy;
-import terramisc.core.TFCMDetails;
-import terramisc.core.TFCMItemsSetup;
-import terramisc.core.TFCMOreDictionary;
-import terramisc.core.TFCMRecipes;
-import terramisc.core.player.TFCMPlayerTracker;
-import terramisc.events.EventListener;
-import terramisc.handlers.TFCMChunkEventHandler;
-import terramisc.handlers.TFCMCraftingHandler;
-import terramisc.handlers.TFCMCraftingToolUsageHandler;
-import terramisc.handlers.TFCMEntityLivingHandler;
-import terramisc.handlers.TFCMMobDropHandler;
-import terramisc.handlers.network.TFCMInitClientWorldPacket;
-
 import com.bioxx.tfc.TerraFirmaCraft;
 
 import cpw.mods.fml.common.FMLCommonHandler;
@@ -29,6 +12,25 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.common.MinecraftForge;
+import terramisc.core.TFCMAchievements;
+import terramisc.core.TFCMBlocks;
+import terramisc.core.TFCMCommonProxy;
+import terramisc.core.TFCMDetails;
+import terramisc.core.TFCMItemsSetup;
+import terramisc.core.TFCMOreDictionary;
+import terramisc.core.TFCMRecipes;
+import terramisc.core.player.TFCMPlayerTracker;
+import terramisc.events.EventListener;
+import terramisc.food.CropRegistry;
+import terramisc.handlers.TFCMBlockDropHandler;
+import terramisc.handlers.TFCMChunkEventHandler;
+import terramisc.handlers.TFCMCraftingHandler;
+import terramisc.handlers.TFCMCraftingToolUsageHandler;
+import terramisc.handlers.TFCMEntityLivingHandler;
+import terramisc.handlers.TFCMMobDropHandler;
+import terramisc.handlers.network.TFCMCreateMealPacket;
+import terramisc.handlers.network.TFCMInitClientWorldPacket;
 
 @Mod(modid = TFCMDetails.ModID, name = TFCMDetails.ModName, version = "0.14.0", dependencies = TFCMDetails.ModDependencies)
 public class TerraMisc
@@ -58,6 +60,8 @@ public class TerraMisc
 		TFCMBlocks.initialise();
 		//Register Tick Handler
 		proxy.registerTickHandler();
+		
+		TFCMBlocks.setupFire();
 	    
 		// Register Key Bindings(Client only)
 		proxy.registerKeys();
@@ -81,6 +85,7 @@ public class TerraMisc
 	{
 		// Register packets in the TFC PacketPipeline
 		TerraFirmaCraft.PACKET_PIPELINE.registerPacket(TFCMInitClientWorldPacket.class);
+		TerraFirmaCraft.PACKET_PIPELINE.registerPacket(TFCMCreateMealPacket.class);
 		
 		// Register the player tracker
 		FMLCommonHandler.instance().bus().register(new TFCMPlayerTracker());
@@ -90,6 +95,7 @@ public class TerraMisc
 
 		// Register Crafting Handlers
 		FMLCommonHandler.instance().bus().register(new TFCMCraftingHandler());
+		//FMLCommonHandler.instance().bus().register(new TFCMFoodCraftingHandler());
 		FMLCommonHandler.instance().bus().register(new TFCMCraftingToolUsageHandler());
 
 		// Register the Chunk Load/Save Handler
@@ -105,6 +111,9 @@ public class TerraMisc
 		// Register Mob Drop Handlers
 		MinecraftForge.EVENT_BUS.register(new TFCMMobDropHandler());
 		
+		// Register Block Drop Handlers
+		MinecraftForge.EVENT_BUS.register(new TFCMBlockDropHandler());
+		
 		// Register Liquids
 		proxy.setupFluids();
 		
@@ -117,7 +126,10 @@ public class TerraMisc
 		
 		// Register WAILA classes
 		proxy.registerWailaClasses();
-		proxy.hideNEIItems();		
+		proxy.hideNEIItems();
+		
+		//Register Crops
+		CropRegistry.registerCrops();
 	}
 
 	@EventHandler

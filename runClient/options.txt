@@ -12,7 +12,7 @@ advancedOpengl:false
 maxFps:120
 fboEnable:true
 difficulty:2
-fancyGraphics:false
+fancyGraphics:true
 ao:2
 clouds:false
 resourcePacks:[]
@@ -92,6 +92,7 @@ key_waila.keybind.wailadisplay:79
 key_waila.keybind.liquid:80
 key_waila.keybind.recipe:81
 key_waila.keybind.usage:75
+key_Baubles Inventory:48
 soundCategory_master:1.0
 soundCategory_music:0.0
 soundCategory_record:1.0

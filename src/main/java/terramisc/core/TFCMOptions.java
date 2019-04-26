@@ -18,7 +18,11 @@ public class TFCMOptions
 	public static boolean enableCrucibleEmptying = true;
 	//Other
 	public static boolean enableCraftingCompassClock = true;
-	public static double TallowCandleBurnTime = 975;
+	public static float TallowCandleBurnTime = 975;
+	//Crops
+	public static int pumpkinID = 100;
+	public static int cayenneID = 101;
+	public static int coffeeID= 102;
 	
 	public static void loadSettings()
 	{	
@@ -49,15 +53,19 @@ public class TFCMOptions
 		enableCrucibleEmptying = getBooleanFor(config, "Crucible Emptying", "enableCrucibleEmptying", true, "Enable Crucible Emptying Recipe. (Default = true)");
 			//Other
 		enableCraftingCompassClock = getBooleanFor(config, "Other", "enableCraftingCompassClock", true, "Enable crafting Clocks and Compasses. (Default = true)");
-		TallowCandleBurnTime = getDoubleFor(config, "Other", "TallowCandleBurnTime", 975, "The number of hours the candle will burn for, torch default is 48, oil lamp default is 2000. (Default = 975");
+		TallowCandleBurnTime = getIntFor(config, "Other", "TallowCandleBurnTime", 975, "The number of hours the candle will burn for, torch default is 48, oil lamp default is 2000. (Default = 975");
+			//Crops
+		pumpkinID = getIntFor(config, "CropIDs", "pumpkinID", 100, "DO NOT CHANGE THIS UNLESS YOU KNOW WHAT YOU ARE DOING! (Default = 100");
+		cayenneID = getIntFor(config, "CropIDs", "cayenneID", 101, "DO NOT CHANGE THIS UNLESS YOU KNOW WHAT YOU ARE DOING! (Default = 101");
+		coffeeID = getIntFor(config, "CropIDs", "coffeeID", 102, "DO NOT CHANGE THIS UNLESS YOU KNOW WHAT YOU ARE DOING! (Default = 102");
 		/** End Here*/
 		if (config != null)
 			config.save();
 
 		System.out.println("[" + TFCMDetails.ModName + "] Done loading options.");
 	}
-	
-	 public static void loadSettings(TFCMOptions options)
+
+	public static void loadSettings(TFCMOptions options)
 	  {
 	    System.out.println("[TerraMisc] Loading options from options class.");
 	    	//Redstone
@@ -72,6 +80,10 @@ public class TFCMOptions
 	    	//Other
 	    enableCraftingCompassClock = options == null ? true : enableCraftingCompassClock;
 	    TallowCandleBurnTime = options == null ? 1: TallowCandleBurnTime;
+	    
+	    pumpkinID = options == null ? 1: pumpkinID;
+	    cayenneID = options == null ? 1: cayenneID;
+	    coffeeID = options == null ? 1: coffeeID;
 	    System.out.println("[TerraMisc] Done loading options from options class.");
 	  }
 	
@@ -86,7 +98,7 @@ public class TFCMOptions
 		}
 		catch (Exception e)
 		{
-			System.out.println("[" + TFCMDetails.ModName + "] Error while trying to add Integer, config wasn't loaded properly!");
+			System.out.println("[" + TFCMDetails.ModName + "] Error while trying to add Boolean, config wasn't loaded properly!");
 		}
 		return value;
 	}
@@ -103,7 +115,7 @@ public class TFCMOptions
 		}
 		catch (Exception e)
 		{
-			System.out.println("[" + TFCMDetails.ModName + "] Error while trying to add Integer, config wasn't loaded properly!");
+			System.out.println("[" + TFCMDetails.ModName + "] Error while trying to add Boolean, config wasn't loaded properly!");
 		}
 		return value;
 	}

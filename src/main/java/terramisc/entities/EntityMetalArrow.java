@@ -9,7 +9,7 @@ import com.bioxx.tfc.Entities.EntityProjectileTFC;
 
 public class EntityMetalArrow extends EntityProjectileTFC 
 {
-	public Item pickupItem = TFCMItems.itemArrow_Copper;
+	public Item pickupItem = TFCMItems.arrow_Copper;
 	
 	public EntityMetalArrow(World par1World) 
 	{

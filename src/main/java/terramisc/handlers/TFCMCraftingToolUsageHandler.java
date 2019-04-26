@@ -18,7 +18,7 @@ public class TFCMCraftingToolUsageHandler
 
 		if(craftMatrix != null)
 		{
-			if(item == TFCMItems.itemBowLimb)
+			if(item == TFCMItems.bowLimb)
 			{
 				if (e.player.capabilities.isCreativeMode)
 					e.crafting.setItemDamage(0);
@@ -50,7 +50,7 @@ public class TFCMCraftingToolUsageHandler
 		
 		if(craftMatrix != null)
 		{
-			if(item == TFCMItems.itemSinewFiber)
+			if(item == TFCMItems.sinewFiber)
 			{
 				if (e.player.capabilities.isCreativeMode)
 					e.crafting.setItemDamage(0);

@@ -49,7 +49,7 @@ public class BlockClayTFCM extends BlockTerraContainer
 	@Override
 	public int quantityDropped(Random rand)
 	{
-		return rand.nextInt(3) + 1;
+		return 4;
 	}
 
 	@Override

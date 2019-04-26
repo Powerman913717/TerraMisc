@@ -1,8 +1,13 @@
 package terramisc.blocks;
 
-import java.util.ArrayList;
 import java.util.Random;
 
+import com.bioxx.tfc.Core.TFC_Time;
+import com.bioxx.tfc.Items.Tools.ItemFirestarter;
+import com.bioxx.tfc.api.TFCBlocks;
+
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemFlintAndSteel;
@@ -11,13 +16,6 @@ import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import terramisc.core.TFCMBlocks;
 import terramisc.tileentities.TETallowCandle;
-
-import com.bioxx.tfc.Core.TFC_Time;
-import com.bioxx.tfc.Items.Tools.ItemFirestarter;
-import com.bioxx.tfc.api.TFCBlocks;
-
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 
 public class BlockTallowCandleOff extends BlockTallowCandle
 {
@@ -83,14 +81,6 @@ public class BlockTallowCandleOff extends BlockTallowCandle
 		}
 		
 		return true;
-	}
-
-	@Override
-	public ArrayList<ItemStack> getDrops(World world, int x, int y, int z, int metadata, int fortune)
-	{
-		new ArrayList<ItemStack>().add(new ItemStack(TFCMBlocks.blockTallowCandle));
-		
-		return new ArrayList<ItemStack>();
 	}
 
 	/**

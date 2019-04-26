@@ -2,6 +2,16 @@ package terramisc.blocks;
 
 import java.util.Random;
 
+import com.bioxx.tfc.Blocks.BlockTerraContainer;
+import com.bioxx.tfc.Core.TFCTabs;
+import com.bioxx.tfc.Core.TFC_Core;
+import com.bioxx.tfc.Core.TFC_Time;
+import com.bioxx.tfc.Items.Tools.ItemFirestarter;
+import com.bioxx.tfc.api.TFCBlocks;
+import com.bioxx.tfc.api.TFCOptions;
+
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.player.EntityPlayer;
@@ -16,18 +26,6 @@ import terramisc.core.TFCMBlocks;
 import terramisc.core.TFCMOptions;
 import terramisc.items.ItemTallowDye;
 import terramisc.tileentities.TETallowCandle;
-
-import com.bioxx.tfc.Blocks.BlockTerraContainer;
-import com.bioxx.tfc.Core.TFCTabs;
-import com.bioxx.tfc.Core.TFC_Core;
-import com.bioxx.tfc.Core.TFC_Time;
-import com.bioxx.tfc.Items.Tools.ItemFirestarter;
-import com.bioxx.tfc.api.TFCBlocks;
-import com.bioxx.tfc.api.TFCItems;
-import com.bioxx.tfc.api.TFCOptions;
-
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 
 public class BlockTallowCandle extends BlockTerraContainer
 {
@@ -65,14 +63,8 @@ public class BlockTallowCandle extends BlockTerraContainer
 			Item item = is != null ? is.getItem() : null;
 			TETallowCandle te = (TETallowCandle)world.getTileEntity(x, y, z);
 			
-			//Makes additonal torches.
-			if (meta < 8 && item == TFCItems.stick)
-			{	
-				player.inventory.consumeInventoryItem(TFCItems.stick);
-				TFC_Core.giveItemToPlayer(new ItemStack(TFCBlocks.torch), player);
-			}
 			// Refreshing candle timer, or re-lighting burned out candles that haven't converted yet.
-			else if (item == Item.getItemFromBlock(TFCBlocks.torch))
+			if (item == Item.getItemFromBlock(TFCBlocks.torch))
 			{
 				te.hourPlaced = (int)TFC_Time.getTotalHours();
 				if (meta >= 8)
@@ -94,13 +86,14 @@ public class BlockTallowCandle extends BlockTerraContainer
 					}
 					
 					equippedItem.damageItem(1, player);
-					world.setBlockMetadataWithNotify(x, y, z, meta - 8, 3);
+					world.setBlockMetadataWithNotify(x, y, z, meta, 3);
 					return true;
 				}
 			}
-			//Add dye to candle inventory
 			else if(te.color == 15 && item instanceof ItemTallowDye)
 			{
+				//Sets Candle color via NBT data.
+				
 				int d = item.getDamage(is);
 				if(d != 15)
 				{
@@ -109,7 +102,6 @@ public class BlockTallowCandle extends BlockTerraContainer
 					world.scheduleBlockUpdate(x, y, z, this, 1);
 				}
 			}
-			// Extinguish the candle.
 			else if(item == null)
 			{
 				int c1 = te.color;
@@ -239,6 +231,12 @@ public class BlockTallowCandle extends BlockTerraContainer
 		return false;
 	}
 	
+	@Override
+	public Item getItemDropped(int metadata, Random rand, int fortune)
+	{
+		return new ItemStack(TFCMBlocks.blockTallowCandleOff).getItem();
+	}
+	
 	//Particles
 	@Override
 	@SideOnly(Side.CLIENT)
@@ -248,37 +246,11 @@ public class BlockTallowCandle extends BlockTerraContainer
 		if(meta >= 8)
 			return;
 
-
 		double centerX = x + 0.5F;
 		double centerY = y + 0.5F;
 		double centerZ = z + 0.43F;
-		double d3 = 0.22;
-		double d4 = 0.27;
 
-		if ((meta & 7) == 1)
-		{
-			world.spawnParticle("smoke", centerX - d4, centerY + d3, centerZ, 0.0D, 0.0D, 0.0D);
-			world.spawnParticle("flame", centerX - d4, centerY + d3, centerZ, 0.0D, 0.0D, 0.0D);
-		}
-		else if ((meta & 7) == 2)
-		{
-			world.spawnParticle("smoke", centerX + d4, centerY + d3, centerZ, 0.0D, 0.0D, 0.0D);
-			world.spawnParticle("flame", centerX + d4, centerY + d3, centerZ, 0.0D, 0.0D, 0.0D);
-		}
-		else if ((meta & 7) == 3)
-		{
-			world.spawnParticle("smoke", centerX, centerY + d3, centerZ - d4, 0.0D, 0.0D, 0.0D);
-			world.spawnParticle("flame", centerX, centerY + d3, centerZ - d4, 0.0D, 0.0D, 0.0D);
-		}
-		else if ((meta & 7) == 4)
-		{
-			world.spawnParticle("smoke", centerX, centerY + d3, centerZ + d4, 0.0D, 0.0D, 0.0D);
-			world.spawnParticle("flame", centerX, centerY + d3, centerZ + d4, 0.0D, 0.0D, 0.0D);
-		}
-		else
-		{
-			world.spawnParticle("smoke", centerX, centerY, centerZ, 0.0D, 0.0D, 0.0D);
-			world.spawnParticle("flame", centerX, centerY, centerZ, 0.0D, 0.0D, 0.0D);
-		}
+		world.spawnParticle("smoke", centerX, centerY, centerZ, 0.0D, 0.0D, 0.0D);
+		world.spawnParticle("flame", centerX, centerY, centerZ, 0.0D, 0.0D, 0.0D);
 	}
 }

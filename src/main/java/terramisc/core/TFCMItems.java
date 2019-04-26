@@ -3,189 +3,189 @@ package terramisc.core;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.item.Item;
 
-public class TFCMItems 
+public class TFCMItems
 {
-	//Basic Items
-	public static Item itemCasingBrass;
-	public static Item itemCasingIron;
-	public static Item itemCasingRoseGold;
-	public static Item itemGear;
-	public static Item itemCaseinGlue;
-	public static Item itemPistonBase;
-	public static Item itemCircuit;
-	public static Item itemDeerTendon;
-	public static Item itemSinewFiber;
-	public static Item itemSinewString;
-	public static Item itemSinewBowString;
-	public static Item itemBowLimb;
-	public static Item itemSuet;
-	public static Item itemBowlSuet;
-	public static Item itemBowlTallow;
-	public static Item itemBrownDye;
-	public static Item itemIronDust;
-	public static Item itemTallowDye;
+	//Basic s
+	public static Item casingBrass;
+	public static Item casingIron;
+	public static Item casingRoseGold;
+	public static Item gear;
+	public static Item caseinGlue;
+	public static Item pistonBase;
+	public static Item circuit;
+	public static Item deerTendon;
+	public static Item sinewFiber;
+	public static Item sinewString;
+	public static Item sinewBowString;
+	public static Item bowLimb;
+	public static Item suet;
+	public static Item bowlSuet;
+	public static Item bowlTallow;
+	public static Item brownDye;
+	public static Item ironDust;
+	public static Item tallowDye;
 		
 	//Bows and Such
-	public static Item itemLongBow;
-	public static Item itemCrossBow;
+	public static Item longBow;
+	public static Item crossBow;
 	
 	//Halberds
-	public static Item itemHalberd_BismuthBronze;
-	public static Item itemHalberd_BlackBronze;
-	public static Item itemHalberd_BlackSteel;
-	public static Item itemHalberd_BlueSteel;
-	public static Item itemHalberd_Bronze;
-	public static Item itemHalberd_Copper;
-	public static Item itemHalberd_WroughtIron;
-	public static Item itemHalberd_RedSteel;
-	public static Item itemHalberd_Steel;
+	public static Item halberd_BismuthBronze;
+	public static Item halberd_BlackBronze;
+	public static Item halberd_BlackSteel;
+	public static Item halberd_BlueSteel;
+	public static Item halberd_Bronze;
+	public static Item halberd_Copper;
+	public static Item halberd_WroughtIron;
+	public static Item halberd_RedSteel;
+	public static Item halberd_Steel;
 	
 	//Halberd Tool Heads
-	public static Item itemHalberd_BismuthBronze_Head;
-	public static Item itemHalberd_BlackBronze_Head;
-	public static Item itemHalberd_BlackSteel_Head;
-	public static Item itemHalberd_BlueSteel_Head;
-	public static Item itemHalberd_Bronze_Head;
-	public static Item itemHalberd_Copper_Head;
-	public static Item itemHalberd_WroughtIron_Head;
-	public static Item itemHalberd_RedSteel_Head;
-	public static Item itemHalberd_Steel_Head;
+	public static Item halberd_BismuthBronze_Head;
+	public static Item halberd_BlackBronze_Head;
+	public static Item halberd_BlackSteel_Head;
+	public static Item halberd_BlueSteel_Head;
+	public static Item halberd_Bronze_Head;
+	public static Item halberd_Copper_Head;
+	public static Item halberd_WroughtIron_Head;
+	public static Item halberd_RedSteel_Head;
+	public static Item halberd_Steel_Head;
 	
 	//War Hammers
-	public static Item itemWarHammer_BismuthBronze;
-	public static Item itemWarHammer_BlackBronze;
-	public static Item itemWarHammer_BlackSteel;
-	public static Item itemWarHammer_BlueSteel;
-	public static Item itemWarHammer_Bronze;
-	public static Item itemWarHammer_Copper;
-	public static Item itemWarHammer_WroughtIron;
-	public static Item itemWarHammer_RedSteel;
-	public static Item itemWarHammer_Steel;
+	public static Item warHammer_BismuthBronze;
+	public static Item warHammer_BlackBronze;
+	public static Item warHammer_BlackSteel;
+	public static Item warHammer_BlueSteel;
+	public static Item warHammer_Bronze;
+	public static Item warHammer_Copper;
+	public static Item warHammer_WroughtIron;
+	public static Item warHammer_RedSteel;
+	public static Item warHammer_Steel;
 	
 	//War Hammer Heads
-	public static Item itemWarHammer_BismuthBronze_Head;
-	public static Item itemWarHammer_BlackBronze_Head;
-	public static Item itemWarHammer_BlackSteel_Head;
-	public static Item itemWarHammer_BlueSteel_Head;
-	public static Item itemWarHammer_Bronze_Head;
-	public static Item itemWarHammer_Copper_Head;
-	public static Item itemWarHammer_WroughtIron_Head;
-	public static Item itemWarHammer_RedSteel_Head;
-	public static Item itemWarHammer_Steel_Head;
+	public static Item warHammer_BismuthBronze_Head;
+	public static Item warHammer_BlackBronze_Head;
+	public static Item warHammer_BlackSteel_Head;
+	public static Item warHammer_BlueSteel_Head;
+	public static Item warHammer_Bronze_Head;
+	public static Item warHammer_Copper_Head;
+	public static Item warHammer_WroughtIron_Head;
+	public static Item warHammer_RedSteel_Head;
+	public static Item warHammer_Steel_Head;
 	
 	//Poniards
-	public static Item itemPoniard_BismuthBronze;
-	public static Item itemPoniard_BlackBronze;
-	public static Item itemPoniard_BlackSteel;
-	public static Item itemPoniard_BlueSteel;
-	public static Item itemPoniard_Bronze;
-	public static Item itemPoniard_Copper;
-	public static Item itemPoniard_WroughtIron;
-	public static Item itemPoniard_RedSteel;
-	public static Item itemPoniard_Steel;
+	public static Item poniard_BismuthBronze;
+	public static Item poniard_BlackBronze;
+	public static Item poniard_BlackSteel;
+	public static Item poniard_BlueSteel;
+	public static Item poniard_Bronze;
+	public static Item poniard_Copper;
+	public static Item poniard_WroughtIron;
+	public static Item poniard_RedSteel;
+	public static Item poniard_Steel;
 	
 	//Poniard Blades
-	public static Item itemPoniard_BismuthBronze_Head;
-	public static Item itemPoniard_BlackBronze_Head;
-	public static Item itemPoniard_BlackSteel_Head;
-	public static Item itemPoniard_BlueSteel_Head;
-	public static Item itemPoniard_Bronze_Head;
-	public static Item itemPoniard_Copper_Head;
-	public static Item itemPoniard_WroughtIron_Head;
-	public static Item itemPoniard_RedSteel_Head;
-	public static Item itemPoniard_Steel_Head;
+	public static Item poniard_BismuthBronze_Head;
+	public static Item poniard_BlackBronze_Head;
+	public static Item poniard_BlackSteel_Head;
+	public static Item poniard_BlueSteel_Head;
+	public static Item poniard_Bronze_Head;
+	public static Item poniard_Copper_Head;
+	public static Item poniard_WroughtIron_Head;
+	public static Item poniard_RedSteel_Head;
+	public static Item poniard_Steel_Head;
 	
 	//Arrows
-	public static Item itemArrow_BismuthBronze;
-	public static Item itemArrow_BlackBronze;
-	public static Item itemArrow_BlackSteel;
-	public static Item itemArrow_BlueSteel;
-	public static Item itemArrow_Bronze;
-	public static Item itemArrow_Copper;
-	public static Item itemArrow_WroughtIron;
-	public static Item itemArrow_RedSteel;
-	public static Item itemArrow_Steel;
+	public static Item arrow_BismuthBronze;
+	public static Item arrow_BlackBronze;
+	public static Item arrow_BlackSteel;
+	public static Item arrow_BlueSteel;
+	public static Item arrow_Bronze;
+	public static Item arrow_Copper;
+	public static Item arrow_WroughtIron;
+	public static Item arrow_RedSteel;
+	public static Item arrow_Steel;
 	
 	//Arrow Heads
-	public static Item itemArrow_BismuthBronze_Head;
-	public static Item itemArrow_BlackBronze_Head;
-	public static Item itemArrow_BlackSteel_Head;
-	public static Item itemArrow_BlueSteel_Head;
-	public static Item itemArrow_Bronze_Head;
-	public static Item itemArrow_Copper_Head;
-	public static Item itemArrow_WroughtIron_Head;
-	public static Item itemArrow_RedSteel_Head;
-	public static Item itemArrow_Steel_Head;
+	public static Item arrow_BismuthBronze_Head;
+	public static Item arrow_BlackBronze_Head;
+	public static Item arrow_BlackSteel_Head;
+	public static Item arrow_BlueSteel_Head;
+	public static Item arrow_Bronze_Head;
+	public static Item arrow_Copper_Head;
+	public static Item arrow_WroughtIron_Head;
+	public static Item arrow_RedSteel_Head;
+	public static Item arrow_Steel_Head;
 	
 	//Bolts
-	public static Item itemBolt_BismuthBronze;
-	public static Item itemBolt_BlackBronze;
-	public static Item itemBolt_BlackSteel;
-	public static Item itemBolt_BlueSteel;
-	public static Item itemBolt_Bronze;
-	public static Item itemBolt_Copper;
-	public static Item itemBolt_WroughtIron;
-	public static Item itemBolt_RedSteel;
-	public static Item itemBolt_Steel;
+	public static Item bolt_BismuthBronze;
+	public static Item bolt_BlackBronze;
+	public static Item bolt_BlackSteel;
+	public static Item bolt_BlueSteel;
+	public static Item bolt_Bronze;
+	public static Item bolt_Copper;
+	public static Item bolt_WroughtIron;
+	public static Item bolt_RedSteel;
+	public static Item bolt_Steel;
 	
 	//Bolt Heads
-	public static Item itemBolt_BismuthBronze_Head;
-	public static Item itemBolt_BlackBronze_Head;
-	public static Item itemBolt_BlackSteel_Head;
-	public static Item itemBolt_BlueSteel_Head;
-	public static Item itemBolt_Bronze_Head;
-	public static Item itemBolt_Copper_Head;
-	public static Item itemBolt_WroughtIron_Head;
-	public static Item itemBolt_RedSteel_Head;
-	public static Item itemBolt_Steel_Head;
+	public static Item bolt_BismuthBronze_Head;
+	public static Item bolt_BlackBronze_Head;
+	public static Item bolt_BlackSteel_Head;
+	public static Item bolt_BlueSteel_Head;
+	public static Item bolt_Bronze_Head;
+	public static Item bolt_Copper_Head;
+	public static Item bolt_WroughtIron_Head;
+	public static Item bolt_RedSteel_Head;
+	public static Item bolt_Steel_Head;
 	
 	//Pottery
-	public static Item itemHalberd_Mold;
-	public static Item itemWarHammer_Mold;
-	public static Item itemPoniard_Mold;
-	public static Item itemArrow_Mold;
-	public static Item itemBolt_Mold;
+	public static Item halberd_Mold;
+	public static Item warHammer_Mold;
+	public static Item poniard_Mold;
+	public static Item arrow_Mold;
+	public static Item bolt_Mold;
 	
 	//Armor
-	public static Item itemCoil_BismuthBronze;
-	public static Item itemCoil_BlackBronze;
-	public static Item itemCoil_BlackSteel;
-	public static Item itemCoil_BlueSteel;
-	public static Item itemCoil_Bronze;
-	public static Item itemCoil_Copper;
-	public static Item itemCoil_WroughtIron;
-	public static Item itemCoil_RedSteel;
-	public static Item itemCoil_Steel;
+	public static Item coil_BismuthBronze;
+	public static Item coil_BlackBronze;
+	public static Item coil_BlackSteel;
+	public static Item coil_BlueSteel;
+	public static Item coil_Bronze;
+	public static Item coil_Copper;
+	public static Item coil_WroughtIron;
+	public static Item coil_RedSteel;
+	public static Item coil_Steel;
 	
-	public static Item itemLink_BismuthBronze;
-	public static Item itemLink_BlackBronze;
-	public static Item itemLink_BlackSteel;
-	public static Item itemLink_BlueSteel;
-	public static Item itemLink_Bronze;
-	public static Item itemLink_Copper;
-	public static Item itemLink_WroughtIron;
-	public static Item itemLink_RedSteel;
-	public static Item itemLink_Steel;
+	public static Item link_BismuthBronze;
+	public static Item link_BlackBronze;
+	public static Item link_BlackSteel;
+	public static Item link_BlueSteel;
+	public static Item link_Bronze;
+	public static Item link_Copper;
+	public static Item link_WroughtIron;
+	public static Item link_RedSteel;
+	public static Item link_Steel;
 	
-	public static Item itemChain_Square_BismuthBronze;
-	public static Item itemChain_Square_BlackBronze;
-	public static Item itemChain_Square_BlackSteel;
-	public static Item itemChain_Square_BlueSteel;
-	public static Item itemChain_Square_Bronze;
-	public static Item itemChain_Square_Copper;
-	public static Item itemChain_Square_WroughtIron;
-	public static Item itemChain_Square_RedSteel;
-	public static Item itemChain_Square_Steel;
+	public static Item chain_Square_BismuthBronze;
+	public static Item chain_Square_BlackBronze;
+	public static Item chain_Square_BlackSteel;
+	public static Item chain_Square_BlueSteel;
+	public static Item chain_Square_Bronze;
+	public static Item chain_Square_Copper;
+	public static Item chain_Square_WroughtIron;
+	public static Item chain_Square_RedSteel;
+	public static Item chain_Square_Steel;
 	
-	public static Item itemChain_Sheet_BismuthBronze;
-	public static Item itemChain_Sheet_BlackBronze;
-	public static Item itemChain_Sheet_BlackSteel;
-	public static Item itemChain_Sheet_BlueSteel;
-	public static Item itemChain_Sheet_Bronze;
-	public static Item itemChain_Sheet_Copper;
-	public static Item itemChain_Sheet_WroughtIron;
-	public static Item itemChain_Sheet_RedSteel;
-	public static Item itemChain_Sheet_Steel;
+	public static Item chain_Sheet_BismuthBronze;
+	public static Item chain_Sheet_BlackBronze;
+	public static Item chain_Sheet_BlackSteel;
+	public static Item chain_Sheet_BlueSteel;
+	public static Item chain_Sheet_Bronze;
+	public static Item chain_Sheet_Copper;
+	public static Item chain_Sheet_WroughtIron;
+	public static Item chain_Sheet_RedSteel;
+	public static Item chain_Sheet_Steel;
 	
 	public static Item BismuthBronzeChainGreaves;
 	public static Item BlackBronzeChainGreaves;
@@ -218,206 +218,226 @@ public class TFCMItems
 	public static Item SteelChainHelmet;
 	
 	//Food Stuffs
-	public static Item itemBottleFruitJuice;
-	public static Item itemBottleFruitWine;
-	public static Item itemBottleSugar;
+	public static Item bottleFruitJuice;
+	public static Item bottleFruitWine;
+	public static Item bottleSugar;
 	
-	public static Item itemBottleJuiceApple;
-	public static Item itemBottleJuiceOrange;
-	public static Item itemBottleJuiceLemon;
-	public static Item itemBottleLemonade;
-	public static Item itemBottleJuiceOnion;
+	public static Item bottleJuiceApple;
+	public static Item bottleJuiceOrange;
+	public static Item bottleJuiceLemon;
+	public static Item bottleLemonade;
+	public static Item bottleJuiceOnion;
 	
-	public static Item itemBottleSoyMilk;
-	public static Item itemBucketHotWater;
-	public static Item itemSoyPaste;
+		//Soy
+	public static Item bottleSoyMilk;
+	public static Item bucketHotWater;
+	public static Item soyPaste;
 	
-	//Inventory Items
+		//Crops
+	public static Item seedsPumpkin;
+	public static Item pumpkin;
+	public static Item seedsCayenne;
+	public static Item greenCayenne;
+	public static Item redCayenne;
+	public static Item seedsCoffee;
+	public static Item coffeeCherries;
+	public static Item greenCoffee;
+	public static Item coffee;
+	public static Item groundCoffee;
+	
+	public static Item pie;
+	public static Item casserole;
+	public static Item soup;
+	public static Item stew;
+	
+	public static Item bearRaw;
+	
+	//Inventory s
 	public static Item itemQuiver;
 	
-	public static void registerItems()
+	public static void registers()
 	{
-		//Basic Items
-		GameRegistry.registerItem(itemCasingBrass, itemCasingBrass.getUnlocalizedName());
-		GameRegistry.registerItem(itemCasingIron, itemCasingIron.getUnlocalizedName());
-		GameRegistry.registerItem(itemCasingRoseGold, itemCasingRoseGold.getUnlocalizedName());
-		GameRegistry.registerItem(itemGear, itemGear.getUnlocalizedName()); 
-		GameRegistry.registerItem(itemCaseinGlue, itemCaseinGlue.getUnlocalizedName());		
-		GameRegistry.registerItem(itemPistonBase, itemPistonBase.getUnlocalizedName());
-		GameRegistry.registerItem(itemCircuit, itemCircuit.getUnlocalizedName());
-		GameRegistry.registerItem(itemDeerTendon, itemDeerTendon.getUnlocalizedName());
-		GameRegistry.registerItem(itemSinewFiber, itemSinewFiber.getUnlocalizedName());
-		GameRegistry.registerItem(itemSinewString, itemSinewString.getUnlocalizedName());
-		GameRegistry.registerItem(itemSinewBowString, itemSinewBowString.getUnlocalizedName());
-		GameRegistry.registerItem(itemBowLimb, itemBowLimb.getUnlocalizedName());
-		GameRegistry.registerItem(itemSuet, itemSuet.getUnlocalizedName());
-		GameRegistry.registerItem(itemBowlSuet, itemBowlSuet.getUnlocalizedName());
-		GameRegistry.registerItem(itemBowlTallow, itemBowlTallow.getUnlocalizedName());
-		GameRegistry.registerItem(itemBrownDye, itemBrownDye.getUnlocalizedName());
-		GameRegistry.registerItem(itemIronDust, itemIronDust.getUnlocalizedName());
-		GameRegistry.registerItem(itemTallowDye, itemTallowDye.getUnlocalizedName());
+		//Basic s
+		GameRegistry.registerItem(casingBrass, casingBrass.getUnlocalizedName());
+		GameRegistry.registerItem(casingIron, casingIron.getUnlocalizedName());
+		GameRegistry.registerItem(casingRoseGold, casingRoseGold.getUnlocalizedName());
+		GameRegistry.registerItem(gear, gear.getUnlocalizedName()); 
+		GameRegistry.registerItem(caseinGlue, caseinGlue.getUnlocalizedName());		
+		GameRegistry.registerItem(pistonBase, pistonBase.getUnlocalizedName());
+		GameRegistry.registerItem(circuit, circuit.getUnlocalizedName());
+		GameRegistry.registerItem(deerTendon, deerTendon.getUnlocalizedName());
+		GameRegistry.registerItem(sinewFiber, sinewFiber.getUnlocalizedName());
+		GameRegistry.registerItem(sinewString, sinewString.getUnlocalizedName());
+		GameRegistry.registerItem(sinewBowString, sinewBowString.getUnlocalizedName());
+		GameRegistry.registerItem(bowLimb, bowLimb.getUnlocalizedName());
+		GameRegistry.registerItem(suet, suet.getUnlocalizedName());
+		GameRegistry.registerItem(bowlSuet, bowlSuet.getUnlocalizedName());
+		GameRegistry.registerItem(bowlTallow, bowlTallow.getUnlocalizedName());
+		GameRegistry.registerItem(brownDye, brownDye.getUnlocalizedName());
+		GameRegistry.registerItem(ironDust, ironDust.getUnlocalizedName());
+		GameRegistry.registerItem(tallowDye, tallowDye.getUnlocalizedName());
 		
 		//Bows and Such
-		GameRegistry.registerItem(itemLongBow, itemLongBow.getUnlocalizedName());
-		GameRegistry.registerItem(itemCrossBow, itemCrossBow.getUnlocalizedName());
+		GameRegistry.registerItem(longBow, longBow.getUnlocalizedName());
+		GameRegistry.registerItem(crossBow, crossBow.getUnlocalizedName());
 		
 		//Halberds
-		GameRegistry.registerItem(itemHalberd_BismuthBronze, itemHalberd_BismuthBronze.getUnlocalizedName());
-		GameRegistry.registerItem(itemHalberd_BlackBronze, itemHalberd_BlackBronze.getUnlocalizedName());
-		GameRegistry.registerItem(itemHalberd_BlackSteel, itemHalberd_BlackSteel.getUnlocalizedName());
-		GameRegistry.registerItem(itemHalberd_BlueSteel, itemHalberd_BlueSteel.getUnlocalizedName());
-		GameRegistry.registerItem(itemHalberd_Bronze, itemHalberd_Bronze.getUnlocalizedName());
-		GameRegistry.registerItem(itemHalberd_Copper, itemHalberd_Copper.getUnlocalizedName());
-		GameRegistry.registerItem(itemHalberd_WroughtIron, itemHalberd_WroughtIron.getUnlocalizedName());
-		GameRegistry.registerItem(itemHalberd_RedSteel, itemHalberd_RedSteel.getUnlocalizedName());
-		GameRegistry.registerItem(itemHalberd_Steel, itemHalberd_Steel.getUnlocalizedName());
+		GameRegistry.registerItem(halberd_BismuthBronze, halberd_BismuthBronze.getUnlocalizedName());
+		GameRegistry.registerItem(halberd_BlackBronze, halberd_BlackBronze.getUnlocalizedName());
+		GameRegistry.registerItem(halberd_BlackSteel, halberd_BlackSteel.getUnlocalizedName());
+		GameRegistry.registerItem(halberd_BlueSteel, halberd_BlueSteel.getUnlocalizedName());
+		GameRegistry.registerItem(halberd_Bronze, halberd_Bronze.getUnlocalizedName());
+		GameRegistry.registerItem(halberd_Copper, halberd_Copper.getUnlocalizedName());
+		GameRegistry.registerItem(halberd_WroughtIron, halberd_WroughtIron.getUnlocalizedName());
+		GameRegistry.registerItem(halberd_RedSteel, halberd_RedSteel.getUnlocalizedName());
+		GameRegistry.registerItem(halberd_Steel, halberd_Steel.getUnlocalizedName());
 		
 		//Halberd Tool Heads
-		GameRegistry.registerItem(itemHalberd_BismuthBronze_Head, itemHalberd_BismuthBronze_Head.getUnlocalizedName());
-		GameRegistry.registerItem(itemHalberd_BlackBronze_Head, itemHalberd_BlackBronze_Head.getUnlocalizedName());
-		GameRegistry.registerItem(itemHalberd_BlackSteel_Head, itemHalberd_BlackSteel_Head.getUnlocalizedName());
-		GameRegistry.registerItem(itemHalberd_BlueSteel_Head, itemHalberd_BlueSteel_Head.getUnlocalizedName());
-		GameRegistry.registerItem(itemHalberd_Bronze_Head, itemHalberd_Bronze_Head.getUnlocalizedName());
-		GameRegistry.registerItem(itemHalberd_Copper_Head, itemHalberd_Copper_Head.getUnlocalizedName());
-		GameRegistry.registerItem(itemHalberd_WroughtIron_Head, itemHalberd_WroughtIron_Head.getUnlocalizedName());
-		GameRegistry.registerItem(itemHalberd_RedSteel_Head, itemHalberd_RedSteel_Head.getUnlocalizedName());
-		GameRegistry.registerItem(itemHalberd_Steel_Head, itemHalberd_Steel_Head.getUnlocalizedName());
+		GameRegistry.registerItem(halberd_BismuthBronze_Head, halberd_BismuthBronze_Head.getUnlocalizedName());
+		GameRegistry.registerItem(halberd_BlackBronze_Head, halberd_BlackBronze_Head.getUnlocalizedName());
+		GameRegistry.registerItem(halberd_BlackSteel_Head, halberd_BlackSteel_Head.getUnlocalizedName());
+		GameRegistry.registerItem(halberd_BlueSteel_Head, halberd_BlueSteel_Head.getUnlocalizedName());
+		GameRegistry.registerItem(halberd_Bronze_Head, halberd_Bronze_Head.getUnlocalizedName());
+		GameRegistry.registerItem(halberd_Copper_Head, halberd_Copper_Head.getUnlocalizedName());
+		GameRegistry.registerItem(halberd_WroughtIron_Head, halberd_WroughtIron_Head.getUnlocalizedName());
+		GameRegistry.registerItem(halberd_RedSteel_Head, halberd_RedSteel_Head.getUnlocalizedName());
+		GameRegistry.registerItem(halberd_Steel_Head, halberd_Steel_Head.getUnlocalizedName());
 		
 		//War Hammers
-		GameRegistry.registerItem(itemWarHammer_BismuthBronze, itemWarHammer_BismuthBronze.getUnlocalizedName());
-		GameRegistry.registerItem(itemWarHammer_BlackBronze, itemWarHammer_BlackBronze.getUnlocalizedName());
-		GameRegistry.registerItem(itemWarHammer_BlackSteel, itemWarHammer_BlackSteel.getUnlocalizedName());
-		GameRegistry.registerItem(itemWarHammer_BlueSteel, itemWarHammer_BlueSteel.getUnlocalizedName());
-		GameRegistry.registerItem(itemWarHammer_Bronze, itemWarHammer_Bronze.getUnlocalizedName());
-		GameRegistry.registerItem(itemWarHammer_Copper, itemWarHammer_Copper.getUnlocalizedName());
-		GameRegistry.registerItem(itemWarHammer_WroughtIron, itemWarHammer_WroughtIron.getUnlocalizedName());
-		GameRegistry.registerItem(itemWarHammer_RedSteel, itemWarHammer_RedSteel.getUnlocalizedName());
-		GameRegistry.registerItem(itemWarHammer_Steel, itemWarHammer_Steel.getUnlocalizedName());
+		GameRegistry.registerItem(warHammer_BismuthBronze, warHammer_BismuthBronze.getUnlocalizedName());
+		GameRegistry.registerItem(warHammer_BlackBronze, warHammer_BlackBronze.getUnlocalizedName());
+		GameRegistry.registerItem(warHammer_BlackSteel, warHammer_BlackSteel.getUnlocalizedName());
+		GameRegistry.registerItem(warHammer_BlueSteel, warHammer_BlueSteel.getUnlocalizedName());
+		GameRegistry.registerItem(warHammer_Bronze, warHammer_Bronze.getUnlocalizedName());
+		GameRegistry.registerItem(warHammer_Copper, warHammer_Copper.getUnlocalizedName());
+		GameRegistry.registerItem(warHammer_WroughtIron, warHammer_WroughtIron.getUnlocalizedName());
+		GameRegistry.registerItem(warHammer_RedSteel, warHammer_RedSteel.getUnlocalizedName());
+		GameRegistry.registerItem(warHammer_Steel, warHammer_Steel.getUnlocalizedName());
 		
 		//War Hammer Heads
-		GameRegistry.registerItem(itemWarHammer_BismuthBronze_Head, itemWarHammer_BismuthBronze_Head.getUnlocalizedName());
-		GameRegistry.registerItem(itemWarHammer_BlackBronze_Head, itemWarHammer_BlackBronze_Head.getUnlocalizedName());
-		GameRegistry.registerItem(itemWarHammer_BlackSteel_Head, itemWarHammer_BlackSteel_Head.getUnlocalizedName());
-		GameRegistry.registerItem(itemWarHammer_BlueSteel_Head, itemWarHammer_BlueSteel_Head.getUnlocalizedName());
-		GameRegistry.registerItem(itemWarHammer_Bronze_Head, itemWarHammer_Bronze_Head.getUnlocalizedName());
-		GameRegistry.registerItem(itemWarHammer_Copper_Head, itemWarHammer_Copper_Head.getUnlocalizedName());
-		GameRegistry.registerItem(itemWarHammer_WroughtIron_Head, itemWarHammer_WroughtIron_Head.getUnlocalizedName());
-		GameRegistry.registerItem(itemWarHammer_RedSteel_Head, itemWarHammer_RedSteel_Head.getUnlocalizedName());
-		GameRegistry.registerItem(itemWarHammer_Steel_Head, itemWarHammer_Steel_Head.getUnlocalizedName());
+		GameRegistry.registerItem(warHammer_BismuthBronze_Head, warHammer_BismuthBronze_Head.getUnlocalizedName());
+		GameRegistry.registerItem(warHammer_BlackBronze_Head, warHammer_BlackBronze_Head.getUnlocalizedName());
+		GameRegistry.registerItem(warHammer_BlackSteel_Head, warHammer_BlackSteel_Head.getUnlocalizedName());
+		GameRegistry.registerItem(warHammer_BlueSteel_Head, warHammer_BlueSteel_Head.getUnlocalizedName());
+		GameRegistry.registerItem(warHammer_Bronze_Head, warHammer_Bronze_Head.getUnlocalizedName());
+		GameRegistry.registerItem(warHammer_Copper_Head, warHammer_Copper_Head.getUnlocalizedName());
+		GameRegistry.registerItem(warHammer_WroughtIron_Head, warHammer_WroughtIron_Head.getUnlocalizedName());
+		GameRegistry.registerItem(warHammer_RedSteel_Head, warHammer_RedSteel_Head.getUnlocalizedName());
+		GameRegistry.registerItem(warHammer_Steel_Head, warHammer_Steel_Head.getUnlocalizedName());
 	
 		//Poniards
-		GameRegistry.registerItem(itemPoniard_BismuthBronze, itemPoniard_BismuthBronze.getUnlocalizedName());
-		GameRegistry.registerItem(itemPoniard_BlackBronze, itemPoniard_BlackBronze.getUnlocalizedName());
-		GameRegistry.registerItem(itemPoniard_BlackSteel, itemPoniard_BlackSteel.getUnlocalizedName());
-		GameRegistry.registerItem(itemPoniard_BlueSteel, itemPoniard_BlueSteel.getUnlocalizedName());
-		GameRegistry.registerItem(itemPoniard_Bronze, itemPoniard_Bronze.getUnlocalizedName());
-		GameRegistry.registerItem(itemPoniard_Copper, itemPoniard_Copper.getUnlocalizedName());
-		GameRegistry.registerItem(itemPoniard_WroughtIron, itemPoniard_WroughtIron.getUnlocalizedName());
-		GameRegistry.registerItem(itemPoniard_RedSteel, itemPoniard_RedSteel.getUnlocalizedName());
-		GameRegistry.registerItem(itemPoniard_Steel, itemPoniard_Steel.getUnlocalizedName());
+		GameRegistry.registerItem(poniard_BismuthBronze, poniard_BismuthBronze.getUnlocalizedName());
+		GameRegistry.registerItem(poniard_BlackBronze, poniard_BlackBronze.getUnlocalizedName());
+		GameRegistry.registerItem(poniard_BlackSteel, poniard_BlackSteel.getUnlocalizedName());
+		GameRegistry.registerItem(poniard_BlueSteel, poniard_BlueSteel.getUnlocalizedName());
+		GameRegistry.registerItem(poniard_Bronze, poniard_Bronze.getUnlocalizedName());
+		GameRegistry.registerItem(poniard_Copper, poniard_Copper.getUnlocalizedName());
+		GameRegistry.registerItem(poniard_WroughtIron, poniard_WroughtIron.getUnlocalizedName());
+		GameRegistry.registerItem(poniard_RedSteel, poniard_RedSteel.getUnlocalizedName());
+		GameRegistry.registerItem(poniard_Steel, poniard_Steel.getUnlocalizedName());
 		
 		//Poniard Blades
-		GameRegistry.registerItem(itemPoniard_BismuthBronze_Head, itemPoniard_BismuthBronze_Head.getUnlocalizedName());
-		GameRegistry.registerItem(itemPoniard_BlackBronze_Head, itemPoniard_BlackBronze_Head.getUnlocalizedName());
-		GameRegistry.registerItem(itemPoniard_BlackSteel_Head, itemPoniard_BlackSteel_Head.getUnlocalizedName());
-		GameRegistry.registerItem(itemPoniard_BlueSteel_Head, itemPoniard_BlueSteel_Head.getUnlocalizedName());
-		GameRegistry.registerItem(itemPoniard_Bronze_Head, itemPoniard_Bronze_Head.getUnlocalizedName());
-		GameRegistry.registerItem(itemPoniard_Copper_Head, itemPoniard_Copper_Head.getUnlocalizedName());
-		GameRegistry.registerItem(itemPoniard_WroughtIron_Head, itemPoniard_WroughtIron_Head.getUnlocalizedName());
-		GameRegistry.registerItem(itemPoniard_RedSteel_Head, itemPoniard_RedSteel_Head.getUnlocalizedName());
-		GameRegistry.registerItem(itemPoniard_Steel_Head, itemPoniard_Steel_Head.getUnlocalizedName());
+		GameRegistry.registerItem(poniard_BismuthBronze_Head, poniard_BismuthBronze_Head.getUnlocalizedName());
+		GameRegistry.registerItem(poniard_BlackBronze_Head, poniard_BlackBronze_Head.getUnlocalizedName());
+		GameRegistry.registerItem(poniard_BlackSteel_Head, poniard_BlackSteel_Head.getUnlocalizedName());
+		GameRegistry.registerItem(poniard_BlueSteel_Head, poniard_BlueSteel_Head.getUnlocalizedName());
+		GameRegistry.registerItem(poniard_Bronze_Head, poniard_Bronze_Head.getUnlocalizedName());
+		GameRegistry.registerItem(poniard_Copper_Head, poniard_Copper_Head.getUnlocalizedName());
+		GameRegistry.registerItem(poniard_WroughtIron_Head, poniard_WroughtIron_Head.getUnlocalizedName());
+		GameRegistry.registerItem(poniard_RedSteel_Head, poniard_RedSteel_Head.getUnlocalizedName());
+		GameRegistry.registerItem(poniard_Steel_Head, poniard_Steel_Head.getUnlocalizedName());
 		
 		//Arrows
-		GameRegistry.registerItem(itemArrow_BismuthBronze, itemArrow_BismuthBronze.getUnlocalizedName());
-		GameRegistry.registerItem(itemArrow_BlackBronze, itemArrow_BlackBronze.getUnlocalizedName());
-		GameRegistry.registerItem(itemArrow_BlackSteel, itemArrow_BlackSteel.getUnlocalizedName());
-		GameRegistry.registerItem(itemArrow_BlueSteel, itemArrow_BlueSteel.getUnlocalizedName());
-		GameRegistry.registerItem(itemArrow_Bronze, itemArrow_Bronze.getUnlocalizedName());
-		GameRegistry.registerItem(itemArrow_Copper, itemArrow_Copper.getUnlocalizedName());
-		GameRegistry.registerItem(itemArrow_WroughtIron, itemArrow_WroughtIron.getUnlocalizedName());
-		GameRegistry.registerItem(itemArrow_RedSteel, itemArrow_RedSteel.getUnlocalizedName());
-		GameRegistry.registerItem(itemArrow_Steel, itemArrow_Steel.getUnlocalizedName());
+		GameRegistry.registerItem(arrow_BismuthBronze, arrow_BismuthBronze.getUnlocalizedName());
+		GameRegistry.registerItem(arrow_BlackBronze, arrow_BlackBronze.getUnlocalizedName());
+		GameRegistry.registerItem(arrow_BlackSteel, arrow_BlackSteel.getUnlocalizedName());
+		GameRegistry.registerItem(arrow_BlueSteel, arrow_BlueSteel.getUnlocalizedName());
+		GameRegistry.registerItem(arrow_Bronze, arrow_Bronze.getUnlocalizedName());
+		GameRegistry.registerItem(arrow_Copper, arrow_Copper.getUnlocalizedName());
+		GameRegistry.registerItem(arrow_WroughtIron, arrow_WroughtIron.getUnlocalizedName());
+		GameRegistry.registerItem(arrow_RedSteel, arrow_RedSteel.getUnlocalizedName());
+		GameRegistry.registerItem(arrow_Steel, arrow_Steel.getUnlocalizedName());
 		
 		//Arrow Heads
-		GameRegistry.registerItem(itemArrow_BismuthBronze_Head, itemArrow_BismuthBronze_Head.getUnlocalizedName());
-		GameRegistry.registerItem(itemArrow_BlackBronze_Head, itemArrow_BlackBronze_Head.getUnlocalizedName());
-		GameRegistry.registerItem(itemArrow_BlackSteel_Head, itemArrow_BlackSteel_Head.getUnlocalizedName());
-		GameRegistry.registerItem(itemArrow_BlueSteel_Head, itemArrow_BlueSteel_Head.getUnlocalizedName());
-		GameRegistry.registerItem(itemArrow_Bronze_Head, itemArrow_Bronze_Head.getUnlocalizedName());
-		GameRegistry.registerItem(itemArrow_Copper_Head, itemArrow_Copper_Head.getUnlocalizedName());
-		GameRegistry.registerItem(itemArrow_WroughtIron_Head, itemArrow_WroughtIron_Head.getUnlocalizedName());
-		GameRegistry.registerItem(itemArrow_RedSteel_Head, itemArrow_RedSteel_Head.getUnlocalizedName());
-		GameRegistry.registerItem(itemArrow_Steel_Head, itemArrow_Steel_Head.getUnlocalizedName());
+		GameRegistry.registerItem(arrow_BismuthBronze_Head, arrow_BismuthBronze_Head.getUnlocalizedName());
+		GameRegistry.registerItem(arrow_BlackBronze_Head, arrow_BlackBronze_Head.getUnlocalizedName());
+		GameRegistry.registerItem(arrow_BlackSteel_Head, arrow_BlackSteel_Head.getUnlocalizedName());
+		GameRegistry.registerItem(arrow_BlueSteel_Head, arrow_BlueSteel_Head.getUnlocalizedName());
+		GameRegistry.registerItem(arrow_Bronze_Head, arrow_Bronze_Head.getUnlocalizedName());
+		GameRegistry.registerItem(arrow_Copper_Head, arrow_Copper_Head.getUnlocalizedName());
+		GameRegistry.registerItem(arrow_WroughtIron_Head, arrow_WroughtIron_Head.getUnlocalizedName());
+		GameRegistry.registerItem(arrow_RedSteel_Head, arrow_RedSteel_Head.getUnlocalizedName());
+		GameRegistry.registerItem(arrow_Steel_Head, arrow_Steel_Head.getUnlocalizedName());
 	
 		//Bolts
-		GameRegistry.registerItem(itemBolt_BismuthBronze, itemBolt_BismuthBronze.getUnlocalizedName());
-		GameRegistry.registerItem(itemBolt_BlackBronze, itemBolt_BlackBronze.getUnlocalizedName());
-		GameRegistry.registerItem(itemBolt_BlackSteel, itemBolt_BlackSteel.getUnlocalizedName());
-		GameRegistry.registerItem(itemBolt_BlueSteel, itemBolt_BlueSteel.getUnlocalizedName());
-		GameRegistry.registerItem(itemBolt_Bronze, itemBolt_Bronze.getUnlocalizedName());
-		GameRegistry.registerItem(itemBolt_Copper, itemBolt_Copper.getUnlocalizedName());
-		GameRegistry.registerItem(itemBolt_WroughtIron, itemBolt_WroughtIron.getUnlocalizedName());
-		GameRegistry.registerItem(itemBolt_RedSteel, itemBolt_RedSteel.getUnlocalizedName());
-		GameRegistry.registerItem(itemBolt_Steel, itemBolt_Steel.getUnlocalizedName());
+		GameRegistry.registerItem(bolt_BismuthBronze, bolt_BismuthBronze.getUnlocalizedName());
+		GameRegistry.registerItem(bolt_BlackBronze, bolt_BlackBronze.getUnlocalizedName());
+		GameRegistry.registerItem(bolt_BlackSteel, bolt_BlackSteel.getUnlocalizedName());
+		GameRegistry.registerItem(bolt_BlueSteel, bolt_BlueSteel.getUnlocalizedName());
+		GameRegistry.registerItem(bolt_Bronze, bolt_Bronze.getUnlocalizedName());
+		GameRegistry.registerItem(bolt_Copper, bolt_Copper.getUnlocalizedName());
+		GameRegistry.registerItem(bolt_WroughtIron, bolt_WroughtIron.getUnlocalizedName());
+		GameRegistry.registerItem(bolt_RedSteel, bolt_RedSteel.getUnlocalizedName());
+		GameRegistry.registerItem(bolt_Steel, bolt_Steel.getUnlocalizedName());
 		
 		//Bolt Heads
-		GameRegistry.registerItem(itemBolt_BismuthBronze_Head, itemBolt_BismuthBronze_Head.getUnlocalizedName());
-		GameRegistry.registerItem(itemBolt_BlackBronze_Head, itemBolt_BlackBronze_Head.getUnlocalizedName());
-		GameRegistry.registerItem(itemBolt_BlackSteel_Head, itemBolt_BlackSteel_Head.getUnlocalizedName());
-		GameRegistry.registerItem(itemBolt_BlueSteel_Head, itemBolt_BlueSteel_Head.getUnlocalizedName());
-		GameRegistry.registerItem(itemBolt_Bronze_Head, itemBolt_Bronze_Head.getUnlocalizedName());
-		GameRegistry.registerItem(itemBolt_Copper_Head, itemBolt_Copper_Head.getUnlocalizedName());
-		GameRegistry.registerItem(itemBolt_WroughtIron_Head, itemBolt_WroughtIron_Head.getUnlocalizedName());
-		GameRegistry.registerItem(itemBolt_RedSteel_Head, itemBolt_RedSteel_Head.getUnlocalizedName());
-		GameRegistry.registerItem(itemBolt_Steel_Head, itemBolt_Steel_Head.getUnlocalizedName());
+		GameRegistry.registerItem(bolt_BismuthBronze_Head, bolt_BismuthBronze_Head.getUnlocalizedName());
+		GameRegistry.registerItem(bolt_BlackBronze_Head, bolt_BlackBronze_Head.getUnlocalizedName());
+		GameRegistry.registerItem(bolt_BlackSteel_Head, bolt_BlackSteel_Head.getUnlocalizedName());
+		GameRegistry.registerItem(bolt_BlueSteel_Head, bolt_BlueSteel_Head.getUnlocalizedName());
+		GameRegistry.registerItem(bolt_Bronze_Head, bolt_Bronze_Head.getUnlocalizedName());
+		GameRegistry.registerItem(bolt_Copper_Head, bolt_Copper_Head.getUnlocalizedName());
+		GameRegistry.registerItem(bolt_WroughtIron_Head, bolt_WroughtIron_Head.getUnlocalizedName());
+		GameRegistry.registerItem(bolt_RedSteel_Head, bolt_RedSteel_Head.getUnlocalizedName());
+		GameRegistry.registerItem(bolt_Steel_Head, bolt_Steel_Head.getUnlocalizedName());
 		
 		//Pottery
-		GameRegistry.registerItem(itemHalberd_Mold, itemHalberd_Mold.getUnlocalizedName());
-		GameRegistry.registerItem(itemWarHammer_Mold, itemWarHammer_Mold.getUnlocalizedName());
-		GameRegistry.registerItem(itemPoniard_Mold, itemPoniard_Mold.getUnlocalizedName());
-		GameRegistry.registerItem(itemArrow_Mold, itemArrow_Mold.getUnlocalizedName());
-		GameRegistry.registerItem(itemBolt_Mold, itemBolt_Mold.getUnlocalizedName());
+		GameRegistry.registerItem(halberd_Mold, halberd_Mold.getUnlocalizedName());
+		GameRegistry.registerItem(warHammer_Mold, warHammer_Mold.getUnlocalizedName());
+		GameRegistry.registerItem(poniard_Mold, poniard_Mold.getUnlocalizedName());
+		GameRegistry.registerItem(arrow_Mold, arrow_Mold.getUnlocalizedName());
+		GameRegistry.registerItem(bolt_Mold, bolt_Mold.getUnlocalizedName());
 		
 		//Armor
-		GameRegistry.registerItem(itemCoil_BismuthBronze, itemCoil_BismuthBronze.getUnlocalizedName());
-		GameRegistry.registerItem(itemCoil_BlackBronze, itemCoil_BlackBronze.getUnlocalizedName());
-		GameRegistry.registerItem(itemCoil_BlackSteel, itemCoil_BlackSteel.getUnlocalizedName());
-		GameRegistry.registerItem(itemCoil_BlueSteel, itemCoil_BlueSteel.getUnlocalizedName());
-		GameRegistry.registerItem(itemCoil_Bronze, itemCoil_Bronze.getUnlocalizedName());
-		GameRegistry.registerItem(itemCoil_Copper, itemCoil_Copper.getUnlocalizedName());
-		GameRegistry.registerItem(itemCoil_WroughtIron, itemCoil_WroughtIron.getUnlocalizedName());
-		GameRegistry.registerItem(itemCoil_RedSteel, itemCoil_RedSteel.getUnlocalizedName());
-		GameRegistry.registerItem(itemCoil_Steel, itemCoil_Steel.getUnlocalizedName());
+		GameRegistry.registerItem(coil_BismuthBronze, coil_BismuthBronze.getUnlocalizedName());
+		GameRegistry.registerItem(coil_BlackBronze, coil_BlackBronze.getUnlocalizedName());
+		GameRegistry.registerItem(coil_BlackSteel, coil_BlackSteel.getUnlocalizedName());
+		GameRegistry.registerItem(coil_BlueSteel, coil_BlueSteel.getUnlocalizedName());
+		GameRegistry.registerItem(coil_Bronze, coil_Bronze.getUnlocalizedName());
+		GameRegistry.registerItem(coil_Copper, coil_Copper.getUnlocalizedName());
+		GameRegistry.registerItem(coil_WroughtIron, coil_WroughtIron.getUnlocalizedName());
+		GameRegistry.registerItem(coil_RedSteel, coil_RedSteel.getUnlocalizedName());
+		GameRegistry.registerItem(coil_Steel, coil_Steel.getUnlocalizedName());
 		
-		GameRegistry.registerItem(itemLink_BismuthBronze, itemLink_BismuthBronze.getUnlocalizedName());
-		GameRegistry.registerItem(itemLink_BlackBronze, itemLink_BlackBronze.getUnlocalizedName());
-		GameRegistry.registerItem(itemLink_BlackSteel, itemLink_BlackSteel.getUnlocalizedName());
-		GameRegistry.registerItem(itemLink_BlueSteel, itemLink_BlueSteel.getUnlocalizedName());
-		GameRegistry.registerItem(itemLink_Bronze, itemLink_Bronze.getUnlocalizedName());
-		GameRegistry.registerItem(itemLink_Copper, itemLink_Copper.getUnlocalizedName());
-		GameRegistry.registerItem(itemLink_WroughtIron, itemLink_WroughtIron.getUnlocalizedName());
-		GameRegistry.registerItem(itemLink_RedSteel, itemLink_RedSteel.getUnlocalizedName());
-		GameRegistry.registerItem(itemLink_Steel, itemLink_Steel.getUnlocalizedName());
+		GameRegistry.registerItem(link_BismuthBronze, link_BismuthBronze.getUnlocalizedName());
+		GameRegistry.registerItem(link_BlackBronze, link_BlackBronze.getUnlocalizedName());
+		GameRegistry.registerItem(link_BlackSteel, link_BlackSteel.getUnlocalizedName());
+		GameRegistry.registerItem(link_BlueSteel, link_BlueSteel.getUnlocalizedName());
+		GameRegistry.registerItem(link_Bronze, link_Bronze.getUnlocalizedName());
+		GameRegistry.registerItem(link_Copper, link_Copper.getUnlocalizedName());
+		GameRegistry.registerItem(link_WroughtIron, link_WroughtIron.getUnlocalizedName());
+		GameRegistry.registerItem(link_RedSteel, link_RedSteel.getUnlocalizedName());
+		GameRegistry.registerItem(link_Steel, link_Steel.getUnlocalizedName());
 		
-		GameRegistry.registerItem(itemChain_Square_BismuthBronze, itemChain_Square_BismuthBronze.getUnlocalizedName());
-		GameRegistry.registerItem(itemChain_Square_BlackBronze, itemChain_Square_BlackBronze.getUnlocalizedName());
-		GameRegistry.registerItem(itemChain_Square_BlackSteel, itemChain_Square_BlackSteel.getUnlocalizedName());
-		GameRegistry.registerItem(itemChain_Square_BlueSteel, itemChain_Square_BlueSteel.getUnlocalizedName());
-		GameRegistry.registerItem(itemChain_Square_Bronze, itemChain_Square_Bronze.getUnlocalizedName());
-		GameRegistry.registerItem(itemChain_Square_Copper, itemChain_Square_Copper.getUnlocalizedName());
-		GameRegistry.registerItem(itemChain_Square_WroughtIron, itemChain_Square_WroughtIron.getUnlocalizedName());
-		GameRegistry.registerItem(itemChain_Square_RedSteel, itemChain_Square_RedSteel.getUnlocalizedName());
-		GameRegistry.registerItem(itemChain_Square_Steel, itemChain_Square_Steel.getUnlocalizedName());
+		GameRegistry.registerItem(chain_Square_BismuthBronze, chain_Square_BismuthBronze.getUnlocalizedName());
+		GameRegistry.registerItem(chain_Square_BlackBronze, chain_Square_BlackBronze.getUnlocalizedName());
+		GameRegistry.registerItem(chain_Square_BlackSteel, chain_Square_BlackSteel.getUnlocalizedName());
+		GameRegistry.registerItem(chain_Square_BlueSteel, chain_Square_BlueSteel.getUnlocalizedName());
+		GameRegistry.registerItem(chain_Square_Bronze, chain_Square_Bronze.getUnlocalizedName());
+		GameRegistry.registerItem(chain_Square_Copper, chain_Square_Copper.getUnlocalizedName());
+		GameRegistry.registerItem(chain_Square_WroughtIron, chain_Square_WroughtIron.getUnlocalizedName());
+		GameRegistry.registerItem(chain_Square_RedSteel, chain_Square_RedSteel.getUnlocalizedName());
+		GameRegistry.registerItem(chain_Square_Steel, chain_Square_Steel.getUnlocalizedName());
 		
-		GameRegistry.registerItem(itemChain_Sheet_BismuthBronze, itemChain_Sheet_BismuthBronze.getUnlocalizedName());
-		GameRegistry.registerItem(itemChain_Sheet_BlackBronze, itemChain_Sheet_BlackBronze.getUnlocalizedName());
-		GameRegistry.registerItem(itemChain_Sheet_BlackSteel, itemChain_Sheet_BlackSteel.getUnlocalizedName());
-		GameRegistry.registerItem(itemChain_Sheet_BlueSteel, itemChain_Sheet_BlueSteel.getUnlocalizedName());
-		GameRegistry.registerItem(itemChain_Sheet_Bronze, itemChain_Sheet_Bronze.getUnlocalizedName());
-		GameRegistry.registerItem(itemChain_Sheet_Copper, itemChain_Sheet_Copper.getUnlocalizedName());
-		GameRegistry.registerItem(itemChain_Sheet_WroughtIron, itemChain_Sheet_WroughtIron.getUnlocalizedName());
-		GameRegistry.registerItem(itemChain_Sheet_RedSteel, itemChain_Sheet_RedSteel.getUnlocalizedName());
-		GameRegistry.registerItem(itemChain_Sheet_Steel, itemChain_Sheet_Steel.getUnlocalizedName());
+		GameRegistry.registerItem(chain_Sheet_BismuthBronze, chain_Sheet_BismuthBronze.getUnlocalizedName());
+		GameRegistry.registerItem(chain_Sheet_BlackBronze, chain_Sheet_BlackBronze.getUnlocalizedName());
+		GameRegistry.registerItem(chain_Sheet_BlackSteel, chain_Sheet_BlackSteel.getUnlocalizedName());
+		GameRegistry.registerItem(chain_Sheet_BlueSteel, chain_Sheet_BlueSteel.getUnlocalizedName());
+		GameRegistry.registerItem(chain_Sheet_Bronze, chain_Sheet_Bronze.getUnlocalizedName());
+		GameRegistry.registerItem(chain_Sheet_Copper, chain_Sheet_Copper.getUnlocalizedName());
+		GameRegistry.registerItem(chain_Sheet_WroughtIron, chain_Sheet_WroughtIron.getUnlocalizedName());
+		GameRegistry.registerItem(chain_Sheet_RedSteel, chain_Sheet_RedSteel.getUnlocalizedName());
+		GameRegistry.registerItem(chain_Sheet_Steel, chain_Sheet_Steel.getUnlocalizedName());
 		
 		GameRegistry.registerItem(BismuthBronzeChainGreaves, BismuthBronzeChainGreaves.getUnlocalizedName());
 		GameRegistry.registerItem(BlackBronzeChainGreaves, BlackBronzeChainGreaves.getUnlocalizedName());
@@ -450,21 +470,39 @@ public class TFCMItems
 		GameRegistry.registerItem(SteelChainHelmet, SteelChainHelmet.getUnlocalizedName());
 		
 		//Food Stuffs
-		GameRegistry.registerItem(itemBottleFruitJuice, itemBottleFruitJuice.getUnlocalizedName());
-		GameRegistry.registerItem(itemBottleFruitWine, itemBottleFruitWine.getUnlocalizedName());
-		GameRegistry.registerItem(itemBottleSugar, itemBottleSugar.getUnlocalizedName());
+		GameRegistry.registerItem(bottleFruitJuice, bottleFruitJuice.getUnlocalizedName());
+		GameRegistry.registerItem(bottleFruitWine, bottleFruitWine.getUnlocalizedName());
+		GameRegistry.registerItem(bottleSugar, bottleSugar.getUnlocalizedName());
 		
-		GameRegistry.registerItem(itemBottleJuiceApple, itemBottleJuiceApple.getUnlocalizedName());
-		GameRegistry.registerItem(itemBottleJuiceOrange, itemBottleJuiceOrange.getUnlocalizedName());
+		GameRegistry.registerItem(bottleJuiceApple, bottleJuiceApple.getUnlocalizedName());
+		GameRegistry.registerItem(bottleJuiceOrange, bottleJuiceOrange.getUnlocalizedName());
 		
-		GameRegistry.registerItem(itemBottleJuiceLemon, itemBottleJuiceLemon.getUnlocalizedName());
-		GameRegistry.registerItem(itemBottleLemonade, itemBottleLemonade.getUnlocalizedName());
+		GameRegistry.registerItem(bottleJuiceLemon, bottleJuiceLemon.getUnlocalizedName());
+		GameRegistry.registerItem(bottleLemonade, bottleLemonade.getUnlocalizedName());
 		
-		GameRegistry.registerItem(itemBottleJuiceOnion, itemBottleJuiceOnion.getUnlocalizedName());
+		GameRegistry.registerItem(bottleJuiceOnion, bottleJuiceOnion.getUnlocalizedName());
 		
-		GameRegistry.registerItem(itemBottleSoyMilk, itemBottleSoyMilk.getUnlocalizedName());
-		GameRegistry.registerItem(itemBucketHotWater, itemBucketHotWater.getUnlocalizedName());
-		GameRegistry.registerItem(itemSoyPaste, itemSoyPaste.getUnlocalizedName());
+		GameRegistry.registerItem(bottleSoyMilk, bottleSoyMilk.getUnlocalizedName());
+		GameRegistry.registerItem(bucketHotWater, bucketHotWater.getUnlocalizedName());
+		GameRegistry.registerItem(soyPaste, soyPaste.getUnlocalizedName());
+		
+		GameRegistry.registerItem(seedsPumpkin, seedsPumpkin.getUnlocalizedName());
+		GameRegistry.registerItem(pumpkin, pumpkin.getUnlocalizedName());
+		GameRegistry.registerItem(seedsCayenne, seedsCayenne.getUnlocalizedName());
+		GameRegistry.registerItem(greenCayenne, greenCayenne.getUnlocalizedName());
+		GameRegistry.registerItem(redCayenne, redCayenne.getUnlocalizedName());
+		GameRegistry.registerItem(seedsCoffee, seedsCoffee.getUnlocalizedName());
+		GameRegistry.registerItem(coffeeCherries, coffeeCherries.getUnlocalizedName());
+		GameRegistry.registerItem(greenCoffee, greenCoffee.getUnlocalizedName());
+		GameRegistry.registerItem(coffee, coffee.getUnlocalizedName());
+		GameRegistry.registerItem(groundCoffee, groundCoffee.getUnlocalizedName());
+		
+		GameRegistry.registerItem(pie, pie.getUnlocalizedName());
+		//GameRegistry.registerItem(casserole, casserole.getUnlocalizedName());
+		//GameRegistry.registerItem(soup, soup.getUnlocalizedName());
+		//GameRegistry.registerItem(stew, stew.getUnlocalizedName());
+		
+		GameRegistry.registerItem(bearRaw, bearRaw.getUnlocalizedName());
 		
 		//Inventory Items
 		GameRegistry.registerItem(itemQuiver, itemQuiver.getUnlocalizedName());

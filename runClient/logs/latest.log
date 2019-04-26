@@ -1,30 +1,37 @@
-[22:05:49] [main/INFO]: Logging in with username & password
-[22:05:57] [main/INFO]: Setting user: Powerman913717
-[22:05:59] [Client thread/INFO]: LWJGL Version: 2.9.1
-[22:06:10] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Not Enough Items, FMLFileResourcePack:TerraFirmaCraft, FMLFileResourcePack:Waila, FMLFileResourcePack:TerraMisc, FMLFileResourcePack:TerraFirmaCraftNEIplugin
-[22:06:13] [Sound Library Loader/INFO]: Sound engine started
-[22:06:15] [Client thread/INFO]: Created: 16x16 textures/blocks-atlas
-[22:06:15] [Client thread/INFO]: Created: 16x16 textures/items-atlas
-[22:06:16] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Not Enough Items, FMLFileResourcePack:TerraFirmaCraft, FMLFileResourcePack:Waila, FMLFileResourcePack:TerraMisc, FMLFileResourcePack:TerraFirmaCraftNEIplugin
-[22:06:18] [Client thread/INFO]: Created: 1024x512 textures/items-atlas
-[22:06:20] [Client thread/INFO]: Created: 1024x512 textures/blocks-atlas
-[22:06:21] [Sound Library Loader/INFO]: Sound engine started
-[22:06:29] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
-[22:06:29] [Server thread/INFO]: Generating keypair
-[22:06:29] [Server thread/INFO]: Preparing start region for level 0
-[22:06:30] [Server thread/INFO]: Changing view distance to 9, from 10
-[22:06:31] [Server thread/INFO]: Powerman913717[local:E:347b4907] logged in with entity id 123 at (1554.154075739234, 149.0, -14745.449543786723)
-[22:06:31] [Server thread/INFO]: Powerman913717 joined the game
-[22:06:35] [Client thread/INFO]: [CHAT] Version 1.0.7.47 of CodeChickenCore is available
-[22:06:35] [Client thread/INFO]: [CHAT] Version 1.0.5.120 of NotEnoughItems is available
-[22:09:21] [Server thread/INFO]: Saving and pausing game...
-[22:09:21] [Server thread/INFO]: Saving chunks for level 'New World'/DEFAULT
-[22:09:21] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[22:09:21] [Server thread/INFO]: Saving chunks for level 'New World'/DEFAULT
-[22:09:21] [Server thread/INFO]: Stopping server
-[22:09:21] [Server thread/INFO]: Saving players
-[22:09:21] [Server thread/INFO]: Saving worlds
-[22:09:21] [Server thread/INFO]: Saving chunks for level 'New World'/DEFAULT
-[22:09:21] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[22:09:21] [Server thread/INFO]: Saving chunks for level 'New World'/DEFAULT
-[22:09:23] [Client thread/INFO]: Stopping!
+[18:14:29] [main/INFO]: Logging in with username & password
+[18:14:41] [main/INFO]: Setting user: Powerman913717
+[18:14:43] [Client thread/INFO]: LWJGL Version: 2.9.1
+[18:14:59] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Not Enough Items, FMLFileResourcePack:TerraFirmaCraft, FMLFileResourcePack:Waila, FMLFileResourcePack:TerraMisc, FMLFileResourcePack:Decorations, FMLFileResourcePack:TFC Scales, FMLFileResourcePack:TFC Udary Mod, FMLFileResourcePack:Baubles, FMLFileResourcePack:TerraFirmaCraftNEIplugin
+[18:15:04] [Sound Library Loader/INFO]: Sound engine started
+[18:15:09] [Client thread/INFO]: Created: 16x16 textures/blocks-atlas
+[18:15:09] [Client thread/INFO]: Created: 16x16 textures/items-atlas
+[18:15:11] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Not Enough Items, FMLFileResourcePack:TerraFirmaCraft, FMLFileResourcePack:Waila, FMLFileResourcePack:TerraMisc, FMLFileResourcePack:Decorations, FMLFileResourcePack:TFC Scales, FMLFileResourcePack:TFC Udary Mod, FMLFileResourcePack:Baubles, FMLFileResourcePack:TerraFirmaCraftNEIplugin
+[18:15:15] [Client thread/INFO]: Created: 1024x512 textures/items-atlas
+[18:15:18] [Client thread/INFO]: Created: 1024x512 textures/blocks-atlas
+[18:15:19] [Sound Library Loader/INFO]: Sound engine started
+[18:16:49] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
+[18:16:49] [Server thread/INFO]: Generating keypair
+[18:16:53] [Server thread/INFO]: Preparing start region for level 0
+[18:16:54] [Server thread/INFO]: Preparing spawn area: 74%
+[18:16:54] [Server thread/INFO]: Changing view distance to 9, from 10
+[18:16:55] [Server thread/INFO]: Powerman913717[local:E:c803e9a5] logged in with entity id 132 at (28.26324958001975, 148.0, -11258.374502835855)
+[18:16:55] [Server thread/INFO]: Powerman913717 joined the game
+[18:17:00] [Client thread/INFO]: [CHAT] Version 1.0.7.47 of CodeChickenCore is available
+[18:17:00] [Client thread/INFO]: [CHAT] Version 1.0.5.120 of NotEnoughItems is available
+[18:18:55] [Server thread/INFO]: [Powerman913717: Given [item.coffeeCherries.name] * 1 to Powerman913717]
+[18:18:55] [Client thread/INFO]: [CHAT] Given [item.coffeeCherries.name] * 1 to Powerman913717
+[18:19:23] [Server thread/INFO]: [Powerman913717: Given [null Pie] * 1 to Powerman913717]
+[18:19:23] [Client thread/INFO]: [CHAT] Given [null Pie] * 1 to Powerman913717
+[18:19:27] [Server thread/INFO]: [Powerman913717: Given [Pumpkin] * 1 to Powerman913717]
+[18:19:27] [Client thread/INFO]: [CHAT] Given [Pumpkin] * 1 to Powerman913717
+[18:19:37] [Server thread/INFO]: Saving and pausing game...
+[18:19:37] [Server thread/INFO]: Saving chunks for level 'Test3'/DEFAULT
+[18:19:37] [Server thread/INFO]: Saving chunks for level 'Test3'/Nether
+[18:19:37] [Server thread/INFO]: Saving chunks for level 'Test3'/DEFAULT
+[18:19:38] [Server thread/INFO]: Stopping server
+[18:19:38] [Server thread/INFO]: Saving players
+[18:19:38] [Server thread/INFO]: Saving worlds
+[18:19:38] [Server thread/INFO]: Saving chunks for level 'Test3'/DEFAULT
+[18:19:38] [Server thread/INFO]: Saving chunks for level 'Test3'/Nether
+[18:19:38] [Server thread/INFO]: Saving chunks for level 'Test3'/DEFAULT
+[18:19:40] [Client thread/INFO]: Stopping!

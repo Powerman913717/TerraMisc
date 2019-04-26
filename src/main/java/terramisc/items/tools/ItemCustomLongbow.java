@@ -18,7 +18,6 @@ import net.minecraftforge.event.entity.player.ArrowNockEvent;
 import terramisc.core.TFCMItems;
 import terramisc.core.TFCMOptions;
 import terramisc.entities.EntityMetalArrow;
-import terramisc.items.ItemCustomQuiver;
 
 import com.bioxx.tfc.Core.TFCTabs;
 import com.bioxx.tfc.Core.Player.InventoryPlayerTFC;
@@ -126,43 +125,43 @@ public class ItemCustomLongbow extends ItemBow implements ISize
 					break;
 				case 2: 
 					ammoMult = 0.6F; //Copper
-					entityarrow.setPickupItem(TFCMItems.itemArrow_Copper);
+					entityarrow.setPickupItem(TFCMItems.arrow_Copper);
 					break;
 				case 3: 
 					ammoMult = 0.65F; //Bismuth Bronze
-					entityarrow.setPickupItem(TFCMItems.itemArrow_BismuthBronze);
+					entityarrow.setPickupItem(TFCMItems.arrow_BismuthBronze);
 					break;
 				case 4: 
 					ammoMult = 0.7F; //Bronze
-					entityarrow.setPickupItem(TFCMItems.itemArrow_Bronze);
+					entityarrow.setPickupItem(TFCMItems.arrow_Bronze);
 					break;
 				case 5: 
 					ammoMult = 0.75F; //Black Bronze
-					entityarrow.setPickupItem(TFCMItems.itemArrow_BlackBronze);
+					entityarrow.setPickupItem(TFCMItems.arrow_BlackBronze);
 					break;
 				case 6: 
 					ammoMult = 0.8F; //Wrought Iron
-					entityarrow.setPickupItem(TFCMItems.itemArrow_WroughtIron);
+					entityarrow.setPickupItem(TFCMItems.arrow_WroughtIron);
 					break;
 				case 7: 
 					ammoMult = 0.85F; //Steel
-					entityarrow.setPickupItem(TFCMItems.itemArrow_Steel);
+					entityarrow.setPickupItem(TFCMItems.arrow_Steel);
 					break;
 				case 8: 
 					ammoMult = 0.9F; //Black Steel
-					entityarrow.setPickupItem(TFCMItems.itemArrow_BlackSteel);
+					entityarrow.setPickupItem(TFCMItems.arrow_BlackSteel);
 					break; 
 				case 9: 
 					ammoMult = 1.0F; //Blue Steel
-					entityarrow.setPickupItem(TFCMItems.itemArrow_BlueSteel);
+					entityarrow.setPickupItem(TFCMItems.arrow_BlueSteel);
 					break;
 				case 10: 
 					ammoMult = 1.0F; //Red Steel
-					entityarrow.setPickupItem(TFCMItems.itemArrow_RedSteel);
+					entityarrow.setPickupItem(TFCMItems.arrow_RedSteel);
 					break;
 				default: 
 					ammoMult = 0.8F; //Wrought Iron
-					entityarrow.setPickupItem(TFCMItems.itemArrow_WroughtIron);
+					entityarrow.setPickupItem(TFCMItems.arrow_WroughtIron);
 					break;
 			}
 
@@ -188,23 +187,23 @@ public class ItemCustomLongbow extends ItemBow implements ISize
 				{
 					case 1: player.inventory.consumeInventoryItem(TFCItems.arrow);
 						break;
-					case 2: player.inventory.consumeInventoryItem(TFCMItems.itemArrow_Copper);
+					case 2: player.inventory.consumeInventoryItem(TFCMItems.arrow_Copper);
 						break;
-					case 3: player.inventory.consumeInventoryItem(TFCMItems.itemArrow_BismuthBronze);
+					case 3: player.inventory.consumeInventoryItem(TFCMItems.arrow_BismuthBronze);
 						break;
-					case 4: player.inventory.consumeInventoryItem(TFCMItems.itemArrow_Bronze);
+					case 4: player.inventory.consumeInventoryItem(TFCMItems.arrow_Bronze);
 						break;
-					case 5: player.inventory.consumeInventoryItem(TFCMItems.itemArrow_BlackBronze);
+					case 5: player.inventory.consumeInventoryItem(TFCMItems.arrow_BlackBronze);
 						break;
-					case 6: player.inventory.consumeInventoryItem(TFCMItems.itemArrow_WroughtIron);
+					case 6: player.inventory.consumeInventoryItem(TFCMItems.arrow_WroughtIron);
 						break;
-					case 7: player.inventory.consumeInventoryItem(TFCMItems.itemArrow_Steel);
+					case 7: player.inventory.consumeInventoryItem(TFCMItems.arrow_Steel);
 						break;
-					case 8: player.inventory.consumeInventoryItem(TFCMItems.itemArrow_BlackSteel);
+					case 8: player.inventory.consumeInventoryItem(TFCMItems.arrow_BlackSteel);
 						break;
-					case 9: player.inventory.consumeInventoryItem(TFCMItems.itemArrow_BlueSteel);
+					case 9: player.inventory.consumeInventoryItem(TFCMItems.arrow_BlueSteel);
 						break;
-					case 10: player.inventory.consumeInventoryItem(TFCMItems.itemArrow_RedSteel);
+					case 10: player.inventory.consumeInventoryItem(TFCMItems.arrow_RedSteel);
 						break;
 					default:
 						break;
@@ -240,47 +239,47 @@ public class ItemCustomLongbow extends ItemBow implements ISize
 			is.stackTagCompound.setInteger("ammo", 1);
 			return true;
 		}
-		else if(player.inventory.hasItem(TFCMItems.itemArrow_Copper))
+		else if(player.inventory.hasItem(TFCMItems.arrow_Copper))
 		{
 			is.stackTagCompound.setInteger("ammo", 2);
 			return true;
 		}
-		else if(player.inventory.hasItem(TFCMItems.itemArrow_BismuthBronze))
+		else if(player.inventory.hasItem(TFCMItems.arrow_BismuthBronze))
 		{
 			is.stackTagCompound.setInteger("ammo", 3);
 			return true;
 		}
-		else if(player.inventory.hasItem(TFCMItems.itemArrow_Bronze))
+		else if(player.inventory.hasItem(TFCMItems.arrow_Bronze))
 		{
 			is.stackTagCompound.setInteger("ammo", 4);
 			return true;
 		}
-		else if(player.inventory.hasItem(TFCMItems.itemArrow_BlackBronze))
+		else if(player.inventory.hasItem(TFCMItems.arrow_BlackBronze))
 		{
 			is.stackTagCompound.setInteger("ammo", 5);
 			return true;
 		}
-		else if(player.inventory.hasItem(TFCMItems.itemArrow_WroughtIron))
+		else if(player.inventory.hasItem(TFCMItems.arrow_WroughtIron))
 		{
 			is.stackTagCompound.setInteger("ammo", 6);
 			return true;
 		}
-		else if(player.inventory.hasItem(TFCMItems.itemArrow_Steel))
+		else if(player.inventory.hasItem(TFCMItems.arrow_Steel))
 		{
 			is.stackTagCompound.setInteger("ammo", 7);
 			return true;
 		}
-		else if(player.inventory.hasItem(TFCMItems.itemArrow_BlackSteel))
+		else if(player.inventory.hasItem(TFCMItems.arrow_BlackSteel))
 		{
 				is.stackTagCompound.setInteger("ammo", 8);
 			return true;
 		}
-		else if(player.inventory.hasItem(TFCMItems.itemArrow_BlueSteel))
+		else if(player.inventory.hasItem(TFCMItems.arrow_BlueSteel))
 		{
 			is.stackTagCompound.setInteger("ammo", 9);
 			return true;
 		}
-		else if(player.inventory.hasItem(TFCMItems.itemArrow_RedSteel))
+		else if(player.inventory.hasItem(TFCMItems.arrow_RedSteel))
 		{
 			is.stackTagCompound.setInteger("ammo", 10);
 			return true;
@@ -323,47 +322,47 @@ public class ItemCustomLongbow extends ItemBow implements ISize
 			}
 			case 2:
 			{
-				ammo = TFCMItems.itemArrow_Copper;
+				ammo = TFCMItems.arrow_Copper;
 				break;
 			}
 			case 3:
 			{
-				ammo = TFCMItems.itemArrow_BismuthBronze;
+				ammo = TFCMItems.arrow_BismuthBronze;
 				break;
 			}
 			case 4:
 			{
-				ammo = TFCMItems.itemArrow_Bronze;
+				ammo = TFCMItems.arrow_Bronze;
 				break;
 			}
 			case 5:
 			{
-				ammo = TFCMItems.itemArrow_BlackBronze;
+				ammo = TFCMItems.arrow_BlackBronze;
 				break;
 			}
 			case 6:
 			{
-				ammo = TFCMItems.itemArrow_WroughtIron;
+				ammo = TFCMItems.arrow_WroughtIron;
 				break;
 			}
 			case 7:
 			{
-				ammo = TFCMItems.itemArrow_Steel;
+				ammo = TFCMItems.arrow_Steel;
 				break;
 			}
 			case 8:
 			{
-				ammo = TFCMItems.itemArrow_BlackSteel;
+				ammo = TFCMItems.arrow_BlackSteel;
 				break;
 			}
 			case 9:
 			{
-				ammo = TFCMItems.itemArrow_BlueSteel;
+				ammo = TFCMItems.arrow_BlueSteel;
 				break;
 			}
 			case 10:
 			{
-				ammo = TFCMItems.itemArrow_RedSteel;
+				ammo = TFCMItems.arrow_RedSteel;
 				break;
 			}
 			default:

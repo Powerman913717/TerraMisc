@@ -14,7 +14,11 @@ import net.minecraft.world.World;
 import net.minecraftforge.fluids.FluidContainerRegistry;
 import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fluids.FluidStack;
+import terramisc.tileentities.TEBrickOven;
+import terramisc.tileentities.TEFoodBlock;
 import terramisc.tileentities.TEFruitPress;
+import terramisc.tileentities.TEPumpkinLantern;
+import terramisc.tileentities.TESoupKettle;
 import terramisc.tileentities.TETallowCandle;
 import terramisc.tileentities.TEWetClay;
 
@@ -98,12 +102,16 @@ public class TFCMCommonProxy
 	{
 		// non TESR registers
 		GameRegistry.registerTileEntity(TEWetClay.class, "WetClay");
+		GameRegistry.registerTileEntity(TEFoodBlock.class, "FoodBlock");
+		GameRegistry.registerTileEntity(TEPumpkinLantern.class, "PumpkinLantern");
 
 		if (flag)
 		{
 			// TESR registers
 			GameRegistry.registerTileEntity(TETallowCandle.class, "TallowCandle");
 			GameRegistry.registerTileEntity(TEFruitPress.class, "FruitPress");
+			GameRegistry.registerTileEntity(TEBrickOven.class, "BrickOven");
+			GameRegistry.registerTileEntity(TESoupKettle.class, "SoupKettle");
 		}
 	}
 
@@ -126,19 +134,19 @@ public class TFCMCommonProxy
 	
 	public void setupFluids()
 	{
-		FluidContainerRegistry.registerFluidContainer(new FluidStack(TFCMFluids.FRUITJUICE, 250), new ItemStack(TFCMItems.itemBottleFruitJuice), new ItemStack(TFCItems.glassBottle));
-		FluidContainerRegistry.registerFluidContainer(new FluidStack(TFCMFluids.FRUITWINE, 250), new ItemStack(TFCMItems.itemBottleFruitWine), new ItemStack(TFCItems.glassBottle));
+		FluidContainerRegistry.registerFluidContainer(new FluidStack(TFCMFluids.FRUITJUICE, 250), new ItemStack(TFCMItems.bottleFruitJuice), new ItemStack(TFCItems.glassBottle));
+		FluidContainerRegistry.registerFluidContainer(new FluidStack(TFCMFluids.FRUITWINE, 250), new ItemStack(TFCMItems.bottleFruitWine), new ItemStack(TFCItems.glassBottle));
 		
-		FluidContainerRegistry.registerFluidContainer(new FluidStack(TFCMFluids.JUICEAPPLE, 250), new ItemStack(TFCMItems.itemBottleJuiceApple), new ItemStack(TFCItems.glassBottle));
-		FluidContainerRegistry.registerFluidContainer(new FluidStack(TFCMFluids.JUICEORANGE, 250), new ItemStack(TFCMItems.itemBottleJuiceOrange), new ItemStack(TFCItems.glassBottle));
+		FluidContainerRegistry.registerFluidContainer(new FluidStack(TFCMFluids.JUICEAPPLE, 250), new ItemStack(TFCMItems.bottleJuiceApple), new ItemStack(TFCItems.glassBottle));
+		FluidContainerRegistry.registerFluidContainer(new FluidStack(TFCMFluids.JUICEORANGE, 250), new ItemStack(TFCMItems.bottleJuiceOrange), new ItemStack(TFCItems.glassBottle));
 		
-		FluidContainerRegistry.registerFluidContainer(new FluidStack(TFCMFluids.JUICELEMON, 250), new ItemStack(TFCMItems.itemBottleJuiceLemon), new ItemStack(TFCItems.glassBottle));
-		FluidContainerRegistry.registerFluidContainer(new FluidStack(TFCMFluids.LEMONADE, 250), new ItemStack(TFCMItems.itemBottleLemonade), new ItemStack(TFCItems.glassBottle));
+		FluidContainerRegistry.registerFluidContainer(new FluidStack(TFCMFluids.JUICELEMON, 250), new ItemStack(TFCMItems.bottleJuiceLemon), new ItemStack(TFCItems.glassBottle));
+		FluidContainerRegistry.registerFluidContainer(new FluidStack(TFCMFluids.LEMONADE, 250), new ItemStack(TFCMItems.bottleLemonade), new ItemStack(TFCItems.glassBottle));
 		
-		FluidContainerRegistry.registerFluidContainer(new FluidStack(TFCMFluids.SOYMILK, 250), new ItemStack(TFCMItems.itemBottleSoyMilk), new ItemStack(TFCItems.glassBottle));
-		FluidContainerRegistry.registerFluidContainer(new FluidStack(TFCMFluids.WATERHOT, 1000), new ItemStack(TFCMItems.itemBucketHotWater), new ItemStack(TFCItems.woodenBucketEmpty));
+		FluidContainerRegistry.registerFluidContainer(new FluidStack(TFCMFluids.SOYMILK, 250), new ItemStack(TFCMItems.bottleSoyMilk), new ItemStack(TFCItems.glassBottle));
+		FluidContainerRegistry.registerFluidContainer(new FluidStack(TFCMFluids.WATERHOT, 1000), new ItemStack(TFCMItems.bucketHotWater), new ItemStack(TFCItems.woodenBucketEmpty));
 	
-		FluidContainerRegistry.registerFluidContainer(new FluidStack(TFCMFluids.JUICEONION, 250), new ItemStack(TFCMItems.itemBottleJuiceOnion), new ItemStack(TFCItems.glassBottle));
+		FluidContainerRegistry.registerFluidContainer(new FluidStack(TFCMFluids.JUICEONION, 250), new ItemStack(TFCMItems.bottleJuiceOnion), new ItemStack(TFCItems.glassBottle));
 	}
 	
 	public void registerToolClasses()

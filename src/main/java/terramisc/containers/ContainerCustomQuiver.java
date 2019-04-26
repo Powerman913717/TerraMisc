@@ -4,7 +4,7 @@ import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.Slot;
 import net.minecraft.world.World;
-import terramisc.containerslots.SlotCustomQuiver;
+import terramisc.containers.slots.SlotCustomQuiver;
 
 import com.bioxx.tfc.Containers.ContainerQuiver;
 import com.bioxx.tfc.Containers.Slots.SlotForShowOnly;

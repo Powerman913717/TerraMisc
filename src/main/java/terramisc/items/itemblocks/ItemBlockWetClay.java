@@ -26,7 +26,7 @@ public class ItemBlockWetClay extends ItemTerraBlock
 			arraylist.add("\u2696" + TFC_Core.translate("gui.Weight." + ((ISize)is.getItem()).getWeight(is).getName()) + " \u21F2" + 
 					TFC_Core.translate("gui.Size." + ((ISize)is.getItem()).getSize(is).getName().replace(" ", "")));
 		
-		arraylist.add("Bake near open flames or lava.");
+		arraylist.add(TFC_Core.translate("gui.clay.baking"));
 	}
 
 }

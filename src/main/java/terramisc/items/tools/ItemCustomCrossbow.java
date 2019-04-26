@@ -16,9 +16,9 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.player.ArrowNockEvent;
 import terramisc.core.TFCMItems;
 import terramisc.entities.EntityMetalBolt;
-import terramisc.items.ItemCustomQuiver;
 
 import com.bioxx.tfc.Core.TFCTabs;
+import com.bioxx.tfc.Core.TFC_Core;
 import com.bioxx.tfc.Core.Player.InventoryPlayerTFC;
 import com.bioxx.tfc.Items.ItemTerra;
 import com.bioxx.tfc.api.Enums.EnumItemReach;
@@ -135,23 +135,23 @@ public class ItemCustomCrossbow extends ItemBow implements ISize
 				{
 					switch(ammo)
 					{
-					case 1: player.inventory.consumeInventoryItem(TFCMItems.itemBolt_Copper);
+					case 1: player.inventory.consumeInventoryItem(TFCMItems.bolt_Copper);
 						break;
-					case 2: player.inventory.consumeInventoryItem(TFCMItems.itemBolt_BismuthBronze);
+					case 2: player.inventory.consumeInventoryItem(TFCMItems.bolt_BismuthBronze);
 						break;
-					case 3: player.inventory.consumeInventoryItem(TFCMItems.itemBolt_Bronze);
+					case 3: player.inventory.consumeInventoryItem(TFCMItems.bolt_Bronze);
 						break;
-					case 4: player.inventory.consumeInventoryItem(TFCMItems.itemBolt_BlackBronze);
+					case 4: player.inventory.consumeInventoryItem(TFCMItems.bolt_BlackBronze);
 						break;
-					case 5: player.inventory.consumeInventoryItem(TFCMItems.itemBolt_WroughtIron);
+					case 5: player.inventory.consumeInventoryItem(TFCMItems.bolt_WroughtIron);
 						break;
-					case 6: player.inventory.consumeInventoryItem(TFCMItems.itemBolt_Steel);
+					case 6: player.inventory.consumeInventoryItem(TFCMItems.bolt_Steel);
 						break;
-					case 7: player.inventory.consumeInventoryItem(TFCMItems.itemBolt_BlackSteel);
+					case 7: player.inventory.consumeInventoryItem(TFCMItems.bolt_BlackSteel);
 						break;
-					case 8: player.inventory.consumeInventoryItem(TFCMItems.itemBolt_BlueSteel);
+					case 8: player.inventory.consumeInventoryItem(TFCMItems.bolt_BlueSteel);
 						break;
-					case 9: player.inventory.consumeInventoryItem(TFCMItems.itemBolt_RedSteel);
+					case 9: player.inventory.consumeInventoryItem(TFCMItems.bolt_RedSteel);
 						break;
 					default:
 						break;
@@ -172,47 +172,47 @@ public class ItemCustomCrossbow extends ItemBow implements ISize
 		//Selects the lowest tier of ammo first.
 	public boolean hasAmmo(ItemStack is, EntityPlayer player) 
 	{	
-		if(player.inventory.hasItem(TFCMItems.itemBolt_Copper))
+		if(player.inventory.hasItem(TFCMItems.bolt_Copper))
 		{
 			is.stackTagCompound.setInteger("ammo", 1);
 			return true;
 		}
-		if(player.inventory.hasItem(TFCMItems.itemBolt_BismuthBronze))
+		if(player.inventory.hasItem(TFCMItems.bolt_BismuthBronze))
 		{
 			is.stackTagCompound.setInteger("ammo", 2);
 			return true;
 		}
-		if(player.inventory.hasItem(TFCMItems.itemBolt_Bronze))
+		if(player.inventory.hasItem(TFCMItems.bolt_Bronze))
 		{
 			is.stackTagCompound.setInteger("ammo", 3);
 			return true;
 		}
-		if(player.inventory.hasItem(TFCMItems.itemBolt_BlackBronze))
+		if(player.inventory.hasItem(TFCMItems.bolt_BlackBronze))
 		{
 			is.stackTagCompound.setInteger("ammo", 4);
 			return true;
 		}
-		if(player.inventory.hasItem(TFCMItems.itemBolt_WroughtIron))
+		if(player.inventory.hasItem(TFCMItems.bolt_WroughtIron))
 		{
 			is.stackTagCompound.setInteger("ammo", 5);
 			return true;
 		}
-		if(player.inventory.hasItem(TFCMItems.itemBolt_Steel))
+		if(player.inventory.hasItem(TFCMItems.bolt_Steel))
 		{
 			is.stackTagCompound.setInteger("ammo", 6);
 			return true;
 		}
-		if(player.inventory.hasItem(TFCMItems.itemBolt_BlackSteel))
+		if(player.inventory.hasItem(TFCMItems.bolt_BlackSteel))
 		{
 			is.stackTagCompound.setInteger("ammo", 7);
 			return true;
 		}
-		if(player.inventory.hasItem(TFCMItems.itemBolt_BlueSteel))
+		if(player.inventory.hasItem(TFCMItems.bolt_BlueSteel))
 		{
 			is.stackTagCompound.setInteger("ammo", 8);
 			return true;
 		}
-		if(player.inventory.hasItem(TFCMItems.itemBolt_RedSteel))
+		if(player.inventory.hasItem(TFCMItems.bolt_RedSteel))
 		{
 			is.stackTagCompound.setInteger("ammo", 9);
 			return true;
@@ -250,47 +250,47 @@ public class ItemCustomCrossbow extends ItemBow implements ISize
 		{
 			case 1:
 			{
-				ammo = TFCMItems.itemBolt_Copper;
+				ammo = TFCMItems.bolt_Copper;
 				break;
 			}
 			case 2:
 			{
-				ammo = TFCMItems.itemBolt_BismuthBronze;
+				ammo = TFCMItems.bolt_BismuthBronze;
 				break;
 			}
 			case 3:
 			{
-				ammo = TFCMItems.itemBolt_Bronze;
+				ammo = TFCMItems.bolt_Bronze;
 				break;
 			}
 			case 4:
 			{
-				ammo = TFCMItems.itemBolt_BlackBronze;
+				ammo = TFCMItems.bolt_BlackBronze;
 				break;
 			}
 			case 5:
 			{
-				ammo = TFCMItems.itemBolt_WroughtIron;
+				ammo = TFCMItems.bolt_WroughtIron;
 				break;
 			}
 			case 6:
 			{
-				ammo = TFCMItems.itemBolt_Steel;
+				ammo = TFCMItems.bolt_Steel;
 				break;
 			}
 			case 7:
 			{
-				ammo = TFCMItems.itemBolt_BlackSteel;
+				ammo = TFCMItems.bolt_BlackSteel;
 				break;
 			}
 			case 8:
 			{
-				ammo = TFCMItems.itemBolt_BlueSteel;
+				ammo = TFCMItems.bolt_BlueSteel;
 				break;
 			}
 			case 9:
 			{
-				ammo = TFCMItems.itemBolt_RedSteel;
+				ammo = TFCMItems.bolt_RedSteel;
 				break;
 			}
 			default:
@@ -318,43 +318,43 @@ public class ItemCustomCrossbow extends ItemBow implements ISize
 		{
 			case 1: 
 				ammoMult = 0.6F; //Copper
-				entityarrow.setPickupItem(TFCMItems.itemBolt_Copper);
+				entityarrow.setPickupItem(TFCMItems.bolt_Copper);
 				break;
 			case 2: 
 				ammoMult = 0.65F; //Bismuth Bronze
-				entityarrow.setPickupItem(TFCMItems.itemBolt_BismuthBronze);
+				entityarrow.setPickupItem(TFCMItems.bolt_BismuthBronze);
 				break;
 			case 3: 
 				ammoMult = 0.7F; //Bronze
-				entityarrow.setPickupItem(TFCMItems.itemBolt_Bronze);
+				entityarrow.setPickupItem(TFCMItems.bolt_Bronze);
 				break;
 			case 4: 
 				ammoMult = 0.75F; //Black Bronze
-				entityarrow.setPickupItem(TFCMItems.itemBolt_BlackBronze);
+				entityarrow.setPickupItem(TFCMItems.bolt_BlackBronze);
 				break;
 			case 5: 
 				ammoMult = 0.8F; //Wrought Iron
-				entityarrow.setPickupItem(TFCMItems.itemBolt_WroughtIron);
+				entityarrow.setPickupItem(TFCMItems.bolt_WroughtIron);
 				break;
 			case 6: 
 				ammoMult = 0.85F; //Steel
-				entityarrow.setPickupItem(TFCMItems.itemBolt_Steel);
+				entityarrow.setPickupItem(TFCMItems.bolt_Steel);
 				break;
 			case 7: 
 				ammoMult = 0.9F; //Black Steel
-				entityarrow.setPickupItem(TFCMItems.itemBolt_BlackSteel);
+				entityarrow.setPickupItem(TFCMItems.bolt_BlackSteel);
 				break; 
 			case 8: 
 				ammoMult = 1.0F; //Blue Steel
-				entityarrow.setPickupItem(TFCMItems.itemBolt_BlueSteel);
+				entityarrow.setPickupItem(TFCMItems.bolt_BlueSteel);
 				break;
 			case 9: 
 				ammoMult = 1.0F; //Red Steel
-				entityarrow.setPickupItem(TFCMItems.itemBolt_RedSteel);
+				entityarrow.setPickupItem(TFCMItems.bolt_RedSteel);
 				break;
 			default:
 				ammoMult = 0.8F; //Wrought Iron
-				entityarrow.setPickupItem(TFCMItems.itemBolt_WroughtIron);
+				entityarrow.setPickupItem(TFCMItems.bolt_WroughtIron);
 				break;
 		}
 		
@@ -417,11 +417,11 @@ public class ItemCustomCrossbow extends ItemBow implements ISize
 		{
 			if(is.getTagCompound().getBoolean("load") == true)
 			{
-				arraylist.add("Condition: Loaded");
+				arraylist.add(TFC_Core.translate("gui.crossbow.loaded"));
 			}
 			else
 			{
-				arraylist.add("Condition: Unloaded");
+				arraylist.add(TFC_Core.translate("gui.crossbow.unloaded"));
 			}
 		}
 	}
@@ -476,7 +476,7 @@ public class ItemCustomCrossbow extends ItemBow implements ISize
         	{
         		return getItemIconForUseDuration(3); //While loaded
         	}
-        	else if (usingItem != null && usingItem.getItem() == TFCMItems.itemCrossBow)
+        	else if (usingItem != null && usingItem.getItem() == TFCMItems.crossBow)
             {
             	int j = usingItem.getMaxItemUseDuration() - useRemaining;
                 float force = j / getUseSpeed(player);
