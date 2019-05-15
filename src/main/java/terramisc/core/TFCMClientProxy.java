@@ -18,7 +18,9 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 import net.minecraftforge.client.MinecraftForgeClient;
-import terramisc.render.CropRender;
+import net.minecraftforge.common.MinecraftForge;
+import terramisc.api.crops.CropRenderTFCM;
+import terramisc.handlers.client.FarmlandHighlightHandler;
 import terramisc.render.ItemCrossbowRender;
 import terramisc.render.ItemLongbowRender;
 import terramisc.render.ItemPolearmRender;
@@ -97,6 +99,7 @@ public class TFCMClientProxy extends TFCMCommonProxy
 	@Override
 	public void registerHandlers()
 	{
+		MinecraftForge.EVENT_BUS.register(new FarmlandHighlightHandler());
 	}
 
 	@Override
@@ -149,7 +152,7 @@ public class TFCMClientProxy extends TFCMCommonProxy
 			//Screen Overlay for custom quiver
 		//MinecraftForge.EVENT_BUS.register(new RenderQuiverOverlayHandler());
 		
-		RenderingRegistry.registerBlockHandler(TFCMBlocks.cropRenderId = RenderingRegistry.getNextAvailableRenderId(), new CropRender());
+		RenderingRegistry.registerBlockHandler(TFCMBlocks.cropRenderId = RenderingRegistry.getNextAvailableRenderId(), new CropRenderTFCM());
 	}
 	
 	@Override

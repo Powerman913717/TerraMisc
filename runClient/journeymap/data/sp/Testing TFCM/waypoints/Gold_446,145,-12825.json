@@ -1,0 +1,17 @@
+{
+  "id": "Gold_446,145,-12825",
+  "name": "Gold",
+  "icon": "waypoint-normal.png",
+  "x": 446,
+  "y": 145,
+  "z": -12825,
+  "r": 255,
+  "g": 133,
+  "b": 10,
+  "enable": false,
+  "type": "Normal",
+  "origin": "JourneyMap",
+  "dimensions": [
+    0
+  ]
+}

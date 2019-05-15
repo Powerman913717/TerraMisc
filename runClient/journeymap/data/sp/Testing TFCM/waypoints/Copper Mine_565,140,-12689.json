@@ -1,0 +1,17 @@
+{
+  "id": "Copper Mine_565,140,-12689",
+  "name": "Copper Mine",
+  "icon": "waypoint-normal.png",
+  "x": 565,
+  "y": 140,
+  "z": -12689,
+  "r": 167,
+  "g": 73,
+  "b": 0,
+  "enable": true,
+  "type": "Normal",
+  "origin": "JourneyMap",
+  "dimensions": [
+    0
+  ]
+}

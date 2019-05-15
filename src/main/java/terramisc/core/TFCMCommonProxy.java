@@ -14,6 +14,7 @@ import net.minecraft.world.World;
 import net.minecraftforge.fluids.FluidContainerRegistry;
 import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fluids.FluidStack;
+import terramisc.api.crops.TECropTFCM;
 import terramisc.tileentities.TEBrickOven;
 import terramisc.tileentities.TEFoodBlock;
 import terramisc.tileentities.TEFruitPress;
@@ -104,6 +105,7 @@ public class TFCMCommonProxy
 		GameRegistry.registerTileEntity(TEWetClay.class, "WetClay");
 		GameRegistry.registerTileEntity(TEFoodBlock.class, "FoodBlock");
 		GameRegistry.registerTileEntity(TEPumpkinLantern.class, "PumpkinLantern");
+		GameRegistry.registerTileEntity(TECropTFCM.class, "CropTFCM");
 
 		if (flag)
 		{

@@ -19,10 +19,6 @@ public class TFCMOptions
 	//Other
 	public static boolean enableCraftingCompassClock = true;
 	public static float TallowCandleBurnTime = 975;
-	//Crops
-	public static int pumpkinID = 100;
-	public static int cayenneID = 101;
-	public static int coffeeID= 102;
 	
 	public static void loadSettings()
 	{	
@@ -54,10 +50,6 @@ public class TFCMOptions
 			//Other
 		enableCraftingCompassClock = getBooleanFor(config, "Other", "enableCraftingCompassClock", true, "Enable crafting Clocks and Compasses. (Default = true)");
 		TallowCandleBurnTime = getIntFor(config, "Other", "TallowCandleBurnTime", 975, "The number of hours the candle will burn for, torch default is 48, oil lamp default is 2000. (Default = 975");
-			//Crops
-		pumpkinID = getIntFor(config, "CropIDs", "pumpkinID", 100, "DO NOT CHANGE THIS UNLESS YOU KNOW WHAT YOU ARE DOING! (Default = 100");
-		cayenneID = getIntFor(config, "CropIDs", "cayenneID", 101, "DO NOT CHANGE THIS UNLESS YOU KNOW WHAT YOU ARE DOING! (Default = 101");
-		coffeeID = getIntFor(config, "CropIDs", "coffeeID", 102, "DO NOT CHANGE THIS UNLESS YOU KNOW WHAT YOU ARE DOING! (Default = 102");
 		/** End Here*/
 		if (config != null)
 			config.save();
@@ -81,9 +73,6 @@ public class TFCMOptions
 	    enableCraftingCompassClock = options == null ? true : enableCraftingCompassClock;
 	    TallowCandleBurnTime = options == null ? 1: TallowCandleBurnTime;
 	    
-	    pumpkinID = options == null ? 1: pumpkinID;
-	    cayenneID = options == null ? 1: cayenneID;
-	    coffeeID = options == null ? 1: coffeeID;
 	    System.out.println("[TerraMisc] Done loading options from options class.");
 	  }
 	

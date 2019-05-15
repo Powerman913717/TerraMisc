@@ -11,7 +11,7 @@ anaglyph3d:false
 advancedOpengl:false
 maxFps:120
 fboEnable:true
-difficulty:2
+difficulty:1
 fancyGraphics:true
 ao:2
 clouds:false
@@ -27,7 +27,7 @@ snooperEnabled:true
 fullscreen:false
 enableVsync:true
 hideServerAddress:false
-advancedItemTooltips:false
+advancedItemTooltips:true
 pauseOnLostFocus:true
 showCape:true
 touchscreen:false
@@ -93,6 +93,13 @@ key_waila.keybind.liquid:80
 key_waila.keybind.recipe:81
 key_waila.keybind.usage:75
 key_Baubles Inventory:48
+key_key.journeymap.map_toggle:50
+key_key.journeymap.zoom_in:13
+key_key.journeymap.zoom_out:12
+key_key.journeymap.minimap_type:26
+key_key.journeymap.minimap_type:27
+key_key.journeymap.minimap_preset:43
+key_key.journeymap.create_waypoint:47
 soundCategory_master:1.0
 soundCategory_music:0.0
 soundCategory_record:1.0

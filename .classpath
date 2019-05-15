@@ -3,7 +3,7 @@
 	<classpathentry combineaccessrules="false" exported="true" kind="src" path="/TFCraft-0.79.29"/>
 	<classpathentry kind="src" path="src/main/java"/>
 	<classpathentry kind="src" path="src/main/resources"/>
-	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
 	<classpathentry exported="true" kind="lib" path="C:/Users/Jared Jarvis/.gradle/caches/modules-2/files-2.1/codechicken/CodeChickenCore/1.7.10-1.0.4.35/b7165acdf6b414123d49bde2c9a92561cc33c669/CodeChickenCore-1.7.10-1.0.4.35-dev.jar"/>
 	<classpathentry exported="true" kind="lib" path="C:/Users/Jared Jarvis/.gradle/caches/modules-2/files-2.1/codechicken/CodeChickenLib/1.7.10-1.1.3.127/ef00b332b40c0ebfc42ed5720d6d5b8f4de0eeb4/CodeChickenLib-1.7.10-1.1.3.127-dev.jar"/>
 	<classpathentry exported="true" kind="lib" path="C:/Users/Jared Jarvis/.gradle/caches/modules-2/files-2.1/codechicken/NotEnoughItems/1.7.10-1.0.4.95/23f2772674f1feda9449baf757d1ca245004470e/NotEnoughItems-1.7.10-1.0.4.95-dev.jar"/>

@@ -8,20 +8,19 @@ import com.bioxx.tfc.api.Enums.EnumFoodGroup;
 
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraftforge.common.util.EnumHelper;
+import terramisc.api.crops.CustomSeedsTFCM;
 import terramisc.common.ArmorStats;
 import terramisc.items.ItemBowLimb;
 import terramisc.items.ItemBowlTallow;
 import terramisc.items.ItemMetalPart;
 import terramisc.items.ItemTallowDye;
 import terramisc.items.ItemToolMold;
-import terramisc.items.TFCMCustomSeeds;
 import terramisc.items.food.ItemBottleJuice;
 import terramisc.items.food.ItemBottleJuiceLemon;
 import terramisc.items.food.ItemBottleJuiceOnion;
 import terramisc.items.food.ItemBottleSoyMilk;
 import terramisc.items.food.ItemBottleSugar;
 import terramisc.items.food.ItemBottleWine;
-import terramisc.items.food.ItemFoodReturn;
 import terramisc.items.food.ItemPie;
 import terramisc.items.food.ItemPlaceableFood;
 import terramisc.items.tools.ItemCustomArmor;
@@ -306,16 +305,26 @@ public class TFCMItemsSetup extends TFCMItems
 		soyPaste = new ItemFoodTFC(EnumFoodGroup.Protein, 10, 0, 0, 0, 40, false).setUnlocalizedName("SoyPaste");
 		
 		//Crops, See BlockCropTFCM.class CropRegistry.class and CropRender.class
-		seedsPumpkin = new TFCMCustomSeeds(TFCMOptions.pumpkinID).setUnlocalizedName("Seeds Pumpkin");
+		seedsPumpkin = new CustomSeedsTFCM("pumpkin").setFolder("food/unused/").setUnlocalizedName("Seeds Pumpkin").setTextureName("img131");
 		pumpkin = new ItemPlaceableFood(EnumFoodGroup.Vegetable, 5, 0, 0, 10, 5, true, 80, TFCMBlocks.blockPumpkin, true).setFolder("food/unused/").setUnlocalizedName("Pumpkin").setTextureName("img73");
-		seedsCayenne = new TFCMCustomSeeds(TFCMOptions.cayenneID).setUnlocalizedName("Seeds Cayenne");
+		
+		seedsCayenne = new CustomSeedsTFCM("cayenne").setFolder("food/unused/").setUnlocalizedName("Seeds Cayenne").setTextureName("img139");
 		greenCayenne = new ItemFoodTFC(EnumFoodGroup.Vegetable, 10, 0, 0, 0, 20, true).setUnlocalizedName("greenCayenne");
 		redCayenne = new ItemFoodTFC(EnumFoodGroup.Vegetable, 10, 0, 0, 0, 45, true).setFolder("food/unused/").setUnlocalizedName("redCayenne").setTextureName("img105");
-		seedsCoffee = new TFCMCustomSeeds(TFCMOptions.coffeeID).setUnlocalizedName("Seeds Coffee");
-		coffeeCherries = new ItemFoodReturn(EnumFoodGroup.Fruit, 10, 5, 0, 0, 5, true).setReturnFood(TFCMItems.greenCoffee, 1F, 0.2F).setUnlocalizedName("coffeeCherries");
+		
+		seedsCoffee = new CustomSeedsTFCM("coffee").setFolder("food/unused/").setUnlocalizedName("Seeds Coffee").setTextureName("img141");
+		coffeeCherries = new ItemFoodTFC(EnumFoodGroup.Fruit, 10, 5, 0, 0, 5, true).setUnlocalizedName("coffeeCherries");
 		greenCoffee = new ItemFoodTFC(EnumFoodGroup.None, 0, 0, 0, 15, 0, false, false).setUnlocalizedName("greenCoffee");
 		coffee = new ItemFoodTFC(EnumFoodGroup.None, 0, 0, 0, 25, 0, false, false).setFolder("food/unused/").setUnlocalizedName("coffee").setTextureName("img78");
 		groundCoffee = new ItemFoodTFC(EnumFoodGroup.None, 0, 0, 0, 25, 0, false, false).setUnlocalizedName("groundCoffee");
+		
+		//TODO add new crop items here
+		seedsWatermelon = new CustomSeedsTFCM("watermelon").setFolder("food/unused/").setUnlocalizedName("Seeds Watermelon").setTextureName("img133");
+		watermelon = new ItemFoodTFC(EnumFoodGroup.Fruit, 15, 0, 0, 2, 0, true).setFolder("food/unused/").setUnlocalizedName("Watermelon").setTextureName("img74");
+		seedsSweetPotato = new CustomSeedsTFCM("sweetPotato").setFolder("food/unused/").setUnlocalizedName("Seeds Sweet Potato").setTextureName("img129");
+		sweetPotato = new ItemFoodTFC(EnumFoodGroup.Vegetable, 12, 0, 0, 5, 0, true).setUnlocalizedName("Sweet Potato");
+		seedsHops = new CustomSeedsTFCM("hops").setFolder("food/unused/").setUnlocalizedName("Seeds Hops").setTextureName("img137");
+		hops = new ItemFoodTFC(EnumFoodGroup.Fruit, 0, 0, 0, 20, 0, false, false).setUnlocalizedName("Hops");
 		
 		//Meat
 		bearRaw = new ItemFoodMeat(EnumFoodGroup.Protein, 5, 0, 0, 0, 50, false, false).setDecayRate(2.5f).setCanSmoke().setHasCookedIcon().setSmokeAbsorbMultiplier(1F).setUnlocalizedName("Bear");

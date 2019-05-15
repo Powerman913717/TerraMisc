@@ -10,3 +10,14 @@ Changelog
 -Added:	Breaking wild pumpkins no longer drops a block but instead drops food. (Wild Pumpkins yeild around 10 ounces)
 		-Pumpkin blocks can be placed from pumpkin food items at a rate of 80 ounces per block.
 -Added: Bears now drop a meat item, which can be cooked and used in meals.
+
+//TODO
+-TFCM Crops show broken texture when being placed. (Not neccessary but would look nicer to fix)
+	-Will be fixed when setting up a TFCM specific crop index.
+-WorldGen for Crops
+	-TFC should already be generating crops via the CropIndex system and BiomeDecoratorTFC.class
+	-However TFC will place the wrong crop blocks (which won't render) and generate pumpkin crops
+	-Must seperate TFCM crops into a seperate crop registry and index system and build worldgen based on those.
+-Fix crop highlighting with tools
+
+-Log pile placement tweak: add event to place a full log pile when 16 logs are held on right click.

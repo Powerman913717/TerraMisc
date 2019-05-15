@@ -5,6 +5,7 @@ import java.util.List;
 import com.bioxx.tfc.Blocks.Vanilla.BlockCustomPumpkin;
 import com.bioxx.tfc.Core.TFC_Core;
 import com.bioxx.tfc.Core.TFC_Time;
+import com.bioxx.tfc.Food.ItemFoodTFC;
 import com.bioxx.tfc.api.Food;
 import com.bioxx.tfc.api.TFCBlocks;
 import com.bioxx.tfc.api.Util.Helper;
@@ -15,11 +16,15 @@ import mcp.mobius.waila.api.IWailaDataProvider;
 import mcp.mobius.waila.api.IWailaRegistrar;
 import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayerMP;
+import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
+import terramisc.api.crops.CropIndexTFCM;
+import terramisc.api.crops.CropManagerTFCM;
+import terramisc.api.crops.TECropTFCM;
 import terramisc.blocks.BlockClayTFCM;
 import terramisc.blocks.BlockFoodPumpkin;
 import terramisc.blocks.BlockPumpkinLantern;
@@ -34,6 +39,13 @@ public class TFCMWailaData implements IWailaDataProvider
 	@Override
 	public ItemStack getWailaStack(IWailaDataAccessor accessor, IWailaConfigHandler config) 
 	{
+		TileEntity te = accessor.getTileEntity();
+		
+		if(te instanceof TECropTFCM)
+		{
+			return cropStack(accessor, config);
+		}
+		
 		return null;
 	}
 
@@ -47,7 +59,7 @@ public class TFCMWailaData implements IWailaDataProvider
 	public List<String> getWailaBody(ItemStack itemStack, List<String> currenttip, IWailaDataAccessor accessor, IWailaConfigHandler config) 
 	{
 		Block block = accessor.getBlock();
-		//TileEntity te = accessor.getTileEntity();
+		TileEntity te = accessor.getTileEntity();
 		
 		if(block == TFCMBlocks.blockTallowCandle)
 		{
@@ -89,6 +101,11 @@ public class TFCMWailaData implements IWailaDataProvider
 			currenttip = pumpkinLanternBody(itemStack, currenttip, accessor, config);
 		}
 		
+		if(te instanceof TECropTFCM)
+		{
+			currenttip = cropBody(itemStack, currenttip, accessor, config);
+		}
+			
 		return currenttip;
 	}
 
@@ -126,6 +143,10 @@ public class TFCMWailaData implements IWailaDataProvider
 		
 		reg.registerBodyProvider(new TFCMWailaData(), BlockPumpkinLantern.class);
 		reg.registerNBTProvider(new TFCMWailaData(), BlockPumpkinLantern.class);
+		
+		reg.registerStackProvider(new TFCMWailaData(), TECropTFCM.class);
+		reg.registerBodyProvider(new TFCMWailaData(), TECropTFCM.class);
+		reg.registerNBTProvider(new TFCMWailaData(), TECropTFCM.class);
 	}
 	
 	public List<String> candleBody(ItemStack itemStack, List<String> currenttip, IWailaDataAccessor accessor, IWailaConfigHandler config)
@@ -219,5 +240,43 @@ public class TFCMWailaData implements IWailaDataProvider
 				currenttip.add(hours + " " + TFC_Core.translate("gui.hoursRemaining") + " (" + Helper.roundNumber((100f * hours) / TFCMOptions.TallowCandleBurnTime, 10) + "%)");
 		}
 		return currenttip;
+	}
+	
+	public List<String> cropBody(ItemStack itemStack, List<String> currenttip, IWailaDataAccessor accessor, IWailaConfigHandler config)
+	{
+		NBTTagCompound tag = accessor.getNBTData();
+		float growth = tag.getFloat("growth");
+		String cropId = tag.getString("cropId");
+
+		CropIndexTFCM crop = CropManagerTFCM.getInstance().getCropFromName(cropId);
+		int percentGrowth = (int) Math.min((growth / crop.numGrowthStages) * 100, 100);
+
+		if (percentGrowth < 100)
+			currenttip.add(TFC_Core.translate("gui.growth") + " : " + percentGrowth + "%");
+		else
+			currenttip.add(TFC_Core.translate("gui.growth") + " : " + TFC_Core.translate("gui.mature"));
+
+		return currenttip;
+	}
+	
+	public ItemStack cropStack(IWailaDataAccessor accessor, IWailaConfigHandler config)
+	{
+		NBTTagCompound tag = accessor.getNBTData();
+		String cropId = tag.getString("cropId");
+		CropIndexTFCM crop;
+		ItemStack itemstack = new ItemStack(Blocks.air);;
+		
+		if(cropId != null)
+			crop = CropManagerTFCM.getInstance().getCropFromName(cropId);
+		else
+			return itemstack;
+
+		if(crop.output2 != null) //TODO Fix Error that is occuring here.
+			itemstack = new ItemStack(crop.output2);
+		else
+			itemstack = new ItemStack(crop.output1);
+
+		ItemFoodTFC.createTag(itemstack);
+		return itemstack;
 	}
 }
