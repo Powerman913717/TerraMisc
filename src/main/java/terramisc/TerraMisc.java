@@ -24,7 +24,7 @@ import terramisc.core.player.TFCMPlayerTracker;
 import terramisc.events.EventListener;
 import terramisc.food.CropRegistry;
 import terramisc.handlers.TFCMBlockDropHandler;
-import terramisc.handlers.TFCMChunkEventHandler;
+import terramisc.handlers.ChunkEventHandlerTFCM;
 import terramisc.handlers.TFCMCraftingHandler;
 import terramisc.handlers.TFCMCraftingToolUsageHandler;
 import terramisc.handlers.TFCMEntityLivingHandler;
@@ -77,7 +77,10 @@ public class TerraMisc
 		TFCMItemsSetup.ItemSetup();
 		
 		// Register Gui Handler
-		proxy.registerGuiHandler();		
+		proxy.registerGuiHandler();
+		
+		//Register World Generators
+		proxy.registerWorldGen();
 	}
 
 	@EventHandler
@@ -99,7 +102,7 @@ public class TerraMisc
 		FMLCommonHandler.instance().bus().register(new TFCMCraftingToolUsageHandler());
 
 		// Register the Chunk Load/Save Handler
-		MinecraftForge.EVENT_BUS.register(new TFCMChunkEventHandler());
+		MinecraftForge.EVENT_BUS.register(new ChunkEventHandlerTFCM());
 		
 		// Register all the render stuff for the client
 		proxy.registerRenderInformation();

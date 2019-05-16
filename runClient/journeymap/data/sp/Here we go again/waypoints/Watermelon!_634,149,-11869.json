@@ -1,0 +1,17 @@
+{
+  "id": "Watermelon!_634,149,-11869",
+  "name": "Watermelon!",
+  "icon": "waypoint-normal.png",
+  "x": 634,
+  "y": 149,
+  "z": -11869,
+  "r": 29,
+  "g": 253,
+  "b": 250,
+  "enable": true,
+  "type": "Normal",
+  "origin": "JourneyMap",
+  "dimensions": [
+    0
+  ]
+}

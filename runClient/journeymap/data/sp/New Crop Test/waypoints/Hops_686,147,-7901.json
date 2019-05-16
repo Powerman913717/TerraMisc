@@ -1,0 +1,17 @@
+{
+  "id": "Hops_686,147,-7901",
+  "name": "Hops",
+  "icon": "waypoint-normal.png",
+  "x": 686,
+  "y": 147,
+  "z": -7901,
+  "r": 14,
+  "g": 127,
+  "b": 0,
+  "enable": true,
+  "type": "Normal",
+  "origin": "JourneyMap",
+  "dimensions": [
+    0
+  ]
+}

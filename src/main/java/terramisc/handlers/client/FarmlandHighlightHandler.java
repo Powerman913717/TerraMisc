@@ -23,8 +23,8 @@ import net.minecraftforge.client.event.DrawBlockHighlightEvent;
 import terramisc.api.crops.CropIndexRipenTFCM;
 import terramisc.api.crops.CropIndexTFCM;
 import terramisc.api.crops.CropManagerTFCM;
-import terramisc.api.crops.TECropTFCM;
 import terramisc.core.TFCMBlocks;
+import terramisc.tileentities.TECropTFCM;
 
 public class FarmlandHighlightHandler
 {

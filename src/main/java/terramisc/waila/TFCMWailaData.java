@@ -16,7 +16,6 @@ import mcp.mobius.waila.api.IWailaDataProvider;
 import mcp.mobius.waila.api.IWailaRegistrar;
 import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayerMP;
-import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
@@ -24,14 +23,15 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 import terramisc.api.crops.CropIndexTFCM;
 import terramisc.api.crops.CropManagerTFCM;
-import terramisc.api.crops.TECropTFCM;
 import terramisc.blocks.BlockClayTFCM;
 import terramisc.blocks.BlockFoodPumpkin;
 import terramisc.blocks.BlockPumpkinLantern;
 import terramisc.blocks.BlockPumpkinTFCM;
 import terramisc.blocks.BlockTallowCandle;
 import terramisc.core.TFCMBlocks;
+import terramisc.core.TFCMItems;
 import terramisc.core.TFCMOptions;
+import terramisc.tileentities.TECropTFCM;
 
 public class TFCMWailaData implements IWailaDataProvider
 {
@@ -263,20 +263,16 @@ public class TFCMWailaData implements IWailaDataProvider
 	{
 		NBTTagCompound tag = accessor.getNBTData();
 		String cropId = tag.getString("cropId");
-		CropIndexTFCM crop;
-		ItemStack itemstack = new ItemStack(Blocks.air);;
+		CropIndexTFCM crop = CropManagerTFCM.getInstance().getCropFromName(cropId);
 		
-		if(cropId != null)
-			crop = CropManagerTFCM.getInstance().getCropFromName(cropId);
+		if(crop != null)
+		{
+			if(crop.output2 != null)
+				return ItemFoodTFC.createTag(new ItemStack(crop.output2));
+			else
+				return ItemFoodTFC.createTag(new ItemStack(crop.output1));
+		}
 		else
-			return itemstack;
-
-		if(crop.output2 != null) //TODO Fix Error that is occuring here.
-			itemstack = new ItemStack(crop.output2);
-		else
-			itemstack = new ItemStack(crop.output1);
-
-		ItemFoodTFC.createTag(itemstack);
-		return itemstack;
+			return new ItemStack(TFCMItems.arrow_Copper);
 	}
 }

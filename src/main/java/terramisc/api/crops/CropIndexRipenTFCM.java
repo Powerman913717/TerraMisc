@@ -6,6 +6,7 @@ import com.bioxx.tfc.Food.ItemFoodTFC;
 
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import terramisc.tileentities.TECropTFCM;
 
 public class CropIndexRipenTFCM extends CropIndexTFCM
 {

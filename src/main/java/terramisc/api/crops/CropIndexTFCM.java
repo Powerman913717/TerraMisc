@@ -12,6 +12,7 @@ import com.bioxx.tfc.api.Util.Helper;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import terramisc.tileentities.TECropTFCM;
 
 public class CropIndexTFCM
 {

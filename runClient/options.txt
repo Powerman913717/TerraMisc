@@ -3,7 +3,7 @@ mouseSensitivity:0.75352114
 fov:0.0
 gamma:0.5070422
 saturation:0.0
-renderDistance:9
+renderDistance:7
 guiScale:3
 particles:1
 bobView:true
@@ -11,7 +11,7 @@ anaglyph3d:false
 advancedOpengl:false
 maxFps:120
 fboEnable:true
-difficulty:1
+difficulty:0
 fancyGraphics:true
 ao:2
 clouds:false
@@ -96,7 +96,7 @@ key_Baubles Inventory:48
 key_key.journeymap.map_toggle:50
 key_key.journeymap.zoom_in:13
 key_key.journeymap.zoom_out:12
-key_key.journeymap.minimap_type:26
+key_key.journeymap.minimap_type:27
 key_key.journeymap.minimap_type:27
 key_key.journeymap.minimap_preset:43
 key_key.journeymap.create_waypoint:47

@@ -1,0 +1,17 @@
+{
+  "id": "Sweet Potato!_1316,154,-11639",
+  "name": "Sweet Potato!",
+  "icon": "waypoint-normal.png",
+  "x": 1316,
+  "y": 154,
+  "z": -11639,
+  "r": 216,
+  "g": 52,
+  "b": 72,
+  "enable": true,
+  "type": "Normal",
+  "origin": "JourneyMap",
+  "dimensions": [
+    0
+  ]
+}

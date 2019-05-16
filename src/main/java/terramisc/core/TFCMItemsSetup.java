@@ -8,13 +8,13 @@ import com.bioxx.tfc.api.Enums.EnumFoodGroup;
 
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraftforge.common.util.EnumHelper;
-import terramisc.api.crops.CustomSeedsTFCM;
 import terramisc.common.ArmorStats;
 import terramisc.items.ItemBowLimb;
 import terramisc.items.ItemBowlTallow;
 import terramisc.items.ItemMetalPart;
 import terramisc.items.ItemTallowDye;
 import terramisc.items.ItemToolMold;
+import terramisc.items.food.CustomSeedsTFCM;
 import terramisc.items.food.ItemBottleJuice;
 import terramisc.items.food.ItemBottleJuiceLemon;
 import terramisc.items.food.ItemBottleJuiceOnion;
@@ -318,11 +318,12 @@ public class TFCMItemsSetup extends TFCMItems
 		coffee = new ItemFoodTFC(EnumFoodGroup.None, 0, 0, 0, 25, 0, false, false).setFolder("food/unused/").setUnlocalizedName("coffee").setTextureName("img78");
 		groundCoffee = new ItemFoodTFC(EnumFoodGroup.None, 0, 0, 0, 25, 0, false, false).setUnlocalizedName("groundCoffee");
 		
-		//TODO add new crop items here
 		seedsWatermelon = new CustomSeedsTFCM("watermelon").setFolder("food/unused/").setUnlocalizedName("Seeds Watermelon").setTextureName("img133");
 		watermelon = new ItemFoodTFC(EnumFoodGroup.Fruit, 15, 0, 0, 2, 0, true).setFolder("food/unused/").setUnlocalizedName("Watermelon").setTextureName("img74");
-		seedsSweetPotato = new CustomSeedsTFCM("sweetPotato").setFolder("food/unused/").setUnlocalizedName("Seeds Sweet Potato").setTextureName("img129");
+		
+		seedsSweetPotato = new CustomSeedsTFCM("sweet potato").setFolder("food/unused/").setUnlocalizedName("Seeds Sweet Potato").setTextureName("img129");
 		sweetPotato = new ItemFoodTFC(EnumFoodGroup.Vegetable, 12, 0, 0, 5, 0, true).setUnlocalizedName("Sweet Potato");
+		
 		seedsHops = new CustomSeedsTFCM("hops").setFolder("food/unused/").setUnlocalizedName("Seeds Hops").setTextureName("img137");
 		hops = new ItemFoodTFC(EnumFoodGroup.Fruit, 0, 0, 0, 20, 0, false, false).setUnlocalizedName("Hops");
 		

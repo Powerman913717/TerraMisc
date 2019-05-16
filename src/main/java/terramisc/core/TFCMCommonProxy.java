@@ -14,14 +14,15 @@ import net.minecraft.world.World;
 import net.minecraftforge.fluids.FluidContainerRegistry;
 import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fluids.FluidStack;
-import terramisc.api.crops.TECropTFCM;
 import terramisc.tileentities.TEBrickOven;
+import terramisc.tileentities.TECropTFCM;
 import terramisc.tileentities.TEFoodBlock;
 import terramisc.tileentities.TEFruitPress;
 import terramisc.tileentities.TEPumpkinLantern;
 import terramisc.tileentities.TESoupKettle;
 import terramisc.tileentities.TETallowCandle;
 import terramisc.tileentities.TEWetClay;
+import terramisc.worldGen.Generators.WorldGenGrowCropsTFCM;
 
 public class TFCMCommonProxy
 {
@@ -97,6 +98,11 @@ public class TFCMCommonProxy
 	public void registerTickHandler()
 	{
 		FMLCommonHandler.instance().bus().register(new terramisc.handlers.TFCMServerTickHandler());
+	}
+	
+	public void registerWorldGen()
+	{
+		GameRegistry.registerWorldGenerator(new WorldGenGrowCropsTFCM(), 9);
 	}
 	
 	public void registerTileEntities(boolean flag)
