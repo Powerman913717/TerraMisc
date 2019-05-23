@@ -4,6 +4,9 @@
 ### Gradle ###
 .gradle
 build/
+bin/
+runClient/
+runServer/
 
 # Ignore Gradle GUI config
 gradle-app.setting
