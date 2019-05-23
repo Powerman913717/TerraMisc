@@ -5306,3 +5306,687 @@
 [17:33:33] [main/INFO] [LaunchWrapper]: Using primary tweak class name cpw.mods.fml.common.launcher.FMLTweaker
 [17:33:33] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
 [17:33:33] [main/INFO] [LaunchWrapper]: Calling tweak class cpw.mods.fml.common.launcher.FMLTweaker
+[03:52:32] [main/INFO] [GradleStart]: username: powerman913717@gmail.com
+[03:52:32] [main/INFO] [GradleStart]: Extra: []
+[03:52:32] [main/INFO] [GradleStart]: Password found, attempting login
+[03:52:33] [main/INFO] [GradleStart]: Login Succesful!
+[03:52:33] [main/INFO] [GradleStart]: Found and added coremod: com.bioxx.tfc.TFCASMLoadingPlugin
+[03:52:33] [main/INFO] [GradleStart]: Found and added coremod: codechicken.core.launch.CodeChickenCorePlugin
+[03:52:33] [main/INFO] [GradleStart]: Found and added coremod: codechicken.nei.asm.NEICorePlugin
+[03:52:33] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --username, Necoxus, --accessToken, {REDACTED}, --assetIndex, 1.7.10, --uuid, 1236da5d03de4e74b309a6d1b45ac70a, --userType, mojang, --assetsDir, C:/Users/Jared Jarvis/.gradle/caches/minecraft/assets, --version, 1.7.10, --tweakClass, cpw.mods.fml.common.launcher.FMLTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[03:52:33] [main/INFO] [LaunchWrapper]: Loading tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[03:52:33] [main/INFO] [LaunchWrapper]: Using primary tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[03:52:33] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[03:52:33] [main/INFO] [LaunchWrapper]: Calling tweak class cpw.mods.fml.common.launcher.FMLTweaker
+[03:58:05] [main/INFO] [GradleStart]: username: powerman913717@gmail.com
+[03:58:05] [main/INFO] [GradleStart]: Extra: []
+[03:58:05] [main/INFO] [GradleStart]: Password found, attempting login
+[03:58:06] [main/INFO] [GradleStart]: Login Succesful!
+[03:58:06] [main/INFO] [GradleStart]: Found and added coremod: com.bioxx.tfc.TFCASMLoadingPlugin
+[03:58:06] [main/INFO] [GradleStart]: Found and added coremod: codechicken.core.launch.CodeChickenCorePlugin
+[03:58:06] [main/INFO] [GradleStart]: Found and added coremod: codechicken.nei.asm.NEICorePlugin
+[03:58:06] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --username, Necoxus, --accessToken, {REDACTED}, --assetIndex, 1.7.10, --uuid, 1236da5d03de4e74b309a6d1b45ac70a, --userType, mojang, --assetsDir, C:/Users/Jared Jarvis/.gradle/caches/minecraft/assets, --version, 1.7.10, --tweakClass, cpw.mods.fml.common.launcher.FMLTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[03:58:06] [main/INFO] [LaunchWrapper]: Loading tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[03:58:06] [main/INFO] [LaunchWrapper]: Using primary tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[03:58:06] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[03:58:06] [main/INFO] [LaunchWrapper]: Calling tweak class cpw.mods.fml.common.launcher.FMLTweaker
+[03:58:47] [main/INFO] [GradleStart]: username: powerman913717@gmail.com
+[03:58:47] [main/INFO] [GradleStart]: Extra: []
+[03:58:47] [main/INFO] [GradleStart]: Password found, attempting login
+[03:58:48] [main/INFO] [GradleStart]: Login Succesful!
+[03:58:49] [main/INFO] [GradleStart]: Found and added coremod: com.bioxx.tfc.TFCASMLoadingPlugin
+[03:58:49] [main/INFO] [GradleStart]: Found and added coremod: codechicken.core.launch.CodeChickenCorePlugin
+[03:58:49] [main/INFO] [GradleStart]: Found and added coremod: codechicken.nei.asm.NEICorePlugin
+[03:58:49] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --username, Necoxus, --accessToken, {REDACTED}, --assetIndex, 1.7.10, --uuid, 1236da5d03de4e74b309a6d1b45ac70a, --userType, mojang, --assetsDir, C:/Users/Jared Jarvis/.gradle/caches/minecraft/assets, --version, 1.7.10, --tweakClass, cpw.mods.fml.common.launcher.FMLTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[03:58:49] [main/INFO] [LaunchWrapper]: Loading tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[03:58:49] [main/INFO] [LaunchWrapper]: Using primary tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[03:58:49] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[03:58:49] [main/INFO] [LaunchWrapper]: Calling tweak class cpw.mods.fml.common.launcher.FMLTweaker
+[04:15:34] [main/INFO] [GradleStart]: username: powerman913717@gmail.com
+[04:15:34] [main/INFO] [GradleStart]: Extra: []
+[04:15:34] [main/INFO] [GradleStart]: Password found, attempting login
+[04:15:35] [main/INFO] [GradleStart]: Login Succesful!
+[04:15:35] [main/INFO] [GradleStart]: Found and added coremod: com.bioxx.tfc.TFCASMLoadingPlugin
+[04:15:35] [main/INFO] [GradleStart]: Found and added coremod: codechicken.core.launch.CodeChickenCorePlugin
+[04:15:35] [main/INFO] [GradleStart]: Found and added coremod: codechicken.nei.asm.NEICorePlugin
+[04:15:35] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --username, Necoxus, --accessToken, {REDACTED}, --assetIndex, 1.7.10, --uuid, 1236da5d03de4e74b309a6d1b45ac70a, --userType, mojang, --assetsDir, C:/Users/Jared Jarvis/.gradle/caches/minecraft/assets, --version, 1.7.10, --tweakClass, cpw.mods.fml.common.launcher.FMLTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[04:15:36] [main/INFO] [LaunchWrapper]: Loading tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[04:15:36] [main/INFO] [LaunchWrapper]: Using primary tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[04:15:36] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[04:15:36] [main/INFO] [LaunchWrapper]: Calling tweak class cpw.mods.fml.common.launcher.FMLTweaker
+[04:36:10] [main/INFO] [GradleStart]: username: powerman913717@gmail.com
+[04:36:10] [main/INFO] [GradleStart]: Extra: []
+[04:36:10] [main/INFO] [GradleStart]: Password found, attempting login
+[04:36:11] [main/INFO] [GradleStart]: Login Succesful!
+[04:36:11] [main/INFO] [GradleStart]: Found and added coremod: com.bioxx.tfc.TFCASMLoadingPlugin
+[04:36:11] [main/INFO] [GradleStart]: Found and added coremod: codechicken.core.launch.CodeChickenCorePlugin
+[04:36:11] [main/INFO] [GradleStart]: Found and added coremod: codechicken.nei.asm.NEICorePlugin
+[04:36:11] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --username, Necoxus, --accessToken, {REDACTED}, --assetIndex, 1.7.10, --uuid, 1236da5d03de4e74b309a6d1b45ac70a, --userType, mojang, --assetsDir, C:/Users/Jared Jarvis/.gradle/caches/minecraft/assets, --version, 1.7.10, --tweakClass, cpw.mods.fml.common.launcher.FMLTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[04:36:11] [main/INFO] [LaunchWrapper]: Loading tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[04:36:11] [main/INFO] [LaunchWrapper]: Using primary tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[04:36:11] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[04:36:11] [main/INFO] [LaunchWrapper]: Calling tweak class cpw.mods.fml.common.launcher.FMLTweaker
+[04:36:56] [main/INFO] [GradleStart]: username: powerman913717@gmail.com
+[04:36:56] [main/INFO] [GradleStart]: Extra: []
+[04:36:56] [main/INFO] [GradleStart]: Password found, attempting login
+[04:36:57] [main/INFO] [GradleStart]: Login Succesful!
+[04:36:57] [main/INFO] [GradleStart]: Found and added coremod: com.bioxx.tfc.TFCASMLoadingPlugin
+[04:36:57] [main/INFO] [GradleStart]: Found and added coremod: codechicken.core.launch.CodeChickenCorePlugin
+[04:36:57] [main/INFO] [GradleStart]: Found and added coremod: codechicken.nei.asm.NEICorePlugin
+[04:36:57] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --username, Necoxus, --accessToken, {REDACTED}, --assetIndex, 1.7.10, --uuid, 1236da5d03de4e74b309a6d1b45ac70a, --userType, mojang, --assetsDir, C:/Users/Jared Jarvis/.gradle/caches/minecraft/assets, --version, 1.7.10, --tweakClass, cpw.mods.fml.common.launcher.FMLTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[04:36:57] [main/INFO] [LaunchWrapper]: Loading tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[04:36:57] [main/INFO] [LaunchWrapper]: Using primary tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[04:36:57] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[04:36:57] [main/INFO] [LaunchWrapper]: Calling tweak class cpw.mods.fml.common.launcher.FMLTweaker
+[04:45:47] [main/INFO] [GradleStart]: username: powerman913717@gmail.com
+[04:45:47] [main/INFO] [GradleStart]: Extra: []
+[04:45:47] [main/INFO] [GradleStart]: Password found, attempting login
+[04:45:48] [main/INFO] [GradleStart]: Login Succesful!
+[04:45:49] [main/INFO] [GradleStart]: Found and added coremod: com.bioxx.tfc.TFCASMLoadingPlugin
+[04:45:49] [main/INFO] [GradleStart]: Found and added coremod: codechicken.core.launch.CodeChickenCorePlugin
+[04:45:49] [main/INFO] [GradleStart]: Found and added coremod: codechicken.nei.asm.NEICorePlugin
+[04:45:49] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --username, Necoxus, --accessToken, {REDACTED}, --assetIndex, 1.7.10, --uuid, 1236da5d03de4e74b309a6d1b45ac70a, --userType, mojang, --assetsDir, C:/Users/Jared Jarvis/.gradle/caches/minecraft/assets, --version, 1.7.10, --tweakClass, cpw.mods.fml.common.launcher.FMLTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[04:45:49] [main/INFO] [LaunchWrapper]: Loading tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[04:45:49] [main/INFO] [LaunchWrapper]: Using primary tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[04:45:49] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[04:45:49] [main/INFO] [LaunchWrapper]: Calling tweak class cpw.mods.fml.common.launcher.FMLTweaker
+[05:02:05] [main/INFO] [GradleStart]: username: powerman913717@gmail.com
+[05:02:05] [main/INFO] [GradleStart]: Extra: []
+[05:02:05] [main/INFO] [GradleStart]: Password found, attempting login
+[05:02:06] [main/INFO] [GradleStart]: Login Succesful!
+[05:02:06] [main/INFO] [GradleStart]: Found and added coremod: com.bioxx.tfc.TFCASMLoadingPlugin
+[05:02:06] [main/INFO] [GradleStart]: Found and added coremod: codechicken.core.launch.CodeChickenCorePlugin
+[05:02:06] [main/INFO] [GradleStart]: Found and added coremod: codechicken.nei.asm.NEICorePlugin
+[05:02:06] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --username, Necoxus, --accessToken, {REDACTED}, --assetIndex, 1.7.10, --uuid, 1236da5d03de4e74b309a6d1b45ac70a, --userType, mojang, --assetsDir, C:/Users/Jared Jarvis/.gradle/caches/minecraft/assets, --version, 1.7.10, --tweakClass, cpw.mods.fml.common.launcher.FMLTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[05:02:06] [main/INFO] [LaunchWrapper]: Loading tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[05:02:06] [main/INFO] [LaunchWrapper]: Using primary tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[05:02:06] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[05:02:06] [main/INFO] [LaunchWrapper]: Calling tweak class cpw.mods.fml.common.launcher.FMLTweaker
+[05:05:32] [main/INFO] [GradleStart]: username: powerman913717@gmail.com
+[05:05:32] [main/INFO] [GradleStart]: Extra: []
+[05:05:32] [main/INFO] [GradleStart]: Password found, attempting login
+[05:05:33] [main/INFO] [GradleStart]: Login Succesful!
+[05:05:33] [main/INFO] [GradleStart]: Found and added coremod: com.bioxx.tfc.TFCASMLoadingPlugin
+[05:05:33] [main/INFO] [GradleStart]: Found and added coremod: codechicken.core.launch.CodeChickenCorePlugin
+[05:05:33] [main/INFO] [GradleStart]: Found and added coremod: codechicken.nei.asm.NEICorePlugin
+[05:05:33] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --username, Necoxus, --accessToken, {REDACTED}, --assetIndex, 1.7.10, --uuid, 1236da5d03de4e74b309a6d1b45ac70a, --userType, mojang, --assetsDir, C:/Users/Jared Jarvis/.gradle/caches/minecraft/assets, --version, 1.7.10, --tweakClass, cpw.mods.fml.common.launcher.FMLTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[05:05:34] [main/INFO] [LaunchWrapper]: Loading tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[05:05:34] [main/INFO] [LaunchWrapper]: Using primary tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[05:05:34] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[05:05:34] [main/INFO] [LaunchWrapper]: Calling tweak class cpw.mods.fml.common.launcher.FMLTweaker
+[15:51:14] [main/INFO] [GradleStart]: username: powerman913717@gmail.com
+[15:51:14] [main/INFO] [GradleStart]: Extra: []
+[15:51:14] [main/INFO] [GradleStart]: Password found, attempting login
+[15:51:15] [main/INFO] [GradleStart]: Login Succesful!
+[15:51:15] [main/INFO] [GradleStart]: Found and added coremod: com.bioxx.tfc.TFCASMLoadingPlugin
+[15:51:15] [main/INFO] [GradleStart]: Found and added coremod: codechicken.core.launch.CodeChickenCorePlugin
+[15:51:15] [main/INFO] [GradleStart]: Found and added coremod: codechicken.nei.asm.NEICorePlugin
+[15:51:15] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --username, Necoxus, --accessToken, {REDACTED}, --assetIndex, 1.7.10, --uuid, 1236da5d03de4e74b309a6d1b45ac70a, --userType, mojang, --assetsDir, C:/Users/Jared Jarvis/.gradle/caches/minecraft/assets, --version, 1.7.10, --tweakClass, cpw.mods.fml.common.launcher.FMLTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[15:51:15] [main/INFO] [LaunchWrapper]: Loading tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[15:51:15] [main/INFO] [LaunchWrapper]: Using primary tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[15:51:15] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[15:51:15] [main/INFO] [LaunchWrapper]: Calling tweak class cpw.mods.fml.common.launcher.FMLTweaker
+[16:19:42] [main/INFO] [GradleStart]: username: powerman913717@gmail.com
+[16:19:42] [main/INFO] [GradleStart]: Extra: []
+[16:19:42] [main/INFO] [GradleStart]: Password found, attempting login
+[16:19:43] [main/INFO] [GradleStart]: Login Succesful!
+[16:19:43] [main/INFO] [GradleStart]: Found and added coremod: com.bioxx.tfc.TFCASMLoadingPlugin
+[16:19:43] [main/INFO] [GradleStart]: Found and added coremod: codechicken.core.launch.CodeChickenCorePlugin
+[16:19:43] [main/INFO] [GradleStart]: Found and added coremod: codechicken.nei.asm.NEICorePlugin
+[16:19:43] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --username, Necoxus, --accessToken, {REDACTED}, --assetIndex, 1.7.10, --uuid, 1236da5d03de4e74b309a6d1b45ac70a, --userType, mojang, --assetsDir, C:/Users/Jared Jarvis/.gradle/caches/minecraft/assets, --version, 1.7.10, --tweakClass, cpw.mods.fml.common.launcher.FMLTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[16:19:44] [main/INFO] [LaunchWrapper]: Loading tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[16:19:44] [main/INFO] [LaunchWrapper]: Using primary tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[16:19:44] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[16:19:44] [main/INFO] [LaunchWrapper]: Calling tweak class cpw.mods.fml.common.launcher.FMLTweaker
+[18:02:27] [main/INFO] [GradleStart]: username: powerman913717@gmail.com
+[18:02:27] [main/INFO] [GradleStart]: Extra: []
+[18:02:27] [main/INFO] [GradleStart]: Password found, attempting login
+[18:02:28] [main/INFO] [GradleStart]: Login Succesful!
+[18:02:28] [main/INFO] [GradleStart]: Found and added coremod: com.bioxx.tfc.TFCASMLoadingPlugin
+[18:02:28] [main/INFO] [GradleStart]: Found and added coremod: codechicken.core.launch.CodeChickenCorePlugin
+[18:02:28] [main/INFO] [GradleStart]: Found and added coremod: codechicken.nei.asm.NEICorePlugin
+[18:02:28] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --username, Necoxus, --accessToken, {REDACTED}, --assetIndex, 1.7.10, --uuid, 1236da5d03de4e74b309a6d1b45ac70a, --userType, mojang, --assetsDir, C:/Users/Jared Jarvis/.gradle/caches/minecraft/assets, --version, 1.7.10, --tweakClass, cpw.mods.fml.common.launcher.FMLTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[18:02:28] [main/INFO] [LaunchWrapper]: Loading tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[18:02:28] [main/INFO] [LaunchWrapper]: Using primary tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[18:02:28] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[18:02:28] [main/INFO] [LaunchWrapper]: Calling tweak class cpw.mods.fml.common.launcher.FMLTweaker
+[18:07:33] [main/INFO] [GradleStart]: username: powerman913717@gmail.com
+[18:07:33] [main/INFO] [GradleStart]: Extra: []
+[18:07:33] [main/INFO] [GradleStart]: Password found, attempting login
+[18:07:34] [main/INFO] [GradleStart]: Login Succesful!
+[18:07:34] [main/INFO] [GradleStart]: Found and added coremod: com.bioxx.tfc.TFCASMLoadingPlugin
+[18:07:34] [main/INFO] [GradleStart]: Found and added coremod: codechicken.core.launch.CodeChickenCorePlugin
+[18:07:34] [main/INFO] [GradleStart]: Found and added coremod: codechicken.nei.asm.NEICorePlugin
+[18:07:34] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --username, Necoxus, --accessToken, {REDACTED}, --assetIndex, 1.7.10, --uuid, 1236da5d03de4e74b309a6d1b45ac70a, --userType, mojang, --assetsDir, C:/Users/Jared Jarvis/.gradle/caches/minecraft/assets, --version, 1.7.10, --tweakClass, cpw.mods.fml.common.launcher.FMLTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[18:07:34] [main/INFO] [LaunchWrapper]: Loading tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[18:07:34] [main/INFO] [LaunchWrapper]: Using primary tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[18:07:34] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[18:07:34] [main/INFO] [LaunchWrapper]: Calling tweak class cpw.mods.fml.common.launcher.FMLTweaker
+[18:13:05] [main/INFO] [GradleStart]: username: powerman913717@gmail.com
+[18:13:05] [main/INFO] [GradleStart]: Extra: []
+[18:13:05] [main/INFO] [GradleStart]: Password found, attempting login
+[18:13:07] [main/INFO] [GradleStart]: Login Succesful!
+[18:13:07] [main/INFO] [GradleStart]: Found and added coremod: com.bioxx.tfc.TFCASMLoadingPlugin
+[18:13:07] [main/INFO] [GradleStart]: Found and added coremod: codechicken.core.launch.CodeChickenCorePlugin
+[18:13:07] [main/INFO] [GradleStart]: Found and added coremod: codechicken.nei.asm.NEICorePlugin
+[18:13:07] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --username, Necoxus, --accessToken, {REDACTED}, --assetIndex, 1.7.10, --uuid, 1236da5d03de4e74b309a6d1b45ac70a, --userType, mojang, --assetsDir, C:/Users/Jared Jarvis/.gradle/caches/minecraft/assets, --version, 1.7.10, --tweakClass, cpw.mods.fml.common.launcher.FMLTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[18:13:07] [main/INFO] [LaunchWrapper]: Loading tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[18:13:07] [main/INFO] [LaunchWrapper]: Using primary tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[18:13:07] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[18:13:07] [main/INFO] [LaunchWrapper]: Calling tweak class cpw.mods.fml.common.launcher.FMLTweaker
+[18:15:49] [main/INFO] [GradleStart]: username: powerman913717@gmail.com
+[18:15:49] [main/INFO] [GradleStart]: Extra: []
+[18:15:49] [main/INFO] [GradleStart]: Password found, attempting login
+[18:15:50] [main/INFO] [GradleStart]: Login Succesful!
+[18:15:50] [main/INFO] [GradleStart]: Found and added coremod: com.bioxx.tfc.TFCASMLoadingPlugin
+[18:15:50] [main/INFO] [GradleStart]: Found and added coremod: codechicken.core.launch.CodeChickenCorePlugin
+[18:15:50] [main/INFO] [GradleStart]: Found and added coremod: codechicken.nei.asm.NEICorePlugin
+[18:15:50] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --username, Necoxus, --accessToken, {REDACTED}, --assetIndex, 1.7.10, --uuid, 1236da5d03de4e74b309a6d1b45ac70a, --userType, mojang, --assetsDir, C:/Users/Jared Jarvis/.gradle/caches/minecraft/assets, --version, 1.7.10, --tweakClass, cpw.mods.fml.common.launcher.FMLTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[18:15:50] [main/INFO] [LaunchWrapper]: Loading tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[18:15:50] [main/INFO] [LaunchWrapper]: Using primary tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[18:15:50] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[18:15:50] [main/INFO] [LaunchWrapper]: Calling tweak class cpw.mods.fml.common.launcher.FMLTweaker
+[18:54:15] [main/INFO] [GradleStart]: username: powerman913717@gmail.com
+[18:54:15] [main/INFO] [GradleStart]: Extra: []
+[18:54:15] [main/INFO] [GradleStart]: Password found, attempting login
+[18:54:16] [main/INFO] [GradleStart]: Login Succesful!
+[18:54:16] [main/INFO] [GradleStart]: Found and added coremod: com.bioxx.tfc.TFCASMLoadingPlugin
+[18:54:16] [main/INFO] [GradleStart]: Found and added coremod: codechicken.core.launch.CodeChickenCorePlugin
+[18:54:16] [main/INFO] [GradleStart]: Found and added coremod: codechicken.nei.asm.NEICorePlugin
+[18:54:16] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --username, Necoxus, --accessToken, {REDACTED}, --assetIndex, 1.7.10, --uuid, 1236da5d03de4e74b309a6d1b45ac70a, --userType, mojang, --assetsDir, C:/Users/Jared Jarvis/.gradle/caches/minecraft/assets, --version, 1.7.10, --tweakClass, cpw.mods.fml.common.launcher.FMLTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[18:54:16] [main/INFO] [LaunchWrapper]: Loading tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[18:54:16] [main/INFO] [LaunchWrapper]: Using primary tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[18:54:16] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[18:54:16] [main/INFO] [LaunchWrapper]: Calling tweak class cpw.mods.fml.common.launcher.FMLTweaker
+[23:16:21] [main/INFO] [GradleStart]: username: powerman913717@gmail.com
+[23:16:21] [main/INFO] [GradleStart]: Extra: []
+[23:16:21] [main/INFO] [GradleStart]: Password found, attempting login
+[23:16:23] [main/INFO] [GradleStart]: Login Succesful!
+[23:16:23] [main/INFO] [GradleStart]: Found and added coremod: com.bioxx.tfc.TFCASMLoadingPlugin
+[23:16:23] [main/INFO] [GradleStart]: Found and added coremod: codechicken.core.launch.CodeChickenCorePlugin
+[23:16:23] [main/INFO] [GradleStart]: Found and added coremod: codechicken.nei.asm.NEICorePlugin
+[23:16:23] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --username, Necoxus, --accessToken, {REDACTED}, --assetIndex, 1.7.10, --uuid, 1236da5d03de4e74b309a6d1b45ac70a, --userType, mojang, --assetsDir, C:/Users/Jared Jarvis/.gradle/caches/minecraft/assets, --version, 1.7.10, --tweakClass, cpw.mods.fml.common.launcher.FMLTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[23:16:23] [main/INFO] [LaunchWrapper]: Loading tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[23:16:23] [main/INFO] [LaunchWrapper]: Using primary tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[23:16:23] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[23:16:23] [main/INFO] [LaunchWrapper]: Calling tweak class cpw.mods.fml.common.launcher.FMLTweaker
+[02:32:29] [main/INFO] [GradleStart]: username: powerman913717@gmail.com
+[02:32:29] [main/INFO] [GradleStart]: Extra: []
+[02:32:29] [main/INFO] [GradleStart]: Password found, attempting login
+[02:32:30] [main/INFO] [GradleStart]: Login Succesful!
+[02:32:30] [main/INFO] [GradleStart]: Found and added coremod: com.bioxx.tfc.TFCASMLoadingPlugin
+[02:32:30] [main/INFO] [GradleStart]: Found and added coremod: codechicken.core.launch.CodeChickenCorePlugin
+[02:32:30] [main/INFO] [GradleStart]: Found and added coremod: codechicken.nei.asm.NEICorePlugin
+[02:32:30] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --username, Necoxus, --accessToken, {REDACTED}, --assetIndex, 1.7.10, --uuid, 1236da5d03de4e74b309a6d1b45ac70a, --userType, mojang, --assetsDir, C:/Users/Jared Jarvis/.gradle/caches/minecraft/assets, --version, 1.7.10, --tweakClass, cpw.mods.fml.common.launcher.FMLTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[02:32:30] [main/INFO] [LaunchWrapper]: Loading tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[02:32:30] [main/INFO] [LaunchWrapper]: Using primary tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[02:32:30] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[02:32:30] [main/INFO] [LaunchWrapper]: Calling tweak class cpw.mods.fml.common.launcher.FMLTweaker
+[12:36:28] [main/INFO] [GradleStart]: username: powerman913717@gmail.com
+[12:36:28] [main/INFO] [GradleStart]: Extra: []
+[12:36:28] [main/INFO] [GradleStart]: Password found, attempting login
+[12:36:31] [main/INFO] [GradleStart]: Login Succesful!
+[12:36:31] [main/INFO] [GradleStart]: Found and added coremod: com.bioxx.tfc.TFCASMLoadingPlugin
+[12:36:31] [main/INFO] [GradleStart]: Found and added coremod: codechicken.core.launch.CodeChickenCorePlugin
+[12:36:31] [main/INFO] [GradleStart]: Found and added coremod: codechicken.nei.asm.NEICorePlugin
+[12:36:31] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --username, Necoxus, --accessToken, {REDACTED}, --assetIndex, 1.7.10, --uuid, 1236da5d03de4e74b309a6d1b45ac70a, --userType, mojang, --assetsDir, C:/Users/Jared Jarvis/.gradle/caches/minecraft/assets, --version, 1.7.10, --tweakClass, cpw.mods.fml.common.launcher.FMLTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[12:36:31] [main/INFO] [LaunchWrapper]: Loading tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[12:36:31] [main/INFO] [LaunchWrapper]: Using primary tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[12:36:31] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[12:36:31] [main/INFO] [LaunchWrapper]: Calling tweak class cpw.mods.fml.common.launcher.FMLTweaker
+[01:32:59] [main/INFO] [GradleStart]: username: powerman913717@gmail.com
+[01:32:59] [main/INFO] [GradleStart]: Extra: []
+[01:32:59] [main/INFO] [GradleStart]: Password found, attempting login
+[01:33:00] [main/INFO] [GradleStart]: Login Succesful!
+[01:33:00] [main/INFO] [GradleStart]: Found and added coremod: com.bioxx.tfc.TFCASMLoadingPlugin
+[01:33:00] [main/INFO] [GradleStart]: Found and added coremod: codechicken.core.launch.CodeChickenCorePlugin
+[01:33:00] [main/INFO] [GradleStart]: Found and added coremod: codechicken.nei.asm.NEICorePlugin
+[01:33:00] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --username, Necoxus, --accessToken, {REDACTED}, --assetIndex, 1.7.10, --uuid, 1236da5d03de4e74b309a6d1b45ac70a, --userType, mojang, --assetsDir, C:/Users/Jared Jarvis/.gradle/caches/minecraft/assets, --version, 1.7.10, --tweakClass, cpw.mods.fml.common.launcher.FMLTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[01:33:00] [main/INFO] [LaunchWrapper]: Loading tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[01:33:00] [main/INFO] [LaunchWrapper]: Using primary tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[01:33:00] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[01:33:00] [main/INFO] [LaunchWrapper]: Calling tweak class cpw.mods.fml.common.launcher.FMLTweaker
+[01:37:45] [main/INFO] [GradleStart]: username: powerman913717@gmail.com
+[01:37:45] [main/INFO] [GradleStart]: Extra: []
+[01:37:45] [main/INFO] [GradleStart]: Password found, attempting login
+[01:37:47] [main/INFO] [GradleStart]: Login Succesful!
+[01:37:47] [main/INFO] [GradleStart]: Found and added coremod: com.bioxx.tfc.TFCASMLoadingPlugin
+[01:37:47] [main/INFO] [GradleStart]: Found and added coremod: codechicken.core.launch.CodeChickenCorePlugin
+[01:37:47] [main/INFO] [GradleStart]: Found and added coremod: codechicken.nei.asm.NEICorePlugin
+[01:37:47] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --username, Necoxus, --accessToken, {REDACTED}, --assetIndex, 1.7.10, --uuid, 1236da5d03de4e74b309a6d1b45ac70a, --userType, mojang, --assetsDir, C:/Users/Jared Jarvis/.gradle/caches/minecraft/assets, --version, 1.7.10, --tweakClass, cpw.mods.fml.common.launcher.FMLTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[01:37:47] [main/INFO] [LaunchWrapper]: Loading tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[01:37:47] [main/INFO] [LaunchWrapper]: Using primary tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[01:37:47] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[01:37:47] [main/INFO] [LaunchWrapper]: Calling tweak class cpw.mods.fml.common.launcher.FMLTweaker
+[01:59:16] [main/INFO] [GradleStart]: username: powerman913717@gmail.com
+[01:59:16] [main/INFO] [GradleStart]: Extra: []
+[01:59:16] [main/INFO] [GradleStart]: Password found, attempting login
+[01:59:18] [main/INFO] [GradleStart]: Login Succesful!
+[01:59:18] [main/INFO] [GradleStart]: Found and added coremod: com.bioxx.tfc.TFCASMLoadingPlugin
+[01:59:18] [main/INFO] [GradleStart]: Found and added coremod: codechicken.core.launch.CodeChickenCorePlugin
+[01:59:18] [main/INFO] [GradleStart]: Found and added coremod: codechicken.nei.asm.NEICorePlugin
+[01:59:18] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --username, Necoxus, --accessToken, {REDACTED}, --assetIndex, 1.7.10, --uuid, 1236da5d03de4e74b309a6d1b45ac70a, --userType, mojang, --assetsDir, C:/Users/Jared Jarvis/.gradle/caches/minecraft/assets, --version, 1.7.10, --tweakClass, cpw.mods.fml.common.launcher.FMLTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[01:59:18] [main/INFO] [LaunchWrapper]: Loading tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[01:59:18] [main/INFO] [LaunchWrapper]: Using primary tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[01:59:18] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[01:59:18] [main/INFO] [LaunchWrapper]: Calling tweak class cpw.mods.fml.common.launcher.FMLTweaker
+[02:03:01] [main/INFO] [GradleStart]: username: powerman913717@gmail.com
+[02:03:01] [main/INFO] [GradleStart]: Extra: []
+[02:03:01] [main/INFO] [GradleStart]: Password found, attempting login
+[02:03:02] [main/INFO] [GradleStart]: Login Succesful!
+[02:03:02] [main/INFO] [GradleStart]: Found and added coremod: com.bioxx.tfc.TFCASMLoadingPlugin
+[02:03:02] [main/INFO] [GradleStart]: Found and added coremod: codechicken.core.launch.CodeChickenCorePlugin
+[02:03:02] [main/INFO] [GradleStart]: Found and added coremod: codechicken.nei.asm.NEICorePlugin
+[02:03:02] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --username, Necoxus, --accessToken, {REDACTED}, --assetIndex, 1.7.10, --uuid, 1236da5d03de4e74b309a6d1b45ac70a, --userType, mojang, --assetsDir, C:/Users/Jared Jarvis/.gradle/caches/minecraft/assets, --version, 1.7.10, --tweakClass, cpw.mods.fml.common.launcher.FMLTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[02:03:02] [main/INFO] [LaunchWrapper]: Loading tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[02:03:02] [main/INFO] [LaunchWrapper]: Using primary tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[02:03:02] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[02:03:02] [main/INFO] [LaunchWrapper]: Calling tweak class cpw.mods.fml.common.launcher.FMLTweaker
+[02:05:28] [main/INFO] [GradleStart]: username: powerman913717@gmail.com
+[02:05:28] [main/INFO] [GradleStart]: Extra: []
+[02:05:28] [main/INFO] [GradleStart]: Password found, attempting login
+[02:05:30] [main/INFO] [GradleStart]: Login Succesful!
+[02:05:30] [main/INFO] [GradleStart]: Found and added coremod: com.bioxx.tfc.TFCASMLoadingPlugin
+[02:05:30] [main/INFO] [GradleStart]: Found and added coremod: codechicken.core.launch.CodeChickenCorePlugin
+[02:05:30] [main/INFO] [GradleStart]: Found and added coremod: codechicken.nei.asm.NEICorePlugin
+[02:05:30] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --username, Necoxus, --accessToken, {REDACTED}, --assetIndex, 1.7.10, --uuid, 1236da5d03de4e74b309a6d1b45ac70a, --userType, mojang, --assetsDir, C:/Users/Jared Jarvis/.gradle/caches/minecraft/assets, --version, 1.7.10, --tweakClass, cpw.mods.fml.common.launcher.FMLTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[02:05:30] [main/INFO] [LaunchWrapper]: Loading tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[02:05:30] [main/INFO] [LaunchWrapper]: Using primary tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[02:05:30] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[02:05:30] [main/INFO] [LaunchWrapper]: Calling tweak class cpw.mods.fml.common.launcher.FMLTweaker
+[02:10:56] [main/INFO] [GradleStart]: username: powerman913717@gmail.com
+[02:10:56] [main/INFO] [GradleStart]: Extra: []
+[02:10:56] [main/INFO] [GradleStart]: Password found, attempting login
+[02:10:57] [main/INFO] [GradleStart]: Login Succesful!
+[02:10:57] [main/INFO] [GradleStart]: Found and added coremod: com.bioxx.tfc.TFCASMLoadingPlugin
+[02:10:57] [main/INFO] [GradleStart]: Found and added coremod: codechicken.core.launch.CodeChickenCorePlugin
+[02:10:57] [main/INFO] [GradleStart]: Found and added coremod: codechicken.nei.asm.NEICorePlugin
+[02:10:58] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --username, Necoxus, --accessToken, {REDACTED}, --assetIndex, 1.7.10, --uuid, 1236da5d03de4e74b309a6d1b45ac70a, --userType, mojang, --assetsDir, C:/Users/Jared Jarvis/.gradle/caches/minecraft/assets, --version, 1.7.10, --tweakClass, cpw.mods.fml.common.launcher.FMLTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[02:10:58] [main/INFO] [LaunchWrapper]: Loading tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[02:10:58] [main/INFO] [LaunchWrapper]: Using primary tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[02:10:58] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[02:10:58] [main/INFO] [LaunchWrapper]: Calling tweak class cpw.mods.fml.common.launcher.FMLTweaker
+[02:11:21] [main/INFO] [GradleStart]: username: powerman913717@gmail.com
+[02:11:21] [main/INFO] [GradleStart]: Extra: []
+[02:11:21] [main/INFO] [GradleStart]: Password found, attempting login
+[02:11:22] [main/INFO] [GradleStart]: Login Succesful!
+[02:11:22] [main/INFO] [GradleStart]: Found and added coremod: com.bioxx.tfc.TFCASMLoadingPlugin
+[02:11:22] [main/INFO] [GradleStart]: Found and added coremod: codechicken.core.launch.CodeChickenCorePlugin
+[02:11:22] [main/INFO] [GradleStart]: Found and added coremod: codechicken.nei.asm.NEICorePlugin
+[02:11:22] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --username, Necoxus, --accessToken, {REDACTED}, --assetIndex, 1.7.10, --uuid, 1236da5d03de4e74b309a6d1b45ac70a, --userType, mojang, --assetsDir, C:/Users/Jared Jarvis/.gradle/caches/minecraft/assets, --version, 1.7.10, --tweakClass, cpw.mods.fml.common.launcher.FMLTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[02:11:22] [main/INFO] [LaunchWrapper]: Loading tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[02:11:22] [main/INFO] [LaunchWrapper]: Using primary tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[02:11:22] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[02:11:22] [main/INFO] [LaunchWrapper]: Calling tweak class cpw.mods.fml.common.launcher.FMLTweaker
+[02:18:05] [main/INFO] [GradleStart]: username: powerman913717@gmail.com
+[02:18:05] [main/INFO] [GradleStart]: Extra: []
+[02:18:05] [main/INFO] [GradleStart]: Password found, attempting login
+[02:18:07] [main/INFO] [GradleStart]: Login Succesful!
+[02:18:07] [main/INFO] [GradleStart]: Found and added coremod: com.bioxx.tfc.TFCASMLoadingPlugin
+[02:18:07] [main/INFO] [GradleStart]: Found and added coremod: codechicken.core.launch.CodeChickenCorePlugin
+[02:18:07] [main/INFO] [GradleStart]: Found and added coremod: codechicken.nei.asm.NEICorePlugin
+[02:18:07] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --username, Necoxus, --accessToken, {REDACTED}, --assetIndex, 1.7.10, --uuid, 1236da5d03de4e74b309a6d1b45ac70a, --userType, mojang, --assetsDir, C:/Users/Jared Jarvis/.gradle/caches/minecraft/assets, --version, 1.7.10, --tweakClass, cpw.mods.fml.common.launcher.FMLTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[02:18:07] [main/INFO] [LaunchWrapper]: Loading tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[02:18:07] [main/INFO] [LaunchWrapper]: Using primary tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[02:18:07] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[02:18:07] [main/INFO] [LaunchWrapper]: Calling tweak class cpw.mods.fml.common.launcher.FMLTweaker
+[02:18:54] [main/INFO] [GradleStart]: username: powerman913717@gmail.com
+[02:18:54] [main/INFO] [GradleStart]: Extra: []
+[02:18:54] [main/INFO] [GradleStart]: Password found, attempting login
+[02:18:55] [main/INFO] [GradleStart]: Login Succesful!
+[02:18:55] [main/INFO] [GradleStart]: Found and added coremod: com.bioxx.tfc.TFCASMLoadingPlugin
+[02:18:55] [main/INFO] [GradleStart]: Found and added coremod: codechicken.core.launch.CodeChickenCorePlugin
+[02:18:55] [main/INFO] [GradleStart]: Found and added coremod: codechicken.nei.asm.NEICorePlugin
+[02:18:55] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --username, Necoxus, --accessToken, {REDACTED}, --assetIndex, 1.7.10, --uuid, 1236da5d03de4e74b309a6d1b45ac70a, --userType, mojang, --assetsDir, C:/Users/Jared Jarvis/.gradle/caches/minecraft/assets, --version, 1.7.10, --tweakClass, cpw.mods.fml.common.launcher.FMLTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[02:18:55] [main/INFO] [LaunchWrapper]: Loading tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[02:18:55] [main/INFO] [LaunchWrapper]: Using primary tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[02:18:55] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[02:18:55] [main/INFO] [LaunchWrapper]: Calling tweak class cpw.mods.fml.common.launcher.FMLTweaker
+[02:28:35] [main/INFO] [GradleStart]: username: powerman913717@gmail.com
+[02:28:35] [main/INFO] [GradleStart]: Extra: []
+[02:28:35] [main/INFO] [GradleStart]: Password found, attempting login
+[02:28:36] [main/INFO] [GradleStart]: Login Succesful!
+[02:28:36] [main/INFO] [GradleStart]: Found and added coremod: com.bioxx.tfc.TFCASMLoadingPlugin
+[02:28:36] [main/INFO] [GradleStart]: Found and added coremod: codechicken.core.launch.CodeChickenCorePlugin
+[02:28:36] [main/INFO] [GradleStart]: Found and added coremod: codechicken.nei.asm.NEICorePlugin
+[02:28:36] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --username, Necoxus, --accessToken, {REDACTED}, --assetIndex, 1.7.10, --uuid, 1236da5d03de4e74b309a6d1b45ac70a, --userType, mojang, --assetsDir, C:/Users/Jared Jarvis/.gradle/caches/minecraft/assets, --version, 1.7.10, --tweakClass, cpw.mods.fml.common.launcher.FMLTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[02:28:37] [main/INFO] [LaunchWrapper]: Loading tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[02:28:37] [main/INFO] [LaunchWrapper]: Using primary tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[02:28:37] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[02:28:37] [main/INFO] [LaunchWrapper]: Calling tweak class cpw.mods.fml.common.launcher.FMLTweaker
+[02:30:53] [main/INFO] [GradleStart]: username: powerman913717@gmail.com
+[02:30:53] [main/INFO] [GradleStart]: Extra: []
+[02:30:53] [main/INFO] [GradleStart]: Password found, attempting login
+[02:30:55] [main/INFO] [GradleStart]: Login Succesful!
+[02:30:55] [main/INFO] [GradleStart]: Found and added coremod: com.bioxx.tfc.TFCASMLoadingPlugin
+[02:30:55] [main/INFO] [GradleStart]: Found and added coremod: codechicken.core.launch.CodeChickenCorePlugin
+[02:30:55] [main/INFO] [GradleStart]: Found and added coremod: codechicken.nei.asm.NEICorePlugin
+[02:30:55] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --username, Necoxus, --accessToken, {REDACTED}, --assetIndex, 1.7.10, --uuid, 1236da5d03de4e74b309a6d1b45ac70a, --userType, mojang, --assetsDir, C:/Users/Jared Jarvis/.gradle/caches/minecraft/assets, --version, 1.7.10, --tweakClass, cpw.mods.fml.common.launcher.FMLTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[02:30:55] [main/INFO] [LaunchWrapper]: Loading tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[02:30:55] [main/INFO] [LaunchWrapper]: Using primary tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[02:30:55] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[02:30:55] [main/INFO] [LaunchWrapper]: Calling tweak class cpw.mods.fml.common.launcher.FMLTweaker
+[03:05:16] [main/INFO] [GradleStart]: username: powerman913717@gmail.com
+[03:05:16] [main/INFO] [GradleStart]: Extra: []
+[03:05:16] [main/INFO] [GradleStart]: Password found, attempting login
+[03:05:17] [main/INFO] [GradleStart]: Login Succesful!
+[03:05:17] [main/INFO] [GradleStart]: Found and added coremod: com.bioxx.tfc.TFCASMLoadingPlugin
+[03:05:17] [main/INFO] [GradleStart]: Found and added coremod: codechicken.core.launch.CodeChickenCorePlugin
+[03:05:17] [main/INFO] [GradleStart]: Found and added coremod: codechicken.nei.asm.NEICorePlugin
+[03:05:18] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --username, Necoxus, --accessToken, {REDACTED}, --assetIndex, 1.7.10, --uuid, 1236da5d03de4e74b309a6d1b45ac70a, --userType, mojang, --assetsDir, C:/Users/Jared Jarvis/.gradle/caches/minecraft/assets, --version, 1.7.10, --tweakClass, cpw.mods.fml.common.launcher.FMLTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[03:05:18] [main/INFO] [LaunchWrapper]: Loading tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[03:05:18] [main/INFO] [LaunchWrapper]: Using primary tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[03:05:18] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[03:05:18] [main/INFO] [LaunchWrapper]: Calling tweak class cpw.mods.fml.common.launcher.FMLTweaker
+[12:13:28] [main/INFO] [GradleStart]: username: powerman913717@gmail.com
+[12:13:28] [main/INFO] [GradleStart]: Extra: []
+[12:13:28] [main/INFO] [GradleStart]: Password found, attempting login
+[12:13:31] [main/INFO] [GradleStart]: Login Succesful!
+[12:13:31] [main/INFO] [GradleStart]: Found and added coremod: com.bioxx.tfc.TFCASMLoadingPlugin
+[12:13:31] [main/INFO] [GradleStart]: Found and added coremod: codechicken.core.launch.CodeChickenCorePlugin
+[12:13:31] [main/INFO] [GradleStart]: Found and added coremod: codechicken.nei.asm.NEICorePlugin
+[12:13:31] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --username, Necoxus, --accessToken, {REDACTED}, --assetIndex, 1.7.10, --uuid, 1236da5d03de4e74b309a6d1b45ac70a, --userType, mojang, --assetsDir, C:/Users/Jared Jarvis/.gradle/caches/minecraft/assets, --version, 1.7.10, --tweakClass, cpw.mods.fml.common.launcher.FMLTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[12:13:31] [main/INFO] [LaunchWrapper]: Loading tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[12:13:31] [main/INFO] [LaunchWrapper]: Using primary tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[12:13:31] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[12:13:31] [main/INFO] [LaunchWrapper]: Calling tweak class cpw.mods.fml.common.launcher.FMLTweaker
+[12:17:35] [main/INFO] [GradleStart]: username: powerman913717@gmail.com
+[12:17:35] [main/INFO] [GradleStart]: Extra: []
+[12:17:35] [main/INFO] [GradleStart]: Password found, attempting login
+[12:17:37] [main/INFO] [GradleStart]: Login Succesful!
+[12:17:38] [main/INFO] [GradleStart]: Found and added coremod: com.bioxx.tfc.TFCASMLoadingPlugin
+[12:17:38] [main/INFO] [GradleStart]: Found and added coremod: codechicken.core.launch.CodeChickenCorePlugin
+[12:17:38] [main/INFO] [GradleStart]: Found and added coremod: codechicken.nei.asm.NEICorePlugin
+[12:17:38] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --username, Necoxus, --accessToken, {REDACTED}, --assetIndex, 1.7.10, --uuid, 1236da5d03de4e74b309a6d1b45ac70a, --userType, mojang, --assetsDir, C:/Users/Jared Jarvis/.gradle/caches/minecraft/assets, --version, 1.7.10, --tweakClass, cpw.mods.fml.common.launcher.FMLTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[12:17:38] [main/INFO] [LaunchWrapper]: Loading tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[12:17:38] [main/INFO] [LaunchWrapper]: Using primary tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[12:17:38] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[12:17:38] [main/INFO] [LaunchWrapper]: Calling tweak class cpw.mods.fml.common.launcher.FMLTweaker
+[16:04:41] [main/INFO] [GradleStart]: username: powerman913717@gmail.com
+[16:04:41] [main/INFO] [GradleStart]: Extra: []
+[16:04:41] [main/INFO] [GradleStart]: Password found, attempting login
+[16:04:42] [main/INFO] [GradleStart]: Login Succesful!
+[16:04:42] [main/INFO] [GradleStart]: Found and added coremod: com.bioxx.tfc.TFCASMLoadingPlugin
+[16:04:42] [main/INFO] [GradleStart]: Found and added coremod: codechicken.core.launch.CodeChickenCorePlugin
+[16:04:42] [main/INFO] [GradleStart]: Found and added coremod: codechicken.nei.asm.NEICorePlugin
+[16:04:42] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --username, Necoxus, --accessToken, {REDACTED}, --assetIndex, 1.7.10, --uuid, 1236da5d03de4e74b309a6d1b45ac70a, --userType, mojang, --assetsDir, C:/Users/Jared Jarvis/.gradle/caches/minecraft/assets, --version, 1.7.10, --tweakClass, cpw.mods.fml.common.launcher.FMLTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[16:04:42] [main/INFO] [LaunchWrapper]: Loading tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[16:04:42] [main/INFO] [LaunchWrapper]: Using primary tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[16:04:42] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[16:04:42] [main/INFO] [LaunchWrapper]: Calling tweak class cpw.mods.fml.common.launcher.FMLTweaker
+[01:22:50] [main/INFO] [GradleStart]: username: powerman913717@gmail.com
+[01:22:50] [main/INFO] [GradleStart]: Extra: []
+[01:22:50] [main/INFO] [GradleStart]: Password found, attempting login
+[01:22:51] [main/INFO] [GradleStart]: Login Succesful!
+[01:22:51] [main/INFO] [GradleStart]: Found and added coremod: com.bioxx.tfc.TFCASMLoadingPlugin
+[01:22:51] [main/INFO] [GradleStart]: Found and added coremod: codechicken.core.launch.CodeChickenCorePlugin
+[01:22:51] [main/INFO] [GradleStart]: Found and added coremod: codechicken.nei.asm.NEICorePlugin
+[01:22:51] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --username, Necoxus, --accessToken, {REDACTED}, --assetIndex, 1.7.10, --uuid, 1236da5d03de4e74b309a6d1b45ac70a, --userType, mojang, --assetsDir, C:/Users/Jared Jarvis/.gradle/caches/minecraft/assets, --version, 1.7.10, --tweakClass, cpw.mods.fml.common.launcher.FMLTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[01:22:51] [main/INFO] [LaunchWrapper]: Loading tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[01:22:51] [main/INFO] [LaunchWrapper]: Using primary tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[01:22:51] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[01:22:51] [main/INFO] [LaunchWrapper]: Calling tweak class cpw.mods.fml.common.launcher.FMLTweaker
+[01:28:13] [main/INFO] [GradleStart]: username: powerman913717@gmail.com
+[01:28:13] [main/INFO] [GradleStart]: Extra: []
+[01:28:13] [main/INFO] [GradleStart]: Password found, attempting login
+[01:28:15] [main/INFO] [GradleStart]: Login Succesful!
+[01:28:15] [main/INFO] [GradleStart]: Found and added coremod: com.bioxx.tfc.TFCASMLoadingPlugin
+[01:28:15] [main/INFO] [GradleStart]: Found and added coremod: codechicken.core.launch.CodeChickenCorePlugin
+[01:28:15] [main/INFO] [GradleStart]: Found and added coremod: codechicken.nei.asm.NEICorePlugin
+[01:28:15] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --username, Necoxus, --accessToken, {REDACTED}, --assetIndex, 1.7.10, --uuid, 1236da5d03de4e74b309a6d1b45ac70a, --userType, mojang, --assetsDir, C:/Users/Jared Jarvis/.gradle/caches/minecraft/assets, --version, 1.7.10, --tweakClass, cpw.mods.fml.common.launcher.FMLTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[01:28:15] [main/INFO] [LaunchWrapper]: Loading tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[01:28:15] [main/INFO] [LaunchWrapper]: Using primary tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[01:28:15] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[01:28:15] [main/INFO] [LaunchWrapper]: Calling tweak class cpw.mods.fml.common.launcher.FMLTweaker
+[01:42:23] [main/INFO] [GradleStart]: username: powerman913717@gmail.com
+[01:42:23] [main/INFO] [GradleStart]: Extra: []
+[01:42:23] [main/INFO] [GradleStart]: Password found, attempting login
+[01:42:24] [main/INFO] [GradleStart]: Login Succesful!
+[01:42:24] [main/INFO] [GradleStart]: Found and added coremod: com.bioxx.tfc.TFCASMLoadingPlugin
+[01:42:24] [main/INFO] [GradleStart]: Found and added coremod: codechicken.core.launch.CodeChickenCorePlugin
+[01:42:24] [main/INFO] [GradleStart]: Found and added coremod: codechicken.nei.asm.NEICorePlugin
+[01:42:24] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --username, Necoxus, --accessToken, {REDACTED}, --assetIndex, 1.7.10, --uuid, 1236da5d03de4e74b309a6d1b45ac70a, --userType, mojang, --assetsDir, C:/Users/Jared Jarvis/.gradle/caches/minecraft/assets, --version, 1.7.10, --tweakClass, cpw.mods.fml.common.launcher.FMLTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[01:42:24] [main/INFO] [LaunchWrapper]: Loading tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[01:42:24] [main/INFO] [LaunchWrapper]: Using primary tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[01:42:24] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[01:42:24] [main/INFO] [LaunchWrapper]: Calling tweak class cpw.mods.fml.common.launcher.FMLTweaker
+[01:44:18] [main/INFO] [GradleStart]: username: powerman913717@gmail.com
+[01:44:18] [main/INFO] [GradleStart]: Extra: []
+[01:44:18] [main/INFO] [GradleStart]: Password found, attempting login
+[01:44:19] [main/INFO] [GradleStart]: Login Succesful!
+[01:44:19] [main/INFO] [GradleStart]: Found and added coremod: com.bioxx.tfc.TFCASMLoadingPlugin
+[01:44:19] [main/INFO] [GradleStart]: Found and added coremod: codechicken.core.launch.CodeChickenCorePlugin
+[01:44:19] [main/INFO] [GradleStart]: Found and added coremod: codechicken.nei.asm.NEICorePlugin
+[01:44:19] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --username, Necoxus, --accessToken, {REDACTED}, --assetIndex, 1.7.10, --uuid, 1236da5d03de4e74b309a6d1b45ac70a, --userType, mojang, --assetsDir, C:/Users/Jared Jarvis/.gradle/caches/minecraft/assets, --version, 1.7.10, --tweakClass, cpw.mods.fml.common.launcher.FMLTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[01:44:19] [main/INFO] [LaunchWrapper]: Loading tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[01:44:19] [main/INFO] [LaunchWrapper]: Using primary tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[01:44:19] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[01:44:19] [main/INFO] [LaunchWrapper]: Calling tweak class cpw.mods.fml.common.launcher.FMLTweaker
+[14:20:50] [main/INFO] [GradleStart]: username: powerman913717@gmail.com
+[14:20:50] [main/INFO] [GradleStart]: Extra: []
+[14:20:50] [main/INFO] [GradleStart]: Password found, attempting login
+[14:20:51] [main/INFO] [GradleStart]: Login Succesful!
+[14:20:51] [main/INFO] [GradleStart]: Found and added coremod: com.bioxx.tfc.TFCASMLoadingPlugin
+[14:20:51] [main/INFO] [GradleStart]: Found and added coremod: codechicken.core.launch.CodeChickenCorePlugin
+[14:20:51] [main/INFO] [GradleStart]: Found and added coremod: codechicken.nei.asm.NEICorePlugin
+[14:20:51] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --username, Necoxus, --accessToken, {REDACTED}, --assetIndex, 1.7.10, --uuid, 1236da5d03de4e74b309a6d1b45ac70a, --userType, mojang, --assetsDir, C:/Users/Jared Jarvis/.gradle/caches/minecraft/assets, --version, 1.7.10, --tweakClass, cpw.mods.fml.common.launcher.FMLTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[14:20:51] [main/INFO] [LaunchWrapper]: Loading tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[14:20:51] [main/INFO] [LaunchWrapper]: Using primary tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[14:20:51] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[14:20:51] [main/INFO] [LaunchWrapper]: Calling tweak class cpw.mods.fml.common.launcher.FMLTweaker
+[14:47:48] [main/INFO] [GradleStart]: username: powerman913717@gmail.com
+[14:47:48] [main/INFO] [GradleStart]: Extra: []
+[14:47:48] [main/INFO] [GradleStart]: Password found, attempting login
+[14:47:49] [main/INFO] [GradleStart]: Login Succesful!
+[14:47:49] [main/INFO] [GradleStart]: Found and added coremod: com.bioxx.tfc.TFCASMLoadingPlugin
+[14:47:49] [main/INFO] [GradleStart]: Found and added coremod: codechicken.core.launch.CodeChickenCorePlugin
+[14:47:49] [main/INFO] [GradleStart]: Found and added coremod: codechicken.nei.asm.NEICorePlugin
+[14:47:49] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --username, Necoxus, --accessToken, {REDACTED}, --assetIndex, 1.7.10, --uuid, 1236da5d03de4e74b309a6d1b45ac70a, --userType, mojang, --assetsDir, C:/Users/Jared Jarvis/.gradle/caches/minecraft/assets, --version, 1.7.10, --tweakClass, cpw.mods.fml.common.launcher.FMLTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[14:47:50] [main/INFO] [LaunchWrapper]: Loading tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[14:47:50] [main/INFO] [LaunchWrapper]: Using primary tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[14:47:50] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[14:47:50] [main/INFO] [LaunchWrapper]: Calling tweak class cpw.mods.fml.common.launcher.FMLTweaker
+[14:54:31] [main/INFO] [GradleStart]: username: powerman913717@gmail.com
+[14:54:31] [main/INFO] [GradleStart]: Extra: []
+[14:54:31] [main/INFO] [GradleStart]: Password found, attempting login
+[14:54:34] [main/INFO] [GradleStart]: Login Succesful!
+[14:54:34] [main/INFO] [GradleStart]: Found and added coremod: com.bioxx.tfc.TFCASMLoadingPlugin
+[14:54:34] [main/INFO] [GradleStart]: Found and added coremod: codechicken.core.launch.CodeChickenCorePlugin
+[14:54:34] [main/INFO] [GradleStart]: Found and added coremod: codechicken.nei.asm.NEICorePlugin
+[14:54:34] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --username, Necoxus, --accessToken, {REDACTED}, --assetIndex, 1.7.10, --uuid, 1236da5d03de4e74b309a6d1b45ac70a, --userType, mojang, --assetsDir, C:/Users/Jared Jarvis/.gradle/caches/minecraft/assets, --version, 1.7.10, --tweakClass, cpw.mods.fml.common.launcher.FMLTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[14:54:34] [main/INFO] [LaunchWrapper]: Loading tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[14:54:34] [main/INFO] [LaunchWrapper]: Using primary tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[14:54:34] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[14:54:34] [main/INFO] [LaunchWrapper]: Calling tweak class cpw.mods.fml.common.launcher.FMLTweaker
+[14:57:44] [main/INFO] [GradleStart]: username: powerman913717@gmail.com
+[14:57:44] [main/INFO] [GradleStart]: Extra: []
+[14:57:44] [main/INFO] [GradleStart]: Password found, attempting login
+[14:57:45] [main/INFO] [GradleStart]: Login Succesful!
+[14:57:45] [main/INFO] [GradleStart]: Found and added coremod: com.bioxx.tfc.TFCASMLoadingPlugin
+[14:57:45] [main/INFO] [GradleStart]: Found and added coremod: codechicken.core.launch.CodeChickenCorePlugin
+[14:57:45] [main/INFO] [GradleStart]: Found and added coremod: codechicken.nei.asm.NEICorePlugin
+[14:57:45] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --username, Necoxus, --accessToken, {REDACTED}, --assetIndex, 1.7.10, --uuid, 1236da5d03de4e74b309a6d1b45ac70a, --userType, mojang, --assetsDir, C:/Users/Jared Jarvis/.gradle/caches/minecraft/assets, --version, 1.7.10, --tweakClass, cpw.mods.fml.common.launcher.FMLTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[14:57:45] [main/INFO] [LaunchWrapper]: Loading tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[14:57:45] [main/INFO] [LaunchWrapper]: Using primary tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[14:57:45] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[14:57:45] [main/INFO] [LaunchWrapper]: Calling tweak class cpw.mods.fml.common.launcher.FMLTweaker
+[15:00:40] [main/INFO] [GradleStart]: username: powerman913717@gmail.com
+[15:00:40] [main/INFO] [GradleStart]: Extra: []
+[15:00:40] [main/INFO] [GradleStart]: Password found, attempting login
+[15:00:42] [main/INFO] [GradleStart]: Login Succesful!
+[15:00:42] [main/INFO] [GradleStart]: Found and added coremod: com.bioxx.tfc.TFCASMLoadingPlugin
+[15:00:42] [main/INFO] [GradleStart]: Found and added coremod: codechicken.core.launch.CodeChickenCorePlugin
+[15:00:42] [main/INFO] [GradleStart]: Found and added coremod: codechicken.nei.asm.NEICorePlugin
+[15:00:42] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --username, Necoxus, --accessToken, {REDACTED}, --assetIndex, 1.7.10, --uuid, 1236da5d03de4e74b309a6d1b45ac70a, --userType, mojang, --assetsDir, C:/Users/Jared Jarvis/.gradle/caches/minecraft/assets, --version, 1.7.10, --tweakClass, cpw.mods.fml.common.launcher.FMLTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[15:00:42] [main/INFO] [LaunchWrapper]: Loading tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[15:00:42] [main/INFO] [LaunchWrapper]: Using primary tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[15:00:42] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[15:00:42] [main/INFO] [LaunchWrapper]: Calling tweak class cpw.mods.fml.common.launcher.FMLTweaker
+[17:26:28] [main/INFO] [GradleStart]: username: powerman913717@gmail.com
+[17:26:28] [main/INFO] [GradleStart]: Extra: []
+[17:26:28] [main/INFO] [GradleStart]: Password found, attempting login
+[17:26:29] [main/INFO] [GradleStart]: Login Succesful!
+[17:26:29] [main/INFO] [GradleStart]: Found and added coremod: com.bioxx.tfc.TFCASMLoadingPlugin
+[17:26:29] [main/INFO] [GradleStart]: Found and added coremod: codechicken.core.launch.CodeChickenCorePlugin
+[17:26:29] [main/INFO] [GradleStart]: Found and added coremod: codechicken.nei.asm.NEICorePlugin
+[17:26:29] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --username, Necoxus, --accessToken, {REDACTED}, --assetIndex, 1.7.10, --uuid, 1236da5d03de4e74b309a6d1b45ac70a, --userType, mojang, --assetsDir, C:/Users/Jared Jarvis/.gradle/caches/minecraft/assets, --version, 1.7.10, --tweakClass, cpw.mods.fml.common.launcher.FMLTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[17:26:29] [main/INFO] [LaunchWrapper]: Loading tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[17:26:29] [main/INFO] [LaunchWrapper]: Using primary tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[17:26:29] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[17:26:29] [main/INFO] [LaunchWrapper]: Calling tweak class cpw.mods.fml.common.launcher.FMLTweaker
+[17:30:52] [main/INFO] [GradleStart]: username: powerman913717@gmail.com
+[17:30:52] [main/INFO] [GradleStart]: Extra: []
+[17:30:52] [main/INFO] [GradleStart]: Password found, attempting login
+[17:30:53] [main/INFO] [GradleStart]: Login Succesful!
+[17:30:53] [main/INFO] [GradleStart]: Found and added coremod: com.bioxx.tfc.TFCASMLoadingPlugin
+[17:30:53] [main/INFO] [GradleStart]: Found and added coremod: codechicken.core.launch.CodeChickenCorePlugin
+[17:30:53] [main/INFO] [GradleStart]: Found and added coremod: codechicken.nei.asm.NEICorePlugin
+[17:30:53] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --username, Necoxus, --accessToken, {REDACTED}, --assetIndex, 1.7.10, --uuid, 1236da5d03de4e74b309a6d1b45ac70a, --userType, mojang, --assetsDir, C:/Users/Jared Jarvis/.gradle/caches/minecraft/assets, --version, 1.7.10, --tweakClass, cpw.mods.fml.common.launcher.FMLTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[17:30:53] [main/INFO] [LaunchWrapper]: Loading tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[17:30:53] [main/INFO] [LaunchWrapper]: Using primary tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[17:30:53] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[17:30:53] [main/INFO] [LaunchWrapper]: Calling tweak class cpw.mods.fml.common.launcher.FMLTweaker
+[17:34:28] [main/INFO] [GradleStart]: username: powerman913717@gmail.com
+[17:34:28] [main/INFO] [GradleStart]: Extra: []
+[17:34:28] [main/INFO] [GradleStart]: Password found, attempting login
+[17:34:29] [main/INFO] [GradleStart]: Login Succesful!
+[17:34:29] [main/INFO] [GradleStart]: Found and added coremod: com.bioxx.tfc.TFCASMLoadingPlugin
+[17:34:29] [main/INFO] [GradleStart]: Found and added coremod: codechicken.core.launch.CodeChickenCorePlugin
+[17:34:29] [main/INFO] [GradleStart]: Found and added coremod: codechicken.nei.asm.NEICorePlugin
+[17:34:29] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --username, Necoxus, --accessToken, {REDACTED}, --assetIndex, 1.7.10, --uuid, 1236da5d03de4e74b309a6d1b45ac70a, --userType, mojang, --assetsDir, C:/Users/Jared Jarvis/.gradle/caches/minecraft/assets, --version, 1.7.10, --tweakClass, cpw.mods.fml.common.launcher.FMLTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[17:34:29] [main/INFO] [LaunchWrapper]: Loading tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[17:34:29] [main/INFO] [LaunchWrapper]: Using primary tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[17:34:29] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[17:34:29] [main/INFO] [LaunchWrapper]: Calling tweak class cpw.mods.fml.common.launcher.FMLTweaker
+[17:37:35] [main/INFO] [GradleStart]: username: powerman913717@gmail.com
+[17:37:35] [main/INFO] [GradleStart]: Extra: []
+[17:37:35] [main/INFO] [GradleStart]: Password found, attempting login
+[17:37:37] [main/INFO] [GradleStart]: Login Succesful!
+[17:37:37] [main/INFO] [GradleStart]: Found and added coremod: com.bioxx.tfc.TFCASMLoadingPlugin
+[17:37:37] [main/INFO] [GradleStart]: Found and added coremod: codechicken.core.launch.CodeChickenCorePlugin
+[17:37:37] [main/INFO] [GradleStart]: Found and added coremod: codechicken.nei.asm.NEICorePlugin
+[17:37:37] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --username, Necoxus, --accessToken, {REDACTED}, --assetIndex, 1.7.10, --uuid, 1236da5d03de4e74b309a6d1b45ac70a, --userType, mojang, --assetsDir, C:/Users/Jared Jarvis/.gradle/caches/minecraft/assets, --version, 1.7.10, --tweakClass, cpw.mods.fml.common.launcher.FMLTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[17:37:37] [main/INFO] [LaunchWrapper]: Loading tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[17:37:37] [main/INFO] [LaunchWrapper]: Using primary tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[17:37:37] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[17:37:37] [main/INFO] [LaunchWrapper]: Calling tweak class cpw.mods.fml.common.launcher.FMLTweaker
+[17:43:45] [main/INFO] [GradleStart]: username: powerman913717@gmail.com
+[17:43:45] [main/INFO] [GradleStart]: Extra: []
+[17:43:45] [main/INFO] [GradleStart]: Password found, attempting login
+[17:43:46] [main/INFO] [GradleStart]: Login Succesful!
+[17:43:47] [main/INFO] [GradleStart]: Found and added coremod: com.bioxx.tfc.TFCASMLoadingPlugin
+[17:43:47] [main/INFO] [GradleStart]: Found and added coremod: codechicken.core.launch.CodeChickenCorePlugin
+[17:43:47] [main/INFO] [GradleStart]: Found and added coremod: codechicken.nei.asm.NEICorePlugin
+[17:43:47] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --username, Necoxus, --accessToken, {REDACTED}, --assetIndex, 1.7.10, --uuid, 1236da5d03de4e74b309a6d1b45ac70a, --userType, mojang, --assetsDir, C:/Users/Jared Jarvis/.gradle/caches/minecraft/assets, --version, 1.7.10, --tweakClass, cpw.mods.fml.common.launcher.FMLTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[17:43:47] [main/INFO] [LaunchWrapper]: Loading tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[17:43:47] [main/INFO] [LaunchWrapper]: Using primary tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[17:43:47] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[17:43:47] [main/INFO] [LaunchWrapper]: Calling tweak class cpw.mods.fml.common.launcher.FMLTweaker
+[17:47:54] [main/INFO] [GradleStart]: username: powerman913717@gmail.com
+[17:47:54] [main/INFO] [GradleStart]: Extra: []
+[17:47:54] [main/INFO] [GradleStart]: Password found, attempting login
+[17:47:55] [main/INFO] [GradleStart]: Login Succesful!
+[17:47:55] [main/INFO] [GradleStart]: Found and added coremod: com.bioxx.tfc.TFCASMLoadingPlugin
+[17:47:55] [main/INFO] [GradleStart]: Found and added coremod: codechicken.core.launch.CodeChickenCorePlugin
+[17:47:55] [main/INFO] [GradleStart]: Found and added coremod: codechicken.nei.asm.NEICorePlugin
+[17:47:55] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --username, Necoxus, --accessToken, {REDACTED}, --assetIndex, 1.7.10, --uuid, 1236da5d03de4e74b309a6d1b45ac70a, --userType, mojang, --assetsDir, C:/Users/Jared Jarvis/.gradle/caches/minecraft/assets, --version, 1.7.10, --tweakClass, cpw.mods.fml.common.launcher.FMLTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[17:47:55] [main/INFO] [LaunchWrapper]: Loading tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[17:47:55] [main/INFO] [LaunchWrapper]: Using primary tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[17:47:55] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[17:47:55] [main/INFO] [LaunchWrapper]: Calling tweak class cpw.mods.fml.common.launcher.FMLTweaker
+[17:54:57] [main/INFO] [GradleStart]: username: powerman913717@gmail.com
+[17:54:57] [main/INFO] [GradleStart]: Extra: []
+[17:54:57] [main/INFO] [GradleStart]: Password found, attempting login
+[17:54:58] [main/INFO] [GradleStart]: Login Succesful!
+[17:54:58] [main/INFO] [GradleStart]: Found and added coremod: com.bioxx.tfc.TFCASMLoadingPlugin
+[17:54:58] [main/INFO] [GradleStart]: Found and added coremod: codechicken.core.launch.CodeChickenCorePlugin
+[17:54:58] [main/INFO] [GradleStart]: Found and added coremod: codechicken.nei.asm.NEICorePlugin
+[17:54:58] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --username, Necoxus, --accessToken, {REDACTED}, --assetIndex, 1.7.10, --uuid, 1236da5d03de4e74b309a6d1b45ac70a, --userType, mojang, --assetsDir, C:/Users/Jared Jarvis/.gradle/caches/minecraft/assets, --version, 1.7.10, --tweakClass, cpw.mods.fml.common.launcher.FMLTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[17:54:58] [main/INFO] [LaunchWrapper]: Loading tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[17:54:58] [main/INFO] [LaunchWrapper]: Using primary tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[17:54:58] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[17:54:58] [main/INFO] [LaunchWrapper]: Calling tweak class cpw.mods.fml.common.launcher.FMLTweaker
+[18:00:44] [main/INFO] [GradleStart]: username: powerman913717@gmail.com
+[18:00:44] [main/INFO] [GradleStart]: Extra: []
+[18:00:44] [main/INFO] [GradleStart]: Password found, attempting login
+[18:00:45] [main/INFO] [GradleStart]: Login Succesful!
+[18:00:45] [main/INFO] [GradleStart]: Found and added coremod: com.bioxx.tfc.TFCASMLoadingPlugin
+[18:00:45] [main/INFO] [GradleStart]: Found and added coremod: codechicken.core.launch.CodeChickenCorePlugin
+[18:00:45] [main/INFO] [GradleStart]: Found and added coremod: codechicken.nei.asm.NEICorePlugin
+[18:00:45] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --username, Necoxus, --accessToken, {REDACTED}, --assetIndex, 1.7.10, --uuid, 1236da5d03de4e74b309a6d1b45ac70a, --userType, mojang, --assetsDir, C:/Users/Jared Jarvis/.gradle/caches/minecraft/assets, --version, 1.7.10, --tweakClass, cpw.mods.fml.common.launcher.FMLTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[18:00:45] [main/INFO] [LaunchWrapper]: Loading tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[18:00:45] [main/INFO] [LaunchWrapper]: Using primary tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[18:00:45] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[18:00:45] [main/INFO] [LaunchWrapper]: Calling tweak class cpw.mods.fml.common.launcher.FMLTweaker
+[18:14:11] [main/INFO] [GradleStart]: username: powerman913717@gmail.com
+[18:14:11] [main/INFO] [GradleStart]: Extra: []
+[18:14:11] [main/INFO] [GradleStart]: Password found, attempting login
+[18:14:13] [main/INFO] [GradleStart]: Login Succesful!
+[18:14:13] [main/INFO] [GradleStart]: Found and added coremod: com.bioxx.tfc.TFCASMLoadingPlugin
+[18:14:13] [main/INFO] [GradleStart]: Found and added coremod: codechicken.core.launch.CodeChickenCorePlugin
+[18:14:13] [main/INFO] [GradleStart]: Found and added coremod: codechicken.nei.asm.NEICorePlugin
+[18:14:13] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --username, Necoxus, --accessToken, {REDACTED}, --assetIndex, 1.7.10, --uuid, 1236da5d03de4e74b309a6d1b45ac70a, --userType, mojang, --assetsDir, C:/Users/Jared Jarvis/.gradle/caches/minecraft/assets, --version, 1.7.10, --tweakClass, cpw.mods.fml.common.launcher.FMLTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[18:14:13] [main/INFO] [LaunchWrapper]: Loading tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[18:14:13] [main/INFO] [LaunchWrapper]: Using primary tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[18:14:13] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[18:14:13] [main/INFO] [LaunchWrapper]: Calling tweak class cpw.mods.fml.common.launcher.FMLTweaker
+[18:16:46] [main/INFO] [GradleStart]: username: powerman913717@gmail.com
+[18:16:46] [main/INFO] [GradleStart]: Extra: []
+[18:16:46] [main/INFO] [GradleStart]: Password found, attempting login
+[18:16:47] [main/INFO] [GradleStart]: Login Succesful!
+[18:16:47] [main/INFO] [GradleStart]: Found and added coremod: com.bioxx.tfc.TFCASMLoadingPlugin
+[18:16:47] [main/INFO] [GradleStart]: Found and added coremod: codechicken.core.launch.CodeChickenCorePlugin
+[18:16:47] [main/INFO] [GradleStart]: Found and added coremod: codechicken.nei.asm.NEICorePlugin
+[18:16:47] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --username, Necoxus, --accessToken, {REDACTED}, --assetIndex, 1.7.10, --uuid, 1236da5d03de4e74b309a6d1b45ac70a, --userType, mojang, --assetsDir, C:/Users/Jared Jarvis/.gradle/caches/minecraft/assets, --version, 1.7.10, --tweakClass, cpw.mods.fml.common.launcher.FMLTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[18:16:47] [main/INFO] [LaunchWrapper]: Loading tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[18:16:47] [main/INFO] [LaunchWrapper]: Using primary tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[18:16:47] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[18:16:47] [main/INFO] [LaunchWrapper]: Calling tweak class cpw.mods.fml.common.launcher.FMLTweaker
+[18:21:29] [main/INFO] [GradleStart]: username: powerman913717@gmail.com
+[18:21:29] [main/INFO] [GradleStart]: Extra: []
+[18:21:29] [main/INFO] [GradleStart]: Password found, attempting login
+[18:21:30] [main/INFO] [GradleStart]: Login Succesful!
+[18:21:30] [main/INFO] [GradleStart]: Found and added coremod: com.bioxx.tfc.TFCASMLoadingPlugin
+[18:21:30] [main/INFO] [GradleStart]: Found and added coremod: codechicken.core.launch.CodeChickenCorePlugin
+[18:21:30] [main/INFO] [GradleStart]: Found and added coremod: codechicken.nei.asm.NEICorePlugin
+[18:21:30] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --username, Necoxus, --accessToken, {REDACTED}, --assetIndex, 1.7.10, --uuid, 1236da5d03de4e74b309a6d1b45ac70a, --userType, mojang, --assetsDir, C:/Users/Jared Jarvis/.gradle/caches/minecraft/assets, --version, 1.7.10, --tweakClass, cpw.mods.fml.common.launcher.FMLTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[18:21:31] [main/INFO] [LaunchWrapper]: Loading tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[18:21:31] [main/INFO] [LaunchWrapper]: Using primary tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[18:21:31] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[18:21:31] [main/INFO] [LaunchWrapper]: Calling tweak class cpw.mods.fml.common.launcher.FMLTweaker
+[18:24:46] [main/INFO] [GradleStart]: username: powerman913717@gmail.com
+[18:24:46] [main/INFO] [GradleStart]: Extra: []
+[18:24:46] [main/INFO] [GradleStart]: Password found, attempting login
+[18:24:48] [main/INFO] [GradleStart]: Login Succesful!
+[18:24:48] [main/INFO] [GradleStart]: Found and added coremod: com.bioxx.tfc.TFCASMLoadingPlugin
+[18:24:48] [main/INFO] [GradleStart]: Found and added coremod: codechicken.core.launch.CodeChickenCorePlugin
+[18:24:48] [main/INFO] [GradleStart]: Found and added coremod: codechicken.nei.asm.NEICorePlugin
+[18:24:48] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --username, Necoxus, --accessToken, {REDACTED}, --assetIndex, 1.7.10, --uuid, 1236da5d03de4e74b309a6d1b45ac70a, --userType, mojang, --assetsDir, C:/Users/Jared Jarvis/.gradle/caches/minecraft/assets, --version, 1.7.10, --tweakClass, cpw.mods.fml.common.launcher.FMLTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[18:24:48] [main/INFO] [LaunchWrapper]: Loading tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[18:24:48] [main/INFO] [LaunchWrapper]: Using primary tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[18:24:48] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[18:24:48] [main/INFO] [LaunchWrapper]: Calling tweak class cpw.mods.fml.common.launcher.FMLTweaker
+[18:38:00] [main/INFO] [GradleStart]: username: powerman913717@gmail.com
+[18:38:00] [main/INFO] [GradleStart]: Extra: []
+[18:38:00] [main/INFO] [GradleStart]: Password found, attempting login
+[18:38:01] [main/INFO] [GradleStart]: Login Succesful!
+[18:38:01] [main/INFO] [GradleStart]: Found and added coremod: com.bioxx.tfc.TFCASMLoadingPlugin
+[18:38:01] [main/INFO] [GradleStart]: Found and added coremod: codechicken.core.launch.CodeChickenCorePlugin
+[18:38:01] [main/INFO] [GradleStart]: Found and added coremod: codechicken.nei.asm.NEICorePlugin
+[18:38:01] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --username, Necoxus, --accessToken, {REDACTED}, --assetIndex, 1.7.10, --uuid, 1236da5d03de4e74b309a6d1b45ac70a, --userType, mojang, --assetsDir, C:/Users/Jared Jarvis/.gradle/caches/minecraft/assets, --version, 1.7.10, --tweakClass, cpw.mods.fml.common.launcher.FMLTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[18:38:01] [main/INFO] [LaunchWrapper]: Loading tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[18:38:01] [main/INFO] [LaunchWrapper]: Using primary tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[18:38:01] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[18:38:01] [main/INFO] [LaunchWrapper]: Calling tweak class cpw.mods.fml.common.launcher.FMLTweaker
+[18:42:11] [main/INFO] [GradleStart]: username: powerman913717@gmail.com
+[18:42:11] [main/INFO] [GradleStart]: Extra: []
+[18:42:11] [main/INFO] [GradleStart]: Password found, attempting login
+[18:42:12] [main/INFO] [GradleStart]: Login Succesful!
+[18:42:12] [main/INFO] [GradleStart]: Found and added coremod: com.bioxx.tfc.TFCASMLoadingPlugin
+[18:42:12] [main/INFO] [GradleStart]: Found and added coremod: codechicken.core.launch.CodeChickenCorePlugin
+[18:42:12] [main/INFO] [GradleStart]: Found and added coremod: codechicken.nei.asm.NEICorePlugin
+[18:42:12] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --username, Necoxus, --accessToken, {REDACTED}, --assetIndex, 1.7.10, --uuid, 1236da5d03de4e74b309a6d1b45ac70a, --userType, mojang, --assetsDir, C:/Users/Jared Jarvis/.gradle/caches/minecraft/assets, --version, 1.7.10, --tweakClass, cpw.mods.fml.common.launcher.FMLTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[18:42:12] [main/INFO] [LaunchWrapper]: Loading tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[18:42:12] [main/INFO] [LaunchWrapper]: Using primary tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[18:42:12] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[18:42:12] [main/INFO] [LaunchWrapper]: Calling tweak class cpw.mods.fml.common.launcher.FMLTweaker
