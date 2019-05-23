@@ -22,15 +22,16 @@ import terramisc.core.TFCMOreDictionary;
 import terramisc.core.TFCMRecipes;
 import terramisc.core.player.TFCMPlayerTracker;
 import terramisc.events.EventListener;
-import terramisc.food.CropRegistry;
-import terramisc.handlers.TFCMBlockDropHandler;
+import terramisc.handlers.BlockDropHandlerTFCM;
 import terramisc.handlers.ChunkEventHandlerTFCM;
-import terramisc.handlers.TFCMCraftingHandler;
-import terramisc.handlers.TFCMCraftingToolUsageHandler;
-import terramisc.handlers.TFCMEntityLivingHandler;
-import terramisc.handlers.TFCMMobDropHandler;
+import terramisc.handlers.CraftingHandlerTFCM;
+import terramisc.handlers.CraftingToolUsageHandlerTFCM;
+import terramisc.handlers.EntityLivingHandlerTFCM;
+import terramisc.handlers.MobDropHandlerTFCM;
+import terramisc.handlers.PlayerInteractHandlerTFCM;
 import terramisc.handlers.network.TFCMCreateMealPacket;
 import terramisc.handlers.network.TFCMInitClientWorldPacket;
+import terramisc.plants.CropRegistry;
 
 @Mod(modid = TFCMDetails.ModID, name = TFCMDetails.ModName, version = "0.14.0", dependencies = TFCMDetails.ModDependencies)
 public class TerraMisc
@@ -97,9 +98,9 @@ public class TerraMisc
 		proxy.registerToolClasses();
 
 		// Register Crafting Handlers
-		FMLCommonHandler.instance().bus().register(new TFCMCraftingHandler());
+		FMLCommonHandler.instance().bus().register(new CraftingHandlerTFCM());
 		//FMLCommonHandler.instance().bus().register(new TFCMFoodCraftingHandler());
-		FMLCommonHandler.instance().bus().register(new TFCMCraftingToolUsageHandler());
+		FMLCommonHandler.instance().bus().register(new CraftingToolUsageHandlerTFCM());
 
 		// Register the Chunk Load/Save Handler
 		MinecraftForge.EVENT_BUS.register(new ChunkEventHandlerTFCM());
@@ -112,10 +113,13 @@ public class TerraMisc
 		TFCMRecipes.initialise();
 		
 		// Register Mob Drop Handlers
-		MinecraftForge.EVENT_BUS.register(new TFCMMobDropHandler());
+		MinecraftForge.EVENT_BUS.register(new MobDropHandlerTFCM());
 		
 		// Register Block Drop Handlers
-		MinecraftForge.EVENT_BUS.register(new TFCMBlockDropHandler());
+		MinecraftForge.EVENT_BUS.register(new BlockDropHandlerTFCM());
+		
+		// Register Player Right Click Handlers
+		MinecraftForge.EVENT_BUS.register(new PlayerInteractHandlerTFCM());
 		
 		// Register Liquids
 		proxy.setupFluids();
@@ -125,7 +129,7 @@ public class TerraMisc
 		FMLCommonHandler.instance().bus().register(new EventListener());
 		
 		// Register the Entity Living Update Handler
-		MinecraftForge.EVENT_BUS.register(new TFCMEntityLivingHandler());
+		MinecraftForge.EVENT_BUS.register(new EntityLivingHandlerTFCM());
 		
 		// Register WAILA classes
 		proxy.registerWailaClasses();
