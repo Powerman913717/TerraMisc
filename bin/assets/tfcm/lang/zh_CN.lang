@@ -1,6 +1,6 @@
-#zh_CN ## 汉化者= 233Isaac
+#zh_TW
 #This is the Main language configuration file
-#
+# by mymag
 #If you want to color code the text then I recommend you visit http://www.minecraftwiki.net/wiki/Formatting_codes#Color_codes
 #To create the ?symbol which is used for assigning a color to the following text press Alt + 21 on Windows. For other OSes, view the above link.
 #This file needs to be UTF-8 encoded to work with MC 1.7+
@@ -9,159 +9,74 @@
 #= Blocks =
 #==========
 //Tallow Candles
-tile.blockTallowCandle.name=蜡烛
-tile.blockTallowCandleOff.name=熄灭的蜡烛
-
+tile.blockTallowCandle.name=羊油蜡烛
+tile.blockTallowCandle_Red.name=羊油蜡烛(红)
+tile.blockTallowCandle_Yellow.name=羊油蜡烛(黄色)
+tile.blockTallowCandle_Green.name=羊油蜡烛(绿)
+tile.blockTallowCandle_LightBlue.name=羊油蜡烛(浅蓝)
+tile.blockTallowCandle_Blue.name=羊油蜡烛(蓝色)
+tile.blockTallowCandle_Purple.name=羊油蜡烛(紫色)
+tile.blockTallowCandle_Cyan.name=羊油蜡烛(青色)
+tile.blockTallowCandle_LightGray.name=羊油蜡烛(浅灰色)
+tile.blockTallowCandle_Gray.name=羊油蜡烛(灰色)
+tile.blockTallowCandle_Pink.name=羊油蜡烛(粉红色)
+tile.blockTallowCandle_Lime.name=羊油蜡烛(灰)
+tile.blockTallowCandle_Magenta.name=羊油蜡烛(品红)
+tile.blockTallowCandle_Orange.name=羊油蜡烛(橙色)
+tile.blockTallowCandle_Black.name=羊油蜡烛(黑色)
+tile.blockTallowCandle_Brown.name=羊油蜡烛(棕色)
 //Road
-tile.blockRoadIgEx.Andesite.name=安山岩道路砖
-tile.blockRoadIgEx.Basalt.name=玄武岩道路砖
-tile.blockRoadSed.Chalk.name=白垩岩道路砖
-tile.blockRoadSed.Chert.name=燧石道路砖
-tile.blockRoadSed.Claystone.name=粘土岩道路砖
-tile.blockRoadSed.Conglomerate.name=砾岩道路砖
-tile.blockRoadIgEx.Dacite.name=英安岩道路砖
-tile.blockRoadIgIn.Diorite.name=闪长岩道路砖
-tile.blockRoadSed.Dolomite.name=白云岩道路砖
-tile.blockRoadIgIn.Gabbro.name=辉长岩道路砖
-tile.blockRoadMM.Gneiss.name=片麻岩道路砖
-tile.blockRoadIgIn.Granite.name=花岗岩道路砖
-tile.blockRoadSed.Limestone.name=石灰岩道路砖
-tile.blockRoadMM.Marble.name=大理石道路砖
-tile.blockRoadMM.Phyllite.name=千枚岩道路砖
-tile.blockRoadMM.Quartzite.name=石英岩道路砖
-tile.blockRoadIgEx.Rhyolite.name=流纹岩道路砖
-tile.blockRoadSed.Rock Salt.name=岩盐道路砖
-tile.blockRoadMM.Schist.name=片岩道路砖
-tile.blockRoadSed.Shale.name=页岩道路砖
-tile.blockRoadMM.Slate.name=板岩道路砖
-
-//Stained Clay
-tile.blockClay.name=粘土块
-tile.blockStainedClay.hardened_clay.name=硬化粘土块
-tile.blockStainedClay.hardened_clay_stained_black.name=黑色染色粘土
-tile.blockStainedClay.hardened_clay_stained_red.name=红色染色粘土
-tile.blockStainedClay.hardened_clay_stained_green.name=绿色染色粘土
-tile.blockStainedClay.hardened_clay_stained_brown.name=棕色染色粘土
-tile.blockStainedClay.hardened_clay_stained_blue.name=蓝色染色粘土
-tile.blockStainedClay.hardened_clay_stained_purple.name=紫色染色粘土
-tile.blockStainedClay.hardened_clay_stained_cyan.name=青色染色粘土
-tile.blockStainedClay.hardened_clay_stained_silver.name=浅灰色染色粘土
-tile.blockStainedClay.hardened_clay_stained_gray.name=灰色染色粘土
-tile.blockStainedClay.hardened_clay_stained_pink.name=粉色染色粘土
-tile.blockStainedClay.hardened_clay_stained_lime.name=黄绿染色粘土
-tile.blockStainedClay.hardened_clay_stained_yellow.name=黄染色粘土
-tile.blockStainedClay.hardened_clay_stained_light_blue.name=浅蓝色染色粘土
-tile.blockStainedClay.hardened_clay_stained_magenta.name=品红色染色粘土
-tile.blockStainedClay.hardened_clay_stained_orange.name=橙色染色粘土
-
-//Other Things
-tile.blockFruitPress.name=水果榨汁机
+tile.blockRoadIgEx.Andesite.name=安山岩道路石
+tile.blockRoadIgEx.Basalt.name=玄武岩道路石
+tile.blockRoadSed.Chalk.name=白垩岩道路石
+tile.blockRoadSed.Chert.name=燧石道路石
+tile.blockRoadSed.Claystone.name=粘土岩道路石
+tile.blockRoadSed.Conglomerate.name=砾岩道路石
+tile.blockRoadIgEx.Dacite.name=英安岩道路石
+tile.blockRoadIgIn.Diorite.name=闪长岩道路石
+tile.blockRoadSed.Dolomite.name=白云岩道路石
+tile.blockRoadIgIn.Gabbro.name=辉长岩道路石
+tile.blockRoadMM.Gneiss.name=片麻岩道路石
+tile.blockRoadIgIn.Granite.name=花岗岩道路石
+tile.blockRoadSed.Limestone.name=石灰岩道路石
+tile.blockRoadMM.Marble.name=大理石道路石
+tile.blockRoadMM.Phyllite.name=千枚岩道路石
+tile.blockRoadMM.Quartzite.name=石英岩道路石
+tile.blockRoadIgEx.Rhyolite.name=流纹岩道路石
+tile.blockRoadSed.Rock Salt.name=岩盐道路石
+tile.blockRoadMM.Schist.name=片岩道路石
+tile.blockRoadSed.Shale.name=页岩道路石
+tile.blockRoadMM.Slate.name=板岩道路石
 
 #=========
 #= Items = 
 #=========
-
 //Basic Items
-item.CasingBrass.name=黄铜时钟外壳
-item.CasingIron.name=锻铁指南针外壳
-item.CasingRoseGold.name=玫瑰金时钟外壳
-item.Gear.name=锻铁齿轮
-item.CaseinGlue.name=酪蛋白胶
-item.PistonBase.name=活塞底座
-item.Circuit.name=红石电路
-item.DeerTendon.name=筋
-item.SinewFiber.name=筋纤维
-item.SinewString.name=筋弦
-item.SinewBowString.name=弓弦
-item.BowLimb.name=弓臂
-item.Suet.name=硬动物脂肪
-item.BowlSuet.name=瓷碗(硬动物脂肪)
-item.BowlTallow.0.name=瓷碗(动物脂肪)
-item.BowlTallow.1.name=瓷碗(动物脂肪)
-item.BowlTallow.2.name=瓷碗(动物脂肪)
+item.CompassCasing.name=指南针外壳
+item.ClockCasing.name=时钟外壳
+item.Spring.name=弹簧
+item.Gear.name=齿轮
+item.ClockHand.name=时钟指针
+item.CaseinGlue.name=酪素胶
+item.PistonHead.name=活塞头
+item.PistonShaft.name=活塞轴
+item.PistonBase.name=活塞基座
+item.RepeatorCircuit.name=中继器电路
+item.ComparatorCircuit.name=比较器电路
+item.DeerTendon.name=鹿筋
+item.SinewFiber.name=肌腱纤维
+item.SinewString.name=肌腱线
+item.SinewBowString.name=肌腱弓弦
+item.BowLimb.name=弓肢体
+item.Suet.name=羊油
+item.Tallow.name=羊油
+item.Wick.name=蜡烛灯芯
 item.BrownDye.name=棕色染料
-item.IronDust.name=铁矿粉末
-item.BottleFruitJuice.name=瓶装果汁
-item.BottleFruitWine.name=瓶装果酒
-item.BottleSugar.name=瓶装糖
-item.BottleJuiceApple.name=瓶装苹果汁
-item.BottleJuiceOrange.name=瓶装橙子汁
-item.BottleJuiceLemon.name=瓶装柠檬汁
-item.BottleLemonade.name=瓶装柠檬汽水
-item.BottleJuiceOnion.name=瓶装洋葱汁
-item.BottleSoyMilk.name=瓶装豆浆
-item.BucketHotWater.name=木桶(热水)
-item.SoyPaste.name=大豆粉
-item.Pumpkin.name=南瓜
-item.PumpkinMeat.name=南瓜瓤
-item.Pie.name=派
-item.Bear.name=熊肉
-
+item.BlackDye.name=黑色染料
+item.IronDust.name=磁铁矿粉末
 //Bows and Such
 item.LongBow.name=长弓
-item.CrossBow.name=弩
-
-//Tallow Candle Dyes
-item.TallowDye.Black.name=染色动物油脂(黑)
-item.TallowDye.Red.name=染色动物油脂(红)
-item.TallowDye.Green.name=染色动物油脂(绿)
-item.TallowDye.Brown.name=染色动物油脂(棕)
-item.TallowDye.Blue.name=染色动物油脂(蓝)
-item.TallowDye.Purple.name=染色动物油脂(紫)
-item.TallowDye.Cyan.name=染色动物油脂(青)
-item.TallowDye.LightGray.name=染色动物油脂(浅灰)
-item.TallowDye.Gray.name=染色动物油脂(灰)
-item.TallowDye.Pink.name=染色动物油脂(粉)
-item.TallowDye.Lime.name=染色动物油脂(黄绿)
-item.TallowDye.Yellow.name=染色动物油脂(黄)
-item.TallowDye.LightBlue.name=染色动物油脂(浅蓝)
-item.TallowDye.Magenta.name=染色动物油脂(品红)
-item.TallowDye.Orange.name=染色动物油脂(橙)
-
-//Bolts
-item.Bolt_BismuthBronze.name=铋青铜弩箭
-item.Bolt_BlackBronze.name=黑青铜弩箭
-item.Bolt_BlackSteel.name=黑钢弩箭
-item.Bolt_BlueSteel.name=蓝钢弩箭
-item.Bolt_Bronze.name=青铜弩箭
-item.Bolt_Copper.name=铜弩箭
-item.Bolt_RedSteel.name=红钢弩箭
-item.Bolt_Steel.name=钢弩箭
-item.Bolt_WroughtIron.name=锻铁弩箭
-
-//Bolt Heads
-item.Bolt_BismuthBronze_Head.name=铋青铜弩箭头
-item.Bolt_BlackBronze_Head.name=黑青铜弩箭头
-item.Bolt_BlackSteel_Head.name=黑钢弩箭头
-item.Bolt_BlueSteel_Head.name=蓝钢弩箭头
-item.Bolt_Bronze_Head.name=青铜弩箭头
-item.Bolt_Copper_Head.name=铜弩箭头
-item.Bolt_RedSteel_Head.name=红钢弩箭头
-item.Bolt_Steel_Head.name=钢弩箭头
-item.Bolt_WroughtIron_Head.name=锻铁弩箭头
-
-//Arrows
-item.Arrow_BismuthBronze.name=铋青铜箭
-item.Arrow_BlackBronze.name=黑青铜箭
-item.Arrow_BlackSteel.name=黑钢箭
-item.Arrow_BlueSteel.name=蓝钢箭
-item.Arrow_Bronze.name=青铜箭
-item.Arrow_Copper.name=铜箭
-item.Arrow_RedSteel.name=红钢箭
-item.Arrow_Steel.name=钢箭
-item.Arrow_WroughtIron.name=锻铁箭
-
-//Arrow Heads
-item.Arrow_BismuthBronze_Head.name=铋青铜箭头
-item.Arrow_BlackBronze_Head.name=黑青铜箭头
-item.Arrow_BlackSteel_Head.name=黑钢箭头
-item.Arrow_BlueSteel_Head.name=蓝钢箭头
-item.Arrow_Bronze_Head.name=青铜箭头
-item.Arrow_Copper_Head.name=铜箭头
-item.Arrow_RedSteel_Head.name=红钢箭头
-item.Arrow_Steel_Head.name=钢箭头
-item.Arrow_WroughtIron_Head.name=锻铁箭头
-
+item.CrossBow.name=弩弓
 //Halberds
 item.Halberd_BismuthBronze.name=铋青铜戟
 item.Halberd_BlackBronze.name=黑青铜戟
@@ -171,8 +86,7 @@ item.Halberd_Bronze.name=青铜戟
 item.Halberd_Copper.name=铜戟
 item.Halberd_RedSteel.name=红钢戟
 item.Halberd_Steel.name=钢戟
-item.Halberd_WroughtIron.name=锻铁戟
-
+item.Halberd_WroughtIron.name=熟铁戟
 //Halberd Tool Heads
 item.Halberd_BismuthBronze_Head.name=铋青铜戟头
 item.Halberd_BlackBronze_Head.name=黑色青铜戟头
@@ -182,8 +96,7 @@ item.Halberd_Bronze_Head.name=青铜戟头
 item.Halberd_Copper_Head.name=铜戟头
 item.Halberd_RedSteel_Head.name=红钢戟头
 item.Halberd_Steel_Head.name=钢戟头
-item.Halberd_WroughtIron_Head.name=锻铁戟头
-
+item.Halberd_WroughtIron_Head.name=熟铁戟头
 //War Hammers
 item.WarHammer_BismuthBronze.name=铋青铜战鎚
 item.WarHammer_BlackBronze.name=黑青铜战鎚
@@ -193,8 +106,7 @@ item.WarHammer_Bronze.name=青铜战鎚
 item.WarHammer_Copper.name=铜战鎚
 item.WarHammer_RedSteel.name=红钢战鎚
 item.WarHammer_Steel.name=钢战鎚
-item.WarHammer_WroughtIron.name=锻铁战鎚
-
+item.WarHammer_WroughtIron.name=熟铁战鎚
 //War Hammer Heads
 item.WarHammer_BismuthBronze_Head.name=铋青铜战鎚头
 item.WarHammer_BlackBronze_Head.name=黑色青铜战鎚头
@@ -204,19 +116,17 @@ item.WarHammer_Bronze_Head.name=青铜战鎚头
 item.WarHammer_Copper_Head.name=铜战鎚头
 item.WarHammer_RedSteel_Head.name=红钢战鎚头
 item.WarHammer_Steel_Head.name=钢战鎚头
-item.WarHammer_WroughtIron_Head.name=锻铁战鎚头
-
+item.WarHammer_WroughtIron_Head.name=熟铁战鎚头
 //Poniards
-item.Poniard_BismuthBronze.name=铋青铜匕首
-item.Poniard_BlackBronze.name=黑青铜匕首
+item.Poniard_BismuthBronze.name=铋青铜短剑
+item.Poniard_BlackBronze.name=黑青铜短剑
 item.Poniard_BlackSteel.name=黑钢匕首
 item.Poniard_BlueSteel.name=蓝钢匕首
-item.Poniard_Bronze.name=青铜匕首
+item.Poniard_Bronze.name=青铜短剑
 item.Poniard_Copper.name=铜匕首
 item.Poniard_RedSteel.name=红钢匕首
 item.Poniard_Steel.name=钢匕首
-item.Poniard_WroughtIron.name=锻铁匕首
-
+item.Poniard_WroughtIron.name=熟铁匕首
 //Poniard Blades
 item.Poniard_BismuthBronze_Head.name=铋青铜匕首刃
 item.Poniard_BlackBronze_Head.name=黑青铜匕首刃
@@ -226,84 +136,69 @@ item.Poniard_Bronze_Head.name=青铜匕首刃
 item.Poniard_Copper_Head.name=铜匕首刃
 item.Poniard_RedSteel_Head.name=红钢匕首刃
 item.Poniard_Steel_Head.name=钢匕首刃
-item.Poniard_WroughtIron_Head.name=锻铁匕首刃
-
+item.Poniard_WroughtIron_Head.name=熟铁匕首刃
 //Pottery Molds
-item.itemHalberd_Mold.Clay_Mold_Halberd.name=粘土戟模具
+item.itemHalberd_Mold.Clay_Mold_Halberd.name=黏土戟模具
 item.itemHalberd_Mold.Ceramic_Mold_Halberd.name=戟模具
 item.itemHalberd_Mold.Ceramic_Mold_Halberd_Copper.name=戟模具(铜)
 item.itemHalberd_Mold.Ceramic_Mold_Halberd_Bronze.name=戟模具(青铜)
 item.itemHalberd_Mold.Ceramic_Mold_Halberd_BlackBronze.name=戟模具(黑青铜)
 item.itemHalberd_Mold.Ceramic_Mold_Halberd_BismuthBronze.name=戟模具(铋青铜)
 
-item.itemWarHammer_Mold.Clay_Mold_WarHammer.name=粘土战鎚模具
+item.itemWarHammer_Mold.Clay_Mold_WarHammer.name=黏土战鎚模具
 item.itemWarHammer_Mold.Ceramic_Mold_WarHammer.name=战鎚模具
 item.itemWarHammer_Mold.Ceramic_Mold_WarHammer_Copper.name=战鎚模具(铜)
 item.itemWarHammer_Mold.Ceramic_Mold_WarHammer_Bronze.name=战鎚模具(青铜)
 item.itemWarHammer_Mold.Ceramic_Mold_WarHammer_BlackBronze.name=战鎚模具(黑青铜)
 item.itemWarHammer_Mold.Ceramic_Mold_WarHammer_BismuthBronze.name=战鎚模具(铋青铜)
 
-item.itemPoniard_Mold.Clay_Mold_Poniard.name=粘土匕首模具
+item.itemPoniard_Mold.Clay_Mold_Poniard.name=黏土匕首模具
 item.itemPoniard_Mold.Ceramic_Mold_Poniard.name=匕首模具
 item.itemPoniard_Mold.Ceramic_Mold_Poniard_Copper.name=匕首模具(铜)
 item.itemPoniard_Mold.Ceramic_Mold_Poniard_Bronze.name=匕首模具(青铜)
 item.itemPoniard_Mold.Ceramic_Mold_Poniard_BlackBronze.name=匕首模具(黑青铜)
 item.itemPoniard_Mold.Ceramic_Mold_Poniard_BismuthBronze.name=匕首模具(铋青铜)
 
-item.itemBolt_Mold.Clay_Mold_Bolt.name=粘土弩箭头模具
-item.itemBolt_Mold.Ceramic_Mold_Bolt.name=弩箭头模具
-item.itemBolt_Mold.Ceramic_Mold_Bolt_Copper.name=弩箭头模具(铜)
-item.itemBolt_Mold.Ceramic_Mold_Bolt_Bronze.name=弩箭头模具(青铜)
-item.itemBolt_Mold.Ceramic_Mold_Bolt_BlackBronze.name=弩箭头模具(黑青铜)
-item.itemBolt_Mold.Ceramic_Mold_Bolt_BismuthBronze.name=弩箭头模具(铋青铜)
-
-item.itemArrow_Mold.Clay_Mold_Arrow.name=粘土箭头模具
-item.itemArrow_Mold.Ceramic_Mold_Arrow.name=箭头模具
-item.itemArrow_Mold.Ceramic_Mold_Arrow_Copper.name=箭头模具(铜)
-item.itemArrow_Mold.Ceramic_Mold_Arrow_Bronze.name=箭头模具(青铜)
-item.itemArrow_Mold.Ceramic_Mold_Arrow_BlackBronze.name=箭头模具(黑青铜)
-item.itemArrow_Mold.Ceramic_Mold_Arrow_BismuthBronze.name=箭头模具(铋青铜)
-
 //Armor
-item.Coil_BismuthBronze.name=铋铜线圈
-item.Coil_BlackBronze.name=黑青铜线圈
-item.Coil_BlackSteel.name=黑钢线圈
-item.Coil_BlueSteel.name=蓝钢线圈
-item.Coil_Bronze.name=青铜线圈
-item.Coil_Copper.name=铜线圈
-item.Coil_WroughtIron.name=铁线圈
-item.Coil_RedSteel.name=红钢线圈
-item.Coil_Steel.name=钢线圈
+item.Coil.BismuthBronze.name=铋铜线圈
+item.Coil.BlackBronze.name=黑青铜线圈
+item.Coil.BlackSteel.name=黑钢线圈
+item.Coil.BlueSteel.name=蓝钢线圈
+item.Coil.Bronze.name=青铜线圈
+item.Coil.Copper.name=铜线圈
+item.Coil.WroughtIron.name=铁线圈
+item.Coil.RedSteel.name=红钢线圈
+item.Coil.Steel.name=钢线圈
 
-item.Link_BismuthBronze.name=铋青铜锁链连结圈
-item.Link_BlackBronze.name=黑青铜锁链连结圈
-item.Link_BlackSteel.name=黑钢锁链连结圈
-item.Link_BlueSteel.name=蓝钢锁链连结圈
-item.Link_Bronze.name=青铜锁链连结圈
-item.Link_Copper.name=铜锁链连结圈
-item.Link_WroughtIron.name=锻铁锁链连结圈
-item.Link_RedSteel.name=红钢锁链连结圈
-item.Link_Steel.name=钢锁链连结圈
+item.Link.BismuthBronze.name=铋青铜锁链连结圈
+item.Link.BlackBronze.name=黑青铜锁链连结圈
+item.Link.BlackSteel.name=黑钢锁链连结圈
+item.Link.BlueSteel.name=蓝钢锁链连结圈
+item.Link.Bronze.name=青铜锁链连结圈
+item.Link.Copper.name=铜锁链连结圈
+item.Link.WroughtIron.name=熟铁锁链连结圈
+item.Link.RedSteel.name=红钢锁链连结圈
+item.Link.Steel.name=钢锁链连结圈
 
-item.Chain_Square_BismuthBronze.name=铋青铜锁链小板
-item.Chain_Square_BlackBronze.name=黑青铜锁链小板
-item.Chain_Square_BlackSteel.name=黑钢锁链小板
-item.Chain_Square_BlueSteel.name=蓝钢锁链小板
-item.Chain_Square_Bronze.name=青铜锁链小板
-item.Chain_Square_Copper.name=铜锁链小板
-item.Chain_Square_WroughtIron.name=锻铁锁链小板
-item.Chain_Square_RedSteel.name=红钢锁链小板
-item.Chain_Square_Steel.name=钢锁链小板
+item.Chain_Square.BismuthBronze.name=铋青铜锁链小板
+item.Chain_Square.BlackBronze.name=黑青铜锁链小板
+item.Chain_Square.BlackSteel.name=黑钢锁链小板
+item.Chain_Square.BlueSteel.name=蓝钢锁链小板
+item.Chain_Square.Bronze.name=青铜锁链小板
+item.Chain_Square.Copper.name=铜锁链小板
+item.Chain_Square.WroughtIron.name=熟铁锁链小板
+item.Chain_Square.RedSteel.name=红钢锁链小板
+item.Chain_Square.Steel.name=钢锁链小板
 
-item.Chain_Sheet_BismuthBronze.name=铋青铜链板
-item.Chain_Sheet_BlackBronze.name=黑青铜链板
-item.Chain_Sheet_BlackSteel.name=黑钢链板
-item.Chain_Sheet_BlueSteel.name=蓝钢链板
-item.Chain_Sheet_Bronze.name=青铜链板
-item.Chain_Sheet_Copper.name=铜链板
-item.Chain_Sheet_WroughtIron.name=锻铁链板
-item.Chain_Sheet_RedSteel.name=红钢链板
-item.Chain_Sheet_Steel.name=钢链板
+item.Chain_Sheet.BismuthBronze.name=铋青铜链板
+item.Chain_Sheet.BlackBronze.name=黑青铜链板
+item.Chain_Sheet.BlackSteel.name=黑钢链板
+item.Chain_Sheet.BlueSteel.name=蓝钢链板
+item.Chain_Sheet.Bronze.name=青铜链板
+item.Chain_Sheet.Copper.name=铜链板
+item.Chain_Sheet.WroughtIron.name=熟铁链板
+item.Chain_Sheet.RedSteel.name=红钢链板
+item.Chain_Sheet.Steel.name=钢链板
 
 item.BismuthBronze_Chain_Greaves.name=铋青铜链甲护腿
 item.BlackBronze_Chain_Greaves.name=黑青铜链甲护腿
@@ -311,7 +206,7 @@ item.BlackSteel_Chain_Greaves.name=黑钢链甲护腿
 item.BlueSteel_Chain_Greaves.name=蓝钢链甲护腿
 item.Bronze_Chain_Greaves.name=青铜链甲护腿
 item.Copper_Chain_Greaves.name=铜链甲护腿
-item.WroughtIron_Chain_Greaves.name=锻铁链甲护腿
+item.WroughtIron_Chain_Greaves.name=熟铁链甲护腿
 item.RedSteel_Chain_Greaves.name=红钢链甲护腿
 item.Steel_Chain_Greaves.name=钢链甲护腿
 
@@ -321,7 +216,7 @@ item.BlackSteel_Chain_Chestplate.name=黑钢链甲护胸
 item.BlueSteel_Chain_Chestplate.name=蓝钢链甲护胸
 item.Bronze_Chain_Chestplate.name=青铜链甲护胸
 item.Copper_Chain_Chestplate.name=铜链甲护胸
-item.WroughtIron_Chain_Chestplate.name=锻铁链甲护胸
+item.WroughtIron_Chain_Chestplate.name=熟铁链甲护胸
 item.RedSteel_Chain_Chestplate.name=红钢链甲护胸
 item.Steel_Chain_Chestplate.name=钢链甲护胸
 
@@ -338,86 +233,17 @@ item.Steel_Chain_Helmet.name=钢锁链兜帽
 #=======
 #= GUI =
 #=======
-//Anvil Plans
 gui.plans.casing=外壳
 gui.plans.clockgear=时钟齿轮
+gui.plans.clockhands=时钟指针
 gui.plans.coil=线圈
-gui.plans.link=环节
 gui.plans.pistonhead=活塞头
 gui.plans.pistonshaft=活塞轴
-gui.plans.circuit=红石电路
+gui.plans.repeater=中继器电路
+gui.plans.comparator=比较器电路
 gui.plans.halberd=戟头
 gui.plans.warhammer=战鎚头
 gui.plans.poniard=匕首刃
-gui.plans.bolt=弩箭头
-gui.plans.arrow=箭头
-
-//WAILA and ToolTips
-gui.crossbow.bolts=螺栓
-gui.crossbow.loaded=加载
-gui.crossbow.unloaded=未加载
-gui.tallowcandle.color=颜色:
-gui.clay.isBaking=烘烤中
-gui.clay.baking=在明火或熔岩附近烘烤.
-gui.pumpkinHarvesting=用镰刀收获作为食物.
-
-#===========
-#= Fluids =
-#===========
-
-fluid.fruitjuice=水果汁
-fluid.fruitwine=果酒
-fluid.juiceapple=苹果汁
-fluid.juiceorange=橙子汁
-fluid.juicelemon=柠檬汁
-fluid.lemonade=柠檬汽水
-fluid.soymilk=豆浆
-fluid.waterhot=热水
-fluid.juiceonion=洋葱汁
-
-#=================
-#= Achievements =
-#=================
-
-achievement.HalberdAchievement=你长出了长胡子!
-achievement.HalberdAchievement.desc=制作长戟.
-achievement.WarHammerAchievement=粉碎骨头!
-achievement.WarHammerAchievement.desc=制作战锤.
-achievement.PoniardAchievement=刺客Ezio!
-achievement.PoniardAchievement.desc=制造匕首.
-
-achievement.SinewAchievement=恶 纤维的!
-achievement.SinewAchievement.desc=从鹿、马或其他动物的腿上得来.
-achievement.LongbowAchievement=我不会然它逃走，我一发必中.
-achievement.LongbowAchievement.desc=制作长弓.
-achievement.CrossbowAchievement=注意你的嘴, Sunshine.
-achievement.CrossbowAchievement.desc=制作弩.
-
-achievement.ChainArmorAchievement=拴住了!
-achievement.ChainArmorAchievement.desc=制作一件链甲.
-
-achievement.SuetAchievement=它还在抖动!
-achievement.SuetAchievement.desc=从绵羊、熊或母牛那里得到动物脂肪.
-achievement.CandleAchievement=蜡质的!
-achievement.CandleAchievement.desc=制作蜡烛.
-
-achievement.RedstoneTileAchievement=有线的!
-achievement.RedstoneTileAchievement.desc=用红石电路制作红石中继器或比较器.
-achievement.PistonAchievement=移动它！移动它！
-achievement.PistonAchievement.desc=制作活塞.
-
-achievement.FruitPressAchievement=跺跺脚!
-achievement.FruitPressAchievement.desc=制作水果压榨机.
-achievement.WineAchievement=快乐的猫咪，沉睡的猫咪，喝醉了的猫咪
-achievement.WineAchievement.desc=喝果酒.
-achievement.SugarAchievement=糖！糖!
-achievement.SugarAchievement.desc=把糖从瓶子里拿出来.
-achievement.JuiceOrangeAchievement=早上好!
-achievement.JuiceOrangeAchievement.desc=喝橙汁.
-achievement.JuiceLemonAchievement=柠檬头!
-achievement.JuiceLemonAchievement.desc=喝柠檬汁.
-achievement.LemonadeAchievement=夏季的一天!
-achievement.LemonadeAchievement.desc=喝柠檬汽水.
 
 #===========
 #= Strings =
