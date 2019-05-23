@@ -11,9 +11,8 @@ Changelog
 		-Pumpkin blocks can be placed from pumpkin food items at a rate of 80 ounces per block.
 -Added: Cayenne Peppers, Coffee, Watermelon, Hops, and Sweet Potato crops.
 -Added: Bears now drop a meat item, which can be cooked and used in meals.
+-Added: Right-Clicking a log pile only containing a single log with 15 additional logs of the same type will completely fill the pile.
 
 //TODO
 -Add mod detection for add-ons that generate similar crops (pumpkin/melon/etc) and disable TFCM crops accordingly.
 -Textures and localization still needed for crops.
-
--Log pile placement tweak: add event to place a full log pile when 16 logs are held on right click.
