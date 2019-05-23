@@ -77,6 +77,7 @@ item.BowlTallow.1.name=Bowl of Tallow
 item.BowlTallow.2.name=Bowl of Tallow
 item.BrownDye.name=Brown Dye
 item.IronDust.name=Iron Dust
+
 item.BottleFruitJuice.name=Fruit Juice
 item.BottleFruitWine.name=Fruit Wine
 item.BottleSugar.name=Sugar in a Bottle
@@ -87,11 +88,29 @@ item.BottleLemonade.name=Lemonade
 item.BottleJuiceOnion.name=Onion Juice
 item.BottleSoyMilk.name=Soy Milk
 item.BucketHotWater.name=Wooden Bucket (Hot Water)
+
 item.SoyPaste.name=Soybean Paste
 item.Pumpkin.name=Pumpkin
 item.PumpkinMeat.name=Pumpkin Meat
 item.Pie.name=Pie
 item.Bear.name=Bear Meat
+item.Seeds Pumpkin.name=Pumpkin Seeds
+item.Pumpkin.name=Pumpkin
+item.Seeds Cayenne.name=Cayenne Pepper Seeds
+item.Green Cayenne.name=Green Cayenne Pepper
+item.Red Cayenne.name=Red Cayenne Pepper
+item.Seeds Coffee.name=Coffee Seeds
+item.Coffee Cherries.name=Coffee Cherries
+item.Green Coffee.name=Green Coffee Beans
+item.Coffee.name=Coffee Beans
+item.Ground Coffee.name=Ground Coffee Beans
+item.Seeds Watermelon.name=Watermelon Seeds
+item.Watermelon.name=Watermelon
+item.Seeds Sweet Potato.name=Sweet Potato Seeds
+item.Sweet Potato.name=Sweet Potato
+item.Seeds Hops.name=Hops Seeds
+item.Hops.name=Hops
+
 //Bows and Such
 item.LongBow.name=Longbow
 item.CrossBow.name=Crossbow

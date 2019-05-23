@@ -22,7 +22,7 @@ public class CropRenderTFCM extends RenderCrop implements ISimpleBlockRenderingH
 		Tessellator var9 = Tessellator.instance;
 		var9.setBrightness(block.getMixedBrightnessForBlock(blockaccess, x, y, z));
 		
-		if(cropTE == null)
+		if(cropTE == null || cropTE.cropId == null)
 			return false;
 		
 		switch(cropTE.cropId)
