@@ -26,7 +26,7 @@ import terramisc.api.crops.CropManagerTFCM;
 import terramisc.core.TFCMBlocks;
 import terramisc.tileentities.TECropTFCM;
 
-public class FarmlandHighlightHandler
+public class FarmlandHighlightHandlerTFCM
 {
 	@SubscribeEvent
 	public void drawBlockHighlightEvent(DrawBlockHighlightEvent evt)

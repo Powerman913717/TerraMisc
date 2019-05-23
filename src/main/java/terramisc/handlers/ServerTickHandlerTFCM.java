@@ -4,7 +4,7 @@ import terramisc.core.TFCMRecipes;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.gameevent.TickEvent;
 
-public class TFCMServerTickHandler
+public class ServerTickHandlerTFCM
 {
    @SubscribeEvent
    public void onServerWorldTick(TickEvent.WorldTickEvent e)

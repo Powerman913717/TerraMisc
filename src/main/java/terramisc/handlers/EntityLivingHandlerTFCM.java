@@ -12,7 +12,7 @@ import com.bioxx.tfc.Core.Player.InventoryPlayerTFC;
 import cpw.mods.fml.common.eventhandler.Event.Result;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 
-public class TFCMEntityLivingHandler 
+public class EntityLivingHandlerTFCM 
 {
 	@SubscribeEvent
 	public void handleItemPickup(EntityItemPickupEvent event)

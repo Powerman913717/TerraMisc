@@ -17,7 +17,7 @@ import terramisc.tileentities.TEBrickOven;
 import terramisc.tileentities.TEFruitPress;
 import terramisc.tileentities.TESoupKettle;
 
-public class TFCMGuiHandler extends terramisc.handlers.TFCMGuiHandler
+public class TFCMGuiHandler extends terramisc.handlers.GuiHandlerTFCM
 {
 	@Override
 	public Object getClientGuiElement(int Id, EntityPlayer player, World world, int x, int y, int z) 

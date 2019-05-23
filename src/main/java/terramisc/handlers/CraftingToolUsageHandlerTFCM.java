@@ -8,7 +8,7 @@ import net.minecraft.item.ItemStack;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.gameevent.PlayerEvent.ItemCraftedEvent;
 
-public class TFCMCraftingToolUsageHandler 
+public class CraftingToolUsageHandlerTFCM 
 {
 	@SubscribeEvent
 	public void onCrafting(ItemCraftedEvent e)

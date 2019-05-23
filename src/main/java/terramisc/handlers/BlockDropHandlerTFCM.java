@@ -19,7 +19,7 @@ import net.minecraft.world.World;
 import net.minecraftforge.event.world.BlockEvent.BreakEvent;
 import terramisc.core.TFCMItems;
 
-public class TFCMBlockDropHandler 
+public class BlockDropHandlerTFCM 
 {
 	@SubscribeEvent
 	public void onBlockBreak(BreakEvent event)

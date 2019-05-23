@@ -17,7 +17,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraftforge.event.entity.living.LivingDropsEvent;
 import terramisc.core.TFCMItems;
 
-public class TFCMMobDropHandler 
+public class MobDropHandlerTFCM 
 {
 	@SubscribeEvent
 	public void onEntityDrop(LivingDropsEvent event)

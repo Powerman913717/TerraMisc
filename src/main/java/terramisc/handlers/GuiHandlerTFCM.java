@@ -13,7 +13,7 @@ import terramisc.tileentities.TEBrickOven;
 import terramisc.tileentities.TEFruitPress;
 import terramisc.tileentities.TESoupKettle;
 
-public class TFCMGuiHandler implements IGuiHandler
+public class GuiHandlerTFCM implements IGuiHandler
 {
 //	public static final int GuiIdCustom = ModDetails.GuiOffset + 1;
 	
