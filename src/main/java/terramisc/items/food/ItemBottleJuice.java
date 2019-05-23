@@ -1,16 +1,14 @@
 package terramisc.items.food;
 
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.ItemStack;
-import net.minecraft.world.World;
-import terramisc.core.TFCMAchievements;
-import terramisc.core.TFCMItems;
-
 import com.bioxx.tfc.Core.TFC_Core;
 import com.bioxx.tfc.Core.Player.FoodStatsTFC;
 import com.bioxx.tfc.Items.ItemAlcohol;
 import com.bioxx.tfc.api.TFCItems;
 import com.bioxx.tfc.api.Enums.EnumFoodGroup;
+
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.ItemStack;
+import net.minecraft.world.World;
 
 public class ItemBottleJuice extends ItemAlcohol
 {
@@ -54,16 +52,6 @@ public class ItemBottleJuice extends ItemAlcohol
 					else
 						player.dropPlayerItemWithRandomChoice(new ItemStack(TFCItems.glassBottle), false);
 				}
-		
-				
-		if(this == TFCMItems.bottleJuiceOrange)
-		{
-			player.addStat(TFCMAchievements.achJuiceOrange, 1);
-		}
-		if(this == TFCMItems.bottleLemonade)
-		{
-			player.addStat(TFCMAchievements.achLemonade, 1);
-		}
 		return is;
 	}
 }
