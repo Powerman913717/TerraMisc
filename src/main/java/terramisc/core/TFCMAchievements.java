@@ -60,11 +60,9 @@ public class TFCMAchievements
 		achPiston = createAchievement("achievement.achPistone", "PistonAchievement", 8, 1, new ItemStack(Blocks.piston), null);
 		
 		achFruitPress = createAchievement("achievement.achFruitPress", "FruitPressAchievement", 0, 5, new ItemStack(TFCMBlocks.blockFruitPress), null);
-		achWine = createAchievement("achievement.achWine", "WineAchievement", 0, 7, new ItemStack(TFCMItems.bottleFruitWine), achFruitPress);
+		achWine = createAchievement("achievement.achWine", "WineAchievement", 0, 7, new ItemStack(TFCMItems.arrow_BismuthBronze), achFruitPress); //TODO FIX
 		achSugar = createAchievement("achievement.achSugar", "SugarAchievement", 1, 7, new ItemStack(TFCMItems.bottleSugar), achFruitPress);
-		achJuiceOrange = createAchievement("achievement.achJuiceOrange", "JuiceOrangeAchievement", 2, 7, new ItemStack(TFCMItems.bottleJuiceOrange), achFruitPress);
 		achJuiceLemon = createAchievement("achievement.achJuiceLemon", "JuiceLemonAchievement", -1, 7, new ItemStack(TFCMItems.bottleJuiceLemon), achFruitPress);
-		achLemonade = createAchievement("achievement.achLemonade", "LemonadeAchievement", -1, 8, new ItemStack(TFCMItems.bottleLemonade), achJuiceLemon);
 		
 		achievementsTFCM = new Achievement[achlist.size()];
 		achievementsTFCM = achlist.toArray(achievementsTFCM);

@@ -19,7 +19,6 @@ import com.bioxx.tfc.api.Crafting.BarrelAlcoholRecipe;
 import com.bioxx.tfc.api.Crafting.BarrelLiquidToLiquidRecipe;
 import com.bioxx.tfc.api.Crafting.BarrelManager;
 import com.bioxx.tfc.api.Crafting.BarrelRecipe;
-import com.bioxx.tfc.api.Crafting.BarrelVinegarRecipe;
 import com.bioxx.tfc.api.Crafting.CraftingManagerTFC;
 import com.bioxx.tfc.api.Crafting.KilnCraftingManager;
 import com.bioxx.tfc.api.Crafting.KilnRecipe;
@@ -39,7 +38,6 @@ import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.oredict.OreDictionary;
 import net.minecraftforge.oredict.ShapedOreRecipe;
 import net.minecraftforge.oredict.ShapelessOreRecipe;
-import terramisc.api.crafting.BarrelFermentationRecipe;
 import terramisc.api.crafting.FruitPressManager;
 import terramisc.api.crafting.FruitPressRecipe;
 
@@ -487,7 +485,6 @@ public class TFCMRecipes
 		GameRegistry.addShapelessRecipe(new ItemStack(TFCMItems.poniard_BlackBronze_Head), new ItemStack(TFCMItems.poniard_Mold, 1, 5));
 		
 		//Food
-		GameRegistry.addShapelessRecipe(new ItemStack(TFCMItems.bottleLemonade, 4), new ItemStack(TFCItems.woodenBucketWater), new ItemStack(TFCMItems.bottleJuiceLemon), new ItemStack(TFCMItems.bottleJuiceLemon), new ItemStack(TFCMItems.bottleJuiceLemon), new ItemStack(TFCMItems.bottleJuiceLemon), (ItemFoodTFC.createTag(new ItemStack(TFCItems.sugar), 4F)));
 
 		//Road Block Crafting
 		for (int j = 0; j < Global.STONE_IGEX.length; j++)
@@ -548,46 +545,34 @@ public class TFCMRecipes
 	private static void registerBarrelRecipes()
 	{
 		BarrelManager.getInstance().addRecipe(new BarrelRecipe(new ItemStack(TFCItems.powder, 1, 0), new FluidStack(TFCFluids.MILKCURDLED, 100), new ItemStack(TFCMItems.caseinGlue, 2), new FluidStack(TFCFluids.MILKCURDLED, 100), 1).setMinTechLevel(0));
-		BarrelManager.getInstance().addRecipe(new BarrelFermentationRecipe(new FluidStack(TFCMFluids.FRUITJUICE, 250), new FluidStack(TFCMFluids.FRUITWINE, 250), 72));
-		BarrelManager.getInstance().addRecipe(new BarrelVinegarRecipe(new FluidStack(TFCMFluids.FRUITWINE, 1000), (new FluidStack(TFCFluids.VINEGAR, 1000))));
 		
-		BarrelManager.getInstance().addRecipe(new BarrelAlcoholRecipe(ItemFoodTFC.createTag(new ItemStack(TFCMItems.soyPaste), 160), new FluidStack(TFCMFluids.WATERHOT, 10000), null, new FluidStack(TFCMFluids.SOYMILK, 10000)));	
+		BarrelManager.getInstance().addRecipe(new BarrelAlcoholRecipe(ItemFoodTFC.createTag(new ItemStack(TFCMItems.soyPaste), 160), new FluidStack(TFCFluids.HOTWATER, 10000), null, new FluidStack(TFCMFluids.SOYMILK, 10000)));	
 		BarrelManager.getInstance().addRecipe(new BarrelLiquidToLiquidRecipe(new FluidStack(TFCMFluids.SOYMILK, 9000), new FluidStack(TFCFluids.VINEGAR, 1000), new FluidStack(TFCFluids.MILKVINEGAR, 10000)).setSealedRecipe(false).setMinTechLevel(0).setRemovesLiquid(false));
 		
-		BarrelManager.getInstance().addRecipe(new BarrelRecipe(new ItemStack(TFCMItems.bowlSuet), new FluidStack(TFCMFluids.WATERHOT, 1000), new ItemStack(TFCMItems.bowlTallow), new FluidStack(TFCFluids.FRESHWATER, 1000), 2));
+		BarrelManager.getInstance().addRecipe(new BarrelRecipe(new ItemStack(TFCMItems.bowlSuet), new FluidStack(TFCFluids.HOTWATER, 1000), new ItemStack(TFCMItems.bowlTallow), new FluidStack(TFCFluids.FRESHWATER, 1000), 2));
 	}
 	
 	//Fruit Press
 	private static void registerFruitPressRecipes()
 	{
 		//Fruit Juice
-		FruitPressManager.addRecipe(new FruitPressRecipe(TFCItems.cherry, TFCMFluids.FRUITJUICE, 4));
-		FruitPressManager.addRecipe(new FruitPressRecipe(TFCItems.plum, TFCMFluids.FRUITJUICE, 4));
-		FruitPressManager.addRecipe(new FruitPressRecipe(TFCItems.wintergreenBerry, TFCMFluids.FRUITJUICE, 8));
-		FruitPressManager.addRecipe(new FruitPressRecipe(TFCItems.blueberry, TFCMFluids.FRUITJUICE, 8));
-		FruitPressManager.addRecipe(new FruitPressRecipe(TFCItems.raspberry, TFCMFluids.FRUITJUICE, 8));
-		FruitPressManager.addRecipe(new FruitPressRecipe(TFCItems.strawberry, TFCMFluids.FRUITJUICE, 8));
-		FruitPressManager.addRecipe(new FruitPressRecipe(TFCItems.blackberry, TFCMFluids.FRUITJUICE, 8));
-		FruitPressManager.addRecipe(new FruitPressRecipe(TFCItems.bunchberry, TFCMFluids.FRUITJUICE, 8));
-		FruitPressManager.addRecipe(new FruitPressRecipe(TFCItems.cranberry, TFCMFluids.FRUITJUICE, 8));
-		FruitPressManager.addRecipe(new FruitPressRecipe(TFCItems.snowberry, TFCMFluids.FRUITJUICE, 8));
-		FruitPressManager.addRecipe(new FruitPressRecipe(TFCItems.elderberry, TFCMFluids.FRUITJUICE, 8));
-		FruitPressManager.addRecipe(new FruitPressRecipe(TFCItems.gooseberry, TFCMFluids.FRUITJUICE, 8));
-		FruitPressManager.addRecipe(new FruitPressRecipe(TFCItems.cloudberry, TFCMFluids.FRUITJUICE, 8));
+		FruitPressManager.addRecipe(new FruitPressRecipe(TFCItems.cherry, TFCMFluids.REDFRUITJUICE, 4));
+		FruitPressManager.addRecipe(new FruitPressRecipe(TFCItems.plum, TFCMFluids.REDFRUITJUICE, 4));
+		FruitPressManager.addRecipe(new FruitPressRecipe(TFCItems.blueberry, TFCMFluids.REDFRUITJUICE, 8));
+		FruitPressManager.addRecipe(new FruitPressRecipe(TFCItems.raspberry, TFCMFluids.REDFRUITJUICE, 8));
+		FruitPressManager.addRecipe(new FruitPressRecipe(TFCItems.strawberry, TFCMFluids.REDFRUITJUICE, 8));
+		FruitPressManager.addRecipe(new FruitPressRecipe(TFCItems.blackberry, TFCMFluids.REDFRUITJUICE, 8));
+		FruitPressManager.addRecipe(new FruitPressRecipe(TFCItems.cranberry, TFCMFluids.REDFRUITJUICE, 8));
 		
 		//Apple Juice
 		FruitPressManager.addRecipe(new FruitPressRecipe(TFCItems.redApple, TFCMFluids.JUICEAPPLE, 4));
 		FruitPressManager.addRecipe(new FruitPressRecipe(TFCItems.greenApple, TFCMFluids.JUICEAPPLE, 4));
-		
-		//Orange Juice
-		FruitPressManager.addRecipe(new FruitPressRecipe(TFCItems.orange, TFCMFluids.JUICEORANGE, 4));
-		
+
 		//Lemon Juice
 		FruitPressManager.addRecipe(new FruitPressRecipe(TFCItems.lemon, TFCMFluids.JUICELEMON, 4));
 		
 		//Other
 		FruitPressManager.addRecipe(new FruitPressRecipe(TFCItems.olive, TFCFluids.OLIVEOIL, 1));
-		FruitPressManager.addRecipe(new FruitPressRecipe(TFCItems.onion, TFCMFluids.JUICEONION, 2));
 	}
 	
 	//Kiln
@@ -763,7 +748,6 @@ public class TFCMRecipes
 		HeatRaw zincRaw = new HeatRaw(0.21, 420);//sh = 0.66F; boil = 907; melt = 420;
 		
 		heatmanager.addIndex(new HeatIndex(new ItemStack(TFCMItems.bottleFruitJuice), 0.98D, 150.0D, (new ItemStack(TFCMItems.bottleSugar))));
-		heatmanager.addIndex(new HeatIndex(new ItemStack(TFCItems.woodenBucketWater), 0.98D, 150.0D, (new ItemStack(TFCMItems.bucketHotWater))));
 		
 		heatmanager.addIndex(new HeatIndex(new ItemStack(TFCMItems.coil_BismuthBronze, 1), bismuthBronzeRaw, new ItemStack(TFCItems.bismuthBronzeUnshaped, 1)));
 		heatmanager.addIndex(new HeatIndex(new ItemStack(TFCMItems.coil_BlackBronze, 1), blackBronzeRaw, new ItemStack(TFCItems.blackBronzeUnshaped, 1)));

@@ -19,7 +19,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 import net.minecraftforge.client.MinecraftForgeClient;
 import net.minecraftforge.common.MinecraftForge;
-import terramisc.handlers.client.FarmlandHighlightHandler;
+import terramisc.handlers.client.FarmlandHighlightHandlerTFCM;
 import terramisc.render.CropRenderTFCM;
 import terramisc.render.ItemCrossbowRender;
 import terramisc.render.ItemLongbowRender;
@@ -73,6 +73,8 @@ public class TFCMClientProxy extends TFCMCommonProxy
 			API.hideItem(new ItemStack(TFCBlocks.litPumpkin));
 			
 			API.hideItem(new ItemStack(TFCMBlocks.blockPumpkinLantern));
+			
+			API.hideItem(new ItemStack(TFCMBlocks.blockCrops));
 		}
 	}
 
@@ -99,7 +101,7 @@ public class TFCMClientProxy extends TFCMCommonProxy
 	@Override
 	public void registerHandlers()
 	{
-		MinecraftForge.EVENT_BUS.register(new FarmlandHighlightHandler());
+		MinecraftForge.EVENT_BUS.register(new FarmlandHighlightHandlerTFCM());
 	}
 
 	@Override

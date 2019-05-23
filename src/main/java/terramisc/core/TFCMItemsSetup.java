@@ -17,10 +17,8 @@ import terramisc.items.ItemToolMold;
 import terramisc.items.food.CustomSeedsTFCM;
 import terramisc.items.food.ItemBottleJuice;
 import terramisc.items.food.ItemBottleJuiceLemon;
-import terramisc.items.food.ItemBottleJuiceOnion;
 import terramisc.items.food.ItemBottleSoyMilk;
 import terramisc.items.food.ItemBottleSugar;
-import terramisc.items.food.ItemBottleWine;
 import terramisc.items.food.ItemPie;
 import terramisc.items.food.ItemPlaceableFood;
 import terramisc.items.tools.ItemCustomArmor;
@@ -35,7 +33,6 @@ import terramisc.items.tools.ItemCustomQuiver;
 import terramisc.items.tools.ItemCustomToolHead;
 import terramisc.items.tools.ItemCustomWarHammer;
 import terramisc.items.weights.ItemWeightLargeHeavy;
-import terramisc.items.weights.ItemWeightLightMedium;
 import terramisc.items.weights.ItemWeightSmallHeavy;
 import terramisc.items.weights.ItemWeightTinyLight;
 
@@ -287,19 +284,13 @@ public class TFCMItemsSetup extends TFCMItems
 	{	
 		//Drinks
 		bottleFruitJuice = new ItemBottleJuice().setUnlocalizedName("BottleFruitJuice");
-		bottleFruitWine = new ItemBottleWine().setUnlocalizedName("BottleFruitWine");
 		bottleSugar= new ItemBottleSugar().setUnlocalizedName("BottleSugar");
 		
 		bottleJuiceApple = new ItemBottleJuice().setUnlocalizedName("BottleJuiceApple");
-		bottleJuiceOrange = new ItemBottleJuice().setUnlocalizedName("BottleJuiceOrange");
 		
 		bottleJuiceLemon = new ItemBottleJuiceLemon().setUnlocalizedName("BottleJuiceLemon");
-		bottleLemonade = new ItemBottleJuice().setUnlocalizedName("BottleLemonade");
-		
-		bottleJuiceOnion = new ItemBottleJuiceOnion().setUnlocalizedName("BottleJuiceOnion");
-		
+
 		bottleSoyMilk = new ItemBottleSoyMilk().setUnlocalizedName("BottleSoyMilk");
-		bucketHotWater= new ItemWeightLightMedium().setUnlocalizedName("BucketHotWater");
 		
 		//Soy
 		soyPaste = new ItemFoodTFC(EnumFoodGroup.Protein, 10, 0, 0, 0, 40, false).setUnlocalizedName("SoyPaste");
@@ -309,14 +300,14 @@ public class TFCMItemsSetup extends TFCMItems
 		pumpkin = new ItemPlaceableFood(EnumFoodGroup.Vegetable, 5, 0, 0, 10, 5, true, 80, TFCMBlocks.blockPumpkin, true).setFolder("food/unused/").setUnlocalizedName("Pumpkin").setTextureName("img73");
 		
 		seedsCayenne = new CustomSeedsTFCM("cayenne").setFolder("food/unused/").setUnlocalizedName("Seeds Cayenne").setTextureName("img139");
-		greenCayenne = new ItemFoodTFC(EnumFoodGroup.Vegetable, 10, 0, 0, 0, 20, true).setUnlocalizedName("greenCayenne");
-		redCayenne = new ItemFoodTFC(EnumFoodGroup.Vegetable, 10, 0, 0, 0, 45, true).setFolder("food/unused/").setUnlocalizedName("redCayenne").setTextureName("img105");
+		greenCayenne = new ItemFoodTFC(EnumFoodGroup.Vegetable, 10, 0, 0, 0, 20, true).setUnlocalizedName("Green Cayenne");
+		redCayenne = new ItemFoodTFC(EnumFoodGroup.Vegetable, 10, 0, 0, 0, 45, true).setFolder("food/unused/").setUnlocalizedName("Red Cayenne").setTextureName("img105");
 		
 		seedsCoffee = new CustomSeedsTFCM("coffee").setFolder("food/unused/").setUnlocalizedName("Seeds Coffee").setTextureName("img141");
-		coffeeCherries = new ItemFoodTFC(EnumFoodGroup.Fruit, 10, 5, 0, 0, 5, true).setUnlocalizedName("coffeeCherries");
-		greenCoffee = new ItemFoodTFC(EnumFoodGroup.None, 0, 0, 0, 15, 0, false, false).setUnlocalizedName("greenCoffee");
-		coffee = new ItemFoodTFC(EnumFoodGroup.None, 0, 0, 0, 25, 0, false, false).setFolder("food/unused/").setUnlocalizedName("coffee").setTextureName("img78");
-		groundCoffee = new ItemFoodTFC(EnumFoodGroup.None, 0, 0, 0, 25, 0, false, false).setUnlocalizedName("groundCoffee");
+		coffeeCherries = new ItemFoodTFC(EnumFoodGroup.Fruit, 10, 5, 0, 0, 5, true).setUnlocalizedName("coffee Cherries");
+		greenCoffee = new ItemFoodTFC(EnumFoodGroup.None, 0, 0, 0, 15, 0, false, false).setUnlocalizedName("Green Coffee");
+		coffee = new ItemFoodTFC(EnumFoodGroup.None, 0, 0, 0, 25, 0, false, false).setFolder("food/unused/").setUnlocalizedName("Coffee").setTextureName("img78");
+		groundCoffee = new ItemFoodTFC(EnumFoodGroup.None, 0, 0, 0, 25, 0, false, false).setUnlocalizedName("Ground Coffee");
 		
 		seedsWatermelon = new CustomSeedsTFCM("watermelon").setFolder("food/unused/").setUnlocalizedName("Seeds Watermelon").setTextureName("img133");
 		watermelon = new ItemFoodTFC(EnumFoodGroup.Fruit, 15, 0, 0, 2, 0, true).setFolder("food/unused/").setUnlocalizedName("Watermelon").setTextureName("img74");

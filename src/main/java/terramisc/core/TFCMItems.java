@@ -219,18 +219,13 @@ public class TFCMItems
 	
 	//Food Stuffs
 	public static Item bottleFruitJuice;
-	public static Item bottleFruitWine;
 	public static Item bottleSugar;
 	
 	public static Item bottleJuiceApple;
-	public static Item bottleJuiceOrange;
 	public static Item bottleJuiceLemon;
-	public static Item bottleLemonade;
-	public static Item bottleJuiceOnion;
 	
 		//Soy
 	public static Item bottleSoyMilk;
-	public static Item bucketHotWater;
 	public static Item soyPaste;
 	
 		//Crops
@@ -477,19 +472,14 @@ public class TFCMItems
 		
 		//Food Stuffs
 		GameRegistry.registerItem(bottleFruitJuice, bottleFruitJuice.getUnlocalizedName());
-		GameRegistry.registerItem(bottleFruitWine, bottleFruitWine.getUnlocalizedName());
+
 		GameRegistry.registerItem(bottleSugar, bottleSugar.getUnlocalizedName());
 		
 		GameRegistry.registerItem(bottleJuiceApple, bottleJuiceApple.getUnlocalizedName());
-		GameRegistry.registerItem(bottleJuiceOrange, bottleJuiceOrange.getUnlocalizedName());
 		
 		GameRegistry.registerItem(bottleJuiceLemon, bottleJuiceLemon.getUnlocalizedName());
-		GameRegistry.registerItem(bottleLemonade, bottleLemonade.getUnlocalizedName());
-		
-		GameRegistry.registerItem(bottleJuiceOnion, bottleJuiceOnion.getUnlocalizedName());
 		
 		GameRegistry.registerItem(bottleSoyMilk, bottleSoyMilk.getUnlocalizedName());
-		GameRegistry.registerItem(bucketHotWater, bucketHotWater.getUnlocalizedName());
 		GameRegistry.registerItem(soyPaste, soyPaste.getUnlocalizedName());
 		
 		GameRegistry.registerItem(seedsPumpkin, seedsPumpkin.getUnlocalizedName());
