@@ -9,6 +9,10 @@ public class TFCMItems
 	public static Item casingBrass;
 	public static Item casingIron;
 	public static Item casingRoseGold;
+	public static Item casingGold;
+	public static Item casingSilver;
+	public static Item casingLeadPewter;
+	
 	public static Item gear;
 	public static Item caseinGlue;
 	public static Item pistonBase;
@@ -217,6 +221,12 @@ public class TFCMItems
 	public static Item RedSteelChainHelmet;
 	public static Item SteelChainHelmet;
 	
+	public static Item leadPewterIngot;
+	public static Item leadPewterIngot2x;
+	public static Item leadPewterUnshaped;
+	public static Item leadPewterSheet;
+	public static Item leadPewterSheet2x;
+	
 	//Food Stuffs
 	public static Item bottleFruitJuice;
 	public static Item bottleSugar;
@@ -262,6 +272,10 @@ public class TFCMItems
 		GameRegistry.registerItem(casingBrass, casingBrass.getUnlocalizedName());
 		GameRegistry.registerItem(casingIron, casingIron.getUnlocalizedName());
 		GameRegistry.registerItem(casingRoseGold, casingRoseGold.getUnlocalizedName());
+		GameRegistry.registerItem(casingGold, casingGold.getUnlocalizedName());
+		GameRegistry.registerItem(casingSilver, casingSilver.getUnlocalizedName());
+		GameRegistry.registerItem(casingLeadPewter, casingLeadPewter.getUnlocalizedName());
+		
 		GameRegistry.registerItem(gear, gear.getUnlocalizedName()); 
 		GameRegistry.registerItem(caseinGlue, caseinGlue.getUnlocalizedName());		
 		GameRegistry.registerItem(pistonBase, pistonBase.getUnlocalizedName());
@@ -469,6 +483,12 @@ public class TFCMItems
 		GameRegistry.registerItem(WroughtIronChainHelmet, WroughtIronChainHelmet.getUnlocalizedName());
 		GameRegistry.registerItem(RedSteelChainHelmet, RedSteelChainHelmet.getUnlocalizedName());
 		GameRegistry.registerItem(SteelChainHelmet, SteelChainHelmet.getUnlocalizedName());
+		
+		GameRegistry.registerItem(leadPewterIngot, leadPewterIngot.getUnlocalizedName());
+		GameRegistry.registerItem(leadPewterIngot2x, leadPewterIngot2x.getUnlocalizedName());
+		GameRegistry.registerItem(leadPewterUnshaped, leadPewterUnshaped.getUnlocalizedName());
+		GameRegistry.registerItem(leadPewterSheet, leadPewterSheet.getUnlocalizedName());
+		GameRegistry.registerItem(leadPewterSheet2x, leadPewterSheet2x.getUnlocalizedName());
 		
 		//Food Stuffs
 		GameRegistry.registerItem(bottleFruitJuice, bottleFruitJuice.getUnlocalizedName());

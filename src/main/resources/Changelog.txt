@@ -9,10 +9,14 @@ Changelog
 -Added: A Wet Clay Block, can be baked near open flames or lava source blocks, to produce hardened clay.
 -Added:	Breaking wild pumpkins no longer drops a block but instead drops food. (Wild Pumpkins yeild around 10 ounces)
 		-Pumpkin blocks can be placed from pumpkin food items at a rate of 80 ounces per block.
+		-Pumpkin blocks can then be carved with knives. (Right=Click)
+		-Carved Pumpkins can become Jack O'Lanterns with the additon of a candle. (Right-Click)
 -Added: Cayenne Peppers, Coffee, Watermelon, Hops, and Sweet Potato crops.
 -Added: Bears now drop a meat item, which can be cooked and used in meals.
 -Added: Right-Clicking a log pile only containing a single log with 15 additional logs of the same type will completely fill the pile.
+-Added: Lead Pewter Alloy, a Tin-Copper-Lead Alloy.
+-Added: Gold, Silver, and Lead Pewter Casings. All require an ingot of their respective material and an anvil of copper or better.
+-Tweak: Compass recipe no longer accepts Wrought Iron Casings instead Lead Pewter or Silver Casings must be used.
 
 //TODO
 -Add mod detection for add-ons that generate similar crops (pumpkin/melon/etc) and disable TFCM crops accordingly.
--Textures and localization still needed for crops.

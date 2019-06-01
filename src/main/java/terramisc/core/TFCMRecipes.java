@@ -132,6 +132,10 @@ public class TFCMRecipes
 		anvilManager.addRecipe(new AnvilRecipe(new ItemStack(TFCItems.brassIngot), null, PlanNameCasing , AnvilReq.COPPER, new ItemStack(TFCMItems.casingBrass, 1)).addRecipeSkill(Global.SKILL_GENERAL_SMITHING));
 		anvilManager.addRecipe(new AnvilRecipe(new ItemStack(TFCItems.wroughtIronIngot), null, PlanNameCasing , AnvilReq.WROUGHTIRON, new ItemStack(TFCMItems.casingIron, 1)).addRecipeSkill(Global.SKILL_GENERAL_SMITHING));
 		anvilManager.addRecipe(new AnvilRecipe(new ItemStack(TFCItems.roseGoldIngot), null, PlanNameCasing , AnvilReq.COPPER, new ItemStack(TFCMItems.casingRoseGold, 1)).addRecipeSkill(Global.SKILL_GENERAL_SMITHING));
+		anvilManager.addRecipe(new AnvilRecipe(new ItemStack(TFCItems.goldIngot), null, PlanNameCasing , AnvilReq.COPPER, new ItemStack(TFCMItems.casingGold, 1)).addRecipeSkill(Global.SKILL_GENERAL_SMITHING));
+		anvilManager.addRecipe(new AnvilRecipe(new ItemStack(TFCItems.silverIngot), null, PlanNameCasing , AnvilReq.COPPER, new ItemStack(TFCMItems.casingSilver, 1)).addRecipeSkill(Global.SKILL_GENERAL_SMITHING));
+		anvilManager.addRecipe(new AnvilRecipe(new ItemStack(TFCMItems.leadPewterIngot), null, PlanNameCasing , AnvilReq.COPPER, new ItemStack(TFCMItems.casingLeadPewter, 1)).addRecipeSkill(Global.SKILL_GENERAL_SMITHING));
+		
 		anvilManager.addRecipe(new AnvilRecipe(new ItemStack(TFCItems.wroughtIronIngot), null, PlanNameClockGear, AnvilReq.WROUGHTIRON, new ItemStack(TFCMItems.gear, 2)).addRecipeSkill(Global.SKILL_GENERAL_SMITHING));
 		
 		if(TFCMOptions.enableCraftingLogicTiles = true)
@@ -305,7 +309,9 @@ public class TFCMRecipes
 			
 			GameRegistry.addRecipe(new ItemStack(Items.clock), new Object[]{"GPG","HCH","GSG", 'G', TFCMItems.gear, 'P', Blocks.glass_pane, 'H', TFCItems.stick, 'C', TFCMItems.casingBrass, 'S', Spring});
 			GameRegistry.addRecipe(new ItemStack(Items.clock), new Object[]{"GPG","HCH","GSG", 'G', TFCMItems.gear, 'P', Blocks.glass_pane, 'H', TFCItems.stick, 'C', TFCMItems.casingRoseGold, 'S', Spring});
-			GameRegistry.addRecipe(new ItemStack(Items.compass), new Object[]{"P","O","C", 'P', Blocks.glass_pane, 'O', smallMagnetite, 'C', TFCMItems.casingIron});	
+			GameRegistry.addRecipe(new ItemStack(Items.clock), new Object[]{"GPG","HCH","GSG", 'G', TFCMItems.gear, 'P', Blocks.glass_pane, 'H', TFCItems.stick, 'C', TFCMItems.casingGold, 'S', Spring});
+			GameRegistry.addRecipe(new ItemStack(Items.compass), new Object[]{"P","O","C", 'P', Blocks.glass_pane, 'O', smallMagnetite, 'C', TFCMItems.casingLeadPewter});	
+			GameRegistry.addRecipe(new ItemStack(Items.compass), new Object[]{"P","O","C", 'P', Blocks.glass_pane, 'O', smallMagnetite, 'C', TFCMItems.casingSilver});	
 		}
 		
 		//Shaped

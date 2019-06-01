@@ -53,6 +53,10 @@ tile.blockStainedClay.hardened_clay_stained_magenta.name=Magenta Stained Clay
 tile.blockStainedClay.hardened_clay_stained_orange.name=Orange Stained Clay
 //Other Things
 tile.blockFruitPress.name=Fruit Press
+tile.blockPumpkin.name=Pumpkin
+tile.blockPumpkinCarved.name=Carved Pumpkin
+tile.blockPumpkinLanternOff.name=Jack O' Lantern
+tile.blockPumpkinLanternOn.name=Jack O' Lantern
 
 #=========
 #= Items = 
@@ -61,6 +65,10 @@ tile.blockFruitPress.name=Fruit Press
 item.CasingBrass.name=Brass Casing
 item.CasingIron.name=Wrought Iron Casing
 item.CasingRoseGold.name=Rose Gold Casing
+item.CasingGold.name=Gold Casing
+item.CasingSilver.name=Silver Casing
+item.CasingLeadPewter.name=Lead Pewter Casing
+
 item.Gear.name=Wrought Iron Gear
 item.CaseinGlue.name=Casein Glue
 item.PistonBase.name=Piston Base
@@ -347,6 +355,12 @@ item.Copper_Chain_Helmet.name=Copper Chain Coif
 item.WroughtIron_Chain_Helmet.name=Wrought Iron Chain Coif
 item.RedSteel_Chain_Helmet.name=Red Steel Chain Coif
 item.Steel_Chain_Helmet.name=Steel Chain Coif
+
+item.Lead Pewter Double Ingot.name=Lead Pewter Double Ingot
+item.Lead Pewter Unshaped.name=Unshaped: Lead Pewter
+item.Lead Pewter Ingot.name=Lead Pewter Ingot
+item.Lead Pewter Double Sheet.name=Lead Pewter Double Sheet
+item.Lead Pewter Sheet.name=Lead Pewter Sheet
 
 #=======
 #= GUI =

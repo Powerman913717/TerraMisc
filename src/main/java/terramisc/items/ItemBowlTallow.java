@@ -1,19 +1,20 @@
 package terramisc.items;
 
 import com.bioxx.tfc.api.TFCItems;
+import com.bioxx.tfc.api.Enums.EnumSize;
+import com.bioxx.tfc.api.Enums.EnumWeight;
 
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
-import terramisc.items.weights.ItemWeightSmallHeavy;
 
-public class ItemBowlTallow extends ItemWeightSmallHeavy
+public class ItemBowlTallow extends ItemTFCM
 {
 	private IIcon[] icons = new IIcon[3];
 	
 	public ItemBowlTallow()
 	{
-		super();
+		super(EnumSize.LARGE, EnumWeight.MEDIUM);
 		this.setMaxDamage(2);
 		this.hasSubtypes = true;
 		this.metaNames = new String[]{"0", "1", "2"};

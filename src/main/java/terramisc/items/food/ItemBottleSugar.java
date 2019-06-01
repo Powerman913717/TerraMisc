@@ -2,21 +2,24 @@ package terramisc.items.food;
 
 import java.util.List;
 
+import com.bioxx.tfc.Core.TFC_Core;
+import com.bioxx.tfc.Food.ItemFoodTFC;
+import com.bioxx.tfc.api.TFCItems;
+import com.bioxx.tfc.api.Enums.EnumSize;
+import com.bioxx.tfc.api.Enums.EnumWeight;
+import com.bioxx.tfc.api.Interfaces.ISize;
+
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 import terramisc.core.TFCMAchievements;
-import terramisc.items.weights.ItemWeightSmallHeavy;
+import terramisc.items.ItemTFCM;
 
-import com.bioxx.tfc.Core.TFC_Core;
-import com.bioxx.tfc.Food.ItemFoodTFC;
-import com.bioxx.tfc.api.TFCItems;
-import com.bioxx.tfc.api.Interfaces.ISize;
-
-public class ItemBottleSugar extends ItemWeightSmallHeavy
+public class ItemBottleSugar extends ItemTFCM
 {
 	public ItemBottleSugar()
 	{
+		super(EnumSize.SMALL, EnumWeight.HEAVY);
 		this.setMaxStackSize(64);
 	}
 	

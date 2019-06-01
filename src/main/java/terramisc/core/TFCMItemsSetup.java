@@ -2,16 +2,28 @@ package terramisc.core;
 
 import com.bioxx.tfc.CommonProxy;
 import com.bioxx.tfc.TerraFirmaCraft;
+import com.bioxx.tfc.Core.Metal.Alloy;
+import com.bioxx.tfc.Core.Metal.AlloyManager;
+import com.bioxx.tfc.Core.Metal.MetalRegistry;
 import com.bioxx.tfc.Food.ItemFoodMeat;
 import com.bioxx.tfc.Food.ItemFoodTFC;
+import com.bioxx.tfc.Items.ItemIngot;
+import com.bioxx.tfc.Items.ItemMeltedMetal;
+import com.bioxx.tfc.Items.ItemMetalSheet;
+import com.bioxx.tfc.Items.ItemMetalSheet2x;
+import com.bioxx.tfc.api.Metal;
+import com.bioxx.tfc.api.Constant.Global;
 import com.bioxx.tfc.api.Enums.EnumFoodGroup;
+import com.bioxx.tfc.api.Enums.EnumSize;
+import com.bioxx.tfc.api.Enums.EnumWeight;
 
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraftforge.common.util.EnumHelper;
 import terramisc.common.ArmorStats;
-import terramisc.items.ItemBowLimb;
+import terramisc.common.GlobalTFCM;
 import terramisc.items.ItemBowlTallow;
-import terramisc.items.ItemMetalPart;
+import terramisc.items.ItemMetalTFCM;
+import terramisc.items.ItemTFCM;
 import terramisc.items.ItemTallowDye;
 import terramisc.items.ItemToolMold;
 import terramisc.items.food.CustomSeedsTFCM;
@@ -32,9 +44,6 @@ import terramisc.items.tools.ItemCustomProjectileHead;
 import terramisc.items.tools.ItemCustomQuiver;
 import terramisc.items.tools.ItemCustomToolHead;
 import terramisc.items.tools.ItemCustomWarHammer;
-import terramisc.items.weights.ItemWeightLargeHeavy;
-import terramisc.items.weights.ItemWeightSmallHeavy;
-import terramisc.items.weights.ItemWeightTinyLight;
 
 public class TFCMItemsSetup extends TFCMItems
 {
@@ -82,26 +91,39 @@ public class TFCMItemsSetup extends TFCMItems
 		RedSteelToolMaterial = EnumHelper.addToolMaterial("RedSteel", 3, RedSteelUses, RedSteelEff, 240, 22);
 
 		
-		System.out.println("[" + TFCMDetails.ModName + "] Registering s"); //Beginning of item registering
+		System.out.println("[" + TFCMDetails.ModName + "] Registering Items."); //Beginning of item registering
 		
-		//Basic s
-		casingBrass = new ItemWeightSmallHeavy().setUnlocalizedName("CasingBrass");
-		casingIron = new ItemWeightSmallHeavy().setUnlocalizedName("CasingIron");
-		casingRoseGold = new ItemWeightSmallHeavy().setUnlocalizedName("CasingRoseGold");
-		gear = new ItemWeightTinyLight().setUnlocalizedName("Gear");
-		caseinGlue = new ItemWeightTinyLight().setUnlocalizedName("CaseinGlue");
-		pistonBase = new ItemWeightLargeHeavy().setUnlocalizedName("PistonBase");
-		circuit = new ItemWeightSmallHeavy().setUnlocalizedName("Circuit");
-		deerTendon = new ItemWeightTinyLight().setUnlocalizedName("DeerTendon");
-		sinewFiber = new ItemWeightTinyLight().setUnlocalizedName("SinewFiber");
-		sinewString = new ItemWeightTinyLight().setUnlocalizedName("SinewString");
-		sinewBowString = new ItemWeightTinyLight().setUnlocalizedName("SinewBowString");
-		bowLimb = new ItemBowLimb().setUnlocalizedName("BowLimb");
-		suet = new ItemWeightSmallHeavy().setUnlocalizedName("Suet");
-		bowlSuet = new ItemWeightSmallHeavy().setUnlocalizedName("BowlSuet").setMaxStackSize(1);
+		/* TODO Make these items proper metal
+		 * add lead pewter casing, retain iron casing for legacy purposes
+		 * replace iron with pewter in compass recipe
+		 */
+		casingBrass = new ItemMetalTFCM(EnumSize.SMALL, EnumWeight.HEAVY, "Brass", 100).setUnlocalizedName("CasingBrass");
+		casingIron = new ItemMetalTFCM(EnumSize.SMALL, EnumWeight.HEAVY, "Wrought Iron", 100).setUnlocalizedName("CasingIron");
+		casingRoseGold = new ItemMetalTFCM(EnumSize.SMALL, EnumWeight.HEAVY, "Rose Gold", 100).setUnlocalizedName("CasingRoseGold");
+		casingGold = new ItemMetalTFCM(EnumSize.SMALL, EnumWeight.HEAVY, "Gold", 100).setUnlocalizedName("CasingGold");
+		casingSilver = new ItemMetalTFCM(EnumSize.SMALL, EnumWeight.HEAVY, "Silver", 100).setUnlocalizedName("CasingSilver");
+		casingLeadPewter = new ItemMetalTFCM(EnumSize.SMALL, EnumWeight.HEAVY, "Lead Pewter", 100).setUnlocalizedName("CasingLeadPewter");
+		
+		gear = new ItemMetalTFCM(EnumSize.TINY, EnumWeight.MEDIUM, "Wrought Iron", 100).setUnlocalizedName("Gear");
+		
+		caseinGlue = new ItemTFCM(EnumSize.TINY, EnumWeight.LIGHT).setUnlocalizedName("CaseinGlue");
+		
+		pistonBase = new ItemTFCM(EnumSize.LARGE, EnumWeight.HEAVY).setUnlocalizedName("PistonBase");
+		circuit = new ItemTFCM(EnumSize.SMALL, EnumWeight.MEDIUM).setUnlocalizedName("Circuit");
+		
+		deerTendon = new ItemTFCM(EnumSize.SMALL, EnumWeight.LIGHT).setUnlocalizedName("DeerTendon");
+		sinewFiber = new ItemTFCM(EnumSize.TINY, EnumWeight.LIGHT).setUnlocalizedName("SinewFiber");
+		sinewString = new ItemTFCM(EnumSize.TINY, EnumWeight.LIGHT).setUnlocalizedName("SinewString");
+		sinewBowString = new ItemTFCM(EnumSize.SMALL, EnumWeight.LIGHT).setUnlocalizedName("SinewBowString");
+		
+		bowLimb = new ItemTFCM(EnumSize.LARGE, EnumWeight.MEDIUM).setUnlocalizedName("BowLimb");
+		
+		suet = new ItemTFCM(EnumSize.SMALL, EnumWeight.MEDIUM).setUnlocalizedName("Suet");
+		bowlSuet = new ItemTFCM(EnumSize.LARGE, EnumWeight.MEDIUM).setUnlocalizedName("BowlSuet").setMaxStackSize(1);
 		bowlTallow = new ItemBowlTallow().setUnlocalizedName("BowlTallow");
-		brownDye = new ItemWeightTinyLight().setUnlocalizedName("BrownDye");
-		ironDust = new ItemWeightSmallHeavy().setUnlocalizedName("IronDust");
+		
+		brownDye = new ItemTFCM(EnumSize.SMALL, EnumWeight.MEDIUM).setUnlocalizedName("BrownDye");
+		ironDust = new ItemTFCM(EnumSize.SMALL, EnumWeight.HEAVY).setUnlocalizedName("IronDust");
 		tallowDye = new ItemTallowDye().setUnlocalizedName("TallowDye");
 		
 		//Bows and Such
@@ -231,53 +253,55 @@ public class TFCMItemsSetup extends TFCMItems
 				"Ceramic_Mold_Bolt_Copper","Ceramic_Mold_Bolt_Bronze","Ceramic_Mold_Bolt_BismuthBronze","Ceramic_Mold_Bolt_BlackBronze"}).setUnlocalizedName("bolt_Mold");
 		
 		//Armor Ingrediants
-		coil_BismuthBronze = ((ItemMetalPart) new ItemMetalPart().setUnlocalizedName("Coil_BismuthBronze")).setMetal("Bismuth Bronze", 100);
-		coil_BlackBronze = ((ItemMetalPart) new ItemMetalPart().setUnlocalizedName("Coil_BlackBronze")).setMetal("Black Bronze", 100);
-		coil_BlackSteel = ((ItemMetalPart) new ItemMetalPart().setUnlocalizedName("Coil_BlackSteel")).setMetal("Black Steel", 100);
-		coil_BlueSteel = ((ItemMetalPart) new ItemMetalPart().setUnlocalizedName("Coil_BlueSteel")).setMetal("Blue Steel", 100);
-		coil_Bronze = ((ItemMetalPart) new ItemMetalPart().setUnlocalizedName("Coil_Bronze")).setMetal("Bronze", 100);
-		coil_Copper = ((ItemMetalPart) new ItemMetalPart().setUnlocalizedName("Coil_Copper")).setMetal("Copper", 100);
-		coil_WroughtIron = ((ItemMetalPart) new ItemMetalPart().setUnlocalizedName("Coil_WroughtIron")).setMetal("Wrought Iron", 100);
-		coil_RedSteel = ((ItemMetalPart) new ItemMetalPart().setUnlocalizedName("Coil_RedSteel")).setMetal("Red Steel", 100);
-		coil_Steel = ((ItemMetalPart) new ItemMetalPart().setUnlocalizedName("Coil_Steel")).setMetal("Steel", 100);
+		coil_BismuthBronze = new ItemMetalTFCM(EnumSize.MEDIUM, EnumWeight.HEAVY, "Bismuth Bronze", 100).setUnlocalizedName("Coil_BismuthBronze");
+		coil_BlackBronze = new ItemMetalTFCM(EnumSize.MEDIUM, EnumWeight.HEAVY, "Black Bronze", 100).setUnlocalizedName("Coil_BlackBronze");
+		coil_BlackSteel = new ItemMetalTFCM(EnumSize.MEDIUM, EnumWeight.HEAVY, "Black Steel", 100).setUnlocalizedName("Coil_BlackSteel");
+		coil_BlueSteel = new ItemMetalTFCM(EnumSize.MEDIUM, EnumWeight.HEAVY, "Blue Steel", 100).setUnlocalizedName("Coil_BlueSteel");
+		coil_Bronze = new ItemMetalTFCM(EnumSize.MEDIUM, EnumWeight.HEAVY, "Bronze", 100).setUnlocalizedName("Coil_Bronze");
+		coil_Copper = new ItemMetalTFCM(EnumSize.MEDIUM, EnumWeight.HEAVY, "Copper", 100).setUnlocalizedName("Coil_Copper");
+		coil_WroughtIron = new ItemMetalTFCM(EnumSize.MEDIUM, EnumWeight.HEAVY, "Wrought Iron", 100).setUnlocalizedName("Coil_WroughtIron");
+		coil_RedSteel = new ItemMetalTFCM(EnumSize.MEDIUM, EnumWeight.HEAVY, "Red Steel", 100).setUnlocalizedName("Coil_RedSteel");
+		coil_Steel = new ItemMetalTFCM(EnumSize.MEDIUM, EnumWeight.HEAVY, "Steel", 100).setUnlocalizedName("Coil_Steel");
 		
-		link_BismuthBronze = ((ItemMetalPart) new ItemMetalPart().setUnlocalizedName("Link_BismuthBronze")).setMetal("Bismuth Bronze", (short) 6.25);
-		link_BlackBronze = ((ItemMetalPart) new ItemMetalPart().setUnlocalizedName("Link_BlackBronze")).setMetal("Black Bronze", (short) 6.25);
-		link_BlackSteel = ((ItemMetalPart) new ItemMetalPart().setUnlocalizedName("Link_BlackSteel")).setMetal("Black Steel", (short) 6.25);
-		link_BlueSteel = ((ItemMetalPart) new ItemMetalPart().setUnlocalizedName("Link_BlueSteel")).setMetal("Blue Steel", (short) 6.25);
-		link_Bronze = ((ItemMetalPart) new ItemMetalPart().setUnlocalizedName("Link_Bronze")).setMetal("Bronze", (short) 6.25);
-		link_Copper = ((ItemMetalPart) new ItemMetalPart().setUnlocalizedName("Link_Copper")).setMetal("Copper", (short) 6.25);
-		link_WroughtIron = ((ItemMetalPart) new ItemMetalPart().setUnlocalizedName("Link_WroughtIron")).setMetal("Wrought Iron", (short) 6.25);
-		link_RedSteel = ((ItemMetalPart) new ItemMetalPart().setUnlocalizedName("Link_RedSteel")).setMetal("Red Steel", (short) 6.25);
-		link_Steel = ((ItemMetalPart) new ItemMetalPart().setUnlocalizedName("Link_Steel")).setMetal("Steel", (short) 6.25);
+		link_BismuthBronze = new ItemMetalTFCM(EnumSize.TINY, EnumWeight.HEAVY, "Bismuth Bronze", (short) 6.25).setUnlocalizedName("Link_BismuthBronze");
+		link_BlackBronze = new ItemMetalTFCM(EnumSize.TINY, EnumWeight.HEAVY, "Black Bronze", (short) 6.25).setUnlocalizedName("Link_BlackBronze");
+		link_BlackSteel = new ItemMetalTFCM(EnumSize.TINY, EnumWeight.HEAVY, "Black Steel", (short) 6.25).setUnlocalizedName("Link_BlackSteel");
+		link_BlueSteel = new ItemMetalTFCM(EnumSize.TINY, EnumWeight.HEAVY, "Blue Steel", (short) 6.25).setUnlocalizedName("Link_BlueSteel");
+		link_Bronze = new ItemMetalTFCM(EnumSize.TINY, EnumWeight.HEAVY, "Bronze", (short) 6.25).setUnlocalizedName("Link_Bronze");
+		link_Copper = new ItemMetalTFCM(EnumSize.TINY, EnumWeight.HEAVY, "Copper", (short) 6.25).setUnlocalizedName("Link_Copper");
+		link_WroughtIron = new ItemMetalTFCM(EnumSize.TINY, EnumWeight.HEAVY, "Wrought Iron", (short) 6.25).setUnlocalizedName("Link_WroughtIron");
+		link_RedSteel = new ItemMetalTFCM(EnumSize.TINY, EnumWeight.HEAVY, "Red Steel", (short) 6.25).setUnlocalizedName("Link_RedSteel");
+		link_Steel = new ItemMetalTFCM(EnumSize.TINY, EnumWeight.HEAVY, "Steel", (short) 6.25).setUnlocalizedName("Link_Steel");
 		
-		chain_Square_BismuthBronze = ((ItemMetalPart) new ItemMetalPart().setUnlocalizedName("Chain_Square_BismuthBronze")).setMetal("Bismuth Bronze", 25);
-		chain_Square_BlackBronze = ((ItemMetalPart) new ItemMetalPart().setUnlocalizedName("Chain_Square_BlackBronze")).setMetal("Black Bronze", 25);
-		chain_Square_BlackSteel = ((ItemMetalPart) new ItemMetalPart().setUnlocalizedName("Chain_Square_BlackSteel")).setMetal("Black Steel", 25);
-		chain_Square_BlueSteel = ((ItemMetalPart) new ItemMetalPart().setUnlocalizedName("Chain_Square_BlueSteel")).setMetal("Blue Steel", 25);
-		chain_Square_Bronze = ((ItemMetalPart) new ItemMetalPart().setUnlocalizedName("Chain_Square_Bronze")).setMetal("Bronze", 25);
-		chain_Square_Copper = ((ItemMetalPart) new ItemMetalPart().setUnlocalizedName("Chain_Square_Copper")).setMetal("Copper", 25);
-		chain_Square_WroughtIron = ((ItemMetalPart) new ItemMetalPart().setUnlocalizedName("Chain_Square_WroughtIron")).setMetal("Wrought Iron", 25);
-		chain_Square_RedSteel = ((ItemMetalPart) new ItemMetalPart().setUnlocalizedName("Chain_Square_RedSteel")).setMetal("Red Steel", 25);
-		chain_Square_Steel = ((ItemMetalPart) new ItemMetalPart().setUnlocalizedName("Chain_Square_Steel")).setMetal("Steel", 25);
+		chain_Square_BismuthBronze = new ItemMetalTFCM(EnumSize.SMALL, EnumWeight.HEAVY, "Bismuth Bronze", 25).setUnlocalizedName("Chain_Square_BismuthBronze");
+		chain_Square_BlackBronze = new ItemMetalTFCM(EnumSize.SMALL, EnumWeight.HEAVY, "Black Bronze", 25).setUnlocalizedName("Chain_Square_BlackBronze");
+		chain_Square_BlackSteel = new ItemMetalTFCM(EnumSize.SMALL, EnumWeight.HEAVY, "Black Steel", 25).setUnlocalizedName("Chain_Square_BlackSteel");
+		chain_Square_BlueSteel = new ItemMetalTFCM(EnumSize.SMALL, EnumWeight.HEAVY, "Blue Steel", 25).setUnlocalizedName("Chain_Square_BlueSteel");
+		chain_Square_Bronze = new ItemMetalTFCM(EnumSize.SMALL, EnumWeight.HEAVY, "Bronze", 25).setUnlocalizedName("Chain_Square_Bronze");
+		chain_Square_Copper = new ItemMetalTFCM(EnumSize.SMALL, EnumWeight.HEAVY, "Copper", 25).setUnlocalizedName("Chain_Square_Copper");
+		chain_Square_WroughtIron = new ItemMetalTFCM(EnumSize.SMALL, EnumWeight.HEAVY, "Wrought Iron", 25).setUnlocalizedName("Chain_Square_WroughtIron");
+		chain_Square_RedSteel = new ItemMetalTFCM(EnumSize.SMALL, EnumWeight.HEAVY, "Red Steel", 25).setUnlocalizedName("Chain_Square_RedSteel");
+		chain_Square_Steel = new ItemMetalTFCM(EnumSize.SMALL, EnumWeight.HEAVY, "Steel", 25).setUnlocalizedName("Chain_Square_Steel");
 		
-		chain_Sheet_BismuthBronze = ((ItemMetalPart) new ItemMetalPart().setUnlocalizedName("Chain_Sheet_BismuthBronze")).setMetal("Bismuth Bronze", 100);
-		chain_Sheet_BlackBronze = ((ItemMetalPart) new ItemMetalPart().setUnlocalizedName("Chain_Sheet_BlackBronze")).setMetal("Black Bronze", 100);
-		chain_Sheet_BlackSteel = ((ItemMetalPart) new ItemMetalPart().setUnlocalizedName("Chain_Sheet_BlackSteel")).setMetal("Black Steel", 100);
-		chain_Sheet_BlueSteel = ((ItemMetalPart) new ItemMetalPart().setUnlocalizedName("Chain_Sheet_BlueSteel")).setMetal("Blue Steel", 100);
-		chain_Sheet_Bronze = ((ItemMetalPart) new ItemMetalPart().setUnlocalizedName("Chain_Sheet_Bronze")).setMetal("Bronze", 100);
-		chain_Sheet_Copper = ((ItemMetalPart) new ItemMetalPart().setUnlocalizedName("Chain_Sheet_Copper")).setMetal("Copper", 100);
-		chain_Sheet_WroughtIron = ((ItemMetalPart) new ItemMetalPart().setUnlocalizedName("Chain_Sheet_WroughtIron")).setMetal("Wrought Iron", 100);
-		chain_Sheet_RedSteel = ((ItemMetalPart) new ItemMetalPart().setUnlocalizedName("Chain_Sheet_RedSteel")).setMetal("Red Steel", 100);
-		chain_Sheet_Steel = ((ItemMetalPart) new ItemMetalPart().setUnlocalizedName("Chain_Sheet_Steel")).setMetal("Steel", 100);
+		chain_Sheet_BismuthBronze = new ItemMetalTFCM(EnumSize.MEDIUM, EnumWeight.HEAVY, "Bismuth Bronze", 100).setUnlocalizedName("Chain_Sheet_BismuthBronze");
+		chain_Sheet_BlackBronze = new ItemMetalTFCM(EnumSize.MEDIUM, EnumWeight.HEAVY, "Black Bronze", 100).setUnlocalizedName("Chain_Sheet_BlackBronze");
+		chain_Sheet_BlackSteel = new ItemMetalTFCM(EnumSize.MEDIUM, EnumWeight.HEAVY, "Black Steel", 100).setUnlocalizedName("Chain_Sheet_BlackSteel");
+		chain_Sheet_BlueSteel = new ItemMetalTFCM(EnumSize.MEDIUM, EnumWeight.HEAVY, "Blue Steel", 100).setUnlocalizedName("Chain_Sheet_BlueSteel");
+		chain_Sheet_Bronze = new ItemMetalTFCM(EnumSize.MEDIUM, EnumWeight.HEAVY, "Bronze", 100).setUnlocalizedName("Chain_Sheet_Bronze");
+		chain_Sheet_Copper = new ItemMetalTFCM(EnumSize.MEDIUM, EnumWeight.HEAVY, "Copper", 100).setUnlocalizedName("Chain_Sheet_Copper");
+		chain_Sheet_WroughtIron = new ItemMetalTFCM(EnumSize.MEDIUM, EnumWeight.HEAVY, "Wrought Iron", 100).setUnlocalizedName("Chain_Sheet_WroughtIron");
+		chain_Sheet_RedSteel = new ItemMetalTFCM(EnumSize.MEDIUM, EnumWeight.HEAVY, "Red Steel", 100).setUnlocalizedName("Chain_Sheet_RedSteel");
+		chain_Sheet_Steel = new ItemMetalTFCM(EnumSize.MEDIUM, EnumWeight.HEAVY, "Steel", 100).setUnlocalizedName("Chain_Sheet_Steel");
 		
-		//Inventory s
+		//Inventory items
 		itemQuiver = new ItemCustomQuiver().setUnlocalizedName("Quiver");
 		
 		SetupArmor();
 		SetupFood();
+		SetupMetal();
 		registers();
-		System.out.println("[" + TFCMDetails.ModName + "] Done Registering s");
+		
+		System.out.println("[" + TFCMDetails.ModName + "] Done Registering Items.");
 	}
 	
 	public static void SetupFood()
@@ -364,5 +388,28 @@ public class TFCMItemsSetup extends TFCMItems
 		WroughtIronChainHelmet = 	(new ItemCustomArmor(ArmorStats.WroughtIronChain, proxy.getArmorRenderID("wroughtiron"), 0, 50,3).setUnlocalizedName(Names[i]+"_Chain_Helmet")); i++;
 		RedSteelChainHelmet = 		(new ItemCustomArmor(ArmorStats.RedSteelChain, proxy.getArmorRenderID("redsteel"), 0, 50,3).setUnlocalizedName(Names[i]+"_Chain_Helmet")); i++;
 		SteelChainHelmet = 			(new ItemCustomArmor(ArmorStats.SteelChain, proxy.getArmorRenderID("steel"), 0, 50,3).setUnlocalizedName(Names[i]+"_Chain_Helmet"));
+	}
+	
+	public static void SetupMetal()
+	{
+		/* TODO Create custom TFCM variants of sheet item/te/block for proper texture usage
+		 * Sheet metalID only used for rendering currently Lead Pewter renders as Lead (ID 10)
+		 */
+		leadPewterIngot = new ItemIngot().setUnlocalizedName("Lead Pewter Ingot");
+		leadPewterIngot2x  = ((ItemIngot)new ItemIngot().setUnlocalizedName("Lead Pewter Double Ingot")).setSize(EnumSize.LARGE).setMetal("Lead Pewter", 200);
+		leadPewterUnshaped = new ItemMeltedMetal().setUnlocalizedName("Lead Pewter Unshaped");
+		leadPewterSheet = ((ItemMetalSheet) new ItemMetalSheet(10).setUnlocalizedName("Lead Pewter Sheet")).setMetal("Lead Pewter", 200);
+		leadPewterSheet2x = ((ItemMetalSheet2x) new ItemMetalSheet2x(10).setUnlocalizedName("Lead Pewter Double Sheet")).setMetal("Lead Pewter", 400);
+		
+		GlobalTFCM.LEADPEWTER = new Metal("Lead Pewter", TFCMItems.leadPewterUnshaped, TFCMItems.leadPewterIngot);
+		
+		MetalRegistry.instance.addMetal(GlobalTFCM.LEADPEWTER, Alloy.EnumTier.TierI);
+		
+		/** +-0.01 tolerance to hopefully negate rounding errors */
+		Alloy leadpewter = new Alloy(GlobalTFCM.LEADPEWTER, Alloy.EnumTier.TierI);
+		leadpewter.addIngred(Global.TIN, 79.99f, 90.01f);
+		leadpewter.addIngred(Global.COPPER, 4.99f, 10.01f);
+		leadpewter.addIngred(Global.LEAD, 4.99f, 10.01f);
+		AlloyManager.INSTANCE.addAlloy(leadpewter);
 	}
 }

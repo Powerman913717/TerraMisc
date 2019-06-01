@@ -2,16 +2,8 @@ package terramisc.items;
 
 import java.util.List;
 
-import terramisc.core.TFCMDetails;
-import net.minecraft.client.renderer.texture.IIconRegister;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.EnumChatFormatting;
-
-import com.bioxx.tfc.Core.TFCTabs;
 import com.bioxx.tfc.Core.TFC_Core;
 import com.bioxx.tfc.Core.Metal.MetalRegistry;
-import com.bioxx.tfc.Items.ItemTerra;
 import com.bioxx.tfc.api.HeatRegistry;
 import com.bioxx.tfc.api.Metal;
 import com.bioxx.tfc.api.TFC_ItemHeat;
@@ -21,32 +13,24 @@ import com.bioxx.tfc.api.Interfaces.ISmeltable;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import net.minecraft.client.renderer.texture.IIconRegister;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.EnumChatFormatting;
+import terramisc.core.TFCMDetails;
 
-public class ItemMetalPart extends ItemTerra implements ISmeltable
+public class ItemMetalTFCM extends ItemTFCM implements ISmeltable
 {
-	private String metal;
-	private short metalAmount;
+	Metal metal;
+	int metalAmt;
 	
-	public ItemMetalPart()
+	public ItemMetalTFCM(EnumSize size, EnumWeight weight, String metalString, int amt) 
 	{
-		super();
-		setCreativeTab(TFCTabs.TFC_MATERIALS);
-		this.setMaxStackSize(16);
+		super(size, weight);
+		metal = MetalRegistry.instance.getMetalFromString(metalString);
+		metalAmt = amt;
 	}
-
-	public ItemMetalPart(boolean canSmelt)
-	{
-		this();
-		canSmelt = true;
-	}
-
-	public ItemTerra setMetal(String m, int amt)
-	{
-		metal = m;
-		metalAmount = (short) amt;
-		return this;
-	}
-
+	
 	@Override
 	public void registerIcons(IIconRegister registerer)
 	{
@@ -59,36 +43,17 @@ public class ItemMetalPart extends ItemTerra implements ISmeltable
 	{
 		return true;
 	}
-
-	@Override
-	public EnumSize getSize(ItemStack is)
-	{
-		return EnumSize.SMALL;
-	}
-
-	@Override
-	public EnumWeight getWeight(ItemStack is)
-	{
-		return EnumWeight.MEDIUM;
-	}
 	
 	@Override
 	public Metal getMetalType(ItemStack is) 
 	{
-		if(metal == null) 
-		{
-			return MetalRegistry.instance.getMetalFromItem(this);
-		} 
-		else 
-		{
-			return MetalRegistry.instance.getMetalFromString(metal);
-		}
+		return metal;
 	}
 
 	@Override
 	public short getMetalReturnAmount(ItemStack is) 
 	{
-		return metalAmount;
+		return (short) metalAmt;
 	}
 
 	@Override
@@ -102,10 +67,10 @@ public class ItemMetalPart extends ItemTerra implements ISmeltable
 	{
 		return EnumTier.TierI;
 	}
-
+	
 	public void addItemInformation(ItemStack is, EntityPlayer player, List<String> arraylist)
 	{
-		if(	is.getItem() instanceof ItemMetalPart)
+		if(	is.getItem() instanceof ItemMetalTFCM)
 		{
 			if(TFC_ItemHeat.hasTemp(is))
 			{
@@ -134,8 +99,8 @@ public class ItemMetalPart extends ItemTerra implements ISmeltable
 	@Override
 	public int getItemStackLimit(ItemStack is)
 	{
-		// hot or worked items cannot stack
-		if (is.hasTagCompound() && (TFC_ItemHeat.hasTemp(is) ||
+		//hot or worked items cannot stack
+		if(is.hasTagCompound() && (TFC_ItemHeat.hasTemp(is) ||
 									is.getTagCompound().hasKey("itemCraftingValue") && is.getTagCompound().getShort("itemCraftingValue") != 0))
 		{
 			return 1;
@@ -143,5 +108,4 @@ public class ItemMetalPart extends ItemTerra implements ISmeltable
 
 		return super.getItemStackLimit(is);
 	}
-
 }
