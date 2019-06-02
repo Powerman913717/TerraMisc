@@ -53,18 +53,21 @@ public class TFCMFluids
 	
 	//Vinegar
 	
-	/* Boiling Water = 375 Degree Kelvin
+	/* TFC Heat Tile Entities operate on degrees Celsius fluids are kept in degrees Kelvin.
+	 * 0°C + 273.15 = 273.15K
+	 * 
+	 * Boiling Water = 375 Degree Kelvin / 101.85 Celsius
 	 * 
 	 * Fluids for complex brewing mechanics
 	 * 	Beer
-	 * Grain Wort = 350 Degree Kelvin // Same as Hot Spring Water
+	 * Grain Wort = 350 Degree Kelvin // Same as Hot Spring Water (76.85 Celsius)
 	 * Boiled Grain Wort (Hops)
 	 * Result: Beer : Fermintation
 	 * 
 	 * 	Whiskey (Scotch, Bourbon, Moonshine)
 	 * Grain Wort
 	 * Fermented Grain Wort : Fermintation
-	 * Distilled Grain Wort : Distillation -> Moonshine (Corn) Whiskey : NO Maturation
+	 * Distilled Grain Wort : Distillation -> Moonshine (Corn) Whiskey : NO Maturation (95 Celsius/368.15 Kelvin)
 	 * Result: Whiskey, Scotch, or Bourbon : Maturation
 	 * 
 	 * 	Wine (Cognac, Brandy, Sherry)
