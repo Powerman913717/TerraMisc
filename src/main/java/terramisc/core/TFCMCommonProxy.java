@@ -19,8 +19,8 @@ import terramisc.tileentities.TECropTFCM;
 import terramisc.tileentities.TEFoodBlock;
 import terramisc.tileentities.TEFruitPress;
 import terramisc.tileentities.TEPumpkinLantern;
-import terramisc.tileentities.TESoupKettle;
 import terramisc.tileentities.TETallowCandle;
+import terramisc.tileentities.TEVat;
 import terramisc.tileentities.TEWetClay;
 import terramisc.worldGen.Generators.WorldGenGrowCropsTFCM;
 
@@ -112,6 +112,7 @@ public class TFCMCommonProxy
 		GameRegistry.registerTileEntity(TEFoodBlock.class, "FoodBlock");
 		GameRegistry.registerTileEntity(TEPumpkinLantern.class, "PumpkinLantern");
 		GameRegistry.registerTileEntity(TECropTFCM.class, "CropTFCM");
+		GameRegistry.registerTileEntity(TEVat.class, "VatTFCM");
 
 		if (flag)
 		{
@@ -119,7 +120,7 @@ public class TFCMCommonProxy
 			GameRegistry.registerTileEntity(TETallowCandle.class, "TallowCandle");
 			GameRegistry.registerTileEntity(TEFruitPress.class, "FruitPress");
 			GameRegistry.registerTileEntity(TEBrickOven.class, "BrickOven");
-			GameRegistry.registerTileEntity(TESoupKettle.class, "SoupKettle");
+			GameRegistry.registerTileEntity(TEVat.class, "VatTFCM");
 		}
 	}
 

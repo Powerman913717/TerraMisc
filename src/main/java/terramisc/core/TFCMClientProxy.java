@@ -26,14 +26,14 @@ import terramisc.render.ItemLongbowRender;
 import terramisc.render.ItemPolearmRender;
 import terramisc.render.TESRBrickOven;
 import terramisc.render.TESRFruitPress;
-import terramisc.render.TESRSoupKettle;
 import terramisc.render.TESRTallowCandle;
 import terramisc.render.TESRTallowCandleItem;
 import terramisc.render.TESRTallowCandleItemIntial;
+import terramisc.render.TESRVat;
 import terramisc.tileentities.TEBrickOven;
 import terramisc.tileentities.TEFruitPress;
-import terramisc.tileentities.TESoupKettle;
 import terramisc.tileentities.TETallowCandle;
+import terramisc.tileentities.TEVat;
 
 public class TFCMClientProxy extends TFCMCommonProxy
 {
@@ -95,7 +95,7 @@ public class TFCMClientProxy extends TFCMCommonProxy
 	@Override
 	public void registerGuiHandler()
 	{
-		NetworkRegistry.INSTANCE.registerGuiHandler(terramisc.TerraMisc.instance, new terramisc.handlers.client.TFCMGuiHandler());
+		NetworkRegistry.INSTANCE.registerGuiHandler(terramisc.TerraMisc.instance, new terramisc.handlers.client.GuiHandlerClientTFCM());
 	}
 
 	@Override
@@ -166,7 +166,7 @@ public class TFCMClientProxy extends TFCMCommonProxy
 		ClientRegistry.registerTileEntity(TETallowCandle.class, "TallowCandleTESR", new TESRTallowCandle());
 		ClientRegistry.registerTileEntity(TEFruitPress.class, "FruitPressTESR", new TESRFruitPress());
 		ClientRegistry.registerTileEntity(TEBrickOven.class, "BrickOvenTESR", new TESRBrickOven());
-		ClientRegistry.registerTileEntity(TESoupKettle.class, "SoupKettleTESR", new TESRSoupKettle());
+		ClientRegistry.registerTileEntity(TEVat.class, "VatTESR", new TESRVat());
 	}
 
 	@Override

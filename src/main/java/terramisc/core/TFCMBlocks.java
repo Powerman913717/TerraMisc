@@ -21,7 +21,7 @@ import terramisc.blocks.BlockTallowCandle;
 import terramisc.blocks.BlockTallowCandleOff;
 import terramisc.blocks.devices.BlockBrickOven;
 import terramisc.blocks.devices.BlockFruitPress;
-import terramisc.blocks.devices.BlockSoupKettle;
+import terramisc.blocks.devices.BlockVat;
 import terramisc.items.itemblocks.ItemBlockStainedClayTFCM;
 import terramisc.items.itemblocks.ItemBlockWetClay;
 
@@ -39,10 +39,10 @@ public class TFCMBlocks
 	public static Block blockRoadMM;
 	public static Block blockRoadSed;
 	
-	//Food Devices
+	//Devices
 	public static Block blockFruitPress;
 	public static Block blockBrickOven;
-	public static Block blockSoupKettle;
+	public static Block vat;
 	
 	//Food blockCrops
 	public static Block blockPumpkin;
@@ -83,13 +83,13 @@ public class TFCMBlocks
 		blockRoadSed = new BlockRoadSed().setHardness(14F).setBlockName("blockRoadSed");
 		GameRegistry.registerBlock(blockRoadSed, terramisc.items.itemblocks.ItemBlockRoadBlock.class, "blockRoadSed");
 	
-		//Food Devices
+		//Devices
 		blockFruitPress = new BlockFruitPress().setHardness(2F).setBlockName("blockFruitPress");
 		GameRegistry.registerBlock(blockFruitPress, "blockFruitPress");
 		blockBrickOven = new BlockBrickOven().setHardness(14F).setBlockName("blockBrickOven");
 		GameRegistry.registerBlock(blockBrickOven, ItemTerraBlock.class, "blockBrickOven");
-		blockSoupKettle = new BlockSoupKettle().setHardness(8F).setBlockName("blockSoupKettle");
-		GameRegistry.registerBlock(blockSoupKettle, ItemTerraBlock.class, "blockSoupKettle");
+		vat = new BlockVat().setBlockName("vat");
+		GameRegistry.registerBlock(vat, ItemTerraBlock.class, "vat");
 		
 		//Food blockCrops
 		blockPumpkin = new BlockFoodPumpkin(false, false).setHardness(1.0F).setStepSound(Block.soundTypeWood).setBlockName("blockPumpkin");

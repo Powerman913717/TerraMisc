@@ -3,12 +3,12 @@ package terramisc.tileentities;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
+import java.util.Stack;
 
 import com.bioxx.tfc.Core.TFC_Core;
-import com.bioxx.tfc.Core.TFC_Time;
+import com.bioxx.tfc.Items.Tools.ItemCustomBucketMilk;
 import com.bioxx.tfc.api.TFCBlocks;
 import com.bioxx.tfc.api.TFCItems;
-import com.bioxx.tfc.api.Constant.Global;
 import com.bioxx.tfc.api.Enums.EnumFuelMaterial;
 import com.bioxx.tfc.api.TileEntities.TEFireEntity;
 
@@ -20,28 +20,36 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 import net.minecraft.util.AxisAlignedBB;
+import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidContainerRegistry;
 import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.fluids.IFluidContainerItem;
+import terramisc.api.crafting.VatManager;
 import terramisc.api.crafting.VatRecipe;
+import terramisc.api.crafting.VatRecipeiFoF;
 
 public class TEVat extends TEFireEntity implements IInventory
 {
 	public byte rotation;
+	
 	public int mode;
-	
-	public ItemStack[] storage;
-	public FluidStack fluid;
-	
-	private boolean sealed;
-	public int sealtime;
-	public int unsealtime;
-	private int processTimer;
-
 	public static final int MODE_IN = 0;
 	public static final int MODE_OUT = 1;
-	public static final int INPUT_SLOT = 0;
+	
+	public ItemStack[] storage = new ItemStack[6];
+	public FluidStack fluid;
+	
+	private int processTimer; //Tracks recipe processing time
+	
+	public static final int FUELSLOT_INPUT = 0; //Slots 0-3 hold fuel items
+	public static final int CRAFTINGSLOT_INPUT = 4;
+	public static final int CRAFTINGSLOT_OUTPUT = 5;
+	
+	private TEFireEntity fire; //TE used as the basis for TEFirepit and TEForge.
+	
 	public VatRecipe recipe;
+	
 	//temporary field. No need to save
 	public boolean shouldDropItem = true;
 	
@@ -54,7 +62,6 @@ public class TEVat extends TEFireEntity implements IInventory
 		fuelBurnTemp =  613;
 		fireTemp = 350;
 		maxFireTempScale = 2000;
-		storage = new ItemStack[11];
 	}
 
 	/**
@@ -66,13 +73,13 @@ public class TEVat extends TEFireEntity implements IInventory
 	{
 		if(!worldObj.isRemote)
 		{
-			// Create a list of all the items that are falling onto the firepit
+			//Create a list of all the items that are falling onto the firepit
 			List list = worldObj.getEntitiesWithinAABB(EntityItem.class, AxisAlignedBB.getBoundingBox(xCoord, yCoord, zCoord, xCoord + 1, yCoord + 1.1, zCoord + 1));
 			
-			if (list != null && !list.isEmpty() && storage[0] == null) // Only go through the list if more fuel can fit.
+			if(list != null && !list.isEmpty() && storage[FUELSLOT_INPUT] == null) //Only go through the list if more fuel can fit.
 			{
-				// Iterate through the list and check for logs and peat
-				for (Iterator iterator = list.iterator(); iterator.hasNext();)
+				//Iterate through the list and check for logs and peat
+				for(Iterator iterator = list.iterator(); iterator.hasNext();)
 				{
 					EntityItem entity = (EntityItem) iterator.next();
 					ItemStack is = entity.getEntityItem();
@@ -82,19 +89,19 @@ public class TEVat extends TEFireEntity implements IInventory
 					{
 						for(int c = 0; c < is.stackSize; c++)
 						{
-							if(storage[0] == null) // Secondary check for empty input slot.
+							if(storage[FUELSLOT_INPUT] == null) //Secondary check for empty fuel input slot.
 							{
 								/**
 								 * Place a copy of only one of the logs into the fuel slot, due to the stack limitation of the fuel slots.
 								 * Do not change to storage[0] = is;
 								 */
-								setInventorySlotContents(0, new ItemStack(item, 1, is.getItemDamage()));
+								setInventorySlotContents(1, new ItemStack(item, 1, is.getItemDamage()));
 								is.stackSize--;
 								handleFuelStack(); // Attempt to shift the fuel down so more fuel can be added within the same for loop.
 							}
 						}
 
-						if (is.stackSize == 0)
+						if(is.stackSize == 0)
 							entity.setDead();
 					}
 				}
@@ -103,12 +110,12 @@ public class TEVat extends TEFireEntity implements IInventory
 			//push the input fuel down the stack
 			handleFuelStack();
 			
-			if (fireTemp < 1 && worldObj.getBlockMetadata(xCoord, yCoord, zCoord) != 0)
+			if(fireTemp < 1 && worldObj.getBlockMetadata(xCoord, yCoord, zCoord) != 0)
 			{
 				worldObj.setBlockMetadataWithNotify(xCoord, yCoord, zCoord, 0, 3);
 				worldObj.markBlockForUpdate(xCoord, yCoord, zCoord);
 			}
-			else if (fireTemp >= 1 && worldObj.getBlockMetadata(xCoord, yCoord, zCoord) != 1)
+			else if(fireTemp >= 1 && worldObj.getBlockMetadata(xCoord, yCoord, zCoord) != 1)
 			{
 				worldObj.setBlockMetadataWithNotify(xCoord, yCoord, zCoord, 1, 3);
 				worldObj.markBlockForUpdate(xCoord, yCoord, zCoord);
@@ -123,14 +130,13 @@ public class TEVat extends TEFireEntity implements IInventory
 					worldObj.markBlockForUpdate(xCoord, yCoord, zCoord);
 				}
 			}
-			else if(fuelTimeLeft <= 0 && fireTemp >= 1 && storage[5] != null &&
-						!TFC_Core.isExposedToRain(worldObj, xCoord, yCoord, zCoord))
+			else if(fuelTimeLeft <= 0 && fireTemp >= 1 && storage[3] != null && !TFC_Core.isExposedToRain(worldObj, xCoord, yCoord, zCoord))
 			{
-				if(storage[5] != null)
+				if(storage[3] != null)
 				{
-					EnumFuelMaterial m = TFC_Core.getFuelMaterial(storage[5]);
+					EnumFuelMaterial m = TFC_Core.getFuelMaterial(storage[3]);
 					fuelTasteProfile = m.ordinal();
-					storage[5] = null;
+					storage[3] = null;
 					fuelTimeLeft = m.burnTimeMax;
 					fuelBurnTemp = m.burnTempMax;
 				}
@@ -147,6 +153,9 @@ public class TEVat extends TEFireEntity implements IInventory
 			if(fuelTimeLeft <= 0)
 				TFC_Core.handleItemTicking(this, worldObj, xCoord, yCoord, zCoord);
 			
+			//Handle food decay for the inventory.
+			TFC_Core.handleItemTicking(this, this.worldObj, xCoord, yCoord, zCoord);
+			
 			//We only want to bother ticking food once per 5 seconds to keep overhead low.
 			processTimer++;
 			if(processTimer > 100)
@@ -155,7 +164,79 @@ public class TEVat extends TEFireEntity implements IInventory
 				processTimer = 0;
 			}
 			
-			//TODO Handle Recipe Processing
+			/*Here we handle item stacks that are too big for MC to handle such as when making mortar.
+			//If the stack is > its own max stack size then we split it and add it to the invisible solid storage area or 
+			//spawn the item in the world if there is no room left.
+			if (this.getFluidLevel() > 0 && getInputStack() != null)
+			{
+				int count = 1;
+				while(this.getInputStack().stackSize > getInputStack().getMaxStackSize())
+				{
+					ItemStack is = getInputStack().splitStack(getInputStack().getMaxStackSize());
+					if(count < this.storage.length && this.getStackInSlot(count) == null)
+					{
+						this.setInventorySlotContents(count, is);
+					}
+					else
+					{
+						worldObj.spawnEntityInWorld(new EntityItem(worldObj, xCoord, yCoord, zCoord, is));
+					}
+					count++;
+				}
+			}
+			*/
+
+			//Reset our fluid if all of the liquid is gone.
+			if(fluid != null && fluid.amount == 0)
+				fluid = null;
+
+			//Handle adding fluids to the barrel if the barrel is currently in input mode.
+			if(mode == MODE_IN)
+			{
+				ItemStack container = getInputStack();
+				FluidStack inLiquid = FluidContainerRegistry.getFluidForFilledItem(container);
+
+				if(container != null && container.getItem() instanceof IFluidContainerItem)
+				{
+					FluidStack isfs = ((IFluidContainerItem)container.getItem()).getFluid(container);
+					if(isfs != null && addLiquid(isfs))
+					{
+						((IFluidContainerItem) container.getItem()).drain(container, ((IFluidContainerItem)container.getItem()).getCapacity(container), true);
+					}
+				}
+				else if (inLiquid != null && container != null && container.stackSize == 1)
+				{
+					if(addLiquid(inLiquid))
+					{
+						this.setInventorySlotContents(CRAFTINGSLOT_INPUT, FluidContainerRegistry.drainFluidContainer(container));
+					}
+				}
+			}
+			//Drain liquid from the barrel to a container if the barrel is in output mode.
+			else if(mode == MODE_OUT)
+			{
+				ItemStack container = getInputStack();
+
+				if(container != null && fluid != null && container.getItem() instanceof IFluidContainerItem)
+				{
+					FluidStack isfs = ((IFluidContainerItem)container.getItem()).getFluid(container);
+					if(isfs == null || fluid.isFluidEqual(isfs))
+					{
+						fluid.amount -= ((IFluidContainerItem) container.getItem()).fill(container, fluid, true);
+						if(fluid.amount == 0)
+							fluid = null;
+					}
+				}
+				else if(FluidContainerRegistry.isEmptyContainer(container))
+				{
+					ItemStack fullContainer = this.removeLiquid(getInputStack());
+					if (fullContainer.getItem() == TFCItems.woodenBucketMilk)
+					{
+						ItemCustomBucketMilk.createTag(fullContainer, 20f);
+					}
+					this.setInventorySlotContents(CRAFTINGSLOT_INPUT, fullContainer);
+				}
+			}
 		}
 	}
 	
@@ -164,7 +245,132 @@ public class TEVat extends TEFireEntity implements IInventory
 	 */
 	public void processItems()
 	{
+		if(this.getInvCount() == 0)
+		{
+			if(getFluidStack() != null)
+			{
+				if(canProcess() && !worldObj.isRemote)
+				{
+					int time = 0;
+
+					//Make sure that the recipe meets the time requirements
+					if(time < recipe.cookTime)
+						return;
+
+					ItemStack origIS = getInputStack() != null ? getInputStack().copy() : null;
+					FluidStack origFS = getFluidStack() != null ? getFluidStack().copy() : null;
+					if(fluid.isFluidEqual(recipe.getResultFluid(origIS, origFS, time)) && recipe.removesLiquid)
+					{
+						fluid.amount -= recipe.getResultFluid(origIS, origFS, time).amount;
+					}
+					else
+					{
+						this.fluid = recipe.getResultFluid(origIS, origFS, time).copy();
+						if(fluid != null && !(recipe instanceof VatRecipeiFoF) && origFS != null)
+							this.fluid.amount = origFS.amount;
+
+						worldObj.markBlockForUpdate(xCoord, yCoord, zCoord);
+					}
+
+					Stack<ItemStack> resultStacks = recipe.getResult(origIS, origFS, time);
+					if(!resultStacks.isEmpty())
+					{
+						ItemStack result = resultStacks.pop();
+						storage[CRAFTINGSLOT_OUTPUT] = result;
+
+						for (int i = 1; i < storage.length; i++)
+						{
+							if (storage[i] == null && !resultStacks.isEmpty())
+								this.setInventorySlotContents(i, resultStacks.pop());
+						}
+
+						while (!resultStacks.isEmpty())
+							worldObj.spawnEntityInWorld(new EntityItem(worldObj, xCoord, yCoord, zCoord, resultStacks.pop()));
+
+						this.setInventorySlotContents(5, result);
+					}
+				}
+			}
+		}
+	}
+	
+	/**
+	 * Handles logic to determine if conditions for a valid recipe are present.
+	 * @return True if a recipe process should proceed.
+	 */
+	public boolean canProcess()
+	{
+		recipe = VatManager.getInstance().findMatchingRecipe(getInputStack(), getFluidStack());
 		
+		if(recipe == null || !(this.fireTemp > 0))
+		{
+			//If a valid recipe isn't found or the vat is not being heated.
+			return false;
+		}
+		else //Valid recipe and vat is being heated
+		{
+			//Item checks
+			
+			ItemStack outputIS = recipe.getRecipeOutIS();
+			Item outputItem = outputIS.getItem();
+			
+			ItemStack inputIS = recipe.getRecipeInIS();
+			Item inputItem = inputIS.getItem();
+			
+			/* Output slot must be empty or match output item
+			 * We also check to see if the output item stack will fit in the slot.
+			 * Lastly the combined stack size must also be able to fit in the output slot itself.
+			 */
+			if(outputItem != null)
+				if(storage[CRAFTINGSLOT_OUTPUT] != null)
+					if(storage[CRAFTINGSLOT_OUTPUT].getItem() != outputItem)
+					{
+						int combinedStackSize = (storage[CRAFTINGSLOT_OUTPUT].stackSize + outputIS.stackSize);
+						if(combinedStackSize > outputIS.getMaxStackSize() || combinedStackSize > this.getInventoryStackLimit())
+							return false;
+					}
+			
+			//If the recipe does not require an item, one cannot still be provided.
+			if(inputItem == null && this.storage[CRAFTINGSLOT_INPUT] != null)
+				return false;
+			
+			FluidStack outputFluidStack = recipe.getRecipeOutFluid();
+			Fluid outputFluid = outputFluidStack.getFluid();
+			
+			FluidStack inputFluidStack = recipe.getRecipeInFluid();
+			Fluid inputFluid = inputFluidStack.getFluid();
+			
+			//Fluid checks
+			
+			//Fluid in vat and fluid required must be the same
+			if(this.getFluidStack().getFluid() != inputFluid)
+				return false;
+			
+			//If the fluid is unchanged by the recipe
+			if(inputFluid == outputFluid)
+			{
+				//Fluid in vat must be equal to or greater than the amount required for the recipe
+				if(this.getFluidStack().amount < inputFluidStack.amount)
+					return false;
+			}
+			else //If the fluid is changed by the recipe
+			{
+				//All of the orginal fluid must be consumed in the recipe
+				if(this.getFluidStack().amount - inputFluidStack.amount != 0)
+					return false;
+			}
+			
+			//Temperature
+			int temp = (int) this.fireTemp;
+			int recipeTemp = recipe.getRecipeTemperature();
+			
+			//Vat must be as hot or hotter than what the recipe requires.
+			if(!(temp >= recipeTemp))
+				return false;
+			
+			//If items, fluids, and temperature all check out our recipe is valid.
+			return true;
+		}
 	}
 	
 	@Override
@@ -228,31 +434,54 @@ public class TEVat extends TEFireEntity implements IInventory
 		return null;
 	}
 
+	public int getInvCount()
+	{
+		int count = 0;
+		for(ItemStack is : storage)
+		{
+			if(is != null)
+				count++;
+		}
+		if(storage[CRAFTINGSLOT_INPUT] != null && count == 1)
+			return 0;
+		return count;
+	}
+	
 	public void handleFuelStack()
 	{
-		if(storage[3] == null && storage[0] != null)
+		int slot = FUELSLOT_INPUT;
+		int i = slot+1;
+		int j = slot+2;
+		int k = slot+3;
+		
+		if(storage[i] == null && storage[slot] != null)
 		{
-			storage[3] = storage[0];
-			storage[0] = null;
+			storage[i] = storage[slot];
+			storage[slot] = null;
 		}
-		if(storage[4] == null && storage[3] != null)
+		if(storage[j] == null && storage[i] != null)
 		{
-			storage[4] = storage[3];
-			storage[3] = null;
+			storage[j] = storage[i];
+			storage[i] = null;
 		}
-		if(storage[5] == null && storage[4] != null)
+		if(storage[k] == null && storage[j] != null)
 		{
-			storage[5] = storage[4];
-			storage[4] = null;
+			storage[k] = storage[j];
+			storage[j] = null;
 		}
 	}
 	
 	@Override
-	public void setInventorySlotContents(int slot, ItemStack is) 
+	public void setInventorySlotContents(int i, ItemStack is) 
 	{
-		storage[slot] = is;
-		if(is != null && is.stackSize > getInventoryStackLimit())
-			is.stackSize = getInventoryStackLimit();
+		if(!ItemStack.areItemStacksEqual(storage[i], is))
+		{
+			storage[i] = is;
+			if(i == 0)
+			{
+				processItems();
+			}
+		}
 	}
 
 	@Override
@@ -302,6 +531,11 @@ public class TEVat extends TEFireEntity implements IInventory
 		return 0;
 	}
 	
+	public ItemStack getInputStack()
+	{
+		return storage[CRAFTINGSLOT_INPUT];
+	}
+	
 	public FluidStack getFluidStack()
 	{
 		return this.fluid;
@@ -309,15 +543,15 @@ public class TEVat extends TEFireEntity implements IInventory
 	
 	public int getMaxLiquid()
 	{
-		return 10000;
+		return 5000;
 	}
 
 	public boolean addLiquid(FluidStack inFS)
 	{
 		if (inFS != null)
 		{
-			//Prevent Liquids that are hotter than boiling water from being stored.
-			if (inFS.getFluid() != null && inFS.getFluid().getTemperature(inFS) > Global.HOT_LIQUID_TEMP)
+			//Prevent Liquids that are hotter than the melting point of pewter from being added.
+			if (inFS.getFluid() != null && inFS.getFluid().getTemperature(inFS) > 500)
 				return false;
 
 			if (fluid == null)
@@ -419,7 +653,7 @@ public class TEVat extends TEFireEntity implements IInventory
 	 */
 	public void drainLiquid(int amount)
 	{
-		if(!getSealed() && this.getFluidStack() != null)
+		if(this.getFluidStack() != null)
 		{
 			this.getFluidStack().amount -= amount;
 			if(this.getFluidStack().amount <= 0)
@@ -436,28 +670,6 @@ public class TEVat extends TEFireEntity implements IInventory
 		return 0;
 	}
 	
-	public boolean actionSeal(int tab, EntityPlayer player)
-	{
-		NBTTagCompound nbt = new NBTTagCompound();
-		nbt.setBoolean("seal", true);
-		nbt.setString("player", player.getCommandSenderName());
-		this.broadcastPacketInRange(this.createDataPacket(nbt));
-		sealed = true;
-		this.worldObj.func_147479_m(xCoord, yCoord, zCoord);
-		return true;
-	}
-
-	public boolean actionUnSeal(int tab, EntityPlayer player)
-	{
-		NBTTagCompound nbt = new NBTTagCompound();
-		nbt.setBoolean("seal", false);
-		nbt.setString("player", player.getCommandSenderName());
-		this.broadcastPacketInRange(this.createDataPacket(nbt));
-		sealed = false;
-		this.worldObj.func_147479_m(xCoord, yCoord, zCoord);
-		return true;
-	}
-	
 	public void actionEmpty()
 	{
 		fluid = null;
@@ -466,14 +678,24 @@ public class TEVat extends TEFireEntity implements IInventory
 		this.broadcastPacketInRange(this.createDataPacket(nbt));
 	}
 	
-	public boolean getSealed()
+	public void actionMode()
 	{
-		return sealed;
+		mode = mode == 0 ? 1 : 0;
+		NBTTagCompound nbt = new NBTTagCompound();
+		nbt.setByte("mode", (byte)mode);
+		this.broadcastPacketInRange(this.createDataPacket(nbt));
 	}
 	
-	public void setSealed()
+	public ResourceLocation getTexture() //Sets texture for TESR
 	{
-		sealed = true;
+		this.fire = (TEFireEntity) worldObj.getTileEntity(xCoord, yCoord-1, zCoord);
+		
+		if(this.fire != null && this.fire.fireTemp >= 1F)
+		{
+			return new ResourceLocation("tfcm:textures/blocks/models/Lead Pewter Vat_Lit.png");
+		}
+		
+		return new ResourceLocation("tfcm:textures/blocks/models/Lead Pewter Vat.png");
 	}
 	
 	@Override
@@ -482,8 +704,6 @@ public class TEVat extends TEFireEntity implements IInventory
 		super.readFromNBT(nbttagcompound);
 		
 		fluid = FluidStack.loadFluidStackFromNBT(nbttagcompound.getCompoundTag("fluidNBT"));
-		sealed = nbttagcompound.getBoolean("Sealed");
-		sealtime = nbttagcompound.getInteger("SealTime");
 		rotation = nbttagcompound.getByte("rotation");
 		
 		NBTTagList nbttaglist = nbttagcompound.getTagList("Items", 10);
@@ -502,8 +722,6 @@ public class TEVat extends TEFireEntity implements IInventory
 	{
 		super.writeToNBT(nbttagcompound);
 		
-		nbttagcompound.setBoolean("Sealed", sealed);
-		nbttagcompound.setInteger("SealTime", sealtime);
 		NBTTagCompound fluidNBT = new NBTTagCompound();
 		if(fluid != null)
 			fluid.writeToNBT(fluidNBT);
@@ -534,8 +752,6 @@ public class TEVat extends TEFireEntity implements IInventory
 	public void handleInitPacket(NBTTagCompound nbt) 
 	{
 		this.rotation = nbt.getByte("rotation");
-		this.sealed = nbt.getBoolean("sealed");
-		this.sealtime = nbt.getInteger("SealTime");
 		if(nbt.getInteger("fluid") != -1)
 		{
 			if(fluid != null)
@@ -554,8 +770,6 @@ public class TEVat extends TEFireEntity implements IInventory
 	public void createInitNBT(NBTTagCompound nbt) 
 	{
 		nbt.setByte("rotation", rotation);
-		nbt.setBoolean("sealed", sealed);
-		nbt.setInteger("SealTime", sealtime);
 		nbt.setInteger("fluid", fluid != null ? fluid.getFluidID() : -1);
 		nbt.setInteger("fluidAmount", fluid != null ? fluid.amount : 0);
 	}
@@ -575,33 +789,6 @@ public class TEVat extends TEFireEntity implements IInventory
 			{
 				mode = nbt.getByte("mode");
 			}
-			else if(nbt.hasKey("seal"))
-			{
-				sealed = nbt.getBoolean("seal");
-				if(!sealed)
-				{
-					unsealtime = (int) TFC_Time.getTotalHours();
-					sealtime = 0;
-				}
-				else
-				{
-					sealtime = (int) TFC_Time.getTotalHours();
-					unsealtime = 0;
-				}
-
-				// Broadcast the seal time to update the client
-				NBTTagCompound timeTag = new NBTTagCompound();
-				timeTag.setInteger("SealTime", sealtime);
-				this.broadcastPacketInRange(this.createDataPacket(timeTag));
-
-				worldObj.markBlockForUpdate(xCoord, yCoord, zCoord);
-			}
-		}
-		else
-		{
-			// Get the seal time for the client display
-			if (nbt.hasKey("SealTime"))
-				sealtime = nbt.getInteger("SealTime");
 		}
 	}
 }

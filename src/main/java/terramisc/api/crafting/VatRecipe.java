@@ -14,10 +14,9 @@ public class VatRecipe
 	public FluidStack recipeFluid;
 	public ItemStack recipeOutIS;
 	public FluidStack recipeOutFluid;
-	public int sealTime = 1; //Time in hours
+	public int cookTime = 1; //Time in hours
 	public int temperature; //Temperture in celsius
 	public boolean removesLiquid = true;
-	public boolean sealedRecipe = true;
 	public boolean allowAnyStack = true;
 
 	public VatRecipe(ItemStack inputItem, FluidStack inputFluid, ItemStack outIS, FluidStack outputFluid, int temp)
@@ -32,7 +31,7 @@ public class VatRecipe
 	public VatRecipe(ItemStack inputItem, FluidStack inputFluid, ItemStack outIS, FluidStack outputFluid, int temp, int seal)
 	{
 		this(inputItem, inputFluid, outIS, outputFluid, temp);
-		this.sealTime = seal;
+		this.cookTime = seal;
 	}
 
 	public VatRecipe setRemovesLiquid(boolean b)
@@ -47,18 +46,12 @@ public class VatRecipe
 		return this;
 	}
 
-	public VatRecipe setSealedRecipe(boolean b)
-	{
-		this.sealedRecipe = b;
-		return this;
-	}
-
 	public Boolean matches(ItemStack item, FluidStack fluid)
 	{
 		boolean iStack = removesLiquid ? true : recipeIS != null && item != null && fluid != null && recipeFluid != null && item.stackSize >= (int)Math.ceil(fluid.amount/recipeFluid.amount);
 		boolean fStack = !removesLiquid ? true : recipeFluid != null && item != null && fluid != null && recipeOutFluid != null && fluid.amount >= item.stackSize*recipeOutFluid.amount;
 
-		boolean anyStack = !removesLiquid && !sealedRecipe && this.recipeOutIS == null && allowAnyStack;
+		boolean anyStack = !removesLiquid && this.recipeOutIS == null && allowAnyStack;
 		boolean itemsEqual = item == null && recipeIS == null || OreDictionary.itemMatches(recipeIS, item, false);
 
 		return (recipeIS != null && itemsEqual && (iStack || anyStack) || recipeIS == null) &&
@@ -70,12 +63,12 @@ public class VatRecipe
 		return recipeFluid.isFluidEqual(item);
 	}
 
-	public ItemStack getInItem()
+	public ItemStack getRecipeInIS()
 	{
 		return recipeIS;
 	}
 
-	public FluidStack getInFluid()
+	public FluidStack getRecipeInFluid()
 	{
 		return recipeFluid;
 	}
@@ -90,11 +83,11 @@ public class VatRecipe
 		return recipeOutFluid;
 	}
 
-	public int getSealTime()
+	public int getRecipeTemperature()
 	{
-		return sealTime;
+		return temperature;
 	}
-
+	
 	public boolean isRemovesLiquid()
 	{
 		return removesLiquid;
@@ -119,11 +112,6 @@ public class VatRecipe
 		return s;
 	}
 
-	public boolean isSealedRecipe()
-	{
-		return this.sealedRecipe;
-	}
-
 	protected int getnumberOfRuns(ItemStack inIS, FluidStack inFS)
 	{
 		int runs = 0;
@@ -131,7 +119,7 @@ public class VatRecipe
 		if(inIS != null && recipeIS != null)
 		{
 			runs = inIS.stackSize/this.recipeIS.stackSize;
-			div = inFS.amount/this.getInFluid().amount;
+			div = inFS.amount/this.getRecipeInFluid().amount;
 		}
 		return Math.min(runs, div);
 	}

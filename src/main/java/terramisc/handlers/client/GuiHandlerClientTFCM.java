@@ -12,12 +12,12 @@ import net.minecraft.world.World;
 import net.minecraftforge.client.event.GuiOpenEvent;
 import terramisc.gui.GuiBrickOven;
 import terramisc.gui.GuiFruitPress;
-import terramisc.gui.GuiSoupKettle;
+import terramisc.gui.GuiVat;
 import terramisc.tileentities.TEBrickOven;
 import terramisc.tileentities.TEFruitPress;
-import terramisc.tileentities.TESoupKettle;
+import terramisc.tileentities.TEVat;
 
-public class TFCMGuiHandler extends terramisc.handlers.GuiHandlerTFCM
+public class GuiHandlerClientTFCM extends terramisc.handlers.GuiHandlerTFCM
 {
 	@Override
 	public Object getClientGuiElement(int Id, EntityPlayer player, World world, int x, int y, int z) 
@@ -53,11 +53,7 @@ public class TFCMGuiHandler extends terramisc.handlers.GuiHandlerTFCM
 			}
 			case 5:
 			{
-				return new GuiSoupKettle(player.inventory, ((TESoupKettle) te), world, x, y, z, 0);
-			}
-			case 6:
-			{
-				return new GuiSoupKettle(player.inventory, ((TESoupKettle) te), world, x, y, z, 1);
+				return new GuiVat(player.inventory, ((TEVat) te), world, x, y, z);
 			}
 			default:
 			{

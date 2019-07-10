@@ -8,10 +8,10 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 import terramisc.containers.ContainerBrickOven;
 import terramisc.containers.ContainerCustomQuiver;
-import terramisc.containers.ContainerSoupKettle;
+import terramisc.containers.ContainerVat;
 import terramisc.tileentities.TEBrickOven;
 import terramisc.tileentities.TEFruitPress;
-import terramisc.tileentities.TESoupKettle;
+import terramisc.tileentities.TEVat;
 
 public class GuiHandlerTFCM implements IGuiHandler
 {
@@ -22,7 +22,7 @@ public class GuiHandlerTFCM implements IGuiHandler
 	{
 		TileEntity te = world.getTileEntity(x, y, z);
 		
-		switch (Id)
+		switch(Id)
 		{
 			case 1:
 			{
@@ -42,11 +42,7 @@ public class GuiHandlerTFCM implements IGuiHandler
 			}
 			case 5:
 			{
-				return new ContainerSoupKettle(player.inventory, ((TESoupKettle) te), world, x, y, z, 0);
-			}
-			case 6:
-			{
-				return new ContainerSoupKettle(player.inventory, ((TESoupKettle) te), world, x, y, z, 1);
+				return new ContainerVat(player.inventory, ((TEVat) te), world, x, y, z);
 			}
 			default:
 			{

@@ -40,6 +40,8 @@ import net.minecraftforge.oredict.ShapedOreRecipe;
 import net.minecraftforge.oredict.ShapelessOreRecipe;
 import terramisc.api.crafting.FruitPressManager;
 import terramisc.api.crafting.FruitPressRecipe;
+import terramisc.api.crafting.VatManager;
+import terramisc.api.crafting.VatRecipe;
 
 public class TFCMRecipes
 {	
@@ -76,6 +78,7 @@ public class TFCMRecipes
 		registerKnappingRecipes();
 		registerQuernRecipes();
 		registerHeatingRecipes();
+		registerVatRecipes();
 		
 		System.out.println("[" + TFCMDetails.ModName + "] Done Registering Recipes");
 	}
@@ -768,4 +771,9 @@ public class TFCMRecipes
 		heatmanager.addIndex(new HeatIndex(new ItemStack(TFCMItems.pumpkin,1),1, 1200, null));
 		heatmanager.addIndex(new HeatIndex(new ItemStack(TFCMItems.bearRaw,1),1, 1200, null));
 	}	
+	
+	public static void registerVatRecipes()
+	{
+		VatManager.addRecipe(new VatRecipe(new ItemStack(TFCMItems.bowlSuet), new FluidStack(TFCFluids.FRESHWATER, 1000), new ItemStack(TFCMItems.bowlTallow), new FluidStack(TFCFluids.FRESHWATER, 1000), 102, 2));
+	}
 }

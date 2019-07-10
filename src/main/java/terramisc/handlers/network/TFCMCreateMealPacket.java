@@ -9,7 +9,6 @@ import io.netty.channel.ChannelHandlerContext;
 import net.minecraft.entity.player.EntityPlayer;
 import terramisc.core.TFCMBlocks;
 import terramisc.tileentities.TEBrickOven;
-import terramisc.tileentities.TESoupKettle;
 
 public class TFCMCreateMealPacket extends AbstractPacket
 {
@@ -21,14 +20,6 @@ public class TFCMCreateMealPacket extends AbstractPacket
 	public TFCMCreateMealPacket(){}
 
 	public TFCMCreateMealPacket(int f, TEBrickOven te)
-	{
-		this.flag = (byte)f;
-		this.x = te.xCoord;
-		this.y = te.yCoord;
-		this.z = te.zCoord;
-	}
-	
-	public TFCMCreateMealPacket(int f, TESoupKettle te)
 	{
 		this.flag = (byte)f;
 		this.x = te.xCoord;
@@ -76,12 +67,6 @@ public class TFCMCreateMealPacket extends AbstractPacket
 			{
 				TEBrickOven te = (TEBrickOven) player.worldObj.getTileEntity(x, y, z);
 				TFC_Core.getSkillStats(player).increaseSkill(Global.SKILL_COOKING, 2);
-				te.actionCreate(player);
-			}
-			else if(player.worldObj.getBlock(x, y, z) == TFCMBlocks.blockSoupKettle)
-			{
-				TESoupKettle te = (TESoupKettle) player.worldObj.getTileEntity(x, y, z);
-				TFC_Core.getSkillStats(player).increaseSkill(Global.SKILL_COOKING, 1);
 				te.actionCreate(player);
 			}
 		}

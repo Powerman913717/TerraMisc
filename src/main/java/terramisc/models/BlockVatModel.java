@@ -4,7 +4,7 @@ import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.model.ModelRenderer;
 import net.minecraft.entity.Entity;
 
-public class BlockSoupKettleModel extends ModelBase
+public class BlockVatModel extends ModelBase
 {
   //fields
     ModelRenderer Leg_01;
@@ -19,10 +19,9 @@ public class BlockSoupKettleModel extends ModelBase
     ModelRenderer Hook_01;
     ModelRenderer Hook_02;
     ModelRenderer Handle;
-    ModelRenderer Fluid;
     ModelRenderer Firepit;
   
-  public BlockSoupKettleModel()
+  public BlockVatModel()
   {
     textureWidth = 128;
     textureHeight = 64;
@@ -99,12 +98,6 @@ public class BlockSoupKettleModel extends ModelBase
       Handle.setTextureSize(128, 64);
       Handle.mirror = true;
       setRotation(Handle, 0F, 0F, 0F);
-      Fluid = new ModelRenderer(this, 82, 0);
-      Fluid.addBox(0F, 0F, 0F, 12, 1, 11);
-      Fluid.setRotationPoint(-6F, 13F, -5F);
-      Fluid.setTextureSize(128, 64);
-      Fluid.mirror = true;
-      setRotation(Fluid, 0F, 0F, 0F);
       Firepit = new ModelRenderer(this, 96, 48);
       Firepit.addBox(0F, 0F, 0F, 16, 0, 16);
       Firepit.setRotationPoint(-8F, 23.9F, -8F);
@@ -129,7 +122,6 @@ public class BlockSoupKettleModel extends ModelBase
     Hook_01.render(f5);
     Hook_02.render(f5);
     Handle.render(f5);
-    Fluid.render(f5);
   }
 
   public void renderModel(float f) 
@@ -146,7 +138,6 @@ public class BlockSoupKettleModel extends ModelBase
 	Hook_01.render(f);
 	Hook_02.render(f);
 	Handle.render(f);
-	Fluid.render(f);
 	Firepit.render(f);
   }
   

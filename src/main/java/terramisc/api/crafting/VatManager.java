@@ -36,14 +36,13 @@ public class VatManager
 		return recipes;
 	}
 	
-	public VatRecipe findMatchingRecipe(ItemStack item, FluidStack fluid, boolean sealed)
+	public VatRecipe findMatchingRecipe(ItemStack item, FluidStack fluid)
 	{
 		for(Object recipe : recipes)
 		{
 			VatRecipe br = (VatRecipe) recipe;
 			if(fluid != null && br.matches(item, fluid))
-				if(br.sealedRecipe == sealed)
-					return br;
+				return br;
 		}
 		return null;
 	}

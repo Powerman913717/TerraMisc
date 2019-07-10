@@ -296,10 +296,10 @@ public class TEBrickOven extends NetworkTileEntity implements IInventory
 		
 		if(this.fire != null && this.fire.fireTemp >= 1F)
 		{
-			return new ResourceLocation("tfcm:textures/models/BrickOven_on.png");
+			return new ResourceLocation("tfcm:textures/blocks/models/BrickOven_on.png");
 		}
 		
-		return new ResourceLocation("tfcm:textures/models/BrickOven_off.png");
+		return new ResourceLocation("tfcm:textures/blocks/models/BrickOven_off.png");
 	}
 	
 	@Override

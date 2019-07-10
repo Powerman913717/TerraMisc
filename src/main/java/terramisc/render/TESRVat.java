@@ -6,22 +6,21 @@ import com.bioxx.tfc.Core.TFC_Core;
 
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
 import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.ResourceLocation;
-import terramisc.models.BlockSoupKettleModel;
-import terramisc.tileentities.TESoupKettle;
+import terramisc.models.BlockVatModel;
+import terramisc.tileentities.TEVat;
 
-public class TESRSoupKettle extends TileEntitySpecialRenderer
+public class TESRVat extends TileEntitySpecialRenderer
 {
-	protected BlockSoupKettleModel model;
+protected BlockVatModel model;
 	
-	public TESRSoupKettle()
+	public TESRVat()
 	{
-		this.model = new BlockSoupKettleModel();
+		this.model = new BlockVatModel();
 	}
 	
-	public void renderAt(TESoupKettle tileEnt, double x, double y, double z, float f) 
+	public void renderAt(TEVat tileEnt, double x, double y, double z, float f) 
 	{
-		TFC_Core.bindTexture(new ResourceLocation("tfcm:textures/models/SoupKettle_Empty.png"));
+		TFC_Core.bindTexture(tileEnt.getTexture());
 		
 		GL11.glPushMatrix();
 			GL11.glTranslatef((float) x + 0.5f, (float) y + 1.5f, (float) z + 0.5f);
@@ -36,6 +35,6 @@ public class TESRSoupKettle extends TileEntitySpecialRenderer
 	@Override
 	public void renderTileEntityAt(TileEntity tileEnt, double x, double y, double z, float f) 
 	{
-		this.renderAt((TESoupKettle)tileEnt, x, y, z, f);
+		this.renderAt((TEVat)tileEnt, x, y, z, f);
 	}
 }
