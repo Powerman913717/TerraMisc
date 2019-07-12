@@ -110,9 +110,9 @@ public class BlockCropTFCM extends BlockCrop
 
 		if(TFCOptions.enableDebugMode)
 		{
-			TerraFirmaCraft.LOG.info("Crop ID: " + te.cropId);
-			TerraFirmaCraft.LOG.info("Growth: " + te.growth);
-			TerraFirmaCraft.LOG.info("Est Growth: " + te.getEstimatedGrowth(crop));
+			TerraFirmaCraft.LOG.info("TFCM:Crop ID: " + te.cropId);
+			TerraFirmaCraft.LOG.info("TFCM:Growth: " + te.growth);
+			TerraFirmaCraft.LOG.info("TFCM:Est Growth: " + te.getEstimatedGrowth(crop));
 		}
 
 		return false;

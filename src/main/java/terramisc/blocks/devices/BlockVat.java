@@ -1,5 +1,6 @@
 package terramisc.blocks.devices;
 
+import com.bioxx.tfc.TerraFirmaCraft;
 import com.bioxx.tfc.Blocks.BlockTerraContainer;
 import com.bioxx.tfc.Core.TFCTabs;
 import com.bioxx.tfc.Core.TFC_Core;
@@ -8,6 +9,7 @@ import com.bioxx.tfc.Items.Tools.ItemCustomBucketMilk;
 import com.bioxx.tfc.Items.Tools.ItemFirestarter;
 import com.bioxx.tfc.TileEntities.TEFirepit;
 import com.bioxx.tfc.api.TFCItems;
+import com.bioxx.tfc.api.TFCOptions;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -49,6 +51,15 @@ public class BlockVat extends BlockTerraContainer
 	{
 		if(!world.isRemote)
 		{
+			if(TFCOptions.enableDebugMode)
+			{
+				TEVat te = (TEVat) world.getTileEntity(x, y, z);
+				
+				TerraFirmaCraft.LOG.info("TFCM:Can Process?: " + te.canProcess());
+				TerraFirmaCraft.LOG.info("TFCM:Proccess Timer: " + te.processTimer);
+				TerraFirmaCraft.LOG.info("TFCM:Cooking Timer: " + te.cookTimer);
+			}
+			
 			if(entityplayer.isSneaking())
 			{
 				return false;
@@ -248,6 +259,7 @@ public class BlockVat extends BlockTerraContainer
 			world.spawnParticle("flame", f + f4 - 0.3F, f1,  f2 + f5 + 0.3F, 0.0D, 0.0D, 0.0D);
 			world.spawnParticle("smoke", f + f5 + 0.3F , f1, f2 + f4 - 0.3F, 0.0D, 0.0D, 0.0D);
 			world.spawnParticle("flame", f + f5 + 0.3F , f1, f2 + f4 - 0.3F, 0.0D, 0.0D, 0.0D);
+			
 			if (((TEVat)world.getTileEntity(x, y, z)).fireTemp > 550)
 			{
 				world.spawnParticle("flame", f + f5 + 0.3F , f1, f2 + f6 + 0.2F, 0.0D, 0.0D, 0.0D);

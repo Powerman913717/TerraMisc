@@ -1,8 +1,5 @@
 package terramisc.api.crafting;
 
-import java.util.Stack;
-
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraftforge.fluids.FluidStack;
@@ -32,6 +29,12 @@ public class VatRecipe
 	{
 		this(inputItem, inputFluid, outIS, outputFluid, temp);
 		this.cookTime = seal;
+	}
+	
+	public VatRecipe(ItemStack inputItem, FluidStack inputFluid, ItemStack outIS, FluidStack outputFluid, int temp, int seal, boolean consumeLiquid)
+	{
+		this(inputItem, inputFluid, outIS, outputFluid, temp, seal);
+		this.removesLiquid = consumeLiquid;
 	}
 
 	public VatRecipe setRemovesLiquid(boolean b)
@@ -124,52 +127,19 @@ public class VatRecipe
 		return Math.min(runs, div);
 	}
 
-	@SuppressWarnings({ "rawtypes", "unchecked" })
-	public Stack<ItemStack> getResult(ItemStack inIS, FluidStack inFS, int sealedTime)
+	public ItemStack getResult(ItemStack inIS, FluidStack inFS)
 	{
-		Stack<ItemStack> stackList = new Stack();
 		ItemStack outStack = null;
 
 		if (recipeOutIS != null)
 		{
-			stackList.clear();
-			outStack = recipeOutIS.copy();
-			int outputCount = outStack.stackSize * this.getnumberOfRuns(inIS, inFS);
-			int maxStackSize = outStack.getMaxStackSize();
-			Item item = outStack.getItem();
-			int damage = outStack.getItemDamage();
-
-			int remainder = outputCount % maxStackSize; // The amount remaining after making full-sized stacks.
-			if (remainder > 0)
-			{
-				stackList.push(new ItemStack(item, remainder, damage)); // Push this on first, so it doesn't end up in the input slot.
-				outputCount -= remainder;
-			}
-
-			while (outputCount >= maxStackSize) // Add as many full-sized stacks as possible to stackList.
-			{
-				stackList.push(new ItemStack(item, maxStackSize, damage));
-				outputCount -= maxStackSize;
-			}
-			return stackList;
-
+			return outStack = recipeOutIS.copy();
 		}
-		if (!removesLiquid && inIS != null && inFS != null)
-		{
-			stackList.clear();
-			outStack = inIS.copy();
-			outStack.stackSize -= inFS.amount / this.recipeOutFluid.amount;
-			stackList.push(outStack);
-		}
-		if (outStack == null)
-		{
-			stackList.clear();
-			stackList.push(outStack);
-		}
-		return stackList;
+		
+		return outStack;
 	}
 
-	public FluidStack getResultFluid(ItemStack inIS, FluidStack inFS, int sealedTime)
+	public FluidStack getResultFluid(ItemStack inIS, FluidStack inFS)
 	{
 		if(recipeOutFluid != null)
 		{

@@ -3,15 +3,18 @@ package terramisc.tileentities;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
-import java.util.Stack;
 
+import com.bioxx.tfc.TerraFirmaCraft;
 import com.bioxx.tfc.Core.TFC_Core;
 import com.bioxx.tfc.Items.Tools.ItemCustomBucketMilk;
 import com.bioxx.tfc.api.TFCBlocks;
 import com.bioxx.tfc.api.TFCItems;
+import com.bioxx.tfc.api.TFCOptions;
 import com.bioxx.tfc.api.Enums.EnumFuelMaterial;
 import com.bioxx.tfc.api.TileEntities.TEFireEntity;
 
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
@@ -40,7 +43,8 @@ public class TEVat extends TEFireEntity implements IInventory
 	public ItemStack[] storage = new ItemStack[6];
 	public FluidStack fluid;
 	
-	private int processTimer; //Tracks recipe processing time
+	public int processTimer; //Tracks ticking of process function
+	public int cookTimer; //Tracks ticking of cooking process
 	
 	public static final int FUELSLOT_INPUT = 0; //Slots 0-3 hold fuel items
 	public static final int CRAFTINGSLOT_INPUT = 4;
@@ -144,47 +148,21 @@ public class TEVat extends TEFireEntity implements IInventory
 
 			//Calculate the fire temp
 			float desiredTemp = handleTemp();
-
 			handleTempFlux(desiredTemp);
 
 			//Here we handle the bellows
 			handleAirReduction();
 			
-			if(fuelTimeLeft <= 0)
-				TFC_Core.handleItemTicking(this, worldObj, xCoord, yCoord, zCoord);
-			
-			//Handle food decay for the inventory.
-			TFC_Core.handleItemTicking(this, this.worldObj, xCoord, yCoord, zCoord);
-			
 			//We only want to bother ticking food once per 5 seconds to keep overhead low.
 			processTimer++;
 			if(processTimer > 100)
 			{
+				if(fuelTimeLeft <= 0) //Don't tick food if crafting could be in process.
+					TFC_Core.handleItemTicking(this, this.worldObj, xCoord, yCoord, zCoord);
+				
 				processItems();
 				processTimer = 0;
 			}
-			
-			/*Here we handle item stacks that are too big for MC to handle such as when making mortar.
-			//If the stack is > its own max stack size then we split it and add it to the invisible solid storage area or 
-			//spawn the item in the world if there is no room left.
-			if (this.getFluidLevel() > 0 && getInputStack() != null)
-			{
-				int count = 1;
-				while(this.getInputStack().stackSize > getInputStack().getMaxStackSize())
-				{
-					ItemStack is = getInputStack().splitStack(getInputStack().getMaxStackSize());
-					if(count < this.storage.length && this.getStackInSlot(count) == null)
-					{
-						this.setInventorySlotContents(count, is);
-					}
-					else
-					{
-						worldObj.spawnEntityInWorld(new EntityItem(worldObj, xCoord, yCoord, zCoord, is));
-					}
-					count++;
-				}
-			}
-			*/
 
 			//Reset our fluid if all of the liquid is gone.
 			if(fluid != null && fluid.amount == 0)
@@ -241,55 +219,66 @@ public class TEVat extends TEFireEntity implements IInventory
 	}
 	
 	/**
-	 * TODO Finish development of this method
+	 * Works a secondary timer than tracks recipe process. Also handles the actual consumption of resources and output of products.
 	 */
 	public void processItems()
 	{
-		if(this.getInvCount() == 0)
+		if(!worldObj.isRemote)
 		{
-			if(getFluidStack() != null)
+			if(canProcess())
 			{
-				if(canProcess() && !worldObj.isRemote)
+				this.cookTimer += 100;
+				
+				//Stops processing if enough time hasn't passed.
+				if(this.cookTimer < recipe.cookTime)
+					return;
+
+				ItemStack origIS = getInputStack() != null ? getInputStack().copy() : null;
+				FluidStack origFS = getFluidStack() != null ? getFluidStack().copy() : null;
+				
+				//Consume input itemstack
+				if(origIS != null)
 				{
-					int time = 0;
+					storage[CRAFTINGSLOT_INPUT] = null;
+				}
+				
+				//Handle fluid consumption and output
+				if(fluid.isFluidEqual(recipe.getResultFluid(origIS, origFS)) && recipe.removesLiquid)
+				{
+					fluid.amount -= recipe.getResultFluid(origIS, origFS).amount;
+				}
+				else
+				{
+					this.fluid = recipe.getResultFluid(origIS, origFS).copy();
+					if(fluid != null && !(recipe instanceof VatRecipeiFoF) && origFS != null)
+						this.fluid.amount = origFS.amount;
 
-					//Make sure that the recipe meets the time requirements
-					if(time < recipe.cookTime)
-						return;
+					worldObj.markBlockForUpdate(xCoord, yCoord, zCoord);
+				}
 
-					ItemStack origIS = getInputStack() != null ? getInputStack().copy() : null;
-					FluidStack origFS = getFluidStack() != null ? getFluidStack().copy() : null;
-					if(fluid.isFluidEqual(recipe.getResultFluid(origIS, origFS, time)) && recipe.removesLiquid)
+				//Release recipe output itemstack
+				ItemStack resultStack = recipe.getResult(origIS, origFS);
+				if(resultStack != null)
+				{
+					if(storage[CRAFTINGSLOT_OUTPUT] == null)
 					{
-						fluid.amount -= recipe.getResultFluid(origIS, origFS, time).amount;
+						this.setInventorySlotContents(CRAFTINGSLOT_OUTPUT, resultStack);
 					}
 					else
 					{
-						this.fluid = recipe.getResultFluid(origIS, origFS, time).copy();
-						if(fluid != null && !(recipe instanceof VatRecipeiFoF) && origFS != null)
-							this.fluid.amount = origFS.amount;
-
-						worldObj.markBlockForUpdate(xCoord, yCoord, zCoord);
-					}
-
-					Stack<ItemStack> resultStacks = recipe.getResult(origIS, origFS, time);
-					if(!resultStacks.isEmpty())
-					{
-						ItemStack result = resultStacks.pop();
-						storage[CRAFTINGSLOT_OUTPUT] = result;
-
-						for (int i = 1; i < storage.length; i++)
+						Item iO = resultStack.getItem();
+						Item iT = storage[CRAFTINGSLOT_OUTPUT].getItem();
+						
+						if(iO == iT)
 						{
-							if (storage[i] == null && !resultStacks.isEmpty())
-								this.setInventorySlotContents(i, resultStacks.pop());
+							resultStack.stackSize = resultStack.stackSize + storage[CRAFTINGSLOT_OUTPUT].stackSize;
 						}
-
-						while (!resultStacks.isEmpty())
-							worldObj.spawnEntityInWorld(new EntityItem(worldObj, xCoord, yCoord, zCoord, resultStacks.pop()));
-
-						this.setInventorySlotContents(5, result);
 					}
 				}
+			}
+			else
+			{
+				this.cookTimer = 0;
 			}
 		}
 	}
@@ -307,7 +296,7 @@ public class TEVat extends TEFireEntity implements IInventory
 			//If a valid recipe isn't found or the vat is not being heated.
 			return false;
 		}
-		else //Valid recipe and vat is being heated
+		else
 		{
 			//Item checks
 			
@@ -372,6 +361,25 @@ public class TEVat extends TEFireEntity implements IInventory
 			return true;
 		}
 	}
+	
+	/**
+     * Returns an integer between 0 and the passed value representing how close the current item is to being completely
+     * cooked
+     */
+    @SideOnly(Side.CLIENT)
+    public int getCookProgressScaled(int scale)
+    {
+    	int time = recipe.cookTime;
+    	
+    	if(TFCOptions.enableDebugMode)
+        {
+    		TerraFirmaCraft.LOG.info("TFCM:Recipe Cook Timer: " + this.cookTimer);
+    		TerraFirmaCraft.LOG.info("TFCM:Scale: " + scale);
+        	TerraFirmaCraft.LOG.info("TFCM:Recipe Cook Time: " + time);
+        }
+    	
+    	return this.cookTimer * scale / time;
+    }
 	
 	@Override
 	public int getSizeInventory() 

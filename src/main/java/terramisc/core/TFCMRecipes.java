@@ -774,6 +774,8 @@ public class TFCMRecipes
 	
 	public static void registerVatRecipes()
 	{
-		VatManager.addRecipe(new VatRecipe(new ItemStack(TFCMItems.bowlSuet), new FluidStack(TFCFluids.FRESHWATER, 1000), new ItemStack(TFCMItems.bowlTallow), new FluidStack(TFCFluids.FRESHWATER, 1000), 102, 2));
+		//1200 ticks equals one minute
+		
+		VatManager.addRecipe(new VatRecipe(new ItemStack(TFCMItems.bowlSuet), new FluidStack(TFCFluids.FRESHWATER, 1000), new ItemStack(TFCMItems.bowlTallow), new FluidStack(TFCFluids.FRESHWATER, 1000), 102, 1200, false));
 	}
 }

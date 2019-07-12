@@ -5,9 +5,11 @@ import java.util.ArrayList;
 import org.lwjgl.opengl.GL11;
 
 import com.bioxx.tfc.Reference;
+import com.bioxx.tfc.TerraFirmaCraft;
 import com.bioxx.tfc.Core.TFC_Core;
 import com.bioxx.tfc.Core.Player.PlayerInventory;
 import com.bioxx.tfc.GUI.GuiContainerTFC;
+import com.bioxx.tfc.api.TFCOptions;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiButton;
@@ -182,8 +184,13 @@ public class GuiVat extends GuiContainerTFC
 			 */
 			if(vatTE.canProcess())
 			{
-				int i1 = this.vatTE.getTemperatureScaled(13);
+				int i1 = vatTE.getCookProgressScaled(13);
 	            this.drawTexturedModalRect(guiLeft + 80, guiTop + 61 + 12 - i1, 176, 12 - i1, 14, i1 + 1);
+			
+	            if(TFCOptions.enableDebugMode)
+	            {
+	            	TerraFirmaCraft.LOG.info("TFCM:Cook Progress Scaled: " + i1);
+	            }
 			}
 		}
 	}
