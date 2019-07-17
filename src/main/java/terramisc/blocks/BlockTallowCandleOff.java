@@ -2,9 +2,9 @@ package terramisc.blocks;
 
 import java.util.Random;
 
-import com.bioxx.tfc.Core.TFC_Time;
-import com.bioxx.tfc.Items.Tools.ItemFirestarter;
-import com.bioxx.tfc.api.TFCBlocks;
+import com.dunk.tfc.Core.TFC_Time;
+import com.dunk.tfc.Items.Tools.ItemFirestarter;
+import com.dunk.tfc.api.TFCBlocks;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;

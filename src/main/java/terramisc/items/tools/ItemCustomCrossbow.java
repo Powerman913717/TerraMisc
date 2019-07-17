@@ -17,14 +17,14 @@ import net.minecraftforge.event.entity.player.ArrowNockEvent;
 import terramisc.core.TFCMItems;
 import terramisc.entities.EntityMetalBolt;
 
-import com.bioxx.tfc.Core.TFCTabs;
-import com.bioxx.tfc.Core.TFC_Core;
-import com.bioxx.tfc.Core.Player.InventoryPlayerTFC;
-import com.bioxx.tfc.Items.ItemTerra;
-import com.bioxx.tfc.api.Enums.EnumItemReach;
-import com.bioxx.tfc.api.Enums.EnumSize;
-import com.bioxx.tfc.api.Enums.EnumWeight;
-import com.bioxx.tfc.api.Interfaces.ISize;
+import com.dunk.tfc.Core.TFCTabs;
+import com.dunk.tfc.Core.TFC_Core;
+import com.dunk.tfc.Core.Player.InventoryPlayerTFC;
+import com.dunk.tfc.Items.ItemTerra;
+import com.dunk.tfc.api.Enums.EnumItemReach;
+import com.dunk.tfc.api.Enums.EnumSize;
+import com.dunk.tfc.api.Enums.EnumWeight;
+import com.dunk.tfc.api.Interfaces.ISize;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;

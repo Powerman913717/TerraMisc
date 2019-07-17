@@ -14,9 +14,9 @@ import org.lwjgl.opengl.GL11;
 
 import terramisc.tileentities.TEFruitPress;
 
-import com.bioxx.tfc.Core.TFC_Core;
-import com.bioxx.tfc.Render.TESR.TESRBase;
-import com.bioxx.tfc.api.TFCBlocks;
+import com.dunk.tfc.Core.TFC_Core;
+import com.dunk.tfc.Render.TESR.TESRBase;
+import com.dunk.tfc.api.TFCBlocks;
 
 public class TESRFruitPress extends TESRBase
 {

@@ -3,10 +3,10 @@ package terramisc.containers.slots;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.bioxx.tfc.Containers.Slots.SlotSize;
-import com.bioxx.tfc.api.Enums.EnumFoodGroup;
-import com.bioxx.tfc.api.Interfaces.IFood;
-import com.bioxx.tfc.api.Interfaces.ISize;
+import com.dunk.tfc.Containers.Slots.SlotSize;
+import com.dunk.tfc.api.Enums.EnumFoodGroup;
+import com.dunk.tfc.api.Interfaces.IFood;
+import com.dunk.tfc.api.Interfaces.ISize;
 
 import net.minecraft.inventory.IInventory;
 import net.minecraft.item.Item;

@@ -1,7 +1,7 @@
 package terramisc.tileentities;
 
-import com.bioxx.tfc.Core.TFC_Time;
-import com.bioxx.tfc.api.TFCBlocks;
+import com.dunk.tfc.Core.TFC_Time;
+import com.dunk.tfc.api.TFCBlocks;
 
 import net.minecraft.init.Blocks;
 import net.minecraft.nbt.NBTTagCompound;

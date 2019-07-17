@@ -2,7 +2,7 @@ package terramisc.items.tools;
 
 import net.minecraft.client.renderer.texture.IIconRegister;
 
-import com.bioxx.tfc.Items.Tools.ItemMiscToolHead;
+import com.dunk.tfc.Items.Tools.ItemMiscToolHead;
 
 public class ItemCustomToolHead extends ItemMiscToolHead
 {

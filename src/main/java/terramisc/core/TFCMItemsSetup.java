@@ -1,21 +1,21 @@
 package terramisc.core;
 
-import com.bioxx.tfc.CommonProxy;
-import com.bioxx.tfc.TerraFirmaCraft;
-import com.bioxx.tfc.Core.Metal.Alloy;
-import com.bioxx.tfc.Core.Metal.AlloyManager;
-import com.bioxx.tfc.Core.Metal.MetalRegistry;
-import com.bioxx.tfc.Food.ItemFoodMeat;
-import com.bioxx.tfc.Food.ItemFoodTFC;
-import com.bioxx.tfc.Items.ItemIngot;
-import com.bioxx.tfc.Items.ItemMeltedMetal;
-import com.bioxx.tfc.Items.ItemMetalSheet;
-import com.bioxx.tfc.Items.ItemMetalSheet2x;
-import com.bioxx.tfc.api.Metal;
-import com.bioxx.tfc.api.Constant.Global;
-import com.bioxx.tfc.api.Enums.EnumFoodGroup;
-import com.bioxx.tfc.api.Enums.EnumSize;
-import com.bioxx.tfc.api.Enums.EnumWeight;
+import com.dunk.tfc.CommonProxy;
+import com.dunk.tfc.TerraFirmaCraft;
+import com.dunk.tfc.Core.Metal.Alloy;
+import com.dunk.tfc.Core.Metal.AlloyManager;
+import com.dunk.tfc.Core.Metal.MetalRegistry;
+import com.dunk.tfc.Food.ItemFoodMeat;
+import com.dunk.tfc.Food.ItemFoodTFC;
+import com.dunk.tfc.Items.ItemIngot;
+import com.dunk.tfc.Items.ItemMeltedMetal;
+import com.dunk.tfc.Items.ItemMetalSheet;
+import com.dunk.tfc.Items.ItemMetalSheet2x;
+import com.dunk.tfc.api.Metal;
+import com.dunk.tfc.api.Constant.Global;
+import com.dunk.tfc.api.Enums.EnumFoodGroup;
+import com.dunk.tfc.api.Enums.EnumSize;
+import com.dunk.tfc.api.Enums.EnumWeight;
 
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraftforge.common.util.EnumHelper;
@@ -343,7 +343,7 @@ public class TFCMItemsSetup extends TFCMItems
 		hops = new ItemFoodTFC(EnumFoodGroup.Fruit, 0, 0, 0, 20, 0, false, false).setUnlocalizedName("Hops");
 		
 		//Meat
-		bearRaw = new ItemFoodMeat(EnumFoodGroup.Protein, 5, 0, 0, 0, 50, false, false).setDecayRate(2.5f).setCanSmoke().setHasCookedIcon().setSmokeAbsorbMultiplier(1F).setUnlocalizedName("Bear");
+		bearRaw = new ItemFoodMeat(EnumFoodGroup.Protein, 5, 0, 0, 0, 50, false, false).setDecayRate(2.5f).setCanSmoke().setHasCookedIcon().setUnlocalizedName("Bear");
 		
 		//Meals
 		pie = new ItemPie().setUnlocalizedName("Pie");
@@ -401,8 +401,8 @@ public class TFCMItemsSetup extends TFCMItems
 		leadPewterSheet = ((ItemMetalSheet) new ItemMetalSheet(10).setUnlocalizedName("Lead Pewter Sheet")).setMetal("Lead Pewter", 200);
 		leadPewterSheet2x = ((ItemMetalSheet2x) new ItemMetalSheet2x(10).setUnlocalizedName("Lead Pewter Double Sheet")).setMetal("Lead Pewter", 400);
 		
-		GlobalTFCM.LEADPEWTER = new Metal("Lead Pewter", TFCMItems.leadPewterUnshaped, TFCMItems.leadPewterIngot);
-		
+		GlobalTFCM.LEADPEWTER = new Metal("Lead Pewter", TFCMItems.leadPewterIngot);
+
 		MetalRegistry.instance.addMetal(GlobalTFCM.LEADPEWTER, Alloy.EnumTier.TierI);
 		
 		/** +-0.01 tolerance to hopefully negate rounding errors */

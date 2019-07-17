@@ -5,7 +5,7 @@ buildscript {
             name = "Minecraft Forge"
             url = "http://files.minecraftforge.net/maven"
         }
-         maven {
+        maven {
             name = "sonatype"
             url = "https://oss.sonatype.org/content/repositories/snapshots/"
         }
@@ -44,24 +44,24 @@ allprojects {
 }
 
 repositories {
-    maven { 
-    	// The repo from which to get waila
+    maven {
+        // The repo from which to get waila
         name "Mobius Repo"
-        url "https://www.mobiusstrip.eu/maven/"
+        url "http://mobiusstrip.eu/maven"
     }
-    maven { 
-    	// the repo from which to get NEI and stuff 
+    maven {
+        // the repo from which to get NEI and stuff 
         name 'CB Repo'
         url "http://chickenbones.net/maven/"
     }
 }
- 
+
 dependencies {
-	// Forcing version numbers for everything and using NO-NEI WAILA since the "transitive dependency resolution (gradle magic)" is currently borked.
-	compile "codechicken:CodeChickenCore:1.7.10-1.0.4.35:dev"
-	compile "codechicken:CodeChickenLib:1.7.10-1.1.3.127:dev"
-	compile "codechicken:NotEnoughItems:1.7.10-1.0.4.95:dev"
-	compile "mcp.mobius.waila:Waila:1.5.11-RC2-NONEI_1.7.10"
+    // Forcing version numbers for everything and using NO-NEI WAILA since the "transitive dependency resolution (gradle magic)" is currently borked.
+    compile "codechicken:CodeChickenCore:1.7.10-1.0.4.35:dev"
+    compile "codechicken:CodeChickenLib:1.7.10-1.1.3.127:dev"
+    compile "codechicken:NotEnoughItems:1.7.10-1.0.4.95:dev"
+    compile "mcp.mobius.waila:Waila:1.5.11-RC2-NONEI_1.7.10"
 }
 
 //Creates a compiled de-obfuscated jar
@@ -79,20 +79,20 @@ task sourceJar(type: Jar) {
 tasks.build.dependsOn('sourceJar', 'deobfJar')
 
 dependencies {
-    // Copy "[1.7.10]TerraFirmaCraft-deobf-0.79.0.jar" file into the ./libs directory
+    compile fileTree(dir:'libs',include:'*.jar')
 }
 
 processResources {
-	// First we just copy in the mcmod.info file
-	from(sourceSets.main.resources.srcDirs) {
+    // First we just copy in the mcmod.info file
+    from(sourceSets.main.resources.srcDirs) {
         include '**/*.info'
         include '**/*.prop'
 
         // replaces
         expand ([
-            'mod_version': project.config.mod_version,
-            'tfc_version': project.config.tfc_version,
-            'minecraft_version': project.config.minecraft_version,
+                'mod_version': project.config.mod_version,
+                'tfc_version': project.config.tfc_version,
+                'minecraft_version': project.config.minecraft_version,
         ])
     }
     // copy everything else, that we didn't copy before
@@ -103,5 +103,5 @@ processResources {
 }
 
 task wrapper(type: Wrapper) {
-	gradleVersion = '2.2.1'
+    gradleVersion = '2.2.1'
 }

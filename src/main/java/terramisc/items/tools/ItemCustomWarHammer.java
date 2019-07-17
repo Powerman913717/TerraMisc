@@ -8,12 +8,12 @@ import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.world.World;
 
-import com.bioxx.tfc.Core.TFCTabs;
-import com.bioxx.tfc.Items.Tools.ItemWeapon;
-import com.bioxx.tfc.api.Enums.EnumDamageType;
-import com.bioxx.tfc.api.Enums.EnumItemReach;
-import com.bioxx.tfc.api.Enums.EnumSize;
-import com.bioxx.tfc.api.Enums.EnumWeight;
+import com.dunk.tfc.Core.TFCTabs;
+import com.dunk.tfc.Items.Tools.ItemWeapon;
+import com.dunk.tfc.api.Enums.EnumDamageType;
+import com.dunk.tfc.api.Enums.EnumItemReach;
+import com.dunk.tfc.api.Enums.EnumSize;
+import com.dunk.tfc.api.Enums.EnumWeight;
 
 public class ItemCustomWarHammer extends ItemWeapon
 {

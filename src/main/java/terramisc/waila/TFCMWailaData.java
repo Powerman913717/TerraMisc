@@ -2,13 +2,13 @@ package terramisc.waila;
 
 import java.util.List;
 
-import com.bioxx.tfc.Blocks.Vanilla.BlockCustomPumpkin;
-import com.bioxx.tfc.Core.TFC_Core;
-import com.bioxx.tfc.Core.TFC_Time;
-import com.bioxx.tfc.Food.ItemFoodTFC;
-import com.bioxx.tfc.api.Food;
-import com.bioxx.tfc.api.TFCBlocks;
-import com.bioxx.tfc.api.Util.Helper;
+import com.dunk.tfc.Blocks.Vanilla.BlockCustomPumpkin;
+import com.dunk.tfc.Core.TFC_Core;
+import com.dunk.tfc.Core.TFC_Time;
+import com.dunk.tfc.Food.ItemFoodTFC;
+import com.dunk.tfc.api.Food;
+import com.dunk.tfc.api.TFCBlocks;
+import com.dunk.tfc.api.Util.Helper;
 
 import mcp.mobius.waila.api.IWailaConfigHandler;
 import mcp.mobius.waila.api.IWailaDataAccessor;

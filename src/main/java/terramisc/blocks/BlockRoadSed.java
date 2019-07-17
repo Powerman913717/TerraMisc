@@ -2,7 +2,7 @@ package terramisc.blocks;
 
 import net.minecraft.client.renderer.texture.IIconRegister;
 
-import com.bioxx.tfc.Blocks.Terrain.BlockSedSmooth;
+import com.dunk.tfc.Blocks.Terrain.BlockSedSmooth;
 
 public class BlockRoadSed extends BlockSedSmooth
 {

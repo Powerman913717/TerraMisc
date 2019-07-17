@@ -7,7 +7,7 @@ import terramisc.items.tools.ItemCustomArrow;
 import terramisc.items.tools.ItemCustomBolt;
 import terramisc.items.tools.ItemCustomQuiver;
 
-import com.bioxx.tfc.Core.Player.InventoryPlayerTFC;
+import com.dunk.tfc.Core.Player.InventoryPlayerTFC;
 
 import cpw.mods.fml.common.eventhandler.Event.Result;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;

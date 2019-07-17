@@ -1,8 +1,8 @@
 package terramisc.tileentities;
 
-import com.bioxx.tfc.Core.TFC_Time;
-import com.bioxx.tfc.api.Food;
-import com.bioxx.tfc.api.Enums.EnumFoodGroup;
+import com.dunk.tfc.Core.TFC_Time;
+import com.dunk.tfc.api.Food;
+import com.dunk.tfc.api.Enums.EnumFoodGroup;
 
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;

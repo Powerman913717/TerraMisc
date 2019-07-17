@@ -2,12 +2,12 @@ package terramisc.gui;
 
 import org.lwjgl.opengl.GL11;
 
-import com.bioxx.tfc.Reference;
-import com.bioxx.tfc.Core.TFC_Core;
-import com.bioxx.tfc.Core.Player.PlayerInventory;
-import com.bioxx.tfc.GUI.GuiContainerTFC;
-import com.bioxx.tfc.api.TFCItems;
-import com.bioxx.tfc.api.TileEntities.TEFireEntity;
+import com.dunk.tfc.Reference;
+import com.dunk.tfc.Core.TFC_Core;
+import com.dunk.tfc.Core.Player.PlayerInventory;
+import com.dunk.tfc.GUI.GuiContainerTFC;
+import com.dunk.tfc.api.TFCItems;
+import com.dunk.tfc.api.TileEntities.TEFireEntity;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiButton;

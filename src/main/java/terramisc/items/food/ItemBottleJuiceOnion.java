@@ -11,9 +11,9 @@ import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
 import net.minecraftforge.fluids.FluidContainerRegistry;
 
-import com.bioxx.tfc.Reference;
-import com.bioxx.tfc.Items.ItemTerra;
-import com.bioxx.tfc.api.TFCItems;
+import com.dunk.tfc.Reference;
+import com.dunk.tfc.Items.ItemTerra;
+import com.dunk.tfc.api.TFCItems;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;

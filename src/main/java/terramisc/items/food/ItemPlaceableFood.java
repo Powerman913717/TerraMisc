@@ -1,11 +1,11 @@
 package terramisc.items.food;
 
-import com.bioxx.tfc.Core.TFCTabs;
-import com.bioxx.tfc.Food.ItemFoodTFC;
-import com.bioxx.tfc.api.Food;
-import com.bioxx.tfc.api.FoodRegistry;
-import com.bioxx.tfc.api.TFCItems;
-import com.bioxx.tfc.api.Enums.EnumFoodGroup;
+import com.dunk.tfc.Core.TFCTabs;
+import com.dunk.tfc.Food.ItemFoodTFC;
+import com.dunk.tfc.api.Food;
+import com.dunk.tfc.api.FoodRegistry;
+import com.dunk.tfc.api.TFCItems;
+import com.dunk.tfc.api.Enums.EnumFoodGroup;
 
 import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;

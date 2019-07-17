@@ -1,6 +1,6 @@
 package terramisc.core;
 
-import com.bioxx.tfc.Items.ItemBlocks.ItemTerraBlock;
+import com.dunk.tfc.Items.ItemBlocks.ItemTerraBlock;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;

@@ -4,12 +4,12 @@ import java.util.ArrayList;
 
 import org.lwjgl.opengl.GL11;
 
-import com.bioxx.tfc.Reference;
-import com.bioxx.tfc.TerraFirmaCraft;
-import com.bioxx.tfc.Core.TFC_Core;
-import com.bioxx.tfc.Core.Player.PlayerInventory;
-import com.bioxx.tfc.GUI.GuiContainerTFC;
-import com.bioxx.tfc.api.TFCOptions;
+import com.dunk.tfc.Reference;
+import com.dunk.tfc.TerraFirmaCraft;
+import com.dunk.tfc.Core.TFC_Core;
+import com.dunk.tfc.Core.Player.PlayerInventory;
+import com.dunk.tfc.GUI.GuiContainerTFC;
+import com.dunk.tfc.api.TFCOptions;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiButton;

@@ -2,10 +2,10 @@ package terramisc.tileentities;
 
 import java.util.Random;
 
-import com.bioxx.tfc.Core.TFC_Climate;
-import com.bioxx.tfc.Core.TFC_Core;
-import com.bioxx.tfc.TileEntities.NetworkTileEntity;
-import com.bioxx.tfc.api.Food;
+import com.dunk.tfc.Core.TFC_Climate;
+import com.dunk.tfc.Core.TFC_Core;
+import com.dunk.tfc.TileEntities.NetworkTileEntity;
+import com.dunk.tfc.api.Food;
 
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;

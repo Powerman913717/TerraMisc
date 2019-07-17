@@ -2,9 +2,9 @@ package terramisc.items.itemblocks;
 
 import java.util.List;
 
-import com.bioxx.tfc.Core.TFC_Core;
-import com.bioxx.tfc.Items.ItemBlocks.ItemTerraBlock;
-import com.bioxx.tfc.api.Interfaces.ISize;
+import com.dunk.tfc.Core.TFC_Core;
+import com.dunk.tfc.Items.ItemBlocks.ItemTerraBlock;
+import com.dunk.tfc.api.Interfaces.ISize;
 
 import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;

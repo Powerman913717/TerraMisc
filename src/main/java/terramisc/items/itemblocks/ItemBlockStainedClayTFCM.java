@@ -1,7 +1,7 @@
 package terramisc.items.itemblocks;
 
-import com.bioxx.tfc.TerraFirmaCraft;
-import com.bioxx.tfc.Items.ItemBlocks.ItemTerraBlock;
+import com.dunk.tfc.TerraFirmaCraft;
+import com.dunk.tfc.Items.ItemBlocks.ItemTerraBlock;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemStack;

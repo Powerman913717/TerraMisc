@@ -4,11 +4,11 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
-import com.bioxx.tfc.Core.TFC_Core;
-import com.bioxx.tfc.Core.Player.FoodStatsTFC;
-import com.bioxx.tfc.Items.ItemAlcohol;
-import com.bioxx.tfc.api.TFCItems;
-import com.bioxx.tfc.api.Enums.EnumFoodGroup;
+import com.dunk.tfc.Core.TFC_Core;
+import com.dunk.tfc.Core.Player.FoodStatsTFC;
+import com.dunk.tfc.Items.ItemAlcohol;
+import com.dunk.tfc.api.TFCItems;
+import com.dunk.tfc.api.Enums.EnumFoodGroup;
 
 public class ItemBottleSoyMilk extends ItemAlcohol
 {

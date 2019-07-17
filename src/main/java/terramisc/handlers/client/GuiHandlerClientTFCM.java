@@ -1,7 +1,7 @@
 package terramisc.handlers.client;
 
-import com.bioxx.tfc.GUI.GuiInventoryTFC;
-import com.bioxx.tfc.GUI.GuiQuiver;
+import com.dunk.tfc.GUI.GuiInventoryTFC;
+import com.dunk.tfc.GUI.GuiQuiver;
 
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import net.minecraft.client.Minecraft;

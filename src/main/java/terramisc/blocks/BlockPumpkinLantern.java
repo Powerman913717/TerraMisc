@@ -2,13 +2,13 @@ package terramisc.blocks;
 
 import java.util.Random;
 
-import com.bioxx.tfc.TerraFirmaCraft;
-import com.bioxx.tfc.Blocks.BlockTerraContainer;
-import com.bioxx.tfc.Core.TFCTabs;
-import com.bioxx.tfc.Core.TFC_Time;
-import com.bioxx.tfc.Items.Tools.ItemFirestarter;
-import com.bioxx.tfc.api.TFCBlocks;
-import com.bioxx.tfc.api.TFCOptions;
+import com.dunk.tfc.TerraFirmaCraft;
+import com.dunk.tfc.Blocks.BlockTerraContainer;
+import com.dunk.tfc.Core.TFCTabs;
+import com.dunk.tfc.Core.TFC_Time;
+import com.dunk.tfc.Items.Tools.ItemFirestarter;
+import com.dunk.tfc.api.TFCBlocks;
+import com.dunk.tfc.api.TFCOptions;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;

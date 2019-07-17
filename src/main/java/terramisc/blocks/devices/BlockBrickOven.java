@@ -2,11 +2,11 @@ package terramisc.blocks.devices;
 
 import java.util.ArrayList;
 
-import com.bioxx.tfc.Blocks.BlockTerraContainer;
-import com.bioxx.tfc.Core.TFCTabs;
-import com.bioxx.tfc.Core.TFC_Core;
-import com.bioxx.tfc.Core.TFC_Textures;
-import com.bioxx.tfc.api.TFCBlocks;
+import com.dunk.tfc.Blocks.BlockTerraContainer;
+import com.dunk.tfc.Core.TFCTabs;
+import com.dunk.tfc.Core.TFC_Core;
+import com.dunk.tfc.Core.TFC_Textures;
+import com.dunk.tfc.api.TFCBlocks;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;

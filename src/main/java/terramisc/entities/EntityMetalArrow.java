@@ -5,7 +5,7 @@ import net.minecraft.item.Item;
 import net.minecraft.world.World;
 import terramisc.core.TFCMItems;
 
-import com.bioxx.tfc.Entities.EntityProjectileTFC;
+import com.dunk.tfc.Entities.EntityProjectileTFC;
 
 public class EntityMetalArrow extends EntityProjectileTFC 
 {

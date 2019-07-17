@@ -2,7 +2,7 @@ package terramisc;
 
 import java.io.File;
 
-import com.bioxx.tfc.TerraFirmaCraft;
+import com.dunk.tfc.TerraFirmaCraft;
 
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;

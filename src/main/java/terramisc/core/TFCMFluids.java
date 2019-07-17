@@ -2,7 +2,7 @@ package terramisc.core;
 
 import net.minecraftforge.fluids.Fluid;
 
-import com.bioxx.tfc.Core.FluidBaseTFC;
+import com.dunk.tfc.Core.FluidBaseTFC;
 
 public class TFCMFluids 
 {
@@ -54,7 +54,7 @@ public class TFCMFluids
 	//Vinegar
 	
 	/* TFC Heat Tile Entities operate on degrees Celsius fluids are kept in degrees Kelvin.
-	 * 0°C + 273.15 = 273.15K
+	 * 0ï¿½C + 273.15 = 273.15K
 	 * 
 	 * Boiling Water = 375 Degree Kelvin / 101.85 Celsius
 	 * 

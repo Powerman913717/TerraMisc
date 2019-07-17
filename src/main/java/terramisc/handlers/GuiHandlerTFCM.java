@@ -1,6 +1,6 @@
 package terramisc.handlers;
 
-import com.bioxx.tfc.Containers.ContainerHopper;
+import com.dunk.tfc.Containers.ContainerHopper;
 
 import cpw.mods.fml.common.network.IGuiHandler;
 import net.minecraft.entity.player.EntityPlayer;

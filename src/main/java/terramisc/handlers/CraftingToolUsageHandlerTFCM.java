@@ -1,6 +1,6 @@
 package terramisc.handlers;
 
-import com.bioxx.tfc.Core.Recipes;
+import com.dunk.tfc.Core.Recipes;
 import terramisc.core.TFCMItems;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.item.Item;

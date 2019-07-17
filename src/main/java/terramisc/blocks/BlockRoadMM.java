@@ -2,7 +2,7 @@ package terramisc.blocks;
 
 import net.minecraft.client.renderer.texture.IIconRegister;
 
-import com.bioxx.tfc.Blocks.Terrain.BlockMMSmooth;
+import com.dunk.tfc.Blocks.Terrain.BlockMMSmooth;
 
 public class BlockRoadMM extends BlockMMSmooth
 {

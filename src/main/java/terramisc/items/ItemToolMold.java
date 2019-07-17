@@ -3,7 +3,7 @@ package terramisc.items;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.util.IIcon;
 
-import com.bioxx.tfc.Items.Pottery.ItemPotteryMold;
+import com.dunk.tfc.Items.Pottery.ItemPotteryMold;
 
 public class ItemToolMold extends ItemPotteryMold
 {

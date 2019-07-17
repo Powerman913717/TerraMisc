@@ -2,7 +2,7 @@ package terramisc.render;
 
 import java.lang.reflect.Method;
 
-import com.bioxx.tfc.Render.Blocks.RenderCrop;
+import com.dunk.tfc.Render.Blocks.RenderCrop;
 
 import cpw.mods.fml.client.registry.ISimpleBlockRenderingHandler;
 import net.minecraft.block.Block;
@@ -24,19 +24,11 @@ public class CropRenderTFCM extends RenderCrop implements ISimpleBlockRenderingH
 		
 		if(cropTE == null || cropTE.cropId == null)
 			return false;
-		
-		switch(cropTE.cropId)
-		{
-		case "hops":
-		{
+
+		if ("hops".equals(cropTE.cropId)) {
 			drawCrossedSquares(block, x, y, z, renderblocks, 0.9, 2.0);
-			break;
-		}
-		default:
-		{
+		} else {
 			drawCrossedSquares(block, x, y, z, renderblocks, 0.45, 1.0);
-			break;
-		}
 		}
 
 		return true;

@@ -1,6 +1,6 @@
 package terramisc.blocks;
 
-import com.bioxx.tfc.Blocks.Vanilla.BlockCustomPumpkin;
+import com.dunk.tfc.Blocks.Vanilla.BlockCustomPumpkin;
 
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;

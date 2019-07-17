@@ -2,14 +2,14 @@ package terramisc.items;
 
 import java.util.List;
 
-import com.bioxx.tfc.Core.TFC_Core;
-import com.bioxx.tfc.Core.Metal.MetalRegistry;
-import com.bioxx.tfc.api.HeatRegistry;
-import com.bioxx.tfc.api.Metal;
-import com.bioxx.tfc.api.TFC_ItemHeat;
-import com.bioxx.tfc.api.Enums.EnumSize;
-import com.bioxx.tfc.api.Enums.EnumWeight;
-import com.bioxx.tfc.api.Interfaces.ISmeltable;
+import com.dunk.tfc.Core.TFC_Core;
+import com.dunk.tfc.Core.Metal.MetalRegistry;
+import com.dunk.tfc.api.HeatRegistry;
+import com.dunk.tfc.api.Metal;
+import com.dunk.tfc.api.TFC_ItemHeat;
+import com.dunk.tfc.api.Enums.EnumSize;
+import com.dunk.tfc.api.Enums.EnumWeight;
+import com.dunk.tfc.api.Interfaces.ISmeltable;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;

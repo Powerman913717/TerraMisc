@@ -2,11 +2,11 @@ package terramisc.items.food;
 
 import java.util.List;
 
-import com.bioxx.tfc.Core.TFC_Core;
-import com.bioxx.tfc.Core.Player.FoodStatsTFC;
-import com.bioxx.tfc.Food.ItemMeal;
-import com.bioxx.tfc.api.Food;
-import com.bioxx.tfc.api.FoodRegistry;
+import com.dunk.tfc.Core.TFC_Core;
+import com.dunk.tfc.Core.Player.FoodStatsTFC;
+import com.dunk.tfc.Food.ItemMeal;
+import com.dunk.tfc.api.Food;
+import com.dunk.tfc.api.FoodRegistry;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;

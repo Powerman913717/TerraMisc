@@ -1,8 +1,8 @@
 package terramisc.handlers.network;
 
-import com.bioxx.tfc.Core.TFC_Core;
-import com.bioxx.tfc.Handlers.Network.AbstractPacket;
-import com.bioxx.tfc.api.Constant.Global;
+import com.dunk.tfc.Core.TFC_Core;
+import com.dunk.tfc.Handlers.Network.AbstractPacket;
+import com.dunk.tfc.api.Constant.Global;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;

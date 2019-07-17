@@ -5,7 +5,7 @@ public class TFCMDetails
 	public static final String ModID = "tfcm";
 	public static final String ModName = "TerraMisc";
 
-	public static final String ModDependencies = "required-after:TerraFirmaCraft" + "required-after:Waila";
+	public static final String ModDependencies = "required-after:TerraFirmaCraftPlus" + "required-after:Waila";
 	public static final String ModChannel = "TerraMisc";
 	public static final String SERVER_PROXY_CLASS = "terramisc.core.TFCMCommonProxy";
 	public static final String CLIENT_PROXY_CLASS = "terramisc.core.TFCMClientProxy";

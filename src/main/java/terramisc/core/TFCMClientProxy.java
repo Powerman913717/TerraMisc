@@ -2,8 +2,8 @@ package terramisc.core;
 
 import java.io.File;
 
-import com.bioxx.tfc.api.TFCBlocks;
-import com.bioxx.tfc.api.TFCOptions;
+import com.dunk.tfc.api.TFCBlocks;
+import com.dunk.tfc.api.TFCOptions;
 
 import codechicken.nei.api.API;
 import cpw.mods.fml.client.registry.ClientRegistry;

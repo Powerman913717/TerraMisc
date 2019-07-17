@@ -2,8 +2,8 @@ package terramisc.blocks;
 
 import java.util.Random;
 
-import com.bioxx.tfc.Items.Tools.ItemFirestarter;
-import com.bioxx.tfc.api.TFCBlocks;
+import com.dunk.tfc.Items.Tools.ItemFirestarter;
+import com.dunk.tfc.api.TFCBlocks;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;

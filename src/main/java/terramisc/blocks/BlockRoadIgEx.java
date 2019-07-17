@@ -1,6 +1,6 @@
 package terramisc.blocks;
 
-import com.bioxx.tfc.Blocks.Terrain.BlockIgExSmooth;
+import com.dunk.tfc.Blocks.Terrain.BlockIgExSmooth;
 
 import net.minecraft.client.renderer.texture.IIconRegister;
 

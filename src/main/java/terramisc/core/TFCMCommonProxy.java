@@ -2,7 +2,7 @@ package terramisc.core;
 
 import java.io.File;
 
-import com.bioxx.tfc.api.TFCItems;
+import com.dunk.tfc.api.TFCItems;
 
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.event.FMLInterModComms;

@@ -1,8 +1,8 @@
 package terramisc.handlers;
 
-import com.bioxx.tfc.TileEntities.TELogPile;
-import com.bioxx.tfc.api.TFCBlocks;
-import com.bioxx.tfc.api.Util.Helper;
+import com.dunk.tfc.TileEntities.TELogPile;
+import com.dunk.tfc.api.TFCBlocks;
+import com.dunk.tfc.api.Util.Helper;
 
 import cpw.mods.fml.common.eventhandler.Event.Result;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;

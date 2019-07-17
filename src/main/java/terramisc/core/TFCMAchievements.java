@@ -3,7 +3,7 @@ package terramisc.core;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.bioxx.tfc.Core.TFC_Achievements;
+import com.dunk.tfc.Core.TFC_Achievements;
 
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;

@@ -9,7 +9,7 @@ import net.minecraft.network.play.server.S35PacketUpdateTileEntity;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ResourceLocation;
 
-import com.bioxx.tfc.Core.TFC_Time;
+import com.dunk.tfc.Core.TFC_Time;
 
 public class TETallowCandle extends TileEntity 
 {

@@ -1,9 +1,9 @@
 package terramisc.blocks;
 
-import com.bioxx.tfc.Reference;
-import com.bioxx.tfc.TerraFirmaCraft;
-import com.bioxx.tfc.Blocks.BlockCrop;
-import com.bioxx.tfc.api.TFCOptions;
+import com.dunk.tfc.Reference;
+import com.dunk.tfc.TerraFirmaCraft;
+import com.dunk.tfc.Blocks.BlockCrop;
+import com.dunk.tfc.api.TFCOptions;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -70,24 +70,21 @@ public class BlockCropTFCM extends BlockCrop
 		int stage = (int) Math.floor(te.growth);
 		if(stage > crop.numGrowthStages)
 			stage = crop.numGrowthStages;
-		
-		switch(te.cropId)
-		{
-		case "pumpkin":
+
+		if ("pumpkin".equals(te.cropId)) {
 			return iconsPumpkin[stage];
-		case "cayenne":
+		} else if ("cayenne".equals(te.cropId)) {
 			return iconsCayenne[stage];
-		case "coffee":
+		} else if ("coffee".equals(te.cropId)) {
 			return iconsCoffee[stage];
-		case "watermelon":
+		} else if ("watermelon".equals(te.cropId)) {
 			return iconsWatermelon[stage];
-		case "sweet potato":
+		} else if ("sweet potato".equals(te.cropId)) {
 			return iconsSweetPotato[stage];
-		case "hops":
+		} else if ("hops".equals(te.cropId)) {
 			return iconsHops[stage];
-		default:
-			return iconsPumpkin[1];
 		}
+		return iconsPumpkin[1];
 	}
 	
 	@Override

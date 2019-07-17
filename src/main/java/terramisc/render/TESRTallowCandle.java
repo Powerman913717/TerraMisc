@@ -8,7 +8,7 @@ import org.lwjgl.opengl.GL11;
 import terramisc.models.BlockTallowCandleModel;
 import terramisc.tileentities.TETallowCandle;
 
-import com.bioxx.tfc.Core.TFC_Core;
+import com.dunk.tfc.Core.TFC_Core;
 
 public class TESRTallowCandle extends TileEntitySpecialRenderer
 {		

@@ -6,8 +6,8 @@ import net.minecraft.item.ItemStack;
 import terramisc.items.tools.ItemCustomArrow;
 import terramisc.items.tools.ItemCustomBolt;
 
-import com.bioxx.tfc.Items.ItemArrow;
-import com.bioxx.tfc.Items.Tools.ItemJavelin;
+import com.dunk.tfc.Items.ItemArrow;
+import com.dunk.tfc.Items.Tools.ItemJavelin;
 
 public class SlotCustomQuiver extends Slot
 {

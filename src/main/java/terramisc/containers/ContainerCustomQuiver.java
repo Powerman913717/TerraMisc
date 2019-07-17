@@ -6,8 +6,8 @@ import net.minecraft.inventory.Slot;
 import net.minecraft.world.World;
 import terramisc.containers.slots.SlotCustomQuiver;
 
-import com.bioxx.tfc.Containers.ContainerQuiver;
-import com.bioxx.tfc.Containers.Slots.SlotForShowOnly;
+import com.dunk.tfc.Containers.ContainerQuiver;
+import com.dunk.tfc.Containers.Slots.SlotForShowOnly;
 
 public class ContainerCustomQuiver extends ContainerQuiver
 {

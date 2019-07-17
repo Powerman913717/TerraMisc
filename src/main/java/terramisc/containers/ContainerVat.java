@@ -3,16 +3,16 @@ package terramisc.containers;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.bioxx.tfc.Containers.ContainerTFC;
-import com.bioxx.tfc.Containers.Slots.SlotChest;
-import com.bioxx.tfc.Containers.Slots.SlotFirepit;
-import com.bioxx.tfc.Containers.Slots.SlotFirepitFuel;
-import com.bioxx.tfc.Core.Player.PlayerInventory;
-import com.bioxx.tfc.Items.ItemOre;
-import com.bioxx.tfc.api.HeatRegistry;
-import com.bioxx.tfc.api.TFCBlocks;
-import com.bioxx.tfc.api.TFCItems;
-import com.bioxx.tfc.api.Enums.EnumSize;
+import com.dunk.tfc.Containers.ContainerTFC;
+import com.dunk.tfc.Containers.Slots.SlotChest;
+import com.dunk.tfc.Containers.Slots.SlotFirepit;
+import com.dunk.tfc.Containers.Slots.SlotFirepitFuel;
+import com.dunk.tfc.Core.Player.PlayerInventory;
+import com.dunk.tfc.Items.ItemOre;
+import com.dunk.tfc.api.HeatRegistry;
+import com.dunk.tfc.api.TFCBlocks;
+import com.dunk.tfc.api.TFCItems;
+import com.dunk.tfc.api.Enums.EnumSize;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;

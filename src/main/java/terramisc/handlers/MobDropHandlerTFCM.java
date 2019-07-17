@@ -2,15 +2,15 @@ package terramisc.handlers;
 
 import java.util.Random;
 
-import com.bioxx.tfc.Core.TFC_Core;
-import com.bioxx.tfc.Core.TFC_Time;
-import com.bioxx.tfc.Entities.Mobs.EntityBear;
-import com.bioxx.tfc.Entities.Mobs.EntityCowTFC;
-import com.bioxx.tfc.Entities.Mobs.EntityDeer;
-import com.bioxx.tfc.Entities.Mobs.EntityHorseTFC;
-import com.bioxx.tfc.Entities.Mobs.EntitySheepTFC;
-import com.bioxx.tfc.api.Entities.IAnimal;
-import com.bioxx.tfc.api.Util.Helper;
+import com.dunk.tfc.Core.TFC_Core;
+import com.dunk.tfc.Core.TFC_Time;
+import com.dunk.tfc.Entities.Mobs.EntityBear;
+import com.dunk.tfc.Entities.Mobs.EntityCowTFC;
+import com.dunk.tfc.Entities.Mobs.EntityDeer;
+import com.dunk.tfc.Entities.Mobs.EntityHorseTFC;
+import com.dunk.tfc.Entities.Mobs.EntitySheepTFC;
+import com.dunk.tfc.api.Entities.IAnimal;
+import com.dunk.tfc.api.Util.Helper;
 
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import net.minecraft.item.ItemStack;

@@ -3,9 +3,9 @@ package terramisc.blocks;
 import java.util.ArrayList;
 import java.util.Random;
 
-import com.bioxx.tfc.Blocks.BlockTerraContainer;
-import com.bioxx.tfc.Core.TFCTabs;
-import com.bioxx.tfc.api.TFCItems;
+import com.dunk.tfc.Blocks.BlockTerraContainer;
+import com.dunk.tfc.Core.TFCTabs;
+import com.dunk.tfc.api.TFCItems;
 
 import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;

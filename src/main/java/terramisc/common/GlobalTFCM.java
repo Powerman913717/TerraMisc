@@ -1,6 +1,6 @@
 package terramisc.common;
 
-import com.bioxx.tfc.api.Metal;
+import com.dunk.tfc.api.Metal;
 
 public class GlobalTFCM 
 {

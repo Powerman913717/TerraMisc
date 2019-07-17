@@ -5,7 +5,7 @@ import io.netty.channel.ChannelHandlerContext;
 import net.minecraft.entity.player.EntityPlayer;
 import terramisc.core.TFCMRecipes;
 
-import com.bioxx.tfc.Handlers.Network.AbstractPacket;
+import com.dunk.tfc.Handlers.Network.AbstractPacket;
 
 public class TFCMInitClientWorldPacket extends AbstractPacket
 {

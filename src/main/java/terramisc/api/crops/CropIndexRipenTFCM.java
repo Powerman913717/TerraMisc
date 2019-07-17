@@ -2,7 +2,7 @@ package terramisc.api.crops;
 
 import java.util.Random;
 
-import com.bioxx.tfc.Food.ItemFoodTFC;
+import com.dunk.tfc.Food.ItemFoodTFC;
 
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;

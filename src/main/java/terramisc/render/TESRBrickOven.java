@@ -2,7 +2,7 @@ package terramisc.render;
 
 import org.lwjgl.opengl.GL11;
 
-import com.bioxx.tfc.Core.TFC_Core;
+import com.dunk.tfc.Core.TFC_Core;
 
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
 import net.minecraft.tileentity.TileEntity;

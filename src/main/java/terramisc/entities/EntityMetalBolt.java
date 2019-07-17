@@ -5,8 +5,8 @@ import net.minecraft.item.Item;
 import net.minecraft.world.World;
 import terramisc.core.TFCMItems;
 
-import com.bioxx.tfc.Entities.EntityProjectileTFC;
-import com.bioxx.tfc.api.Enums.EnumDamageType;
+import com.dunk.tfc.Entities.EntityProjectileTFC;
+import com.dunk.tfc.api.Enums.EnumDamageType;
 
 public class EntityMetalBolt  extends EntityProjectileTFC 
 {
