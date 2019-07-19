@@ -1,8 +1,21 @@
 package terramisc.items.tools;
 
-import java.util.List;
-
-import terramisc.common.ArmorStats;
+import com.dunk.tfc.Core.TFCTabs;
+import com.dunk.tfc.Core.TFC_Core;
+import com.dunk.tfc.Items.ItemTerra;
+import com.dunk.tfc.Items.Tools.ItemTerraTool;
+import com.dunk.tfc.api.Armor;
+import com.dunk.tfc.api.Crafting.AnvilManager;
+import com.dunk.tfc.api.Enums.EnumItemReach;
+import com.dunk.tfc.api.Enums.EnumSize;
+import com.dunk.tfc.api.Enums.EnumWeight;
+import com.dunk.tfc.api.Interfaces.IClothing;
+import com.dunk.tfc.api.Interfaces.IEquipable;
+import com.dunk.tfc.api.Interfaces.ISewable;
+import com.dunk.tfc.api.Interfaces.ISize;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+import net.minecraft.client.renderer.entity.RenderBiped;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLiving;
@@ -11,34 +24,25 @@ import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.util.EnumChatFormatting;
-import net.minecraft.util.IIcon;
-import net.minecraft.util.MathHelper;
-import net.minecraft.util.MovingObjectPosition;
-import net.minecraft.util.Vec3;
+import net.minecraft.util.*;
 import net.minecraft.world.World;
+import terramisc.common.ArmorStats;
 
-import com.dunk.tfc.Core.TFCTabs;
-import com.dunk.tfc.Core.TFC_Core;
-import com.dunk.tfc.Items.ItemTerra;
-import com.dunk.tfc.Items.Tools.ItemTerraTool;
-import com.dunk.tfc.api.Crafting.AnvilManager;
-import com.dunk.tfc.api.Enums.EnumItemReach;
-import com.dunk.tfc.api.Enums.EnumSize;
-import com.dunk.tfc.api.Enums.EnumWeight;
-import com.dunk.tfc.api.Interfaces.IClothing;
-import com.dunk.tfc.api.Interfaces.ISize;
+import java.util.List;
 
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
-
-public class ItemCustomArmor extends ItemArmor implements ISize, IClothing
+public class ItemCustomArmor extends ItemArmor implements ISize, IEquipable, IClothing, ISewable
 {
-	public ArmorStats ArmorType;
+	private static final String[] LEATHER_NAMES = new String[] {"leather_helmet_overlay", "leather_chestplate_overlay", "leather_leggings_overlay", "leather_boots_overlay"};
+	public Armor armorTypeTFC;
 	public IIcon overlayIcon;
-	private int thermal = 0;
-	//private int type = 0;
-	private int trueType = 0;
+	boolean[][] clothingAlpha;
+	private int thermal;
+	//private int type;
+	private int trueType;
+	ResourceLocation res;
+	public ArmorStats ArmorType;
+
+
 
 	public ItemCustomArmor(ArmorStats armor, int renderIndex, int armorSlot, int thermal, int type)
 	{
@@ -88,6 +92,11 @@ public class ItemCustomArmor extends ItemArmor implements ISize, IClothing
 	public EnumSize getSize(ItemStack is)
 	{
 		return EnumSize.LARGE;
+	}
+
+	public boolean[][] getClothingAlpha()
+	{
+		return clothingAlpha;
 	}
 
 	@Override
@@ -212,5 +221,46 @@ public class ItemCustomArmor extends ItemArmor implements ISize, IClothing
 	public EnumItemReach getReach(ItemStack is)
 	{
 		return EnumItemReach.SHORT;
+	}
+
+	@Override
+	public EquipType getEquipType(ItemStack is)
+	{
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void onEquippedRender()
+	{
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public boolean getTooHeavyToCarry(ItemStack is)
+	{
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public ResourceLocation getClothingTexture(Entity entity, ItemStack itemstack, int num)
+	{
+		return RenderBiped.getArmorResource(entity, itemstack, num, null);
+	}
+
+	@Override
+	public ClothingType getClothingType()
+	{
+		// TODO Auto-generated method stub
+		return ClothingType.NULL;
+	}
+
+	@Override
+	public ResourceLocation getFlatTexture()
+	{
+		// TODO Auto-generated method stub
+		return res;
 	}
 }
