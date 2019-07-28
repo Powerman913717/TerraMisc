@@ -5,7 +5,7 @@ public class TFCMDetails
 	public static final String ModID = "tfcm";
 	public static final String ModName = "TerraMisc";
 
-	public static final String ModDependencies = "required-after:TerraFirmaCraftPlus" + "required-after:Waila";
+	public static final String ModDependencies = "required-after:terrafirmacraftplus" + "required-after:Waila";
 	public static final String ModChannel = "TerraMisc";
 	public static final String SERVER_PROXY_CLASS = "terramisc.core.TFCMCommonProxy";
 	public static final String CLIENT_PROXY_CLASS = "terramisc.core.TFCMClientProxy";
@@ -19,7 +19,7 @@ public class TFCMDetails
 	public static final int GuiOffset = 10000;
 	
 	public static final String MODID_NEI = "NotEnoughItems";
-	public static final String MODID_TFC = "terrafirmacraft";
+	public static final String MODID_TFC = "terrafirmacraftplus";
 	public static final String MODID_WAILA = "Waila";
 
 	public static final String MODNAME_NEI = "Not Enough Items";
