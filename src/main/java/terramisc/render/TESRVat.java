@@ -11,7 +11,7 @@ import terramisc.tileentities.TEVat;
 
 public class TESRVat extends TileEntitySpecialRenderer
 {
-protected BlockVatModel model;
+	protected BlockVatModel model;
 	
 	public TESRVat()
 	{
@@ -28,7 +28,7 @@ protected BlockVatModel model;
 			GL11.glPushMatrix();
 				this.model.renderModel(0.0625f);
 			GL11.glPopMatrix();
-		
+			
 		GL11.glPopMatrix();
 	}
 

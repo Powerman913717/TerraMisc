@@ -20,7 +20,6 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemFlintAndSteel;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.Explosion;
 import net.minecraft.world.IBlockAccess;
@@ -56,7 +55,7 @@ public class BlockVat extends BlockTerraContainer
 				TEVat te = (TEVat) world.getTileEntity(x, y, z);
 				
 				TerraFirmaCraft.LOG.info("TFCM:Can Process?: " + te.canProcess());
-				TerraFirmaCraft.LOG.info("TFCM:Proccess Timer: " + te.processTimer);
+				TerraFirmaCraft.LOG.info("TFCM:Proccess Timer: " + te.tickTimer);
 				TerraFirmaCraft.LOG.info("TFCM:Cooking Timer: " + te.cookTimer);
 			}
 			
@@ -286,16 +285,6 @@ public class BlockVat extends BlockTerraContainer
 			return 10;
 		else
 			return 15;
-	}
-	
-	/**
-	 * Returns a bounding box from the pool of bounding boxes (this means this box can change after the pool has been
-	 * cleared to be reused)
-	 */
-	@Override
-	public AxisAlignedBB getCollisionBoundingBoxFromPool(World world, int x, int y, int z)
-	{
-		return null;
 	}
 
 	//TODO Make sure vat is also dropped.

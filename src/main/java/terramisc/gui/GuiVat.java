@@ -128,7 +128,8 @@ public class GuiVat extends GuiContainerTFC
 		guiTop = (height - ySize) / 2;
 
 		drawTexturedModalRect(guiLeft, guiTop, 0, 0, xSize, this.getShiftedYSize());
-
+		this.drawForeground(guiLeft, guiTop);
+		
 		int scale = 0;
 		if(vatTE != null && vatTE.fluid != null)
 		{
@@ -146,8 +147,6 @@ public class GuiVat extends GuiContainerTFC
 			}
 			GL11.glColor3f(0, 0, 0);
 		}
-		
-		this.drawForeground(guiLeft, guiTop);
 		
 		//ItemStack inStack = vatTE.getStackInSlot(0);
 

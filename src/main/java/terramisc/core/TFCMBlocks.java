@@ -28,6 +28,7 @@ import terramisc.items.itemblocks.ItemBlockWetClay;
 public class TFCMBlocks 
 {
 	public static int cropRenderId;
+	public static int vatRenderId;
 	
 	//Candles
 	public static Block blockTallowCandle;

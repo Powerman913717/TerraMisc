@@ -34,13 +34,13 @@ public class BlockVatModel extends ModelBase
       setRotation(Leg_01, 0F, 0F, 0F);
       Leg_02 = new ModelRenderer(this, 4, 0);
       Leg_02.addBox(0F, 0F, 0F, 1, 3, 1);
-      Leg_02.setRotationPoint(6F, 22F, -6F);
+      Leg_02.setRotationPoint(6F, 22F, -7F);
       Leg_02.setTextureSize(128, 64);
       Leg_02.mirror = true;
       setRotation(Leg_02, 0F, 0F, 0F);
       Leg_03 = new ModelRenderer(this, 8, 0);
       Leg_03.addBox(0F, 0F, 0F, 1, 3, 1);
-      Leg_03.setRotationPoint(-7F, 22F, -6F);
+      Leg_03.setRotationPoint(-7F, 22F, -7F);
       Leg_03.setTextureSize(128, 64);
       Leg_03.mirror = true;
       setRotation(Leg_03, 0F, 0F, 0F);
@@ -50,36 +50,43 @@ public class BlockVatModel extends ModelBase
       Leg_04.setTextureSize(128, 64);
       Leg_04.mirror = true;
       setRotation(Leg_04, 0F, 0F, 0F);
+     
       Base = new ModelRenderer(this, 0, 4);
-      Base.addBox(0F, 0F, 0F, 14, 1, 13);
-      Base.setRotationPoint(-7F, 21F, -6F);
+      Base.addBox(0F, 0F, 0F, 14, 1, 14);
+      Base.setRotationPoint(-7F, 21F, -7F);
       Base.setTextureSize(128, 64);
       Base.mirror = true;
       setRotation(Base, 0F, 0F, 0F);
+      
+      
       Side_01 = new ModelRenderer(this, 0, 18);
-      Side_01.addBox(0F, 0F, 0F, 1, 10, 13);
+      Side_01.addBox(0F, 0F, 0F, 1, 10, 12);
       Side_01.setRotationPoint(6F, 11F, -6F);
       Side_01.setTextureSize(128, 64);
       Side_01.mirror = true;
       setRotation(Side_01, 0F, 0F, 0F);
+      
       Side_02 = new ModelRenderer(this, 0, 18);
-      Side_02.addBox(0F, 0F, 0F, 1, 10, 13);
+      Side_02.addBox(0F, 0F, 0F, 1, 10, 12);
       Side_02.setRotationPoint(-7F, 11F, -6F);
       Side_02.setTextureSize(128, 64);
       Side_02.mirror = true;
       setRotation(Side_02, 0F, 0F, 0F);
+      
       Side_03 = new ModelRenderer(this, 0, 18);
-      Side_03.addBox(0F, 0F, 0F, 12, 10, 1);
-      Side_03.setRotationPoint(-6F, 11F, -6F);
+      Side_03.addBox(0F, 0F, 0F, 14, 10, 1);
+      Side_03.setRotationPoint(-7F, 11F, -7F);
       Side_03.setTextureSize(128, 64);
       Side_03.mirror = true;
       setRotation(Side_03, 0F, 0F, 0F);
+      
       Side_04 = new ModelRenderer(this, 0, 18);
-      Side_04.addBox(0F, 0F, 0F, 12, 10, 1);
-      Side_04.setRotationPoint(-6F, 11F, 6F);
+      Side_04.addBox(0F, 0F, 0F, 14, 10, 1);
+      Side_04.setRotationPoint(-7F, 11F, 6F);
       Side_04.setTextureSize(128, 64);
       Side_04.mirror = true;
       setRotation(Side_04, 0F, 0F, 0F);
+     
       Hook_01 = new ModelRenderer(this, 0, 41);
       Hook_01.addBox(0F, 0F, 0F, 1, 3, 3);
       Hook_01.setRotationPoint(7F, 10F, -1F);
@@ -91,6 +98,7 @@ public class BlockVatModel extends ModelBase
       Hook_02.setRotationPoint(-8F, 10F, -1F);
       Hook_02.setTextureSize(128, 64);
       Hook_02.mirror = true;
+      
       setRotation(Hook_02, 0F, 0F, 0F);
       Handle = new ModelRenderer(this, 0, 47);
       Handle.addBox(0F, 0F, 0F, 16, 1, 1);
@@ -98,6 +106,7 @@ public class BlockVatModel extends ModelBase
       Handle.setTextureSize(128, 64);
       Handle.mirror = true;
       setRotation(Handle, 0F, 0F, 0F);
+     
       Firepit = new ModelRenderer(this, 96, 48);
       Firepit.addBox(0F, 0F, 0F, 16, 0, 16);
       Firepit.setRotationPoint(-8F, 23.9F, -8F);
