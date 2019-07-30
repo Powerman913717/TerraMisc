@@ -379,6 +379,8 @@ gui.plans.poniard=Poniard Blade
 gui.plans.bolt=Bolt Head
 gui.plans.arrow=Arrow Head
 
+gui.metal.LeadPewter=Lead Pewter
+
 //WAILA and ToolTips
 gui.crossbow.bolts=Bolts
 gui.crossbow.loaded=Loaded

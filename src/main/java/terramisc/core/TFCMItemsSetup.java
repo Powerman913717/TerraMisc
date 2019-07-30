@@ -411,5 +411,13 @@ public class TFCMItemsSetup extends TFCMItems
 		leadpewter.addIngred(Global.COPPER, 4.99f, 10.01f);
 		leadpewter.addIngred(Global.LEAD, 4.99f, 10.01f);
 		AlloyManager.INSTANCE.addAlloy(leadpewter);
+		
+		//Alloys lead pewter ingots to be used to alloy new lead pewter without explotation.
+		Alloy leadpewterMix = new Alloy(GlobalTFCM.LEADPEWTER, Alloy.EnumTier.TierI);
+		leadpewterMix.addIngred(Global.TIN, 79.99f, 90.01f);
+		leadpewterMix.addIngred(Global.COPPER, 4.99f, 10.01f);
+		leadpewterMix.addIngred(Global.LEAD, 4.99f, 10.01f);
+		leadpewterMix.addIngred(GlobalTFCM.LEADPEWTER, 1.01f, 99.01f);
+		AlloyManager.INSTANCE.addAlloy(leadpewterMix);
 	}
 }
