@@ -23,10 +23,8 @@ import terramisc.tileentities.TECropTFCM;
 
 public class BlockCropTFCM extends BlockCrop
 {
-	private IIcon[] iconsPumpkin = new IIcon[7];
 	private IIcon[] iconsCayenne = new IIcon[7];
 	private IIcon[] iconsCoffee = new IIcon[7];
-	private IIcon[] iconsWatermelon = new IIcon[7];
 	private IIcon[] iconsSweetPotato = new IIcon[7];
 	private IIcon[] iconsHops = new IIcon[8];
 	
@@ -48,10 +46,8 @@ public class BlockCropTFCM extends BlockCrop
 		}
 		for(int i = 1; i < 8; i++)
 		{
-			iconsPumpkin[i - 1] = register.registerIcon(Reference.MOD_ID + ":" + "plants/crops/Pumpkin (" + i + ")");
 			iconsCayenne[i - 1] = register.registerIcon(Reference.MOD_ID + ":" + "plants/crops/Pepper Cayenne (" + i + ")");
 			iconsCoffee[i - 1] = register.registerIcon(Reference.MOD_ID + ":" + "plants/crops/Coffee (" + i + ")");
-			iconsWatermelon[i - 1] = register.registerIcon(Reference.MOD_ID + ":" + "plants/crops/Watermelon (" + i + ")");
 			iconsSweetPotato[i - 1] = register.registerIcon(Reference.MOD_ID + ":" + "plants/crops/Sweet Potato (" + i + ")");
 		}
 		for(int i = 1; i < 9; i++)
@@ -71,20 +67,16 @@ public class BlockCropTFCM extends BlockCrop
 		if(stage > crop.numGrowthStages)
 			stage = crop.numGrowthStages;
 
-		if ("pumpkin".equals(te.cropId)) {
-			return iconsPumpkin[stage];
-		} else if ("cayenne".equals(te.cropId)) {
+		if ("cayenne".equals(te.cropId)) {
 			return iconsCayenne[stage];
 		} else if ("coffee".equals(te.cropId)) {
 			return iconsCoffee[stage];
-		} else if ("watermelon".equals(te.cropId)) {
-			return iconsWatermelon[stage];
 		} else if ("sweet potato".equals(te.cropId)) {
 			return iconsSweetPotato[stage];
 		} else if ("hops".equals(te.cropId)) {
 			return iconsHops[stage];
 		}
-		return iconsPumpkin[1];
+		return iconsCayenne[1];
 	}
 	
 	@Override

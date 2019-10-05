@@ -8,10 +8,6 @@ import net.minecraft.block.material.Material;
 import net.minecraft.init.Blocks;
 import terramisc.blocks.BlockClayTFCM;
 import terramisc.blocks.BlockCropTFCM;
-import terramisc.blocks.BlockFoodPumpkin;
-import terramisc.blocks.BlockPumpkinLantern;
-import terramisc.blocks.BlockPumpkinLanternOff;
-import terramisc.blocks.BlockPumpkinTFCM;
 import terramisc.blocks.BlockRoadIgEx;
 import terramisc.blocks.BlockRoadIgIn;
 import terramisc.blocks.BlockRoadMM;
@@ -90,16 +86,6 @@ public class TFCMBlocks
 		GameRegistry.registerBlock(blockBrickOven, ItemTerraBlock.class, "blockBrickOven");
 		vat = new BlockVat().setBlockName("vat");
 		GameRegistry.registerBlock(vat, ItemTerraBlock.class, "vat");
-		
-		//Food blockCrops
-		blockPumpkin = new BlockFoodPumpkin(false, false).setHardness(1.0F).setStepSound(Block.soundTypeWood).setBlockName("blockPumpkin");
-		GameRegistry.registerBlock(blockPumpkin, ItemTerraBlock.class, "blockPumpkin");
-		blockPumpkinCarved = new BlockPumpkinTFCM(true, false).setHardness(1.0F).setStepSound(Block.soundTypeWood).setBlockName("blockPumpkinCarved");
-		GameRegistry.registerBlock(blockPumpkinCarved, ItemTerraBlock.class, "blockPumpkinCarved");
-		blockPumpkinLantern = new BlockPumpkinLantern(true, true).setHardness(1.0F).setStepSound(Block.soundTypeWood).setBlockName("blockPumpkinLantern");
-		GameRegistry.registerBlock(blockPumpkinLantern, ItemTerraBlock.class, "blockPumpkinLantern");
-		blockPumpkinLanternOff = new BlockPumpkinLanternOff(true, false).setHardness(1.0F).setStepSound(Block.soundTypeWood).setBlockName("blockPumpkinLanternOff");
-		GameRegistry.registerBlock(blockPumpkinLanternOff, ItemTerraBlock.class, "blockPumpkinLanternOff");
 		
 		blockCrops = new BlockCropTFCM().setBlockName("blockCrops").setHardness(0.3F).setStepSound(Block.soundTypeGrass);
 		GameRegistry.registerBlock(blockCrops, "blockCrops");

@@ -222,7 +222,7 @@ public class TEBrickOven extends NetworkTileEntity implements IInventory
 		return true;
 	}
 	
-	private void setPieIcon(ItemStack is) //Determines the texture used based on ingrediants.
+	private void setPieIcon(ItemStack is) //Determines the texture used based on ingredients.
 	{
 		if(getStackInSlot(2).getItem() == TFCItems.redApple || getStackInSlot(2).getItem() == TFCItems.greenApple)
 			is.setItemDamage(1);
@@ -236,7 +236,7 @@ public class TEBrickOven extends NetworkTileEntity implements IInventory
 			is.setItemDamage(5);
 		else if(getStackInSlot(2).getItem() == TFCItems.lemon)
 			is.setItemDamage(6);
-		else if(getStackInSlot(2).getItem() == TFCMItems.pumpkin)
+		else if(getStackInSlot(2).getItem() == TFCItems.pumpkinGuts)
 			is.setItemDamage(7);
 		else if(getStackInSlot(2).getItem() == TFCItems.raspberry)
 			is.setItemDamage(8);

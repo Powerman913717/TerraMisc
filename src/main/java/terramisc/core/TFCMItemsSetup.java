@@ -317,29 +317,25 @@ public class TFCMItemsSetup extends TFCMItems
 		bottleSoyMilk = new ItemBottleSoyMilk().setUnlocalizedName("BottleSoyMilk");
 		
 		//Soy
-		soyPaste = new ItemFoodTFC(EnumFoodGroup.Protein, 10, 0, 0, 0, 40, false).setUnlocalizedName("SoyPaste");
+		soyPaste = new ItemFoodTFC(EnumFoodGroup.Protein, 10, 0, 0, 0, 40, false).setUnlocalizedName("SoybeanPaste");
 		
 		//Crops, See BlockCropTFCM.class CropRegistry.class and CropRender.class
-		seedsPumpkin = new CustomSeedsTFCM("pumpkin").setFolder("food/unused/").setUnlocalizedName("Seeds Pumpkin").setTextureName("img131");
-		pumpkin = new ItemPlaceableFood(EnumFoodGroup.Vegetable, 5, 0, 0, 10, 5, true, 80, TFCMBlocks.blockPumpkin, true).setFolder("food/unused/").setUnlocalizedName("Pumpkin").setTextureName("img73");
 		
-		seedsCayenne = new CustomSeedsTFCM("cayenne").setFolder("food/unused/").setUnlocalizedName("Seeds Cayenne").setTextureName("img139");
-		greenCayenne = new ItemFoodTFC(EnumFoodGroup.Vegetable, 10, 0, 0, 0, 20, true).setUnlocalizedName("Green Cayenne");
-		redCayenne = new ItemFoodTFC(EnumFoodGroup.Vegetable, 10, 0, 0, 0, 45, true).setFolder("food/unused/").setUnlocalizedName("Red Cayenne").setTextureName("img105");
+		seedsCayenne = new CustomSeedsTFCM("cayenne").setFolder("food/unused/").setUnlocalizedName("SeedsCayenne").setTextureName("img139");
+		greenCayenne = new ItemFoodTFC(EnumFoodGroup.Vegetable, 10, 0, 0, 0, 20, true).setUnlocalizedName("GreenCayenne");
+		redCayenne = new ItemFoodTFC(EnumFoodGroup.Vegetable, 10, 0, 0, 0, 45, true).setFolder("food/unused/").setUnlocalizedName("RedCayenne").setTextureName("img105");
 		
-		seedsCoffee = new CustomSeedsTFCM("coffee").setFolder("food/unused/").setUnlocalizedName("Seeds Coffee").setTextureName("img141");
-		coffeeCherries = new ItemFoodTFC(EnumFoodGroup.Fruit, 10, 5, 0, 0, 5, true).setUnlocalizedName("coffee Cherries");
-		greenCoffee = new ItemFoodTFC(EnumFoodGroup.None, 0, 0, 0, 15, 0, false, false).setUnlocalizedName("Green Coffee");
+		seedsCoffee = new CustomSeedsTFCM("coffee").setFolder("food/unused/").setUnlocalizedName("SeedsCoffee").setTextureName("img141");
+		coffeeCherries = new ItemFoodTFC(EnumFoodGroup.Fruit, 10, 5, 0, 0, 5, true).setUnlocalizedName("CoffeeCherries");
+		greenCoffee = new ItemFoodTFC(EnumFoodGroup.None, 0, 0, 0, 15, 0, false, false).setUnlocalizedName("GreenCoffee");
 		coffee = new ItemFoodTFC(EnumFoodGroup.None, 0, 0, 0, 25, 0, false, false).setFolder("food/unused/").setUnlocalizedName("Coffee").setTextureName("img78");
-		groundCoffee = new ItemFoodTFC(EnumFoodGroup.None, 0, 0, 0, 25, 0, false, false).setUnlocalizedName("Ground Coffee");
+		groundCoffee = new ItemFoodTFC(EnumFoodGroup.None, 0, 0, 0, 25, 0, false, false).setUnlocalizedName("GroundCoffee");
 		
-		seedsWatermelon = new CustomSeedsTFCM("watermelon").setFolder("food/unused/").setUnlocalizedName("Seeds Watermelon").setTextureName("img133");
-		watermelon = new ItemFoodTFC(EnumFoodGroup.Fruit, 15, 0, 0, 2, 0, true).setFolder("food/unused/").setUnlocalizedName("Watermelon").setTextureName("img74");
+	
+		seedsSweetPotato = new CustomSeedsTFCM("sweet potato").setFolder("food/unused/").setUnlocalizedName("SeedsSweetPotato").setTextureName("img129");
+		sweetPotato = new ItemFoodTFC(EnumFoodGroup.Vegetable, 12, 0, 0, 5, 0, true).setUnlocalizedName("SweetPotato");
 		
-		seedsSweetPotato = new CustomSeedsTFCM("sweet potato").setFolder("food/unused/").setUnlocalizedName("Seeds Sweet Potato").setTextureName("img129");
-		sweetPotato = new ItemFoodTFC(EnumFoodGroup.Vegetable, 12, 0, 0, 5, 0, true).setUnlocalizedName("Sweet Potato");
-		
-		seedsHops = new CustomSeedsTFCM("hops").setFolder("food/unused/").setUnlocalizedName("Seeds Hops").setTextureName("img137");
+		seedsHops = new CustomSeedsTFCM("hops").setFolder("food/unused/").setUnlocalizedName("SeedsHops").setTextureName("img137");
 		hops = new ItemFoodTFC(EnumFoodGroup.Fruit, 0, 0, 0, 20, 0, false, false).setUnlocalizedName("Hops");
 		
 		//Meat
@@ -395,11 +391,11 @@ public class TFCMItemsSetup extends TFCMItems
 		/* TODO Create custom TFCM variants of sheet item/te/block for proper texture usage
 		 * Sheet metalID only used for rendering currently Lead Pewter renders as Lead (ID 10)
 		 */
-		leadPewterIngot = new ItemIngot().setUnlocalizedName("Lead Pewter Ingot");
-		leadPewterIngot2x  = ((ItemIngot)new ItemIngot().setUnlocalizedName("Lead Pewter Double Ingot")).setSize(EnumSize.LARGE).setMetal("Lead Pewter", 200);
-		leadPewterUnshaped = new ItemMeltedMetal().setUnlocalizedName("Lead Pewter Unshaped");
-		leadPewterSheet = ((ItemMetalSheet) new ItemMetalSheet(10).setUnlocalizedName("Lead Pewter Sheet")).setMetal("Lead Pewter", 200);
-		leadPewterSheet2x = ((ItemMetalSheet2x) new ItemMetalSheet2x(10).setUnlocalizedName("Lead Pewter Double Sheet")).setMetal("Lead Pewter", 400);
+		leadPewterIngot = new ItemIngot().setUnlocalizedName("LeadPewterIngot");
+		leadPewterIngot2x  = ((ItemIngot)new ItemIngot().setUnlocalizedName("LeadPewterDoubleIngot")).setSize(EnumSize.LARGE).setMetal("Lead Pewter", 200);
+		leadPewterUnshaped = new ItemMeltedMetal().setUnlocalizedName("LeadPewterUnshaped");
+		leadPewterSheet = ((ItemMetalSheet) new ItemMetalSheet(10).setUnlocalizedName("LeadPewterSheet")).setMetal("Lead Pewter", 200);
+		leadPewterSheet2x = ((ItemMetalSheet2x) new ItemMetalSheet2x(10).setUnlocalizedName("LeadPewterDoubleSheet")).setMetal("Lead Pewter", 400);
 		
 		GlobalTFCM.LEADPEWTER = new Metal("Lead Pewter", TFCMItems.leadPewterIngot);
 
@@ -411,5 +407,13 @@ public class TFCMItemsSetup extends TFCMItems
 		leadpewter.addIngred(Global.COPPER, 4.99f, 10.01f);
 		leadpewter.addIngred(Global.LEAD, 4.99f, 10.01f);
 		AlloyManager.INSTANCE.addAlloy(leadpewter);
+		
+		//Alloys lead pewter ingots to be used to alloy new lead pewter without explotation.
+		Alloy leadpewterMix = new Alloy(GlobalTFCM.LEADPEWTER, Alloy.EnumTier.TierI);
+		leadpewterMix.addIngred(Global.TIN, 79.99f, 90.01f);
+		leadpewterMix.addIngred(Global.COPPER, 4.99f, 10.01f);
+		leadpewterMix.addIngred(Global.LEAD, 4.99f, 10.01f);
+		leadpewterMix.addIngred(GlobalTFCM.LEADPEWTER, 1.01f, 99.01f);
+		AlloyManager.INSTANCE.addAlloy(leadpewterMix);
 	}
 }

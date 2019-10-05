@@ -18,7 +18,6 @@ import terramisc.tileentities.TEBrickOven;
 import terramisc.tileentities.TECropTFCM;
 import terramisc.tileentities.TEFoodBlock;
 import terramisc.tileentities.TEFruitPress;
-import terramisc.tileentities.TEPumpkinLantern;
 import terramisc.tileentities.TETallowCandle;
 import terramisc.tileentities.TEVat;
 import terramisc.tileentities.TEWetClay;
@@ -110,7 +109,6 @@ public class TFCMCommonProxy
 		// non TESR registers
 		GameRegistry.registerTileEntity(TEWetClay.class, "WetClay");
 		GameRegistry.registerTileEntity(TEFoodBlock.class, "FoodBlock");
-		GameRegistry.registerTileEntity(TEPumpkinLantern.class, "PumpkinLantern");
 		GameRegistry.registerTileEntity(TECropTFCM.class, "CropTFCM");
 		GameRegistry.registerTileEntity(TEVat.class, "VatTFCM");
 

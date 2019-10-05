@@ -26,9 +26,12 @@ import terramisc.tileentities.TEVat;
 public class ContainerVat extends ContainerTFC
 {
 	private TEVat vat;
+	@SuppressWarnings("unused")
 	private float liquidLevel;
+	@SuppressWarnings("unused")
 	private int liquidID;
 	private float fireTemp;
+	private int cookTimer;
 	
 	public ContainerVat(InventoryPlayer inventoryplayer, TEVat teVat, World world, int x, int y, int z)
 	{
@@ -150,9 +153,13 @@ public class ContainerVat extends ContainerTFC
 			ICrafting var2 = (ICrafting)this.crafters.get(var1);
 			if (this.fireTemp != this.vat.fireTemp)
 				var2.sendProgressBarUpdate(this, 0, (int)this.vat.fireTemp);
+			
+			if (this.cookTimer != this.vat.cookTimer)
+				var2.sendProgressBarUpdate(this, 1, (int)this.vat.cookTimer);
 		}
 
 		fireTemp = this.vat.fireTemp;
+		cookTimer = this.vat.cookTimer;
 	}
 
 	@Override
@@ -160,5 +167,8 @@ public class ContainerVat extends ContainerTFC
 	{
 		if(par1 == 0)
 			this.vat.fireTemp = par2;
+		
+		if(par1 == 1)
+			this.vat.cookTimer = par2;
 	}
 }

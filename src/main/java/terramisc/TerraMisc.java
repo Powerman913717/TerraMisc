@@ -22,7 +22,6 @@ import terramisc.core.TFCMOreDictionary;
 import terramisc.core.TFCMRecipes;
 import terramisc.core.player.TFCMPlayerTracker;
 import terramisc.events.EventListener;
-import terramisc.handlers.BlockDropHandlerTFCM;
 import terramisc.handlers.ChunkEventHandlerTFCM;
 import terramisc.handlers.CraftingHandlerTFCM;
 import terramisc.handlers.CraftingToolUsageHandlerTFCM;
@@ -114,10 +113,7 @@ public class TerraMisc
 		
 		// Register Mob Drop Handlers
 		MinecraftForge.EVENT_BUS.register(new MobDropHandlerTFCM());
-		
-		// Register Block Drop Handlers
-		MinecraftForge.EVENT_BUS.register(new BlockDropHandlerTFCM());
-		
+			
 		// Register Player Right Click Handlers
 		MinecraftForge.EVENT_BUS.register(new PlayerInteractHandlerTFCM());
 		

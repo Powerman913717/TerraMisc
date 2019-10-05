@@ -41,7 +41,7 @@ public class VatManager
 		for(Object recipe : recipes)
 		{
 			VatRecipe br = (VatRecipe) recipe;
-			if(fluid != null && br.matches(item, fluid))
+			if(br.matches(item, fluid))
 				return br;
 		}
 		return null;

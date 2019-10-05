@@ -13,7 +13,6 @@ public class VatRecipe
 	public FluidStack recipeOutFluid;
 	public int cookTime = 1; //Time in hours
 	public int temperature; //Temperture in celsius
-	public boolean removesLiquid = true;
 	public boolean allowAnyStack = true;
 
 	public VatRecipe(ItemStack inputItem, FluidStack inputFluid, ItemStack outIS, FluidStack outputFluid, int temp)
@@ -30,18 +29,6 @@ public class VatRecipe
 		this(inputItem, inputFluid, outIS, outputFluid, temp);
 		this.cookTime = seal;
 	}
-	
-	public VatRecipe(ItemStack inputItem, FluidStack inputFluid, ItemStack outIS, FluidStack outputFluid, int temp, int seal, boolean consumeLiquid)
-	{
-		this(inputItem, inputFluid, outIS, outputFluid, temp, seal);
-		this.removesLiquid = consumeLiquid;
-	}
-
-	public VatRecipe setRemovesLiquid(boolean b)
-	{
-		this.removesLiquid = b;
-		return this;
-	}
 
 	public VatRecipe setAllowAnyStack(boolean b)
 	{
@@ -51,14 +38,43 @@ public class VatRecipe
 
 	public Boolean matches(ItemStack item, FluidStack fluid)
 	{
-		boolean iStack = removesLiquid ? true : recipeIS != null && item != null && fluid != null && recipeFluid != null && item.stackSize >= (int)Math.ceil(fluid.amount/recipeFluid.amount);
-		boolean fStack = !removesLiquid ? true : recipeFluid != null && item != null && fluid != null && recipeOutFluid != null && fluid.amount >= item.stackSize*recipeOutFluid.amount;
-
-		boolean anyStack = !removesLiquid && this.recipeOutIS == null && allowAnyStack;
-		boolean itemsEqual = item == null && recipeIS == null || OreDictionary.itemMatches(recipeIS, item, false);
-
-		return (recipeIS != null && itemsEqual && (iStack || anyStack) || recipeIS == null) &&
-				(recipeFluid != null && recipeFluid.isFluidEqual(fluid) && (fStack || anyStack) || recipeFluid == null);
+		Boolean checkItems = false;
+		Boolean checkFluid = false;
+		
+		//Check itemstack and fluidstack
+		if(this instanceof VatRecipeAbsorption || this instanceof VatRecipeDoubleBoiler)
+		{
+			if(item == null || fluid == null)
+				return false;
+			
+			if(item.getItem() == recipeIS.getItem())
+				checkItems = true;
+			else if(OreDictionary.itemMatches(item, recipeIS, false))
+				checkItems = true;
+			
+			if(fluid.getFluid() == recipeFluid.getFluid())
+				checkFluid = true;
+		}
+		
+		//TODO add melt recipe conditions
+		
+		//Check fluidstack, itemstack must be null.
+		if(this instanceof VatRecipeBoil || this instanceof VatRecipeEvaporation || this instanceof VatRecipePercipitation)
+		{
+			if(item != null || fluid == null)
+				return false;
+			
+			if(item == null)
+				checkItems = true;
+			
+			if(fluid.getFluid() == recipeFluid.getFluid())
+				checkFluid = true;
+		}
+		
+		if(checkItems && checkFluid)
+			return true;
+		
+		return false;
 	}
 
 	public Boolean isInFluid(FluidStack item)
@@ -90,11 +106,6 @@ public class VatRecipe
 	{
 		return temperature;
 	}
-	
-	public boolean isRemovesLiquid()
-	{
-		return removesLiquid;
-	}
 
 	public boolean isAllowAnyStack()
 	{
@@ -115,18 +126,6 @@ public class VatRecipe
 		return s;
 	}
 
-	protected int getnumberOfRuns(ItemStack inIS, FluidStack inFS)
-	{
-		int runs = 0;
-		int div = 0;
-		if(inIS != null && recipeIS != null)
-		{
-			runs = inIS.stackSize/this.recipeIS.stackSize;
-			div = inFS.amount/this.getRecipeInFluid().amount;
-		}
-		return Math.min(runs, div);
-	}
-
 	public ItemStack getResult(ItemStack inIS, FluidStack inFS)
 	{
 		ItemStack outStack = null;
@@ -145,7 +144,7 @@ public class VatRecipe
 		{
 			FluidStack fs = null;
 			// The FluidStack .copy() method does not make a copy of the NBT tag, which may have been the cause of the quantum entanglement
-			if (recipeOutFluid.tag != null)
+			if(recipeOutFluid.tag != null)
 			{
 				fs = new FluidStack(recipeOutFluid.getFluid(), recipeOutFluid.amount, (NBTTagCompound) recipeOutFluid.tag.copy());
 			}
@@ -154,14 +153,6 @@ public class VatRecipe
 				fs = new FluidStack(recipeOutFluid.getFluid(), recipeOutFluid.amount);
 			}
 			
-			if (!removesLiquid && inFS != null)
-			{
-				fs.amount = inFS.amount;
-			}
-			else if (inIS != null)
-			{
-				fs.amount *= inIS.stackSize;
-			}
 			return fs;
 		}
 		return null;

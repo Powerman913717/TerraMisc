@@ -54,7 +54,7 @@ public class TFCMFluids
 	//Vinegar
 	
 	/* TFC Heat Tile Entities operate on degrees Celsius fluids are kept in degrees Kelvin.
-	 * 0�C + 273.15 = 273.15K
+	 * 0°C + 273.15 = 273.15K
 	 * 
 	 * Boiling Water = 375 Degree Kelvin / 101.85 Celsius
 	 * 

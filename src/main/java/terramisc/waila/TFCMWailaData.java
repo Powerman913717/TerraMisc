@@ -24,9 +24,6 @@ import net.minecraft.world.World;
 import terramisc.api.crops.CropIndexTFCM;
 import terramisc.api.crops.CropManagerTFCM;
 import terramisc.blocks.BlockClayTFCM;
-import terramisc.blocks.BlockFoodPumpkin;
-import terramisc.blocks.BlockPumpkinLantern;
-import terramisc.blocks.BlockPumpkinTFCM;
 import terramisc.blocks.BlockTallowCandle;
 import terramisc.core.TFCMBlocks;
 import terramisc.core.TFCMItems;
@@ -76,30 +73,6 @@ public class TFCMWailaData implements IWailaDataProvider
 			currenttip = clayBody(itemStack, currenttip, accessor, config);
 		}
 		
-		if(block == TFCBlocks.pumpkin)
-		{
-			currenttip = pumpkinBody(itemStack, currenttip, accessor, config);
-		}
-		
-		if(block == TFCMBlocks.blockPumpkin)
-		{
-			currenttip = pumpkinFoodBody(itemStack, currenttip, accessor, config);
-		}
-		
-		if(block == TFCMBlocks.blockPumpkinCarved)
-		{
-			currenttip = pumpkinCarvedBody(itemStack, currenttip, accessor, config);
-		}
-		
-		if(block == TFCMBlocks.blockPumpkinLanternOff)
-		{
-			currenttip = lightBody(itemStack, currenttip, accessor, config);
-		}
-		
-		if(block == TFCMBlocks.blockPumpkinLantern)
-		{
-			currenttip = pumpkinLanternBody(itemStack, currenttip, accessor, config);
-		}
 		
 		if(te instanceof TECropTFCM)
 		{
@@ -132,17 +105,6 @@ public class TFCMWailaData implements IWailaDataProvider
 		
 		reg.registerBodyProvider(new TFCMWailaData(), BlockClayTFCM.class);
 		reg.registerNBTProvider(new TFCMWailaData(), BlockClayTFCM.class);
-		
-		reg.registerBodyProvider(new TFCMWailaData(), BlockCustomPumpkin.class);
-		reg.registerNBTProvider(new TFCMWailaData(), BlockCustomPumpkin.class);
-		
-		reg.registerBodyProvider(new TFCMWailaData(), BlockFoodPumpkin.class);
-		reg.registerNBTProvider(new TFCMWailaData(), BlockFoodPumpkin.class);
-		
-		reg.registerBodyProvider(new TFCMWailaData(), BlockPumpkinTFCM.class);
-		
-		reg.registerBodyProvider(new TFCMWailaData(), BlockPumpkinLantern.class);
-		reg.registerNBTProvider(new TFCMWailaData(), BlockPumpkinLantern.class);
 		
 		reg.registerStackProvider(new TFCMWailaData(), TECropTFCM.class);
 		reg.registerBodyProvider(new TFCMWailaData(), TECropTFCM.class);
@@ -182,63 +144,10 @@ public class TFCMWailaData implements IWailaDataProvider
 		return currenttip;
 	}
 	
-	public List<String> pumpkinBody(ItemStack itemStack, List<String> currenttip, IWailaDataAccessor accessor, IWailaConfigHandler config) 
-	{
-		currenttip.add(TFC_Core.translate("gui.pumpkinHarvesting"));
-		
-		return currenttip;
-	}
-	
-	public List<String> pumpkinFoodBody(ItemStack itemStack, List<String> currenttip, IWailaDataAccessor accessor, IWailaConfigHandler config) 
-	{
-		NBTTagCompound tag = accessor.getNBTData();
-		
-		NBTTagList nbttaglist = tag.getTagList("Items", 10);
-		ItemStack[] storage = new ItemStack[1];
-		for(int i = 0; i < nbttaglist.tagCount(); i++)
-		{
-			NBTTagCompound nbttagcompound1 = nbttaglist.getCompoundTagAt(i);
-			byte byte0 = nbttagcompound1.getByte("Slot");
-			if(byte0 >= 0 && byte0 < storage.length)
-				storage[byte0] = ItemStack.loadItemStackFromNBT(nbttagcompound1);
-		}
-		
-		float weight = Food.getWeight(storage[0]);
-		float decay = Food.getDecay(storage[0]);
-		
-		if(decay < 0)
-			decay = 0;
-		
-		currenttip.add(TFC_Core.translate("gui.pumpkinWeight") + " " + Helper.roundNumber(weight, 10) + " " + TFC_Core.translate("gui.pumpkinDecay") + " " + Helper.roundNumber(decay, 10) + " (" + Helper.roundNumber((decay / weight) * 100, 10) + "%)");
-		currenttip.add(TFC_Core.translate("gui.pumpkinCarving"));
-		
-		return currenttip;
-	}
-	
-	public List<String> pumpkinCarvedBody(ItemStack itemStack, List<String> currenttip, IWailaDataAccessor accessor, IWailaConfigHandler config) 
-	{
-		currenttip.add(TFC_Core.translate("gui.pumpkinCandle"));
-		
-		return currenttip;
-	}
-	
 	public List<String> lightBody(ItemStack itemStack, List<String> currenttip, IWailaDataAccessor accessor, IWailaConfigHandler config) 
 	{
 		currenttip.add(TFC_Core.translate("gui.lightCandle"));
 		
-		return currenttip;
-	}
-	
-	public List<String> pumpkinLanternBody(ItemStack itemStack, List<String> currenttip, IWailaDataAccessor accessor, IWailaConfigHandler config) 
-	{
-		if (accessor.getMetadata() < 8 && TFCMOptions.TallowCandleBurnTime != 0)
-		{
-			NBTTagCompound tag = accessor.getNBTData();
-			long hours = (long) (TFCMOptions.TallowCandleBurnTime - (TFC_Time.getTotalHours() - tag.getInteger("hourPlaced")));
-
-			if (hours > 0)
-				currenttip.add(hours + " " + TFC_Core.translate("gui.hoursRemaining") + " (" + Helper.roundNumber((100f * hours) / TFCMOptions.TallowCandleBurnTime, 10) + "%)");
-		}
 		return currenttip;
 	}
 	

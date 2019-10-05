@@ -97,26 +97,20 @@ item.BottleJuiceOnion.name=Onion Juice
 item.BottleSoyMilk.name=Soy Milk
 item.BucketHotWater.name=Wooden Bucket (Hot Water)
 
-item.SoyPaste.name=Soybean Paste
-item.Pumpkin.name=Pumpkin
-item.PumpkinMeat.name=Pumpkin Meat
+item.SoybeanPaste.name=Soybean Paste
 item.Pie.name=Pie
 item.Bear.name=Bear Meat
-item.Seeds Pumpkin.name=Pumpkin Seeds
-item.Pumpkin.name=Pumpkin
-item.Seeds Cayenne.name=Cayenne Pepper Seeds
-item.Green Cayenne.name=Green Cayenne Pepper
-item.Red Cayenne.name=Red Cayenne Pepper
-item.Seeds Coffee.name=Coffee Seeds
-item.Coffee Cherries.name=Coffee Cherries
-item.Green Coffee.name=Green Coffee Beans
+item.SeedsCayenne.name=Cayenne Pepper Seeds
+item.GreenCayenne.name=Green Cayenne Pepper
+item.RedCayenne.name=Red Cayenne Pepper
+item.SeedsCoffee.name=Coffee Seeds
+item.CoffeeCherries.name=Coffee Cherries
+item.GreenCoffee.name=Green Coffee Beans
 item.Coffee.name=Coffee Beans
-item.Ground Coffee.name=Ground Coffee Beans
-item.Seeds Watermelon.name=Watermelon Seeds
-item.Watermelon.name=Watermelon
-item.Seeds Sweet Potato.name=Sweet Potato Seeds
-item.Sweet Potato.name=Sweet Potato
-item.Seeds Hops.name=Hops Seeds
+item.GroundCoffee.name=Ground Coffee Beans
+item.SeedsSweetPotato.name=Sweet Potato Seeds
+item.SweetPotato.name=Sweet Potato
+item.SeedsHops.name=Hops Seeds
 item.Hops.name=Hops
 
 //Bows and Such
@@ -250,40 +244,40 @@ item.Poniard_Steel_Head.name=Steel Poniard Blade
 item.Poniard_WroughtIron_Head.name=Wrought Iron Poniard Blade
 
 //Pottery Molds
-item.itemHalberd_Mold.Clay_Mold_Halberd.name=Clay Halberd Mold
-item.itemHalberd_Mold.Ceramic_Mold_Halberd.name=Halberd Mold
-item.itemHalberd_Mold.Ceramic_Mold_Halberd_Copper.name=Halberd Mold (Copper)
-item.itemHalberd_Mold.Ceramic_Mold_Halberd_Bronze.name=Halberd Mold (Bronze)
-item.itemHalberd_Mold.Ceramic_Mold_Halberd_BlackBronze.name=Halberd Mold (Black Bronze)
-item.itemHalberd_Mold.Ceramic_Mold_Halberd_BismuthBronze.name=Halberd Mold (Bismuth Bronze)
+item.halberd_Mold.Clay_Mold_Halberd.name=Clay Halberd Mold
+item.halberd_Mold.Ceramic_Mold_Halberd.name=Halberd Mold
+item.halberd_Mold.Ceramic_Mold_Halberd_Copper.name=Halberd Mold (Copper)
+item.halberd_Mold.Ceramic_Mold_Halberd_Bronze.name=Halberd Mold (Bronze)
+item.halberd_Mold.Ceramic_Mold_Halberd_BlackBronze.name=Halberd Mold (Black Bronze)
+item.halberd_Mold.Ceramic_Mold_Halberd_BismuthBronze.name=Halberd Mold (Bismuth Bronze)
 
-item.itemWarHammer_Mold.Clay_Mold_WarHammer.name=Clay War Hammer Mold
-item.itemWarHammer_Mold.Ceramic_Mold_WarHammer.name=War Hammer Mold
-item.itemWarHammer_Mold.Ceramic_Mold_WarHammer_Copper.name=War Hammer Mold (Copper)
-item.itemWarHammer_Mold.Ceramic_Mold_WarHammer_Bronze.name=War Hammer Mold (Bronze)
-item.itemWarHammer_Mold.Ceramic_Mold_WarHammer_BlackBronze.name=War Hammer Mold (Black Bronze)
-item.itemWarHammer_Mold.Ceramic_Mold_WarHammer_BismuthBronze.name=War Hammer Mold (Bismuth Bronze)
+item.warHammer_Mold.Clay_Mold_WarHammer.name=Clay War Hammer Mold
+item.warHammer_Mold.Ceramic_Mold_WarHammer.name=War Hammer Mold
+item.warHammer_Mold.Ceramic_Mold_WarHammer_Copper.name=War Hammer Mold (Copper)
+item.warHammer_Mold.Ceramic_Mold_WarHammer_Bronze.name=War Hammer Mold (Bronze)
+item.warHammer_Mold.Ceramic_Mold_WarHammer_BlackBronze.name=War Hammer Mold (Black Bronze)
+item.warHammer_Mold.Ceramic_Mold_WarHammer_BismuthBronze.name=War Hammer Mold (Bismuth Bronze)
 
-item.itemPoniard_Mold.Clay_Mold_Poniard.name=Clay Poniard Mold
-item.itemPoniard_Mold.Ceramic_Mold_Poniard.name=Poniard Mold
-item.itemPoniard_Mold.Ceramic_Mold_Poniard_Copper.name=Poniard Mold (Copper)
-item.itemPoniard_Mold.Ceramic_Mold_Poniard_Bronze.name=Poniard Mold (Bronze)
-item.itemPoniard_Mold.Ceramic_Mold_Poniard_BlackBronze.name=Poniard Mold (Black Bronze)
-item.itemPoniard_Mold.Ceramic_Mold_Poniard_BismuthBronze.name=Poniard Mold (Bismuth Bronze)
+item.poniard_Mold.Clay_Mold_Poniard.name=Clay Poniard Mold
+item.poniard_Mold.Ceramic_Mold_Poniard.name=Poniard Mold
+item.poniard_Mold.Ceramic_Mold_Poniard_Copper.name=Poniard Mold (Copper)
+item.poniard_Mold.Ceramic_Mold_Poniard_Bronze.name=Poniard Mold (Bronze)
+item.poniard_Mold.Ceramic_Mold_Poniard_BlackBronze.name=Poniard Mold (Black Bronze)
+item.poniard_Mold.Ceramic_Mold_Poniard_BismuthBronze.name=Poniard Mold (Bismuth Bronze)
 
-item.itemBolt_Mold.Clay_Mold_Bolt.name=Clay Bolt Mold
-item.itemBolt_Mold.Ceramic_Mold_Bolt.name=Bolt Mold
-item.itemBolt_Mold.Ceramic_Mold_Bolt_Copper.name=Bolt Mold (Copper)
-item.itemBolt_Mold.Ceramic_Mold_Bolt_Bronze.name=Bolt Mold (Bronze)
-item.itemBolt_Mold.Ceramic_Mold_Bolt_BlackBronze.name=Bolt Mold (Black Bronze)
-item.itemBolt_Mold.Ceramic_Mold_Bolt_BismuthBronze.name=Bolt Mold (Bismuth Bronze)
+item.bolt_Mold.Clay_Mold_Bolt.name=Clay Bolt Mold
+item.bolt_Mold.Ceramic_Mold_Bolt.name=Bolt Mold
+item.bolt_Mold.Ceramic_Mold_Bolt_Copper.name=Bolt Mold (Copper)
+item.bolt_Mold.Ceramic_Mold_Bolt_Bronze.name=Bolt Mold (Bronze)
+item.bolt_Mold.Ceramic_Mold_Bolt_BlackBronze.name=Bolt Mold (Black Bronze)
+item.bolt_Mold.Ceramic_Mold_Bolt_BismuthBronze.name=Bolt Mold (Bismuth Bronze)
 
-item.itemArrow_Mold.Clay_Mold_Arrow.name=Clay Arrow Mold
-item.itemArrow_Mold.Ceramic_Mold_Arrow.name=Arrow Mold
-item.itemArrow_Mold.Ceramic_Mold_Arrow_Copper.name=Arrow Mold (Copper)
-item.itemArrow_Mold.Ceramic_Mold_Arrow_Bronze.name=Arrow Mold (Bronze)
-item.itemArrow_Mold.Ceramic_Mold_Arrow_BlackBronze.name=Arrow Mold (Black Bronze)
-item.itemArrow_Mold.Ceramic_Mold_Arrow_BismuthBronze.name=Arrow Mold (Bismuth Bronze)
+item.arrow_Mold.Clay_Mold_Arrow.name=Clay Arrow Mold
+item.arrow_Mold.Ceramic_Mold_Arrow.name=Arrow Mold
+item.arrow_Mold.Ceramic_Mold_Arrow_Copper.name=Arrow Mold (Copper)
+item.arrow_Mold.Ceramic_Mold_Arrow_Bronze.name=Arrow Mold (Bronze)
+item.arrow_Mold.Ceramic_Mold_Arrow_BlackBronze.name=Arrow Mold (Black Bronze)
+item.arrow_Mold.Ceramic_Mold_Arrow_BismuthBronze.name=Arrow Mold (Bismuth Bronze)
 
 //Armor
 item.Coil_BismuthBronze.name=Bismuth Bronze Coil
@@ -356,11 +350,11 @@ item.WroughtIron_Chain_Helmet.name=Wrought Iron Chain Coif
 item.RedSteel_Chain_Helmet.name=Red Steel Chain Coif
 item.Steel_Chain_Helmet.name=Steel Chain Coif
 
-item.Lead Pewter Double Ingot.name=Lead Pewter Double Ingot
-item.Lead Pewter Unshaped.name=Unshaped: Lead Pewter
-item.Lead Pewter Ingot.name=Lead Pewter Ingot
-item.Lead Pewter Double Sheet.name=Lead Pewter Double Sheet
-item.Lead Pewter Sheet.name=Lead Pewter Sheet
+item.LeadPewterDoubleIngot.name=Lead Pewter Double Ingot
+item.LeadPewterUnshaped.name=Unshaped: Lead Pewter
+item.LeadPewterIngot.name=Lead Pewter Ingot
+item.LeadPewterDoubleSheet.name=Lead Pewter Double Sheet
+item.LeadPewterSheet.name=Lead Pewter Sheet
 
 #=======
 #= GUI =

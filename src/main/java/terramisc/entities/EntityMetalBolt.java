@@ -21,9 +21,9 @@ public class EntityMetalBolt  extends EntityProjectileTFC
 	{
 		super(par1World, shooter, force);
 	}
-	
+
 	@Override
-	public EnumDamageType getDamageType()
+	public EnumDamageType getDamageType(EntityLivingBase is)
 	{
 		return EnumDamageType.CRUSHING;
 	}

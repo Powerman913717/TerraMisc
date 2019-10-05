@@ -42,6 +42,8 @@ import terramisc.api.crafting.FruitPressManager;
 import terramisc.api.crafting.FruitPressRecipe;
 import terramisc.api.crafting.VatManager;
 import terramisc.api.crafting.VatRecipe;
+import terramisc.api.crafting.VatRecipeDoubleBoiler;
+import terramisc.api.crafting.VatRecipeEvaporation;
 
 public class TFCMRecipes
 {	
@@ -768,7 +770,7 @@ public class TFCMRecipes
 		heatmanager.addIndex(new HeatIndex(new ItemStack(TFCMItems.coil_RedSteel, 1), redSteelRaw, new ItemStack(TFCItems.redSteelUnshaped, 1)));
 		heatmanager.addIndex(new HeatIndex(new ItemStack(TFCMItems.coil_Steel, 1), steelRaw, new ItemStack(TFCItems.steelUnshaped, 1)));
 	
-		heatmanager.addIndex(new HeatIndex(new ItemStack(TFCMItems.pumpkin,1),1, 1200, null));
+		heatmanager.addIndex(new HeatIndex(new ItemStack(TFCItems.pumpkinGuts,1),1, 1200, null));
 		heatmanager.addIndex(new HeatIndex(new ItemStack(TFCMItems.bearRaw,1),1, 1200, null));
 	}	
 	
@@ -776,6 +778,7 @@ public class TFCMRecipes
 	{
 		//1200 ticks equals one minute
 		
-		VatManager.addRecipe(new VatRecipe(new ItemStack(TFCMItems.bowlSuet), new FluidStack(TFCFluids.FRESHWATER, 1000), new ItemStack(TFCMItems.bowlTallow), new FluidStack(TFCFluids.FRESHWATER, 1000), 102, 1200, false));
+		VatManager.addRecipe(new VatRecipeDoubleBoiler(new ItemStack(TFCMItems.bowlSuet, 1), new FluidStack(TFCFluids.FRESHWATER, 1000), new ItemStack(TFCMItems.bowlTallow, 1), 102, 1200));
+		VatManager.addRecipe(new VatRecipeEvaporation(new FluidStack(TFCFluids.SALTWATER, 1000), new ItemStack(TFCItems.powder, 1, 9), 102, 1800));
 	}
 }

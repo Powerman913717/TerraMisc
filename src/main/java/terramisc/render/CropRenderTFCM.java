@@ -24,6 +24,9 @@ public class CropRenderTFCM extends RenderCrop implements ISimpleBlockRenderingH
 		
 		if(cropTE == null || cropTE.cropId == null)
 			return false;
+		
+		if(cropTE == null || cropTE.cropId == null)
+			return false;
 
 		if ("hops".equals(cropTE.cropId)) {
 			drawCrossedSquares(block, x, y, z, renderblocks, 0.9, 2.0);

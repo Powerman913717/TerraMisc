@@ -36,13 +36,11 @@ public class ItemCustomArmor extends ItemArmor implements ISize, IEquipable, ICl
 	public Armor armorTypeTFC;
 	public IIcon overlayIcon;
 	boolean[][] clothingAlpha;
-	private int thermal;
+	private int thermal = 0;
 	//private int type;
-	private int trueType;
+	private int trueType = 0;
 	ResourceLocation res;
 	public ArmorStats ArmorType;
-
-
 
 	public ItemCustomArmor(ArmorStats armor, int renderIndex, int armorSlot, int thermal, int type)
 	{

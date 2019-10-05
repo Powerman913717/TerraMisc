@@ -7,10 +7,12 @@ import java.util.Random;
 import com.dunk.tfc.TerraFirmaCraft;
 import com.dunk.tfc.Core.TFC_Core;
 import com.dunk.tfc.Items.Tools.ItemCustomBucketMilk;
+import com.dunk.tfc.api.Food;
 import com.dunk.tfc.api.TFCBlocks;
 import com.dunk.tfc.api.TFCItems;
 import com.dunk.tfc.api.TFCOptions;
 import com.dunk.tfc.api.Enums.EnumFuelMaterial;
+import com.dunk.tfc.api.Interfaces.IFood;
 import com.dunk.tfc.api.TileEntities.TEFireEntity;
 
 import cpw.mods.fml.relauncher.Side;
@@ -30,7 +32,11 @@ import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.fluids.IFluidContainerItem;
 import terramisc.api.crafting.VatManager;
 import terramisc.api.crafting.VatRecipe;
-import terramisc.api.crafting.VatRecipeiFoF;
+import terramisc.api.crafting.VatRecipeAbsorption;
+import terramisc.api.crafting.VatRecipeBoil;
+import terramisc.api.crafting.VatRecipeDoubleBoiler;
+import terramisc.api.crafting.VatRecipeEvaporation;
+import terramisc.api.crafting.VatRecipePercipitation;
 
 public class TEVat extends TEFireEntity implements IInventory
 {
@@ -43,10 +49,12 @@ public class TEVat extends TEFireEntity implements IInventory
 	public ItemStack[] storage = new ItemStack[6];
 	public FluidStack fluid;
 	
-	public int processTimer; //Tracks ticking of process function
-	public int cookTimer; //Tracks ticking of cooking process
+	//TODO Getter methods for variable privatization.
+	public int tickTimer = 0; //Tracks ticking of process function
+	public int cookTimer = 0; //Tracks ticking of cooking process
 	
 	public static final int FUELSLOT_INPUT = 0; //Slots 0-3 hold fuel items
+	public static final int FUELSLOT_CONSUME = 3;
 	public static final int CRAFTINGSLOT_INPUT = 4;
 	public static final int CRAFTINGSLOT_OUTPUT = 5;
 	
@@ -65,53 +73,16 @@ public class TEVat extends TEFireEntity implements IInventory
 		fuelTimeLeft = 375;
 		fuelBurnTemp =  613;
 		fireTemp = 350;
-		maxFireTempScale = 2000;
+		maxFireTempScale = 2000; //TODO Lower max temp to realistic limitations?
 	}
 
-	/**
-	 * Root Method for controlling TE Behavior
-	 */
-	@SuppressWarnings("rawtypes")
+	/**Root Method for controlling TE Behavior*/
 	@Override
 	public void updateEntity()
 	{
 		if(!worldObj.isRemote)
 		{
-			//Create a list of all the items that are falling onto the firepit
-			List list = worldObj.getEntitiesWithinAABB(EntityItem.class, AxisAlignedBB.getBoundingBox(xCoord, yCoord, zCoord, xCoord + 1, yCoord + 1.1, zCoord + 1));
-			
-			if(list != null && !list.isEmpty() && storage[FUELSLOT_INPUT] == null) //Only go through the list if more fuel can fit.
-			{
-				//Iterate through the list and check for logs and peat
-				for(Iterator iterator = list.iterator(); iterator.hasNext();)
-				{
-					EntityItem entity = (EntityItem) iterator.next();
-					ItemStack is = entity.getEntityItem();
-					Item item = is.getItem();
-
-					if(item == TFCItems.logs || item == Item.getItemFromBlock(TFCBlocks.peat))
-					{
-						for(int c = 0; c < is.stackSize; c++)
-						{
-							if(storage[FUELSLOT_INPUT] == null) //Secondary check for empty fuel input slot.
-							{
-								/**
-								 * Place a copy of only one of the logs into the fuel slot, due to the stack limitation of the fuel slots.
-								 * Do not change to storage[0] = is;
-								 */
-								setInventorySlotContents(1, new ItemStack(item, 1, is.getItemDamage()));
-								is.stackSize--;
-								handleFuelStack(); // Attempt to shift the fuel down so more fuel can be added within the same for loop.
-							}
-						}
-
-						if(is.stackSize == 0)
-							entity.setDead();
-					}
-				}
-			}
-			
-			//push the input fuel down the stack
+			handleFallingItems();
 			handleFuelStack();
 			
 			if(fireTemp < 1 && worldObj.getBlockMetadata(xCoord, yCoord, zCoord) != 0)
@@ -126,7 +97,7 @@ public class TEVat extends TEFireEntity implements IInventory
 			}
 
 			//If the fire is still burning and has fuel
-			if(fuelTimeLeft > 0 && fireTemp >= 1)
+			if(fuelTimeLeft > 0 && this.isBurning())
 			{
 				if(worldObj.getBlockMetadata(xCoord, yCoord, zCoord) != 2)
 				{
@@ -134,13 +105,13 @@ public class TEVat extends TEFireEntity implements IInventory
 					worldObj.markBlockForUpdate(xCoord, yCoord, zCoord);
 				}
 			}
-			else if(fuelTimeLeft <= 0 && fireTemp >= 1 && storage[3] != null && !TFC_Core.isExposedToRain(worldObj, xCoord, yCoord, zCoord))
+			else if(fuelTimeLeft <= 0 && this.isBurning() && storage[FUELSLOT_CONSUME] != null && !TFC_Core.isExposedToRain(worldObj, xCoord, yCoord, zCoord))
 			{
-				if(storage[3] != null)
+				if(storage[FUELSLOT_CONSUME] != null)
 				{
-					EnumFuelMaterial m = TFC_Core.getFuelMaterial(storage[3]);
+					EnumFuelMaterial m = TFC_Core.getFuelMaterial(storage[FUELSLOT_CONSUME]);
 					fuelTasteProfile = m.ordinal();
-					storage[3] = null;
+					storage[FUELSLOT_CONSUME] = null;
 					fuelTimeLeft = m.burnTimeMax;
 					fuelBurnTemp = m.burnTempMax;
 				}
@@ -153,132 +124,210 @@ public class TEVat extends TEFireEntity implements IInventory
 			//Here we handle the bellows
 			handleAirReduction();
 			
-			//We only want to bother ticking food once per 5 seconds to keep overhead low.
-			processTimer++;
-			if(processTimer > 100)
+			if(!this.isBurning()) //Don't tick food if crafting could be in process.
 			{
-				if(fuelTimeLeft <= 0) //Don't tick food if crafting could be in process.
+				//We only want to bother ticking food once per 5 seconds to keep overhead low.
+				tickTimer++;
+				if(tickTimer > 100)
+				{
 					TFC_Core.handleItemTicking(this, this.worldObj, xCoord, yCoord, zCoord);
-				
-				processItems();
-				processTimer = 0;
+					
+					tickTimer = 0;
+				}
 			}
+			else if(this.isBurning() && this.canProcess())
+				processItems();
 
 			//Reset our fluid if all of the liquid is gone.
 			if(fluid != null && fluid.amount == 0)
 				fluid = null;
 
-			//Handle adding fluids to the barrel if the barrel is currently in input mode.
-			if(mode == MODE_IN)
-			{
-				ItemStack container = getInputStack();
-				FluidStack inLiquid = FluidContainerRegistry.getFluidForFilledItem(container);
-
-				if(container != null && container.getItem() instanceof IFluidContainerItem)
-				{
-					FluidStack isfs = ((IFluidContainerItem)container.getItem()).getFluid(container);
-					if(isfs != null && addLiquid(isfs))
-					{
-						((IFluidContainerItem) container.getItem()).drain(container, ((IFluidContainerItem)container.getItem()).getCapacity(container), true);
-					}
-				}
-				else if (inLiquid != null && container != null && container.stackSize == 1)
-				{
-					if(addLiquid(inLiquid))
-					{
-						this.setInventorySlotContents(CRAFTINGSLOT_INPUT, FluidContainerRegistry.drainFluidContainer(container));
-					}
-				}
-			}
-			//Drain liquid from the barrel to a container if the barrel is in output mode.
-			else if(mode == MODE_OUT)
-			{
-				ItemStack container = getInputStack();
-
-				if(container != null && fluid != null && container.getItem() instanceof IFluidContainerItem)
-				{
-					FluidStack isfs = ((IFluidContainerItem)container.getItem()).getFluid(container);
-					if(isfs == null || fluid.isFluidEqual(isfs))
-					{
-						fluid.amount -= ((IFluidContainerItem) container.getItem()).fill(container, fluid, true);
-						if(fluid.amount == 0)
-							fluid = null;
-					}
-				}
-				else if(FluidContainerRegistry.isEmptyContainer(container))
-				{
-					ItemStack fullContainer = this.removeLiquid(getInputStack());
-					if (fullContainer.getItem() == TFCItems.woodenBucketMilk)
-					{
-						ItemCustomBucketMilk.createTag(fullContainer, 20f);
-					}
-					this.setInventorySlotContents(CRAFTINGSLOT_INPUT, fullContainer);
-				}
-			}
+			handleFluidContainers();
 		}
 	}
 	
-	/**
-	 * Works a secondary timer than tracks recipe process. Also handles the actual consumption of resources and output of products.
-	 */
+	/**Handles the crafting process including item/fluid consumption and output.*/
 	public void processItems()
 	{
 		if(!worldObj.isRemote)
 		{
-			if(canProcess())
-			{
-				this.cookTimer += 100;
-				
-				//Stops processing if enough time hasn't passed.
-				if(this.cookTimer < recipe.cookTime)
+			recipe = VatManager.getInstance().findMatchingRecipe(getInputStack(), getFluidStack());
+			
+			this.cookTimer++;
+			
+			//Stops processing if enough time hasn't passed.
+			if(recipe != null)
+				if(!(this.cookTimer >= recipe.cookTime))
 					return;
-
-				ItemStack origIS = getInputStack() != null ? getInputStack().copy() : null;
-				FluidStack origFS = getFluidStack() != null ? getFluidStack().copy() : null;
+			
+			/**Copy of stack found in the crafting input slot.*/
+			ItemStack origIS = getInputStack() != null ? getInputStack().copy() : null;
+			/**Copy of fluid stack found in the vat itself.*/
+			FluidStack origFS = getFluidStack() != null ? getFluidStack().copy() : null;
+			
+			//Consume input itemstack TODO Handle Food Items
+			if(recipe != null)
+			{			
+				//Double check recipe conditions.
+				recipe = VatManager.getInstance().findMatchingRecipe(getInputStack(), getFluidStack());
 				
-				//Consume input itemstack
-				if(origIS != null)
-				{
-					storage[CRAFTINGSLOT_INPUT] = null;
-				}
+				if(origIS != null && origIS.getItem() instanceof IFood)
+					return; //TODO switch to food handling code.
 				
-				//Handle fluid consumption and output
-				if(fluid.isFluidEqual(recipe.getResultFluid(origIS, origFS)) && recipe.removesLiquid)
+				ItemStack recipeStack;
+				int isSize = 0;
+				FluidStack fluidStack;
+				int fluidAmt = 0;
+				
+				float tryScale = 1;
+				int scale = 1;
+				
+				if(recipe instanceof VatRecipeAbsorption)
 				{
-					fluid.amount -= recipe.getResultFluid(origIS, origFS).amount;
-				}
-				else
-				{
-					this.fluid = recipe.getResultFluid(origIS, origFS).copy();
-					if(fluid != null && !(recipe instanceof VatRecipeiFoF) && origFS != null)
-						this.fluid.amount = origFS.amount;
-
-					worldObj.markBlockForUpdate(xCoord, yCoord, zCoord);
-				}
-
-				//Release recipe output itemstack
-				ItemStack resultStack = recipe.getResult(origIS, origFS);
-				if(resultStack != null)
-				{
-					if(storage[CRAFTINGSLOT_OUTPUT] == null)
-					{
-						this.setInventorySlotContents(CRAFTINGSLOT_OUTPUT, resultStack);
-					}
+					//Attempting to scale recipe.
+					if(origFS != null)
+						fluidAmt = origFS.amount;
+					
+					if(fluidAmt > recipe.getRecipeInFluid().amount)
+						tryScale = fluidAmt / recipe.getRecipeInFluid().amount;
+					
+					if(origIS.stackSize >= (int) (recipe.recipeIS.stackSize * tryScale))
+						scale = (int) tryScale;
 					else
-					{
-						Item iO = resultStack.getItem();
-						Item iT = storage[CRAFTINGSLOT_OUTPUT].getItem();
-						
-						if(iO == iT)
-						{
-							resultStack.stackSize = resultStack.stackSize + storage[CRAFTINGSLOT_OUTPUT].stackSize;
-						}
-					}
+						scale = 1;
+					
+					//Consume items
+					recipeStack = recipe.getRecipeInIS();
+					if(recipeStack != null)
+						isSize = recipeStack.stackSize;
+					
+					if(this.storage[CRAFTINGSLOT_INPUT] != null)
+						this.storage[CRAFTINGSLOT_INPUT].stackSize -= (isSize * scale);
+					
+					if(this.storage[CRAFTINGSLOT_INPUT].stackSize <= 0)
+						this.storage[CRAFTINGSLOT_INPUT] = null;
+					
+					//Consume and output fluid
+					this.fluid = recipe.getResultFluid(origIS, origFS).copy();
+					
+					fluidAmt = (int) (recipe.getRecipeOutFluid().amount * scale);
+					if(fluidAmt > 5000)
+						fluidAmt = 5000;
+					
+					this.fluid.amount = fluidAmt;
+					
 				}
-			}
-			else
-			{
-				this.cookTimer = 0;
+				
+				if(recipe instanceof VatRecipeBoil)
+				{
+					//Scale recipe
+					tryScale = recipe.getRecipeInFluid().amount / recipe.getRecipeOutFluid().amount;
+					
+					//Consume and output fluid
+					this.fluid = recipe.getResultFluid(origIS, origFS).copy();
+					
+					fluidAmt = (int) (recipe.getRecipeOutFluid().amount / tryScale);
+					if(fluidAmt > 5000)
+						fluidAmt = 5000;
+				}
+				
+				if(recipe instanceof VatRecipeDoubleBoiler)
+				{
+					//Consume items
+					recipeStack = recipe.recipeIS.copy();
+					this.storage[CRAFTINGSLOT_INPUT].stackSize -= recipeStack.stackSize;
+
+            		if(this.storage[CRAFTINGSLOT_INPUT].stackSize <= 0)
+            		{
+                		this.storage[CRAFTINGSLOT_INPUT] = null;
+            		}
+					
+					//Output items
+            		recipeStack = recipe.recipeOutIS.copy();
+            		if(this.storage[CRAFTINGSLOT_OUTPUT] == null)
+                    {
+                        this.storage[CRAFTINGSLOT_OUTPUT] = recipeStack.copy();
+                    }
+                    else if(this.storage[CRAFTINGSLOT_OUTPUT].getItem() == recipeStack.getItem())
+                    {
+                        this.storage[CRAFTINGSLOT_OUTPUT].stackSize += recipeStack.stackSize;
+                    }
+				}
+				
+				if(recipe instanceof VatRecipeEvaporation)
+				{
+					//Scale Recipe
+					tryScale = this.fluid.amount / recipe.getRecipeInFluid().amount;
+					if(tryScale < 1)
+						scale = 1;
+					else
+						scale = (int) tryScale;
+					
+					//Output items
+					recipeStack = recipe.recipeOutIS.copy();
+					isSize = recipeStack.stackSize;
+        			recipeStack.stackSize = (isSize * scale);
+            		if(this.storage[CRAFTINGSLOT_OUTPUT] == null)
+                    {
+                        this.storage[CRAFTINGSLOT_OUTPUT] = recipeStack.copy();
+                    }
+                    else if(this.storage[CRAFTINGSLOT_OUTPUT].getItem() == recipeStack.getItem())
+                    {
+                        this.storage[CRAFTINGSLOT_OUTPUT].stackSize += recipeStack.stackSize;
+                    }
+					
+					//Consume fluid
+					fluidStack = recipe.getRecipeInFluid().copy();
+					fluidAmt = fluidStack.amount;
+					
+					if(this.fluid != null)
+						this.fluid.amount -= (fluidAmt * scale);
+					
+					if(this.fluid.amount <= 0)
+						this.fluid = null;
+				}
+				
+				//TODO add melt recipe
+				
+				if(recipe instanceof VatRecipePercipitation)
+				{
+					//Scale Recipe
+					tryScale = recipe.getRecipeInFluid().amount / recipe.getRecipeOutFluid().amount;
+					if(tryScale < 1)
+						scale = 1;
+					else
+						scale = (int) tryScale;
+					
+					//Output items
+					recipeStack = recipe.recipeOutIS.copy();
+					isSize = recipeStack.stackSize;
+        			recipeStack.stackSize = (isSize * scale);
+            		if(this.storage[CRAFTINGSLOT_OUTPUT] == null)
+                    {
+                        this.storage[CRAFTINGSLOT_OUTPUT] = recipeStack.copy();
+                    }
+                    else if(this.storage[CRAFTINGSLOT_OUTPUT].getItem() == recipeStack.getItem())
+                    {
+                        this.storage[CRAFTINGSLOT_OUTPUT].stackSize += recipeStack.stackSize;
+                    }
+					
+					//Consume and output fluid
+            		fluidStack = recipe.getResultFluid(origIS, origFS).copy();
+					fluidAmt = fluidStack.amount;
+					
+					this.fluid = fluidStack;
+					
+					fluidAmt *= scale; 
+					if(fluidAmt > 5000)
+						fluidAmt = 5000;
+					
+					if(this.fluid != null)
+						this.fluid.amount = fluidAmt;
+				}
+				
+				this.cookTimer = 0; //Reset timer
+				this.tickTimer = 100; //Attempt to tick TE inventory.
+				worldObj.markBlockForUpdate(xCoord, yCoord, zCoord);
 			}
 		}
 	}
@@ -290,75 +339,190 @@ public class TEVat extends TEFireEntity implements IInventory
 	public boolean canProcess()
 	{
 		recipe = VatManager.getInstance().findMatchingRecipe(getInputStack(), getFluidStack());
-		
-		if(recipe == null || !(this.fireTemp > 0))
-		{
-			//If a valid recipe isn't found or the vat is not being heated.
+		if(recipe == null)
 			return false;
-		}
-		else
+		
+		//Temperature
+		int temp = (int) this.fireTemp;
+		int recipeTemp = recipe.getRecipeTemperature();
+		
+		//Vat must be hot enough for the recipe.
+		if(temp < recipeTemp)
+			return false;
+		
+		/**Copy of stack found in the crafting input slot.*/
+		ItemStack origIS = getInputStack() != null ? getInputStack().copy() : null;
+		/**Copy of fluid stack found in the vat itself.*/
+		FluidStack origFS = getFluidStack() != null ? getFluidStack().copy() : null;
+		
+		//TODO Handle food
+		if(recipe instanceof VatRecipeAbsorption)
 		{
-			//Item checks
+			if(origIS == null || origFS == null)
+				return false;
 			
-			ItemStack outputIS = recipe.getRecipeOutIS();
-			Item outputItem = outputIS.getItem();
+			if(storage[CRAFTINGSLOT_OUTPUT] != null)
+				return false;
 			
-			ItemStack inputIS = recipe.getRecipeInIS();
-			Item inputItem = inputIS.getItem();
+			if(origIS.getItem() instanceof IFood)
+			{
+				if(Food.getWeight(origIS) < Food.getWeight(recipe.getRecipeInIS()))
+					return false;
+			}
+			else
+			{
+				if(origIS.stackSize < recipe.getRecipeInIS().stackSize)
+					return false;
+			}
+		}
+		
+		if(recipe instanceof VatRecipeBoil)
+		{
+			if(origIS != null || origFS == null)
+				return false;
 			
-			/* Output slot must be empty or match output item
-			 * We also check to see if the output item stack will fit in the slot.
-			 * Lastly the combined stack size must also be able to fit in the output slot itself.
-			 */
-			if(outputItem != null)
-				if(storage[CRAFTINGSLOT_OUTPUT] != null)
-					if(storage[CRAFTINGSLOT_OUTPUT].getItem() != outputItem)
+			if(storage[CRAFTINGSLOT_OUTPUT] != null)
+				return false;
+			
+			if(origFS.amount < recipe.getRecipeInFluid().amount)
+				return false;
+		}
+		
+		if(recipe instanceof VatRecipeDoubleBoiler)
+		{
+			if(origIS == null || origFS == null)
+				return false;
+			
+			if(storage[CRAFTINGSLOT_OUTPUT] != null)
+				if(storage[CRAFTINGSLOT_OUTPUT].getItem() != recipe.getRecipeOutIS().getItem())
+					return false;
+				else if(storage[CRAFTINGSLOT_OUTPUT].stackSize + recipe.getRecipeOutIS().stackSize > storage[CRAFTINGSLOT_OUTPUT].getMaxStackSize())
+					return false;
+		}
+		
+		if(recipe instanceof VatRecipeEvaporation)
+		{
+			if(origIS != null || origFS == null)
+				return false;
+			
+			if(storage[CRAFTINGSLOT_OUTPUT] != null)
+				if(storage[CRAFTINGSLOT_OUTPUT].getItem() != recipe.getRecipeOutIS().getItem())
+					return false;
+				else if(storage[CRAFTINGSLOT_OUTPUT].stackSize + recipe.getRecipeOutIS().stackSize > storage[CRAFTINGSLOT_OUTPUT].getMaxStackSize())
+					return false;
+		}
+		
+		//TODO add melt recipe
+		
+		if(recipe instanceof VatRecipePercipitation)
+		{
+			if(origIS == null || origFS == null)
+				return false;
+			
+			if(storage[CRAFTINGSLOT_OUTPUT] != null)
+				if(storage[CRAFTINGSLOT_OUTPUT].getItem() != recipe.getRecipeOutIS().getItem())
+					return false;
+				else if(storage[CRAFTINGSLOT_OUTPUT].stackSize + recipe.getRecipeOutIS().stackSize > storage[CRAFTINGSLOT_OUTPUT].getMaxStackSize())
+					return false;
+		}
+		
+		//If items, fluids, and temperature all check out, our recipe is valid.
+		return true;
+	}
+	
+	public boolean isBurning()
+	{
+		return this.fireTemp >= 1;
+	}
+	
+	/**Creates a list of items dropped apon the vat and controls behaviors associated with the dropped items.*/
+	@SuppressWarnings("rawtypes")
+	private void handleFallingItems()
+	{
+		//Create a list of all the items that are falling onto the firepit
+		List list = worldObj.getEntitiesWithinAABB(EntityItem.class, AxisAlignedBB.getBoundingBox(xCoord, yCoord, zCoord, xCoord + 1, yCoord + 1.1, zCoord + 1));
+		
+		if(list != null && !list.isEmpty() && storage[FUELSLOT_INPUT] == null) //Only go through the list if more fuel can fit.
+		{
+			//Iterate through the list and check for logs and peat
+			for(Iterator iterator = list.iterator(); iterator.hasNext();)
+			{
+				EntityItem entity = (EntityItem) iterator.next();
+				ItemStack is = entity.getEntityItem();
+				Item item = is.getItem();
+
+				if(item == TFCItems.logs || item == Item.getItemFromBlock(TFCBlocks.peat))
+				{
+					for(int c = 0; c < is.stackSize; c++)
 					{
-						int combinedStackSize = (storage[CRAFTINGSLOT_OUTPUT].stackSize + outputIS.stackSize);
-						if(combinedStackSize > outputIS.getMaxStackSize() || combinedStackSize > this.getInventoryStackLimit())
-							return false;
+						if(storage[FUELSLOT_INPUT] == null) //Secondary check for empty fuel input slot.
+						{
+							/**
+							 * Place a copy of only one of the logs into the fuel slot, due to the stack limitation of the fuel slots.
+							 * Do not change to storage[0] = is;
+							 */
+							setInventorySlotContents(1, new ItemStack(item, 1, is.getItemDamage()));
+							is.stackSize--;
+							handleFuelStack(); // Attempt to shift the fuel down so more fuel can be added within the same for loop.
+						}
 					}
-			
-			//If the recipe does not require an item, one cannot still be provided.
-			if(inputItem == null && this.storage[CRAFTINGSLOT_INPUT] != null)
-				return false;
-			
-			FluidStack outputFluidStack = recipe.getRecipeOutFluid();
-			Fluid outputFluid = outputFluidStack.getFluid();
-			
-			FluidStack inputFluidStack = recipe.getRecipeInFluid();
-			Fluid inputFluid = inputFluidStack.getFluid();
-			
-			//Fluid checks
-			
-			//Fluid in vat and fluid required must be the same
-			if(this.getFluidStack().getFluid() != inputFluid)
-				return false;
-			
-			//If the fluid is unchanged by the recipe
-			if(inputFluid == outputFluid)
-			{
-				//Fluid in vat must be equal to or greater than the amount required for the recipe
-				if(this.getFluidStack().amount < inputFluidStack.amount)
-					return false;
+
+					if(is.stackSize == 0)
+						entity.setDead();
+				}
 			}
-			else //If the fluid is changed by the recipe
+		}
+	}
+	
+	/**Handles fluid containers based on vat fluid mode.*/
+	private void handleFluidContainers()
+	{
+		//Handle adding fluids to the vat if the vat is currently in input mode.
+		if(mode == MODE_IN)
+		{
+			ItemStack container = getInputStack();
+			FluidStack inLiquid = FluidContainerRegistry.getFluidForFilledItem(container);
+
+			if(container != null && container.getItem() instanceof IFluidContainerItem)
 			{
-				//All of the orginal fluid must be consumed in the recipe
-				if(this.getFluidStack().amount - inputFluidStack.amount != 0)
-					return false;
+				FluidStack isfs = ((IFluidContainerItem)container.getItem()).getFluid(container);
+				if(isfs != null && addLiquid(isfs))
+				{
+					((IFluidContainerItem) container.getItem()).drain(container, ((IFluidContainerItem)container.getItem()).getCapacity(container), true);
+				}
 			}
-			
-			//Temperature
-			int temp = (int) this.fireTemp;
-			int recipeTemp = recipe.getRecipeTemperature();
-			
-			//Vat must be as hot or hotter than what the recipe requires.
-			if(!(temp >= recipeTemp))
-				return false;
-			
-			//If items, fluids, and temperature all check out our recipe is valid.
-			return true;
+			else if (inLiquid != null && container != null && container.stackSize == 1)
+			{
+				if(addLiquid(inLiquid))
+				{
+					this.setInventorySlotContents(CRAFTINGSLOT_INPUT, FluidContainerRegistry.drainFluidContainer(container));
+				}
+			}
+		}
+		//Drain liquid from the vat to a container if the vat is in output mode.
+		else if(mode == MODE_OUT)
+		{
+			ItemStack container = getInputStack();
+
+			if(container != null && fluid != null && container.getItem() instanceof IFluidContainerItem)
+			{
+				FluidStack isfs = ((IFluidContainerItem)container.getItem()).getFluid(container);
+				if(isfs == null || fluid.isFluidEqual(isfs))
+				{
+					fluid.amount -= ((IFluidContainerItem) container.getItem()).fill(container, fluid, true);
+					if(fluid.amount == 0)
+						fluid = null;
+				}
+			}
+			else if(FluidContainerRegistry.isEmptyContainer(container))
+			{
+				ItemStack fullContainer = this.removeLiquid(getInputStack());
+				if (fullContainer.getItem() == TFCItems.woodenBucketMilk)
+				{
+					ItemCustomBucketMilk.createTag(fullContainer, 20f);
+				}
+				this.setInventorySlotContents(CRAFTINGSLOT_INPUT, fullContainer);
+			}
 		}
 	}
 	
@@ -455,6 +619,7 @@ public class TEVat extends TEFireEntity implements IInventory
 		return count;
 	}
 	
+	/**Attempts to pass fuel down to other fuel slots from the fuel input slot.*/
 	public void handleFuelStack()
 	{
 		int slot = FUELSLOT_INPUT;
@@ -698,12 +863,14 @@ public class TEVat extends TEFireEntity implements IInventory
 	{
 		this.fire = (TEFireEntity) worldObj.getTileEntity(xCoord, yCoord-1, zCoord);
 		
-		if(this.fire != null && this.fire.fireTemp >= 1F)
+		if(this.fire != null && this.isBurning())
 		{
-			return new ResourceLocation("tfcm:textures/blocks/models/Lead Pewter Vat_Lit.png");
+			return new ResourceLocation("tfcm:textures/blocks/devices/Lead Pewter Vat_Lit.png");
 		}
-		
-		return new ResourceLocation("tfcm:textures/blocks/models/Lead Pewter Vat.png");
+		else
+		{
+			return new ResourceLocation("tfcm:textures/blocks/devices/Lead Pewter Vat.png");
+		}
 	}
 	
 	@Override
@@ -713,6 +880,8 @@ public class TEVat extends TEFireEntity implements IInventory
 		
 		fluid = FluidStack.loadFluidStackFromNBT(nbttagcompound.getCompoundTag("fluidNBT"));
 		rotation = nbttagcompound.getByte("rotation");
+		tickTimer = nbttagcompound.getInteger("processTime");
+		cookTimer = nbttagcompound.getInteger("cookTime");
 		
 		NBTTagList nbttaglist = nbttagcompound.getTagList("Items", 10);
 		storage = new ItemStack[getSizeInventory()];
@@ -735,6 +904,9 @@ public class TEVat extends TEFireEntity implements IInventory
 			fluid.writeToNBT(fluidNBT);
 		nbttagcompound.setTag("fluidNBT", fluidNBT);
 		nbttagcompound.setByte("rotation", rotation);
+		
+		nbttagcompound.setInteger("processTime", tickTimer);
+		nbttagcompound.setInteger("cookTime", cookTimer);
 		
 		NBTTagList nbttaglist = new NBTTagList();
 		for(int i = 0; i < storage.length; i++)
@@ -760,6 +932,8 @@ public class TEVat extends TEFireEntity implements IInventory
 	public void handleInitPacket(NBTTagCompound nbt) 
 	{
 		this.rotation = nbt.getByte("rotation");
+		tickTimer = nbt.getInteger("processTime");
+		cookTimer = nbt.getInteger("cookTime");
 		if(nbt.getInteger("fluid") != -1)
 		{
 			if(fluid != null)
@@ -778,6 +952,8 @@ public class TEVat extends TEFireEntity implements IInventory
 	public void createInitNBT(NBTTagCompound nbt) 
 	{
 		nbt.setByte("rotation", rotation);
+		nbt.setInteger("processTime", tickTimer);
+		nbt.setInteger("cookTime", cookTimer);
 		nbt.setInteger("fluid", fluid != null ? fluid.getFluidID() : -1);
 		nbt.setInteger("fluidAmount", fluid != null ? fluid.amount : 0);
 	}

@@ -239,8 +239,8 @@ public class TFCMItems
 	public static Item soyPaste;
 	
 		//Crops
-	public static Item seedsPumpkin;
-	public static Item pumpkin;
+	//public static Item seedsPumpkin;
+	//public static Item pumpkin;
 	public static Item seedsCayenne;
 	public static Item greenCayenne;
 	public static Item redCayenne;
@@ -249,8 +249,8 @@ public class TFCMItems
 	public static Item greenCoffee;
 	public static Item coffee;
 	public static Item groundCoffee;
-	public static Item seedsWatermelon;
-	public static Item watermelon;
+	//public static Item seedsWatermelon;
+	//public static Item watermelon;
 	public static Item seedsSweetPotato;
 	public static Item sweetPotato;
 	public static Item seedsHops;
@@ -502,8 +502,6 @@ public class TFCMItems
 		GameRegistry.registerItem(bottleSoyMilk, bottleSoyMilk.getUnlocalizedName());
 		GameRegistry.registerItem(soyPaste, soyPaste.getUnlocalizedName());
 		
-		GameRegistry.registerItem(seedsPumpkin, seedsPumpkin.getUnlocalizedName());
-		GameRegistry.registerItem(pumpkin, pumpkin.getUnlocalizedName());
 		GameRegistry.registerItem(seedsCayenne, seedsCayenne.getUnlocalizedName());
 		GameRegistry.registerItem(greenCayenne, greenCayenne.getUnlocalizedName());
 		GameRegistry.registerItem(redCayenne, redCayenne.getUnlocalizedName());
@@ -512,8 +510,6 @@ public class TFCMItems
 		GameRegistry.registerItem(greenCoffee, greenCoffee.getUnlocalizedName());
 		GameRegistry.registerItem(coffee, coffee.getUnlocalizedName());
 		GameRegistry.registerItem(groundCoffee, groundCoffee.getUnlocalizedName());
-		GameRegistry.registerItem(seedsWatermelon, seedsWatermelon.getUnlocalizedName());
-		GameRegistry.registerItem(watermelon, watermelon.getUnlocalizedName());
 		GameRegistry.registerItem(seedsSweetPotato, seedsSweetPotato.getUnlocalizedName());
 		GameRegistry.registerItem(sweetPotato, sweetPotato.getUnlocalizedName());
 		GameRegistry.registerItem(seedsHops, seedsHops.getUnlocalizedName());
