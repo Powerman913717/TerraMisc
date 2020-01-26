@@ -1,8 +1,8 @@
-TerraMisc by Powerman913717
+TerraMisc by Necoxus
 ================
 
 You may download and use this mod openly. You may include it in mod packs as long
-as you include my IGN:Powerman913717 and a link to the forum post somewhere 
+as youÂ include my IGN:Necoxus and a link to the forum post somewhere 
 in your mod pack. Feel free notify me of your mod pack as I like to view them, 
 however, this isn't required. This INCLUDES server distributed mod packs.
 
