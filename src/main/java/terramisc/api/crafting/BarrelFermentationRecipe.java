@@ -2,6 +2,8 @@ package terramisc.api.crafting;
 
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fluids.FluidStack;
+
+import com.dunk.tfc.TileEntities.TEBarrel;
 import com.dunk.tfc.api.Crafting.BarrelRecipe;
 
 public class BarrelFermentationRecipe extends BarrelRecipe
@@ -19,7 +21,7 @@ public class BarrelFermentationRecipe extends BarrelRecipe
 	}
 	
 	@Override
-	public Boolean matches(ItemStack itemstack, FluidStack inFluid)
+	public Boolean matches(ItemStack itemstack, FluidStack inFluid, TEBarrel te)
 	{
 		if(recipeFluid != null && recipeFluid.isFluidEqual(inFluid))
 		{
@@ -30,7 +32,7 @@ public class BarrelFermentationRecipe extends BarrelRecipe
 	}
 	
 	@Override
-	public FluidStack getResultFluid(ItemStack inIS, FluidStack inFS, int sealedTime)
+	public FluidStack getResultFluid(ItemStack inIS, FluidStack inFS, int sealedTime, int fireTime)
 	{
 		if(recipeOutFluid != null)
 		{

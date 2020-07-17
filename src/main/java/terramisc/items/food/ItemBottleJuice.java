@@ -14,7 +14,7 @@ public class ItemBottleJuice extends ItemAlcohol
 {
 	public ItemBottleJuice()
 	{
-		super();
+		super(250);
 		this.setFolder("food/");
 		this.setContainerItem(TFCItems.glassBottle);
 		this.setMaxStackSize(64);

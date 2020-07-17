@@ -18,9 +18,10 @@ import com.dunk.tfc.api.Enums.EnumFoodGroup;
 
 public class ItemBottleWine extends ItemAlcohol
 {
+	float alcoholContent = 0;
 	public ItemBottleWine()
 	{
-		super();
+		super(250);
 		this.setFolder("food/");
 		this.setContainerItem(TFCItems.glassBottle);
 		this.setMaxStackSize(64);
@@ -48,7 +49,7 @@ public class ItemBottleWine extends ItemAlcohol
 			fs.restoreWater(player, 4000);
 			fs.addNutrition(EnumFoodGroup.Fruit, 25.0F);
 			int time = 400+rand.nextInt(1000);
-			fs.consumeAlcohol();
+			fs.consumeAlcohol(alcoholContent * (volume/250));
 			if(rand.nextInt(100)==0){
 				player.addPotionEffect(new PotionEffect(8,time,4));
 			}
