@@ -13,6 +13,7 @@ import com.dunk.tfc.api.Interfaces.IClothing;
 import com.dunk.tfc.api.Interfaces.IEquipable;
 import com.dunk.tfc.api.Interfaces.ISewable;
 import com.dunk.tfc.api.Interfaces.ISize;
+
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.client.renderer.entity.RenderBiped;
@@ -21,6 +22,7 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
@@ -41,6 +43,7 @@ public class ItemCustomArmor extends ItemArmor implements ISize, IEquipable, ICl
 	private int trueType = 0;
 	ResourceLocation res;
 	public ArmorStats ArmorType;
+	int repairCost = 4;
 
 	public ItemCustomArmor(ArmorStats armor, int renderIndex, int armorSlot, int thermal, int type)
 	{
@@ -260,5 +263,18 @@ public class ItemCustomArmor extends ItemArmor implements ISize, IEquipable, ICl
 	{
 		// TODO Auto-generated method stub
 		return res;
+	}
+
+	@Override
+	public Item setRepairCost(int i)
+	{
+		this.repairCost = i;
+		return this;
+	}
+
+	@Override
+	public int getRepairCost()
+	{
+		return this.repairCost;
 	}
 }

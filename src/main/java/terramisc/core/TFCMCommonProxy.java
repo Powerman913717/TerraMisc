@@ -118,7 +118,6 @@ public class TFCMCommonProxy
 			GameRegistry.registerTileEntity(TETallowCandle.class, "TallowCandle");
 			GameRegistry.registerTileEntity(TEFruitPress.class, "FruitPress");
 			GameRegistry.registerTileEntity(TEBrickOven.class, "BrickOven");
-			GameRegistry.registerTileEntity(TEVat.class, "VatTFCM");
 		}
 	}
 
