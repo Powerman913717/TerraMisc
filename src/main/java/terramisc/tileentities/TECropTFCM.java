@@ -33,7 +33,6 @@ public class TECropTFCM extends NetworkTileEntity
 	private long growthTimer;//Tracks the time since the plant was planted
 	private long plantedTime;//Tracks the time when the plant was planted
 	private byte sunLevel;
-	public int tendingLevel;
 	private int killLevel;//We use this to make crop killing more and more likely if its cold
 	
 	public TECropTFCM()
@@ -120,9 +119,9 @@ public class TECropTFCM extends NetworkTileEntity
 				int nutriType = crop.cycleType;
 				int nutri = tef != null ? tef.nutrients[nutriType] : 18000;
 				int fert = tef != null ? tef.nutrients[3] : 0;
-				int soilMax = tef != null ? tef.getSoilMax() : 18000;
+				int soilMax = tef != null ? TEFarmland.getSoilMax() : 18000;
 				//waterBoost only helps if you are playing on a longer than default year length.
-				float waterBoost = BlockFarmland.isFreshWaterNearby(worldObj, xCoord, yCoord - 1, zCoord) ? 0.1f : 0;
+				float waterBoost = BlockFarmland.isFreshWaterNearby(worldObj, xCoord, yCoord - 1, zCoord) == 1 ? 0.1f : 0;
 
 				//Allow the fertilizer to make up for lost nutrients
 				nutri = Math.min(nutri + fert, (int)(soilMax * 1.25f));
@@ -172,6 +171,7 @@ public class TECropTFCM extends NetworkTileEntity
 			{
 				if(crop != null && !crop.dormantInFrost || growth > 1)
 				{
+					assert crop != null;
 					killCrop(crop);
 				}
 			}

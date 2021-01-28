@@ -19,6 +19,7 @@ public class TFCMOptions
 	//Other
 	public static boolean enableCraftingCompassClock = true;
 	public static float TallowCandleBurnTime = 975;
+	public static boolean enableGrassCordageCandles = false;
 	
 	public static void loadSettings()
 	{	
@@ -49,7 +50,8 @@ public class TFCMOptions
 		enableCrucibleEmptying = getBooleanFor(config, "Crucible Emptying", "enableCrucibleEmptying", true, "Enable Crucible Emptying Recipe. (Default = true)");
 			//Other
 		enableCraftingCompassClock = getBooleanFor(config, "Other", "enableCraftingCompassClock", true, "Enable crafting Clocks and Compasses. (Default = true)");
-		TallowCandleBurnTime = getIntFor(config, "Other", "TallowCandleBurnTime", 975, "The number of hours the candle will burn for, torch default is 48, oil lamp default is 2000. (Default = 975");
+		TallowCandleBurnTime = getIntFor(config, "Other", "TallowCandleBurnTime", 975, "The number of hours the candle will burn for, torch default is 48, oil lamp default is 2000. (Default = 975)");
+		enableGrassCordageCandles = getBooleanFor(config, "Other", "enableGrassCordageCandles", false, "Enable using grass cordage for the candle recipe. (Default = false)");
 		/** End Here*/
 		if (config != null)
 			config.save();
@@ -72,6 +74,7 @@ public class TFCMOptions
 	    	//Other
 	    enableCraftingCompassClock = options == null ? true : enableCraftingCompassClock;
 	    TallowCandleBurnTime = options == null ? 1: TallowCandleBurnTime;
+	    enableGrassCordageCandles = options == null ? false : enableGrassCordageCandles;
 	    
 	    System.out.println("[TerraMisc] Done loading options from options class.");
 	  }

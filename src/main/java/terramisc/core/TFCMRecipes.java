@@ -38,10 +38,7 @@ import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.oredict.OreDictionary;
 import net.minecraftforge.oredict.ShapedOreRecipe;
 import net.minecraftforge.oredict.ShapelessOreRecipe;
-import terramisc.api.crafting.FruitPressManager;
-import terramisc.api.crafting.FruitPressRecipe;
 import terramisc.api.crafting.VatManager;
-import terramisc.api.crafting.VatRecipe;
 import terramisc.api.crafting.VatRecipeDoubleBoiler;
 import terramisc.api.crafting.VatRecipeEvaporation;
 
@@ -74,7 +71,6 @@ public class TFCMRecipes
 		
 		registerRecipes();
 		registerBarrelRecipes();
-		registerFruitPressRecipes();
 		registerKilnRecipes();
 		registerToolMolds();
 		registerKnappingRecipes();
@@ -298,7 +294,7 @@ public class TFCMRecipes
 		{
 			for(int j = 0; j < Recipes.knives.length; j++)
 			{
-				GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(TFCMItems.bowLimb), new ItemStack(Recipes.knives[j], 1, 32767), "logWood"));
+				GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(TFCMItems.bowLimb), new ItemStack(Recipes.knives[j], 1, 32767), "logWood", "logWood"));
 			}
 		}
 		
@@ -320,10 +316,19 @@ public class TFCMRecipes
 		}
 		
 		//Shaped
-		GameRegistry.addRecipe(new ItemStack(TFCMItems.sinewString), new Object[]{"F","F","F", 'F', TFCMItems.sinewFiber});
+		GameRegistry.addRecipe(new ItemStack(TFCMItems.sinewString), new Object[]{"F","F","F", 'F', TFCItems.sinew});
 		GameRegistry.addRecipe(new ItemStack(TFCMItems.sinewBowString), new Object[]{"SSS", 'S', TFCMItems.sinewString});
 		GameRegistry.addRecipe(new ItemStack(TFCMBlocks.blockTallowCandleOff), new Object[]{"W","T", 'W', TFCItems.woolYarn, 'T', TallowBowl});
-			//Clay
+		GameRegistry.addRecipe(new ItemStack(TFCMBlocks.blockTallowCandleOff), new Object[]{"W","T", 'W', TFCItems.cottonYarn, 'T', TallowBowl});
+		GameRegistry.addRecipe(new ItemStack(TFCMBlocks.blockTallowCandleOff), new Object[]{"W","T", 'W', TFCItems.linenString, 'T', TallowBowl});
+		GameRegistry.addRecipe(new ItemStack(TFCMBlocks.blockTallowCandleOff), new Object[]{"W","T", 'W', TFCItems.silkString, 'T', TallowBowl});
+		
+		if(TFCMOptions.enableGrassCordageCandles = true)
+		{
+			GameRegistry.addRecipe(new ItemStack(TFCMBlocks.blockTallowCandleOff), new Object[]{"W","T", 'W', TFCItems.grassCordage, 'T', TallowBowl});
+		}
+		
+		//Clay
 		GameRegistry.addRecipe(new ItemStack(TFCMBlocks.blockClay), new Object[]{"CC", "CC", 'C', TFCItems.clayBall});
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(TFCMBlocks.blockStainedClay, 8, 1), new Object[]{"CCC", "CDC", "CCC", 'C', TFCMBlocks.blockStainedClay, 'D', "dyeBlack"}));
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(TFCMBlocks.blockStainedClay, 8, 2), new Object[]{"CCC", "CDC", "CCC", 'C', TFCMBlocks.blockStainedClay, 'D', "dyeRed"}));
@@ -341,7 +346,7 @@ public class TFCMRecipes
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(TFCMBlocks.blockStainedClay, 8, 14), new Object[]{"CCC", "CDC", "CCC", 'C', TFCMBlocks.blockStainedClay, 'D', "dyeMagenta"}));
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(TFCMBlocks.blockStainedClay, 8, 15), new Object[]{"CCC", "CDC", "CCC", 'C', TFCMBlocks.blockStainedClay, 'D', "dyeOrange"}));
 		
-			//Shapeless candle dyes
+		//Shapeless candle dyes
 		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(TFCMItems.tallowDye, 1, 0), "dyeBlack", TallowBowl));
 		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(TFCMItems.tallowDye, 1, 1), "dyeRed", TallowBowl));
 		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(TFCMItems.tallowDye, 1, 2), "dyeGreen", TallowBowl));
@@ -357,7 +362,8 @@ public class TFCMRecipes
 		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(TFCMItems.tallowDye, 1, 12), "dyeLightBlue", TallowBowl));
 		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(TFCMItems.tallowDye, 1, 13), "dyeMagenta", TallowBowl));
 		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(TFCMItems.tallowDye, 1, 14), "dyeOrange", TallowBowl));
-			//Halberds
+		
+		//Halberds
 		GameRegistry.addRecipe(new ItemStack(TFCMItems.halberd_BismuthBronze), new Object[]{"H  "," S ","  S", 'H', TFCMItems.halberd_BismuthBronze_Head, 'S', TFCItems.stick});
 		GameRegistry.addRecipe(new ItemStack(TFCMItems.halberd_BismuthBronze), new Object[]{"  H"," S ","S  ", 'H', TFCMItems.halberd_BismuthBronze_Head, 'S', TFCItems.stick});
 		GameRegistry.addRecipe(new ItemStack(TFCMItems.halberd_BlackBronze), new Object[]{"H  "," S ","  S", 'H', TFCMItems.halberd_BlackBronze_Head, 'S', TFCItems.stick});
@@ -376,7 +382,8 @@ public class TFCMRecipes
 		GameRegistry.addRecipe(new ItemStack(TFCMItems.halberd_Steel), new Object[]{"  H"," S ","S  ", 'H', TFCMItems.halberd_Steel_Head, 'S', TFCItems.stick});
 		GameRegistry.addRecipe(new ItemStack(TFCMItems.halberd_WroughtIron), new Object[]{"H  "," S ","  S", 'H', TFCMItems.halberd_WroughtIron_Head, 'S', TFCItems.stick});
 		GameRegistry.addRecipe(new ItemStack(TFCMItems.halberd_WroughtIron), new Object[]{"  H"," S ","S  ", 'H', TFCMItems.halberd_WroughtIron_Head, 'S', TFCItems.stick});
-			//War Hammers
+		
+		//War Hammers
 		GameRegistry.addRecipe(new ItemStack(TFCMItems.warHammer_BismuthBronze), new Object[]{"H  "," S ","  S", 'H', TFCMItems.warHammer_BismuthBronze_Head, 'S', TFCItems.stick});
 		GameRegistry.addRecipe(new ItemStack(TFCMItems.warHammer_BismuthBronze), new Object[]{"  H"," S ","S  ", 'H', TFCMItems.warHammer_BismuthBronze_Head, 'S', TFCItems.stick});
 		GameRegistry.addRecipe(new ItemStack(TFCMItems.warHammer_BlackBronze), new Object[]{"H  "," S ","  S", 'H', TFCMItems.warHammer_BlackBronze_Head, 'S', TFCItems.stick});
@@ -395,7 +402,8 @@ public class TFCMRecipes
 		GameRegistry.addRecipe(new ItemStack(TFCMItems.warHammer_Steel), new Object[]{"  H"," S ","S  ", 'H', TFCMItems.warHammer_Steel_Head, 'S', TFCItems.stick});
 		GameRegistry.addRecipe(new ItemStack(TFCMItems.warHammer_WroughtIron), new Object[]{"H  "," S ","  S", 'H', TFCMItems.warHammer_WroughtIron_Head, 'S', TFCItems.stick});
 		GameRegistry.addRecipe(new ItemStack(TFCMItems.warHammer_WroughtIron), new Object[]{"  H"," S ","S  ", 'H', TFCMItems.warHammer_WroughtIron_Head, 'S', TFCItems.stick});
-			//Poniards
+		
+		//Poniards
 		GameRegistry.addRecipe(new ItemStack(TFCMItems.poniard_BismuthBronze), new Object[]{"H","S", 'H', TFCMItems.poniard_BismuthBronze_Head, 'S', TFCItems.stick});
 		GameRegistry.addRecipe(new ItemStack(TFCMItems.poniard_BlackBronze), new Object[]{"H","S", 'H', TFCMItems.poniard_BlackBronze_Head, 'S', TFCItems.stick});
 		GameRegistry.addRecipe(new ItemStack(TFCMItems.poniard_BlackSteel), new Object[]{"H","S", 'H', TFCMItems.poniard_BlackSteel_Head, 'S', TFCItems.stick});
@@ -407,7 +415,7 @@ public class TFCMRecipes
 		GameRegistry.addRecipe(new ItemStack(TFCMItems.poniard_WroughtIron), new Object[]{"H","S", 'H', TFCMItems.poniard_WroughtIron_Head, 'S', TFCItems.stick});
 		
 		//Armor
-			//Chain Helmets
+		//Chain Helmets
 		GameRegistry.addRecipe(new ItemStack(TFCMItems.BismuthBronzeChainHelmet), new Object[]{"XOX","X X","   ", 'X', new ItemStack(TFCMItems.chain_Sheet_BismuthBronze), 'O', TFCItems.leather});
 		GameRegistry.addRecipe(new ItemStack(TFCMItems.BlackBronzeChainHelmet), new Object[]{"XOX","X X","   ", 'X', new ItemStack(TFCMItems.chain_Sheet_BlackBronze), 'O', TFCItems.leather});
 		GameRegistry.addRecipe(new ItemStack(TFCMItems.BlackSteelChainHelmet), new Object[]{"XOX","X X","   ", 'X', new ItemStack(TFCMItems.chain_Sheet_BlackSteel), 'O', TFCItems.leather});
@@ -417,7 +425,8 @@ public class TFCMRecipes
 		GameRegistry.addRecipe(new ItemStack(TFCMItems.WroughtIronChainHelmet), new Object[]{"XOX","X X","   ", 'X', new ItemStack(TFCMItems.chain_Sheet_WroughtIron), 'O', TFCItems.leather});
 		GameRegistry.addRecipe(new ItemStack(TFCMItems.RedSteelChainHelmet), new Object[]{"XOX","X X","   ", 'X', new ItemStack(TFCMItems.chain_Sheet_RedSteel), 'O', TFCItems.leather});
 		GameRegistry.addRecipe(new ItemStack(TFCMItems.SteelChainHelmet), new Object[]{"XOX","X X","   ", 'X', new ItemStack(TFCMItems.chain_Sheet_Steel), 'O', TFCItems.leather});
-			//Chain Chestplate
+		
+		//Chain Chestplate
 		GameRegistry.addRecipe(new ItemStack(TFCMItems.BismuthBronzeChainChestplate), new Object[]{"X X","XOX","XXX", 'X', new ItemStack(TFCMItems.chain_Sheet_BismuthBronze), 'O', TFCItems.leather});
 		GameRegistry.addRecipe(new ItemStack(TFCMItems.BlackBronzeChainChestplate), new Object[]{"X X","XOX","XXX", 'X', new ItemStack(TFCMItems.chain_Sheet_BlackBronze), 'O', TFCItems.leather});
 		GameRegistry.addRecipe(new ItemStack(TFCMItems.BlackSteelChainChestplate), new Object[]{"X X","XOX","XXX", 'X', new ItemStack(TFCMItems.chain_Sheet_BlackSteel), 'O', TFCItems.leather});
@@ -427,7 +436,8 @@ public class TFCMRecipes
 		GameRegistry.addRecipe(new ItemStack(TFCMItems.WroughtIronChainChestplate), new Object[]{"X X","XOX","XXX", 'X', new ItemStack(TFCMItems.chain_Sheet_WroughtIron), 'O', TFCItems.leather});
 		GameRegistry.addRecipe(new ItemStack(TFCMItems.RedSteelChainChestplate), new Object[]{"X X","XOX","XXX", 'X', new ItemStack(TFCMItems.chain_Sheet_RedSteel), 'O', TFCItems.leather});
 		GameRegistry.addRecipe(new ItemStack(TFCMItems.SteelChainChestplate), new Object[]{"X X","XOX","XXX", 'X', new ItemStack(TFCMItems.chain_Sheet_Steel), 'O', TFCItems.leather});
-			//Chain Leggings
+		
+		//Chain Leggings
 		GameRegistry.addRecipe(new ItemStack(TFCMItems.BismuthBronzeChainGreaves), new Object[]{"XXX","XOX","X X", 'X', new ItemStack(TFCMItems.chain_Sheet_BismuthBronze), 'O', TFCItems.leather});
 		GameRegistry.addRecipe(new ItemStack(TFCMItems.BlackBronzeChainGreaves), new Object[]{"XXX","XOX","X X", 'X', new ItemStack(TFCMItems.chain_Sheet_BlackBronze), 'O', TFCItems.leather});
 		GameRegistry.addRecipe(new ItemStack(TFCMItems.BlackSteelChainGreaves), new Object[]{"XXX","XOX","X X", 'X', new ItemStack(TFCMItems.chain_Sheet_BlackSteel), 'O', TFCItems.leather});
@@ -437,8 +447,9 @@ public class TFCMRecipes
 		GameRegistry.addRecipe(new ItemStack(TFCMItems.WroughtIronChainGreaves), new Object[]{"XXX","XOX","X X", 'X', new ItemStack(TFCMItems.chain_Sheet_WroughtIron), 'O', TFCItems.leather});
 		GameRegistry.addRecipe(new ItemStack(TFCMItems.RedSteelChainGreaves), new Object[]{"XXX","XOX","X X", 'X', new ItemStack(TFCMItems.chain_Sheet_RedSteel), 'O', TFCItems.leather});
 		GameRegistry.addRecipe(new ItemStack(TFCMItems.SteelChainGreaves), new Object[]{"XXX","XOX","X X", 'X', new ItemStack(TFCMItems.chain_Sheet_Steel), 'O', TFCItems.leather});
-			//Chain Item Crafting
-				//Squares
+		
+		//Chain Item Crafting
+		//Squares
 		GameRegistry.addRecipe(new ItemStack(TFCMItems.chain_Square_BismuthBronze), new Object[]{"XX","XX", 'X', new ItemStack(TFCMItems.link_BismuthBronze)});
 		GameRegistry.addRecipe(new ItemStack(TFCMItems.chain_Square_BlackBronze), new Object[]{"XX","XX", 'X', new ItemStack(TFCMItems.link_BlackBronze)});
 		GameRegistry.addRecipe(new ItemStack(TFCMItems.chain_Square_BlackSteel), new Object[]{"XX","XX", 'X', new ItemStack(TFCMItems.link_BlackSteel)});
@@ -448,7 +459,7 @@ public class TFCMRecipes
 		GameRegistry.addRecipe(new ItemStack(TFCMItems.chain_Square_WroughtIron), new Object[]{"XX","XX", 'X', new ItemStack(TFCMItems.link_WroughtIron)});
 		GameRegistry.addRecipe(new ItemStack(TFCMItems.chain_Square_RedSteel), new Object[]{"XX","XX", 'X', new ItemStack(TFCMItems.link_RedSteel)});
 		GameRegistry.addRecipe(new ItemStack(TFCMItems.chain_Square_Steel), new Object[]{"XX","XX", 'X', new ItemStack(TFCMItems.link_Steel)});
-				//Sheets
+		//Sheets
 		GameRegistry.addRecipe(new ItemStack(TFCMItems.chain_Sheet_BismuthBronze), new Object[]{"XX","XX", 'X', new ItemStack(TFCMItems.chain_Square_BismuthBronze)});
 		GameRegistry.addRecipe(new ItemStack(TFCMItems.chain_Sheet_BlackBronze), new Object[]{"XX","XX", 'X', new ItemStack(TFCMItems.chain_Square_BlackBronze)});
 		GameRegistry.addRecipe(new ItemStack(TFCMItems.chain_Sheet_BlackSteel), new Object[]{"XX","XX", 'X', new ItemStack(TFCMItems.chain_Square_BlackSteel)});
@@ -467,6 +478,7 @@ public class TFCMRecipes
 		GameRegistry.addShapelessRecipe(new ItemStack(TFCMBlocks.blockFruitPress), new ItemStack(TFCBlocks.hopper));
 		GameRegistry.addShapelessRecipe(new ItemStack(TFCBlocks.hopper), new ItemStack(TFCMBlocks.blockFruitPress));
 		GameRegistry.addShapelessRecipe(new ItemStack(TFCMItems.itemQuiver), new ItemStack(TFCItems.quiver));
+		
 		//Dyes
 		GameRegistry.addShapelessRecipe(new ItemStack(TFCItems.dye, 1, 6), new ItemStack(TFCItems.dye, 1, 2), new ItemStack(TFCItems.powder, 1, 6)); //Cyan
 		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(TFCItems.dye, 1, 7), new ItemStack(TFCItems.dye, 1, 8), new ItemStack(TFCItems.powder, 1, 0), ("blockSand"))); //Light Gray
@@ -496,7 +508,6 @@ public class TFCMRecipes
 		GameRegistry.addShapelessRecipe(new ItemStack(TFCMItems.poniard_BlackBronze_Head), new ItemStack(TFCMItems.poniard_Mold, 1, 5));
 		
 		//Food
-
 		//Road Block Crafting
 		for (int j = 0; j < Global.STONE_IGEX.length; j++)
 		{
@@ -522,17 +533,6 @@ public class TFCMRecipes
 			GameRegistry.addRecipe(new ItemStack(TFCMBlocks.blockRoadSed, 8, j), new Object[] { "GSG", "SMS", "GSG", Character.valueOf('S'), new ItemStack(TFCItems.stoneBrick, 1, j + Global.STONE_SED_START), Character.valueOf('M'), new ItemStack(TFCItems.mortar, 1), Character.valueOf('G'), Gravel2 });
 		}
 		
-		//Knife Recipes
-		for(int j = 0; j < Recipes.knives.length; j++)
-		{
-			//moved bow limb recipe to the bow crafting section
-		}
-		
-		//Hammer Recipes
-		for(int j = 0; j < Recipes.hammers.length; j++)
-		{
-			GameRegistry.addShapelessRecipe(new ItemStack(TFCMItems.sinewFiber, 3), new ItemStack(Recipes.hammers[j], 1, 32767), new ItemStack(TFCMItems.deerTendon));	
-		}
 	}
 	
 	//From TFCraft/Recipes.java
@@ -563,61 +563,56 @@ public class TFCMRecipes
 		BarrelManager.getInstance().addRecipe(new BarrelRecipe(new ItemStack(TFCMItems.bowlSuet), new FluidStack(TFCFluids.HOTWATER, 1000), new ItemStack(TFCMItems.bowlTallow), new FluidStack(TFCFluids.FRESHWATER, 1000), 2));
 	}
 	
-	//Fruit Press
-	private static void registerFruitPressRecipes()
-	{
-		//Fruit Juice
-		FruitPressManager.addRecipe(new FruitPressRecipe(TFCItems.cherry, TFCMFluids.REDFRUITJUICE, 4));
-		FruitPressManager.addRecipe(new FruitPressRecipe(TFCItems.plum, TFCMFluids.REDFRUITJUICE, 4));
-		FruitPressManager.addRecipe(new FruitPressRecipe(TFCItems.blueberry, TFCMFluids.REDFRUITJUICE, 8));
-		FruitPressManager.addRecipe(new FruitPressRecipe(TFCItems.raspberry, TFCMFluids.REDFRUITJUICE, 8));
-		FruitPressManager.addRecipe(new FruitPressRecipe(TFCItems.strawberry, TFCMFluids.REDFRUITJUICE, 8));
-		FruitPressManager.addRecipe(new FruitPressRecipe(TFCItems.blackberry, TFCMFluids.REDFRUITJUICE, 8));
-		FruitPressManager.addRecipe(new FruitPressRecipe(TFCItems.cranberry, TFCMFluids.REDFRUITJUICE, 8));
-		
-		//Apple Juice
-		FruitPressManager.addRecipe(new FruitPressRecipe(TFCItems.redApple, TFCMFluids.JUICEAPPLE, 4));
-		FruitPressManager.addRecipe(new FruitPressRecipe(TFCItems.greenApple, TFCMFluids.JUICEAPPLE, 4));
-
-		//Lemon Juice
-		FruitPressManager.addRecipe(new FruitPressRecipe(TFCItems.lemon, TFCMFluids.JUICELEMON, 4));
-		
-		//Other
-		FruitPressManager.addRecipe(new FruitPressRecipe(TFCItems.olive, TFCFluids.OLIVEOIL, 1));
-	}
-	
 	//Kiln
 	private static void registerKilnRecipes()
 	{
 		KilnCraftingManager.getInstance().addRecipe(
-		new KilnRecipe(
-		new ItemStack(TFCMItems.halberd_Mold,1,0),
-		0, 
-		new ItemStack(TFCMItems.halberd_Mold,1,1)));
+			new KilnRecipe(
+				new ItemStack(TFCMItems.halberd_Mold,1,0),
+				0, 
+				new ItemStack(TFCMItems.halberd_Mold,1,1)
+			)
+		);
 		
 		KilnCraftingManager.getInstance().addRecipe(
-		new KilnRecipe(
-		new ItemStack(TFCMItems.warHammer_Mold,1,0),
-		0, 
-		new ItemStack(TFCMItems.warHammer_Mold,1,1)));	
+			new KilnRecipe(
+				new ItemStack(TFCMItems.warHammer_Mold,1,0),
+				0, 
+				new ItemStack(TFCMItems.warHammer_Mold,1,1)
+			)
+		);	
 		
 		KilnCraftingManager.getInstance().addRecipe(
-		new KilnRecipe(
-		new ItemStack(TFCMItems.poniard_Mold,1,0),
-		0, 
-		new ItemStack(TFCMItems.poniard_Mold,1,1)));	
+			new KilnRecipe(
+				new ItemStack(TFCMItems.poniard_Mold,1,0),
+				0, 
+				new ItemStack(TFCMItems.poniard_Mold,1,1)
+			)
+		);	
 		
 		KilnCraftingManager.getInstance().addRecipe(
-		new KilnRecipe(
-		new ItemStack(TFCMItems.arrow_Mold,1,0),
-		0, 
-		new ItemStack(TFCMItems.arrow_Mold,1,1)));	
+			new KilnRecipe(
+				new ItemStack(TFCMItems.arrow_Mold,1,0),
+				0, 
+				new ItemStack(TFCMItems.arrow_Mold,1,1)
+			)
+		);	
 		
 		KilnCraftingManager.getInstance().addRecipe(
-		new KilnRecipe(
-		new ItemStack(TFCMItems.bolt_Mold,1,0),
-		0, 
-		new ItemStack(TFCMItems.bolt_Mold,1,1)));
+			new KilnRecipe(
+				new ItemStack(TFCMItems.bolt_Mold,1,0),
+				0, 
+				new ItemStack(TFCMItems.bolt_Mold,1,1)
+			)
+		);
+		
+		KilnCraftingManager.getInstance().addRecipe(
+			new KilnRecipe(
+				new ItemStack(TFCItems.clayBucketWater,1,0),
+				0,
+				new ItemStack(TFCItems.clayBucketWater,1,1)
+			)
+		);
 	}
 	
 	//Mold Pouring
@@ -628,8 +623,8 @@ public class TFCMRecipes
 		is.setTagCompound(Temp);
 		return is;
 	}
-			
-			
+	
+	
 	private static void registerToolMolds()
 	{
 		craftingManager.addRecipe(new ItemStack(TFCMItems.halberd_Mold, 1, 2), 
@@ -758,8 +753,6 @@ public class TFCMRecipes
 		HeatRaw tinRaw = new HeatRaw(0.14, 230);
 		HeatRaw zincRaw = new HeatRaw(0.21, 420);//sh = 0.66F; boil = 907; melt = 420;
 		
-		heatmanager.addIndex(new HeatIndex(new ItemStack(TFCMItems.bottleFruitJuice), 0.98D, 150.0D, (new ItemStack(TFCMItems.bottleSugar))));
-		
 		heatmanager.addIndex(new HeatIndex(new ItemStack(TFCMItems.coil_BismuthBronze, 1), bismuthBronzeRaw, new ItemStack(TFCItems.bismuthBronzeUnshaped, 1)));
 		heatmanager.addIndex(new HeatIndex(new ItemStack(TFCMItems.coil_BlackBronze, 1), blackBronzeRaw, new ItemStack(TFCItems.blackBronzeUnshaped, 1)));
 		heatmanager.addIndex(new HeatIndex(new ItemStack(TFCMItems.coil_BlackSteel, 1), blackSteelRaw, new ItemStack(TFCItems.blackSteelUnshaped, 1)));
@@ -770,8 +763,9 @@ public class TFCMRecipes
 		heatmanager.addIndex(new HeatIndex(new ItemStack(TFCMItems.coil_RedSteel, 1), redSteelRaw, new ItemStack(TFCItems.redSteelUnshaped, 1)));
 		heatmanager.addIndex(new HeatIndex(new ItemStack(TFCMItems.coil_Steel, 1), steelRaw, new ItemStack(TFCItems.steelUnshaped, 1)));
 	
-		heatmanager.addIndex(new HeatIndex(new ItemStack(TFCItems.pumpkinGuts,1),1, 1200, null));
-		heatmanager.addIndex(new HeatIndex(new ItemStack(TFCMItems.bearRaw,1),1, 1200, null));
+		heatmanager.addIndex(new HeatIndex(new ItemStack(TFCItems.pumpkinGuts, 1), 1, 1200, null));
+		heatmanager.addIndex(new HeatIndex(new ItemStack(TFCMItems.bearRaw, 1), 1, 1200, null));
+		heatmanager.addIndex(new HeatIndex(new ItemStack(TFCItems.clayBucketWater, 1), 1, 1200, null));
 	}	
 	
 	public static void registerVatRecipes()

@@ -47,7 +47,6 @@ public class TFCMAchievements
 		achWarHammer = createAchievement("achievement.achWarHammer", "WarHammerAchievement", 0, 1, new ItemStack(TFCMItems.warHammer_Copper), TFC_Achievements.achCopperAge);
 		achPoniard = createAchievement("achievement.achPoniard", "PoniardAchievement", 0, 2, new ItemStack(TFCMItems.poniard_Copper), TFC_Achievements.achCopperAge);
 		
-		achSinew = createAchievement("achievement.achSinew", "SinewAchievement", 3, 0, new ItemStack(TFCMItems.deerTendon), null);
 		achLongbow = createAchievement("achievement.achLongbow", "LongbowAchievement", 2, 1, new ItemStack(TFCMItems.longBow), achSinew);
 		achCrossbow = createAchievement("achievement.achCrossbow", "CrossbowAchievement", 4, 1, new ItemStack(TFCMItems.crossBow), achSinew);
 		
@@ -58,11 +57,6 @@ public class TFCMAchievements
 		
 		achRedstoneTiles = createAchievement("achievement.achRedstoneTiles", "RedstoneTileAchievement", 8, 0, new ItemStack(TFCMItems.circuit), null);
 		achPiston = createAchievement("achievement.achPistone", "PistonAchievement", 8, 1, new ItemStack(Blocks.piston), null);
-		
-		achFruitPress = createAchievement("achievement.achFruitPress", "FruitPressAchievement", 0, 5, new ItemStack(TFCMBlocks.blockFruitPress), null);
-		achWine = createAchievement("achievement.achWine", "WineAchievement", 0, 7, new ItemStack(TFCMItems.arrow_BismuthBronze), achFruitPress); //TODO FIX
-		achSugar = createAchievement("achievement.achSugar", "SugarAchievement", 1, 7, new ItemStack(TFCMItems.bottleSugar), achFruitPress);
-		achJuiceLemon = createAchievement("achievement.achJuiceLemon", "JuiceLemonAchievement", -1, 7, new ItemStack(TFCMItems.bottleJuiceLemon), achFruitPress);
 		
 		achievementsTFCM = new Achievement[achlist.size()];
 		achievementsTFCM = achlist.toArray(achievementsTFCM);

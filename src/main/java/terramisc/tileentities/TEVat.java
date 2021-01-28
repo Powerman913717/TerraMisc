@@ -26,7 +26,6 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidContainerRegistry;
 import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.fluids.IFluidContainerItem;
@@ -57,6 +56,7 @@ public class TEVat extends TEFireEntity implements IInventory
 	public static final int FUELSLOT_CONSUME = 3;
 	public static final int CRAFTINGSLOT_INPUT = 4;
 	public static final int CRAFTINGSLOT_OUTPUT = 5;
+	public static final boolean CAN_COOK_FOOD = true;
 	
 	private TEFireEntity fire; //TE used as the basis for TEFirepit and TEForge.
 	
@@ -130,7 +130,7 @@ public class TEVat extends TEFireEntity implements IInventory
 				tickTimer++;
 				if(tickTimer > 100)
 				{
-					TFC_Core.handleItemTicking(this, this.worldObj, xCoord, yCoord, zCoord);
+					TFC_Core.handleItemTicking(this, this.worldObj, xCoord, yCoord, zCoord, CAN_COOK_FOOD);
 					
 					tickTimer = 0;
 				}

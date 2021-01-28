@@ -11,10 +11,8 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 import net.minecraftforge.client.event.GuiOpenEvent;
 import terramisc.gui.GuiBrickOven;
-import terramisc.gui.GuiFruitPress;
 import terramisc.gui.GuiVat;
 import terramisc.tileentities.TEBrickOven;
-import terramisc.tileentities.TEFruitPress;
 import terramisc.tileentities.TEVat;
 
 public class GuiHandlerClientTFCM extends terramisc.handlers.GuiHandlerTFCM
@@ -35,10 +33,6 @@ public class GuiHandlerClientTFCM extends terramisc.handlers.GuiHandlerTFCM
 
 		switch (Id)
 		{
-			case 1:
-			{
-				return new GuiFruitPress(player.inventory, ((TEFruitPress) te), world, x, y, z);
-			}
 			case 2:
 			{
 				return new GuiQuiver(player.inventory, world, x, y, z);

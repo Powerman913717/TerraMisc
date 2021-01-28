@@ -24,6 +24,7 @@ import terramisc.items.food.ItemPlaceableFood;
 public class TEFoodBlock extends NetworkTileEntity implements IInventory
 {
 	public ItemStack[] storage = new ItemStack[1];
+	public final static boolean CAN_COOK_FOOD = false;
 	
 	@Override
 	public void updateEntity()
@@ -34,7 +35,7 @@ public class TEFoodBlock extends NetworkTileEntity implements IInventory
 		float temp = TFC_Climate.getBioTemperature(worldObj, xCoord, zCoord);
 		float decay = TFC_Core.getEnvironmentalDecay(temp);
 		
-		TFC_Core.handleItemTicking(this, worldObj, xCoord, yCoord, zCoord, decay);
+		TFC_Core.handleItemTicking(this, worldObj, xCoord, yCoord, zCoord, decay, CAN_COOK_FOOD);
 	}
 
 	/**

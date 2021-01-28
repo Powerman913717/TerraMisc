@@ -27,12 +27,8 @@ import terramisc.items.ItemTFCM;
 import terramisc.items.ItemTallowDye;
 import terramisc.items.ItemToolMold;
 import terramisc.items.food.CustomSeedsTFCM;
-import terramisc.items.food.ItemBottleJuice;
-import terramisc.items.food.ItemBottleJuiceLemon;
 import terramisc.items.food.ItemBottleSoyMilk;
-import terramisc.items.food.ItemBottleSugar;
 import terramisc.items.food.ItemPie;
-import terramisc.items.food.ItemPlaceableFood;
 import terramisc.items.tools.ItemCustomArmor;
 import terramisc.items.tools.ItemCustomArrow;
 import terramisc.items.tools.ItemCustomBolt;
@@ -111,7 +107,6 @@ public class TFCMItemsSetup extends TFCMItems
 		pistonBase = new ItemTFCM(EnumSize.LARGE, EnumWeight.HEAVY).setUnlocalizedName("PistonBase");
 		circuit = new ItemTFCM(EnumSize.SMALL, EnumWeight.MEDIUM).setUnlocalizedName("Circuit");
 		
-		deerTendon = new ItemTFCM(EnumSize.SMALL, EnumWeight.LIGHT).setUnlocalizedName("DeerTendon");
 		sinewFiber = new ItemTFCM(EnumSize.TINY, EnumWeight.LIGHT).setUnlocalizedName("SinewFiber");
 		sinewString = new ItemTFCM(EnumSize.TINY, EnumWeight.LIGHT).setUnlocalizedName("SinewString");
 		sinewBowString = new ItemTFCM(EnumSize.SMALL, EnumWeight.LIGHT).setUnlocalizedName("SinewBowString");
@@ -307,13 +302,6 @@ public class TFCMItemsSetup extends TFCMItems
 	public static void SetupFood()
 	{	
 		//Drinks
-		bottleFruitJuice = new ItemBottleJuice().setUnlocalizedName("BottleFruitJuice");
-		bottleSugar= new ItemBottleSugar().setUnlocalizedName("BottleSugar");
-		
-		bottleJuiceApple = new ItemBottleJuice().setUnlocalizedName("BottleJuiceApple");
-		
-		bottleJuiceLemon = new ItemBottleJuiceLemon().setUnlocalizedName("BottleJuiceLemon");
-
 		bottleSoyMilk = new ItemBottleSoyMilk().setUnlocalizedName("BottleSoyMilk");
 		
 		//Soy
@@ -392,7 +380,7 @@ public class TFCMItemsSetup extends TFCMItems
 		 * Sheet metalID only used for rendering currently Lead Pewter renders as Lead (ID 10)
 		 */
 		leadPewterIngot = new ItemIngot().setUnlocalizedName("LeadPewterIngot");
-		leadPewterIngot2x  = ((ItemIngot)new ItemIngot().setUnlocalizedName("LeadPewterDoubleIngot")).setSize(EnumSize.LARGE).setMetal("Lead Pewter", 200);
+		leadPewterIngot2x = ((ItemIngot)new ItemIngot().setUnlocalizedName("LeadPewterDoubleIngot")).setSize(EnumSize.LARGE).setMetal("Lead Pewter", 200);
 		leadPewterUnshaped = new ItemMeltedMetal().setUnlocalizedName("LeadPewterUnshaped");
 		leadPewterSheet = ((ItemMetalSheet) new ItemMetalSheet(10).setUnlocalizedName("LeadPewterSheet")).setMetal("Lead Pewter", 200);
 		leadPewterSheet2x = ((ItemMetalSheet2x) new ItemMetalSheet2x(10).setUnlocalizedName("LeadPewterDoubleSheet")).setMetal("Lead Pewter", 400);

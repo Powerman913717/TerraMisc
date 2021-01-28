@@ -25,13 +25,11 @@ import terramisc.render.ItemCrossbowRender;
 import terramisc.render.ItemLongbowRender;
 import terramisc.render.ItemPolearmRender;
 import terramisc.render.TESRBrickOven;
-import terramisc.render.TESRFruitPress;
 import terramisc.render.TESRTallowCandle;
 import terramisc.render.TESRTallowCandleItem;
 import terramisc.render.TESRTallowCandleItemIntial;
 import terramisc.render.TESRVat;
 import terramisc.tileentities.TEBrickOven;
-import terramisc.tileentities.TEFruitPress;
 import terramisc.tileentities.TETallowCandle;
 import terramisc.tileentities.TEVat;
 
@@ -164,7 +162,6 @@ public class TFCMClientProxy extends TFCMCommonProxy
 		
 		// TESR registers
 		ClientRegistry.registerTileEntity(TETallowCandle.class, "TallowCandleTESR", new TESRTallowCandle());
-		ClientRegistry.registerTileEntity(TEFruitPress.class, "FruitPressTESR", new TESRFruitPress());
 		ClientRegistry.registerTileEntity(TEBrickOven.class, "BrickOvenTESR", new TESRBrickOven());
 		ClientRegistry.registerTileEntity(TEVat.class, "VatTESR", new TESRVat());
 	}

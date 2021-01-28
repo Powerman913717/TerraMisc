@@ -2,12 +2,9 @@ package terramisc.waila;
 
 import java.util.List;
 
-import com.dunk.tfc.Blocks.Vanilla.BlockCustomPumpkin;
 import com.dunk.tfc.Core.TFC_Core;
 import com.dunk.tfc.Core.TFC_Time;
 import com.dunk.tfc.Food.ItemFoodTFC;
-import com.dunk.tfc.api.Food;
-import com.dunk.tfc.api.TFCBlocks;
 import com.dunk.tfc.api.Util.Helper;
 
 import mcp.mobius.waila.api.IWailaConfigHandler;
@@ -18,7 +15,6 @@ import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.nbt.NBTTagList;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 import terramisc.api.crops.CropIndexTFCM;

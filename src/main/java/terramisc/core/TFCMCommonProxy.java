@@ -17,7 +17,6 @@ import net.minecraftforge.fluids.FluidStack;
 import terramisc.tileentities.TEBrickOven;
 import terramisc.tileentities.TECropTFCM;
 import terramisc.tileentities.TEFoodBlock;
-import terramisc.tileentities.TEFruitPress;
 import terramisc.tileentities.TETallowCandle;
 import terramisc.tileentities.TEVat;
 import terramisc.tileentities.TEWetClay;
@@ -116,30 +115,17 @@ public class TFCMCommonProxy
 		{
 			// TESR registers
 			GameRegistry.registerTileEntity(TETallowCandle.class, "TallowCandle");
-			GameRegistry.registerTileEntity(TEFruitPress.class, "FruitPress");
 			GameRegistry.registerTileEntity(TEBrickOven.class, "BrickOven");
 		}
 	}
 
 	public void registerFluids()
 	{
-		FluidRegistry.registerFluid(TFCMFluids.REDFRUITJUICE);
-		
-		FluidRegistry.registerFluid(TFCMFluids.JUICEAPPLE);
-		
-		FluidRegistry.registerFluid(TFCMFluids.JUICELEMON);
-		
 		FluidRegistry.registerFluid(TFCMFluids.SOYMILK);
 	}
 	
 	public void setupFluids()
 	{
-		FluidContainerRegistry.registerFluidContainer(new FluidStack(TFCMFluids.REDFRUITJUICE, 250), new ItemStack(TFCMItems.bottleFruitJuice), new ItemStack(TFCItems.glassBottle));
-		
-		FluidContainerRegistry.registerFluidContainer(new FluidStack(TFCMFluids.JUICEAPPLE, 250), new ItemStack(TFCMItems.bottleJuiceApple), new ItemStack(TFCItems.glassBottle));
-		
-		FluidContainerRegistry.registerFluidContainer(new FluidStack(TFCMFluids.JUICELEMON, 250), new ItemStack(TFCMItems.bottleJuiceLemon), new ItemStack(TFCItems.glassBottle));
-		
 		FluidContainerRegistry.registerFluidContainer(new FluidStack(TFCMFluids.SOYMILK, 250), new ItemStack(TFCMItems.bottleSoyMilk), new ItemStack(TFCItems.glassBottle));
 	}
 	

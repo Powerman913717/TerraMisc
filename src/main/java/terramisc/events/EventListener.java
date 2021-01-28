@@ -78,11 +78,6 @@ public class EventListener
 	@SubscribeEvent
 	 public void pickup(ItemPickupEvent event)
 	 {
-		 if(event.pickedUp.getEntityItem().getItem() == TFCMItems.deerTendon)
-		 {
-			 event.player.addStat(TFCMAchievements.achSinew, 1);
-		 }
-		 
 		 if(event.pickedUp.getEntityItem().getItem() == TFCMItems.suet)
 		 {
 			 event.player.addStat(TFCMAchievements.achSuet, 1);

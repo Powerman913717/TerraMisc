@@ -1,7 +1,5 @@
 package terramisc.handlers;
 
-import com.dunk.tfc.Containers.ContainerHopper;
-
 import cpw.mods.fml.common.network.IGuiHandler;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
@@ -10,7 +8,6 @@ import terramisc.containers.ContainerBrickOven;
 import terramisc.containers.ContainerCustomQuiver;
 import terramisc.containers.ContainerVat;
 import terramisc.tileentities.TEBrickOven;
-import terramisc.tileentities.TEFruitPress;
 import terramisc.tileentities.TEVat;
 
 public class GuiHandlerTFCM implements IGuiHandler
@@ -24,10 +21,6 @@ public class GuiHandlerTFCM implements IGuiHandler
 		
 		switch(Id)
 		{
-			case 1:
-			{
-				return new ContainerHopper(player.inventory, ((TEFruitPress) te));
-			}
 			case 2:
 			{
 				return new ContainerCustomQuiver(player.inventory, world, x, y, z);

@@ -1,21 +1,20 @@
+[
 {
-    "modListVersion": 2,
-    "modList": [{
-        "modid": "tfcm",
-        "name": "TerraMisc",
-        "description": "Random stuff and things for TerraFirmaCraft!",
-        "version": "${mod_version}",
-        "mcversion": "${minecraft_version}",
-        "url": "http://terrafirmacraft.com/f/topic/8401-tfc-07920035terramisc-weapons-update/",
-        "updateUrl": "",
-        "authorList": ["Powerman913717"],
-       "credits": "Bletch, Emris, Dunk, Bioxx, Kitty",
-       "logoFile": "/TerraMisc.png",
-       "screenshots": [],
-       "parent": "",
-       "requiredMods": [],
-       "dependencies": ["terrafirmacraftplus"],
-       "dependants": [  ],
-       "useDependencyInformation": "true"
-    }]
+    "modid": "tfcm",
+    "name": "TerraMisc",
+    "description": "Random stuff and things for TerraFirmaCraft!",
+    "version": "${version}",
+    "mcversion": "${mcversion}",
+    "url": "http://terrafirmacraft.com/f/topic/8401-tfc-07920035terramisc-weapons-update/",
+    "updateUrl": "",
+    "authorList": ["Powerman913717"],
+    "credits": "Bletch, Emris, Dunk, Bioxx, Kitty",
+    "logoFile": "/TerraMisc.png",
+    "screenshots": [],
+    "parent": "",
+    "requiredMods": [],
+    "dependencies": ["terrafirmacraftplus"],
+    "dependants": [  ],
+    "useDependencyInformation": "true"
 }
+]

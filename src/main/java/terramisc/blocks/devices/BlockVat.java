@@ -20,7 +20,6 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemFlintAndSteel;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.Explosion;
 import net.minecraft.world.IBlockAccess;
@@ -68,7 +67,7 @@ public class BlockVat extends BlockTerraContainer
 			ItemStack equippedItem = entityplayer.getCurrentEquippedItem();
 			if(equippedItem != null)
 			{
-				if((TEVat) world.getTileEntity(x, y, z) != null)
+				if(world.getTileEntity(x, y, z) != null)
 				{
 					TEVat te = (TEVat) world.getTileEntity(x, y, z);
 					
@@ -103,11 +102,10 @@ public class BlockVat extends BlockTerraContainer
 				}
 			}
 
-			if((TEVat) world.getTileEntity(x, y, z) != null)
+			if(world.getTileEntity(x, y, z) != null)
 				entityplayer.openGui(TerraMisc.instance, 5, world, x, y, z);
 		}
-		else if(world.isRemote)
-		{
+		else {
 			world.markBlockForUpdate(x, y, z);
 			return true;
 		}
@@ -239,7 +237,7 @@ public class BlockVat extends BlockTerraContainer
 			return;
 		}
 	}
-	
+
 	public void randomDisplayTick(World world, int x, int y, int z, Random rand)
 	{
 		int meta = world.getBlockMetadata(x, y, z);
@@ -259,17 +257,17 @@ public class BlockVat extends BlockTerraContainer
 			world.spawnParticle("flame", f + f4 - 0.3F, f1,  f2 + f5 + 0.3F, 0.0D, 0.0D, 0.0D);
 			world.spawnParticle("smoke", f + f5 + 0.3F , f1, f2 + f4 - 0.3F, 0.0D, 0.0D, 0.0D);
 			world.spawnParticle("flame", f + f5 + 0.3F , f1, f2 + f4 - 0.3F, 0.0D, 0.0D, 0.0D);
-			
+
 			if (((TEVat)world.getTileEntity(x, y, z)).fireTemp > 550)
 			{
 				world.spawnParticle("flame", f + f5 + 0.3F , f1, f2 + f6 + 0.2F, 0.0D, 0.0D, 0.0D);
 				world.spawnParticle("flame", f + f4 - 0.3F , f1, f2 + f6 + 0.1F, 0.0D, 0.0D, 0.0D);
 			}
-			
+
 			//TODO add particles for when liquids are boiling
 		}
 	}
-	
+
 	@Override
 	public boolean renderAsNormalBlock()
 	{

@@ -6,8 +6,6 @@ import com.dunk.tfc.Core.TFC_Core;
 import com.dunk.tfc.Core.TFC_Time;
 import com.dunk.tfc.Entities.Mobs.EntityBear;
 import com.dunk.tfc.Entities.Mobs.EntityCowTFC;
-import com.dunk.tfc.Entities.Mobs.EntityDeer;
-import com.dunk.tfc.Entities.Mobs.EntityHorseTFC;
 import com.dunk.tfc.Entities.Mobs.EntitySheepTFC;
 import com.dunk.tfc.api.Entities.IAnimal;
 import com.dunk.tfc.api.Util.Helper;
@@ -22,23 +20,6 @@ public class MobDropHandlerTFCM
 	@SubscribeEvent
 	public void onEntityDrop(LivingDropsEvent event)
 	{
-		if(event.entityLiving instanceof EntityDeer)
-		{
-			float birth = ((IAnimal) event.entityLiving).getBirthDay();
-			float time = TFC_Time.getTotalDays();
-			float ageMod = (time - birth) / ((IAnimal) event.entityLiving).getNumberOfDaysToAdult();
-			
-			event.entityLiving.entityDropItem(new ItemStack(TFCMItems.deerTendon, (int) (2 * ageMod)), 0);
-		}
-		
-		if(event.entityLiving instanceof EntityHorseTFC)
-		{
-			float birth = ((IAnimal) event.entityLiving).getBirthDay();
-			float time = TFC_Time.getTotalDays();
-			float ageMod = (time - birth) / ((IAnimal) event.entityLiving).getNumberOfDaysToAdult();
-			
-			event.entityLiving.entityDropItem(new ItemStack(TFCMItems.deerTendon, (int) (2 * ageMod)), 0);
-		}
 		
 		if(event.entityLiving instanceof EntityCowTFC)
 		{

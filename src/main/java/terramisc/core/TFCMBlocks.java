@@ -16,7 +16,6 @@ import terramisc.blocks.BlockStainedClayTFCM;
 import terramisc.blocks.BlockTallowCandle;
 import terramisc.blocks.BlockTallowCandleOff;
 import terramisc.blocks.devices.BlockBrickOven;
-import terramisc.blocks.devices.BlockFruitPress;
 import terramisc.blocks.devices.BlockVat;
 import terramisc.items.itemblocks.ItemBlockStainedClayTFCM;
 import terramisc.items.itemblocks.ItemBlockWetClay;
@@ -80,8 +79,6 @@ public class TFCMBlocks
 		GameRegistry.registerBlock(blockRoadSed, terramisc.items.itemblocks.ItemBlockRoadBlock.class, "blockRoadSed");
 	
 		//Devices
-		blockFruitPress = new BlockFruitPress().setHardness(2F).setBlockName("blockFruitPress");
-		GameRegistry.registerBlock(blockFruitPress, "blockFruitPress");
 		blockBrickOven = new BlockBrickOven().setHardness(14F).setBlockName("blockBrickOven");
 		GameRegistry.registerBlock(blockBrickOven, ItemTerraBlock.class, "blockBrickOven");
 		vat = new BlockVat().setBlockName("vat");

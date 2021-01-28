@@ -17,7 +17,6 @@ public class TFCMItems
 	public static Item caseinGlue;
 	public static Item pistonBase;
 	public static Item circuit;
-	public static Item deerTendon;
 	public static Item sinewFiber;
 	public static Item sinewString;
 	public static Item sinewBowString;
@@ -227,20 +226,11 @@ public class TFCMItems
 	public static Item leadPewterSheet;
 	public static Item leadPewterSheet2x;
 	
-	//Food Stuffs
-	public static Item bottleFruitJuice;
-	public static Item bottleSugar;
-	
-	public static Item bottleJuiceApple;
-	public static Item bottleJuiceLemon;
-	
 		//Soy
 	public static Item bottleSoyMilk;
 	public static Item soyPaste;
 	
 		//Crops
-	//public static Item seedsPumpkin;
-	//public static Item pumpkin;
 	public static Item seedsCayenne;
 	public static Item greenCayenne;
 	public static Item redCayenne;
@@ -249,8 +239,6 @@ public class TFCMItems
 	public static Item greenCoffee;
 	public static Item coffee;
 	public static Item groundCoffee;
-	//public static Item seedsWatermelon;
-	//public static Item watermelon;
 	public static Item seedsSweetPotato;
 	public static Item sweetPotato;
 	public static Item seedsHops;
@@ -280,7 +268,6 @@ public class TFCMItems
 		GameRegistry.registerItem(caseinGlue, caseinGlue.getUnlocalizedName());		
 		GameRegistry.registerItem(pistonBase, pistonBase.getUnlocalizedName());
 		GameRegistry.registerItem(circuit, circuit.getUnlocalizedName());
-		GameRegistry.registerItem(deerTendon, deerTendon.getUnlocalizedName());
 		GameRegistry.registerItem(sinewFiber, sinewFiber.getUnlocalizedName());
 		GameRegistry.registerItem(sinewString, sinewString.getUnlocalizedName());
 		GameRegistry.registerItem(sinewBowString, sinewBowString.getUnlocalizedName());
@@ -491,14 +478,6 @@ public class TFCMItems
 		GameRegistry.registerItem(leadPewterSheet2x, leadPewterSheet2x.getUnlocalizedName());
 		
 		//Food Stuffs
-		GameRegistry.registerItem(bottleFruitJuice, bottleFruitJuice.getUnlocalizedName());
-
-		GameRegistry.registerItem(bottleSugar, bottleSugar.getUnlocalizedName());
-		
-		GameRegistry.registerItem(bottleJuiceApple, bottleJuiceApple.getUnlocalizedName());
-		
-		GameRegistry.registerItem(bottleJuiceLemon, bottleJuiceLemon.getUnlocalizedName());
-		
 		GameRegistry.registerItem(bottleSoyMilk, bottleSoyMilk.getUnlocalizedName());
 		GameRegistry.registerItem(soyPaste, soyPaste.getUnlocalizedName());
 		
