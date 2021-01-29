@@ -32,7 +32,7 @@ import terramisc.handlers.network.TFCMCreateMealPacket;
 import terramisc.handlers.network.TFCMInitClientWorldPacket;
 import terramisc.plants.CropRegistry;
 
-@Mod(modid = TFCMDetails.ModID, name = TFCMDetails.ModName, version = "0.14.0", dependencies = TFCMDetails.ModDependencies)
+@Mod(modid = TFCMDetails.ModID, name = TFCMDetails.ModName, version = TFCMDetails.ModVersion, dependencies = TFCMDetails.ModDependencies)
 public class TerraMisc
 {
 	@Instance(TFCMDetails.ModID)

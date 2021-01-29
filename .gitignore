@@ -89,3 +89,4 @@ local.properties
 .DS_Store
 /eclipse/
 /libs/
+.shelf
