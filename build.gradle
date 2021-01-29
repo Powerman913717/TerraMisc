@@ -19,8 +19,8 @@ buildscript {
 
 apply plugin: 'forge'
 
-version = "0.14.3"
-group= "TerraMisc" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+version = "0.14.4"
+group= "TerraMisc"
 archivesBaseName = "TFCM"
 
 minecraft {
@@ -42,26 +42,14 @@ repositories {
 }
 
 dependencies {
-    // you may put jars on which you depend on in ./libs
-    // or you may define them like so..
-    //compile "some.group:artifact:version:classifier"
-    //compile "some.group:artifact:version"
-      
-    // real examples
-    //compile 'com.mod-buildcraft:buildcraft:6.0.8:dev'  // adds buildcraft to the dev env
-    //compile 'com.googlecode.efficient-java-matrix-library:ejml:0.24' // adds ejml to the dev env
-
-    // for more info...
-    // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
-    // http://www.gradle.org/docs/current/userguide/dependency_management.html
+    // Forcing version numbers for everything and using NO-NEI WAILA since the "transitive dependency resolution (gradle magic)" is currently borked.
     compile "codechicken:CodeChickenCore:1.7.10-1.0.4.35:dev"
     compile "codechicken:CodeChickenLib:1.7.10-1.1.3.127:dev"
     compile "codechicken:NotEnoughItems:1.7.10-1.0.4.95:dev"
     compile "mcp.mobius.waila:Waila:1.5.11-RC2-NONEI_1.7.10"
 }
 
-processResources
-{
+processResources {
     // this will ensure that this task is redone when the versions change.
     inputs.property "version", project.version
     inputs.property "mcversion", project.minecraft.version
@@ -95,7 +83,7 @@ task deobfJar(type: Jar) {
     from (sourceSets.main.allSource.srcDirs) {
         include '**/*.java'
     }
-    classifier = 'dev'
+    classifier = 'deobf'
     appendix = project.minecraft.version
 }
 

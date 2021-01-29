@@ -11,6 +11,7 @@ import com.dunk.tfc.Items.ItemIngot;
 import com.dunk.tfc.Items.ItemMeltedMetal;
 import com.dunk.tfc.Items.ItemMetalSheet;
 import com.dunk.tfc.Items.ItemMetalSheet2x;
+import com.dunk.tfc.api.Enums.EnumDamageType;
 import com.dunk.tfc.api.Metal;
 import com.dunk.tfc.api.Constant.Global;
 import com.dunk.tfc.api.Enums.EnumFoodGroup;
@@ -126,15 +127,15 @@ public class TFCMItemsSetup extends TFCMItems
 		crossBow = new ItemCustomCrossbow().setUnlocalizedName("CrossBow");
 		
 		//Halberds
-		halberd_BismuthBronze = new ItemCustomHalberd(BismuthBronzeToolMaterial, 315).setUnlocalizedName("Halberd_BismuthBronze").setMaxDamage(BismuthBronzeUses);
-		halberd_BlackBronze = new ItemCustomHalberd(BlackBronzeToolMaterial, 	 345).setUnlocalizedName("Halberd_BlackBronze").setMaxDamage(BlackBronzeUses);
-		halberd_BlackSteel = new ItemCustomHalberd(BlackSteelToolMaterial, 	     405).setUnlocalizedName("Halberd_BlackSteel").setMaxDamage(BlackSteelUses);
-		halberd_BlueSteel = new ItemCustomHalberd(BlueSteelToolMaterial,		 472).setUnlocalizedName("Halberd_BlueSteel").setMaxDamage(BlueSteelUses);
-		halberd_Bronze = new ItemCustomHalberd(BronzeToolMaterial,			     330).setUnlocalizedName("Halberd_Bronze").setMaxDamage(BronzeUses);
-		halberd_Copper = new ItemCustomHalberd(CopperToolMaterial, 			     248).setUnlocalizedName("Halberd_Copper").setMaxDamage(CopperUses);
-		halberd_WroughtIron = new ItemCustomHalberd(IronToolMaterial,			 360).setUnlocalizedName("Halberd_WroughtIron").setMaxDamage(WroughtIronUses);
-		halberd_RedSteel = new ItemCustomHalberd(RedSteelToolMaterial,		     472).setUnlocalizedName("Halberd_RedSteel").setMaxDamage(RedSteelUses);
-		halberd_Steel = new ItemCustomHalberd(SteelToolMaterial,				 398).setUnlocalizedName("Halberd_Steel").setMaxDamage(SteelUses);
+		halberd_BismuthBronze = new ItemCustomHalberd(BismuthBronzeToolMaterial,BismuthBronzeToolMaterial.getDamageVsEntity() * 1.25f).setAttackSpeed(30).setUnlocalizedName("Halberd_BismuthBronze").setMaxDamage(BismuthBronzeUses);
+		halberd_BlackBronze = new ItemCustomHalberd(BlackBronzeToolMaterial,BlackBronzeToolMaterial.getDamageVsEntity() * 1.25f).setAttackSpeed(30).setUnlocalizedName("Halberd_BlackBronze").setMaxDamage(BlackBronzeUses);
+		halberd_BlackSteel = new ItemCustomHalberd(BlackSteelToolMaterial,BlackSteelToolMaterial.getDamageVsEntity() * 1.25f).setAttackSpeed(30).setUnlocalizedName("Halberd_BlackSteel").setMaxDamage(BlackSteelUses);
+		halberd_BlueSteel = new ItemCustomHalberd(BlueSteelToolMaterial,BlueSteelToolMaterial.getDamageVsEntity() * 1.25f).setAttackSpeed(30).setUnlocalizedName("Halberd_BlueSteel").setMaxDamage(BlueSteelUses);
+		halberd_Bronze = new ItemCustomHalberd(BronzeToolMaterial,BronzeToolMaterial.getDamageVsEntity() * 1.25f).setAttackSpeed(30).setUnlocalizedName("Halberd_Bronze").setMaxDamage(BronzeUses);
+		halberd_Copper = new ItemCustomHalberd(CopperToolMaterial,CopperToolMaterial.getDamageVsEntity() * 1.25f).setAttackSpeed(30).setUnlocalizedName("Halberd_Copper").setMaxDamage(CopperUses);
+		halberd_WroughtIron = new ItemCustomHalberd(IronToolMaterial,IronToolMaterial.getDamageVsEntity() * 1.25f).setAttackSpeed(30).setUnlocalizedName("Halberd_WroughtIron").setMaxDamage(WroughtIronUses);
+		halberd_RedSteel = new ItemCustomHalberd(RedSteelToolMaterial,RedSteelToolMaterial.getDamageVsEntity() * 1.25f).setAttackSpeed(30).setUnlocalizedName("Halberd_RedSteel").setMaxDamage(RedSteelUses);
+		halberd_Steel = new ItemCustomHalberd(SteelToolMaterial,SteelToolMaterial.getDamageVsEntity() * 1.25f).setAttackSpeed(30).setUnlocalizedName("Halberd_Steel").setMaxDamage(SteelUses);
 		
 		//Halberd Tool Heads
 		halberd_BismuthBronze_Head = new ItemCustomToolHead().setUnlocalizedName("Halberd_BismuthBronze_Head");
@@ -148,15 +149,15 @@ public class TFCMItemsSetup extends TFCMItems
 		halberd_Steel_Head = new ItemCustomToolHead().setUnlocalizedName("Halberd_Steel_Head");
 		
 		//War Hammers
-		warHammer_BismuthBronze = new ItemCustomWarHammer(BismuthBronzeToolMaterial, 315).setUnlocalizedName("WarHammer_BismuthBronze").setMaxDamage(BismuthBronzeUses);
-		warHammer_BlackBronze = new ItemCustomWarHammer(BlackBronzeToolMaterial, 	 345).setUnlocalizedName("WarHammer_BlackBronze").setMaxDamage(BlackBronzeUses);
-		warHammer_BlackSteel = new ItemCustomWarHammer(BlackSteelToolMaterial, 	     405).setUnlocalizedName("WarHammer_BlackSteel").setMaxDamage(BlackSteelUses);
-		warHammer_BlueSteel = new ItemCustomWarHammer(BlueSteelToolMaterial,		 472).setUnlocalizedName("WarHammer_BlueSteel").setMaxDamage(BlueSteelUses);
-		warHammer_Bronze = new ItemCustomWarHammer(BronzeToolMaterial,			     330).setUnlocalizedName("WarHammer_Bronze").setMaxDamage(BronzeUses);
-		warHammer_Copper = new ItemCustomWarHammer(CopperToolMaterial, 			     248).setUnlocalizedName("WarHammer_Copper").setMaxDamage(CopperUses);
-		warHammer_WroughtIron = new ItemCustomWarHammer(IronToolMaterial,			 360).setUnlocalizedName("WarHammer_WroughtIron").setMaxDamage(WroughtIronUses);
-		warHammer_RedSteel = new ItemCustomWarHammer(RedSteelToolMaterial,		     472).setUnlocalizedName("WarHammer_RedSteel").setMaxDamage(RedSteelUses);
-		warHammer_Steel = new ItemCustomWarHammer(SteelToolMaterial,				 398).setUnlocalizedName("WarHammer_Steel").setMaxDamage(SteelUses);
+		warHammer_BismuthBronze = new ItemCustomWarHammer(BismuthBronzeToolMaterial,BismuthBronzeToolMaterial.getDamageVsEntity() * 1.25f, EnumDamageType.CRUSHING).setAttackSpeed(30).setUnlocalizedName("WarHammer_BismuthBronze").setMaxDamage(BismuthBronzeUses);
+		warHammer_BlackBronze = new ItemCustomWarHammer(BlackBronzeToolMaterial,BlackBronzeToolMaterial.getDamageVsEntity() * 1.25f, EnumDamageType.CRUSHING).setAttackSpeed(30).setUnlocalizedName("WarHammer_BlackBronze").setMaxDamage(BlackBronzeUses);
+		warHammer_BlackSteel = new ItemCustomWarHammer(BlackSteelToolMaterial,BlackSteelToolMaterial.getDamageVsEntity() * 1.25f, EnumDamageType.CRUSHING).setAttackSpeed(30).setUnlocalizedName("WarHammer_BlackSteel").setMaxDamage(BlackSteelUses);
+		warHammer_BlueSteel = new ItemCustomWarHammer(BlueSteelToolMaterial,BlueSteelToolMaterial.getDamageVsEntity() * 1.25f, EnumDamageType.CRUSHING).setAttackSpeed(30).setUnlocalizedName("WarHammer_BlueSteel").setMaxDamage(BlueSteelUses);
+		warHammer_Bronze = new ItemCustomWarHammer(BronzeToolMaterial,BronzeToolMaterial.getDamageVsEntity() * 1.25f, EnumDamageType.CRUSHING).setAttackSpeed(30).setUnlocalizedName("WarHammer_Bronze").setMaxDamage(BronzeUses);
+		warHammer_Copper = new ItemCustomWarHammer(CopperToolMaterial,CopperToolMaterial.getDamageVsEntity() * 1.25f, EnumDamageType.CRUSHING).setAttackSpeed(30).setUnlocalizedName("WarHammer_Copper").setMaxDamage(CopperUses);
+		warHammer_WroughtIron = new ItemCustomWarHammer(IronToolMaterial,IronToolMaterial.getDamageVsEntity() * 1.25f, EnumDamageType.CRUSHING).setAttackSpeed(30).setUnlocalizedName("WarHammer_WroughtIron").setMaxDamage(WroughtIronUses);
+		warHammer_RedSteel = new ItemCustomWarHammer(RedSteelToolMaterial,RedSteelToolMaterial.getDamageVsEntity() * 1.25f, EnumDamageType.CRUSHING).setAttackSpeed(30).setUnlocalizedName("WarHammer_RedSteel").setMaxDamage(RedSteelUses);
+		warHammer_Steel = new ItemCustomWarHammer(SteelToolMaterial,SteelToolMaterial.getDamageVsEntity() * 1.25f, EnumDamageType.CRUSHING).setAttackSpeed(30).setUnlocalizedName("WarHammer_Steel").setMaxDamage(SteelUses);
 		
 		//War Hammer Heads
 		warHammer_BismuthBronze_Head = new ItemCustomToolHead().setUnlocalizedName("WarHammer_BismuthBronze_Head");
@@ -170,15 +171,15 @@ public class TFCMItemsSetup extends TFCMItems
 		warHammer_Steel_Head = new ItemCustomToolHead().setUnlocalizedName("WarHammer_Steel_Head");
 		
 		//Poniards
-		poniard_BismuthBronze = new ItemCustomPoniard(BismuthBronzeToolMaterial, 175).setUnlocalizedName("Poniard_BismuthBronze").setMaxDamage(BismuthBronzeUses);
-		poniard_BlackBronze = new ItemCustomPoniard(BlackBronzeToolMaterial, 	 190).setUnlocalizedName("Poniard_BlackBronze").setMaxDamage(BlackBronzeUses);
-		poniard_BlackSteel = new ItemCustomPoniard(BlackSteelToolMaterial, 	     225).setUnlocalizedName("Poniard_BlackSteel").setMaxDamage(BlackSteelUses);
-		poniard_BlueSteel = new ItemCustomPoniard(BlueSteelToolMaterial,		 263).setUnlocalizedName("Poniard_BlueSteel").setMaxDamage(BlueSteelUses);
-		poniard_Bronze = new ItemCustomPoniard(BronzeToolMaterial,			     183).setUnlocalizedName("Poniard_Bronze").setMaxDamage(BronzeUses);
-		poniard_Copper = new ItemCustomPoniard(CopperToolMaterial, 			     138).setUnlocalizedName("Poniard_Copper").setMaxDamage(CopperUses);
-		poniard_WroughtIron = new ItemCustomPoniard(IronToolMaterial,			 200).setUnlocalizedName("Poniard_WroughtIron").setMaxDamage(WroughtIronUses);
-		poniard_RedSteel = new ItemCustomPoniard(RedSteelToolMaterial,		     263).setUnlocalizedName("Poniard_RedSteel").setMaxDamage(RedSteelUses);
-		poniard_Steel = new ItemCustomPoniard(SteelToolMaterial,				 221).setUnlocalizedName("Poniard_Steel").setMaxDamage(SteelUses);
+		poniard_BismuthBronze = new ItemCustomPoniard(BismuthBronzeToolMaterial,BismuthBronzeToolMaterial.getDamageVsEntity() * 0.85f, EnumDamageType.PIERCING).setAttackSpeed(7).setUnlocalizedName("Poniard_BismuthBronze").setMaxDamage(BismuthBronzeUses);
+		poniard_BlackBronze = new ItemCustomPoniard(BlackBronzeToolMaterial,BlackBronzeToolMaterial.getDamageVsEntity() * 0.85f, EnumDamageType.PIERCING).setAttackSpeed(7).setUnlocalizedName("Poniard_BlackBronze").setMaxDamage(BlackBronzeUses);
+		poniard_BlackSteel = new ItemCustomPoniard(BlackSteelToolMaterial,BlackSteelToolMaterial.getDamageVsEntity() * 0.85f, EnumDamageType.PIERCING).setAttackSpeed(7).setUnlocalizedName("Poniard_BlackSteel").setMaxDamage(BlackSteelUses);
+		poniard_BlueSteel = new ItemCustomPoniard(BlueSteelToolMaterial,BlueSteelToolMaterial.getDamageVsEntity() * 0.85f, EnumDamageType.PIERCING).setAttackSpeed(7).setUnlocalizedName("Poniard_BlueSteel").setMaxDamage(BlueSteelUses);
+		poniard_Bronze = new ItemCustomPoniard(BronzeToolMaterial,BronzeToolMaterial.getDamageVsEntity() * 0.85f, EnumDamageType.PIERCING).setAttackSpeed(7).setUnlocalizedName("Poniard_Bronze").setMaxDamage(BronzeUses);
+		poniard_Copper = new ItemCustomPoniard(CopperToolMaterial,CopperToolMaterial.getDamageVsEntity() * 0.85f, EnumDamageType.PIERCING).setAttackSpeed(7).setUnlocalizedName("Poniard_Copper").setMaxDamage(CopperUses);
+		poniard_WroughtIron = new ItemCustomPoniard(IronToolMaterial,IronToolMaterial.getDamageVsEntity() * 0.85f, EnumDamageType.PIERCING).setAttackSpeed(7).setUnlocalizedName("Poniard_WroughtIron").setMaxDamage(WroughtIronUses);
+		poniard_RedSteel = new ItemCustomPoniard(RedSteelToolMaterial,RedSteelToolMaterial.getDamageVsEntity() * 0.85f, EnumDamageType.PIERCING).setAttackSpeed(7).setUnlocalizedName("Poniard_RedSteel").setMaxDamage(RedSteelUses);
+		poniard_Steel = new ItemCustomPoniard(SteelToolMaterial,SteelToolMaterial.getDamageVsEntity() * 0.85f, EnumDamageType.PIERCING).setAttackSpeed(7).setUnlocalizedName("Poniard_Steel").setMaxDamage(SteelUses);
 		
 		//Poniard Blades
 		poniard_BismuthBronze_Head = new ItemCustomToolHead().setUnlocalizedName("Poniard_BismuthBronze_Head");
