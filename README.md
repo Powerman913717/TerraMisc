@@ -1,8 +1,16 @@
+TFC+ Port of TerraMisc
+=
+This mod was originally created for TFC and is still occasionally updated for it (last time was in 2020).
+You can find additional information about the mod on the original terrafirmacraft forums (which have been in read only mode for a good while now) https://terrafirmacraft.com/f/topic/8401-tfc-079290130terramisc-misc-magic-and-more/
+
+
+Below is the original description
+
 TerraMisc by Powerman913717
 ================
 
 You may download and use this mod openly. You may include it in mod packs as long
-as you include my IGN:Powerman913717 and a link to the forum post somewhere 
+as youÂ include my IGN:Powerman913717 and a link to the forum post somewhere 
 in your mod pack. Feel free notify me of your mod pack as I like to view them, 
 however, this isn't required. This INCLUDES server distributed mod packs.
 
