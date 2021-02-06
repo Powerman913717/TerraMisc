@@ -2,7 +2,7 @@
 #This is the Main language configuration file
 #
 #If you want to color code the text then I recommend you visit http://www.minecraftwiki.net/wiki/Formatting_codes#Color_codes
-#To create the ง symbol which is used for assigning a color to the following text press Alt + 21 on Windows. For other OSes, view the above link.
+#To create the ยง symbol which is used for assigning a color to the following text press Alt + 21 on Windows. For other OSes, view the above link.
 #This file needs to be UTF-8 encoded to work with MC 1.7+
 
 #==========
@@ -94,7 +94,7 @@ item.BottleJuiceLemon.name=Lemon Juice
 item.BottleLemonade.name=Lemonade
 item.BottleJuiceOnion.name=Onion Juice
 item.BottleSoyMilk.name=Soy Milk
-item.BucketHotWater.name=Wooden Bucket (Hot Water)
+item.Boiling Water Bucket.name=Wooden Bucket (Boiling Water)
 
 item.SoybeanPaste.name=Soybean Paste
 item.Pie.name=Pie
@@ -385,14 +385,8 @@ gui.pumpkinHarvesting=Break to harvest for food.
 #= Fluids =
 #===========
 
-fluid.fruitjuice=Fruit Juice
-fluid.fruitwine=Fruit Wine
-fluid.juiceapple=Apple Juice
-fluid.juiceorange=Orange Juice
-fluid.juicelemon=Lemon Juice
-fluid.lemonade=Lemonade
-fluid.soymilk=Soy Milk
-fluid.waterhot=Hot Water
+fluid.soy milk=Soy Milk
+fluid.boiling water=Boiling Water
 fluid.juiceonion=Onion Juice
 
 #=================

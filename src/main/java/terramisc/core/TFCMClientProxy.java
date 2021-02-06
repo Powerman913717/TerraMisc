@@ -1,11 +1,8 @@
 package terramisc.core;
 
-import java.io.File;
-
+import codechicken.nei.api.API;
 import com.dunk.tfc.api.TFCBlocks;
 import com.dunk.tfc.api.TFCOptions;
-
-import codechicken.nei.api.API;
 import cpw.mods.fml.client.registry.ClientRegistry;
 import cpw.mods.fml.client.registry.RenderingRegistry;
 import cpw.mods.fml.common.Loader;
@@ -33,141 +30,127 @@ import terramisc.tileentities.TEBrickOven;
 import terramisc.tileentities.TETallowCandle;
 import terramisc.tileentities.TEVat;
 
-public class TFCMClientProxy extends TFCMCommonProxy
-{
-	@Override
-	public String getCurrentLanguage()
-	{
-		return Minecraft.getMinecraft().getLanguageManager().getCurrentLanguage().getLanguageCode();
-	}
+import java.io.File;
 
-	@Override
-	public World getCurrentWorld()
-	{
-		return Minecraft.getMinecraft().theWorld;
-	}
+public class TFCMClientProxy extends TFCMCommonProxy {
+    @Override
+    public String getCurrentLanguage() {
+        return Minecraft.getMinecraft().getLanguageManager().getCurrentLanguage().getLanguageCode();
+    }
 
-	@Override
-	public boolean getGraphicsLevel()
-	{
-		Minecraft.getMinecraft();
-		return Minecraft.isFancyGraphicsEnabled();
-	}
+    @Override
+    public World getCurrentWorld() {
+        return Minecraft.getMinecraft().theWorld;
+    }
 
-	@Override
-	public File getMinecraftDirectory()
-	{
-		return Minecraft.getMinecraft().mcDataDir;
-	}
-	
-	@Override
-	public void hideNEIItems()
-	{
-		if (Loader.isModLoaded(TFCMDetails.MODID_NEI) && TFCOptions.enableNEIHiding)
-		{
-			API.hideItem(new ItemStack(TFCMBlocks.blockTallowCandle));
-			
-			API.hideItem(new ItemStack(TFCBlocks.pumpkin));
-			API.hideItem(new ItemStack(TFCBlocks.litPumpkin));
-			
-			API.hideItem(new ItemStack(TFCMBlocks.blockPumpkinLantern));
-			
-			API.hideItem(new ItemStack(TFCMBlocks.blockCrops));
-		}
-	}
+    @Override
+    public boolean getGraphicsLevel() {
+        Minecraft.getMinecraft();
+        return Minecraft.isFancyGraphicsEnabled();
+    }
 
-	@Override
-	public boolean isRemote()
-	{
-		return true;
-	}
-	
-	@Override
-	@SideOnly(Side.CLIENT)
-	public void loadOptions()
-	{
-		//Load our settings from the server
-		TFCMOptions.loadSettings();
-	}
+    @Override
+    public File getMinecraftDirectory() {
+        return Minecraft.getMinecraft().mcDataDir;
+    }
 
-	@Override
-	public void registerGuiHandler()
-	{
-		NetworkRegistry.INSTANCE.registerGuiHandler(terramisc.TerraMisc.instance, new terramisc.handlers.client.GuiHandlerClientTFCM());
-	}
+    @Override
+    public void hideNEIItems() {
+        if (Loader.isModLoaded(TFCMDetails.MODID_NEI) && TFCOptions.enableNEIHiding) {
+            API.hideItem(new ItemStack(TFCMBlocks.blockTallowCandle));
 
-	@Override
-	public void registerHandlers()
-	{
-		MinecraftForge.EVENT_BUS.register(new FarmlandHighlightHandlerTFCM());
-	}
+            API.hideItem(new ItemStack(TFCBlocks.pumpkin));
+            API.hideItem(new ItemStack(TFCBlocks.litPumpkin));
 
-	@Override
-	public void registerKeys()
-	{
-		uploadKeyBindingsToGame();
-	}
+            API.hideItem(new ItemStack(TFCMBlocks.blockPumpkinLantern));
 
-	@Override
-	public void registerKeyBindingHandler()
-	{
-	}
+            API.hideItem(new ItemStack(TFCMBlocks.blockCrops));
+        }
+    }
 
-	@Override
-	@SideOnly(Side.CLIENT)
-	public void registerRenderInformation()
-	{
-		//Other Items
-		MinecraftForgeClient.registerItemRenderer(TFCMItems.longBow, new ItemLongbowRender());
-		MinecraftForgeClient.registerItemRenderer(TFCMItems.crossBow, new ItemCrossbowRender());
-		//Halberds
-		MinecraftForgeClient.registerItemRenderer(TFCMItems.halberd_BismuthBronze, new ItemPolearmRender());
-		MinecraftForgeClient.registerItemRenderer(TFCMItems.halberd_BlackBronze, new ItemPolearmRender());
-		MinecraftForgeClient.registerItemRenderer(TFCMItems.halberd_BlackSteel, new ItemPolearmRender());
-		MinecraftForgeClient.registerItemRenderer(TFCMItems.halberd_BlueSteel, new ItemPolearmRender());
-		MinecraftForgeClient.registerItemRenderer(TFCMItems.halberd_Bronze, new ItemPolearmRender());
-		MinecraftForgeClient.registerItemRenderer(TFCMItems.halberd_Copper, new ItemPolearmRender());
-		MinecraftForgeClient.registerItemRenderer(TFCMItems.halberd_RedSteel, new ItemPolearmRender());
-		MinecraftForgeClient.registerItemRenderer(TFCMItems.halberd_Steel, new ItemPolearmRender());
-		MinecraftForgeClient.registerItemRenderer(TFCMItems.halberd_WroughtIron, new ItemPolearmRender());
-		//War Hammers
-		MinecraftForgeClient.registerItemRenderer(TFCMItems.warHammer_BismuthBronze, new ItemPolearmRender());
-		MinecraftForgeClient.registerItemRenderer(TFCMItems.warHammer_BlackBronze, new ItemPolearmRender());
-		MinecraftForgeClient.registerItemRenderer(TFCMItems.warHammer_BlackSteel, new ItemPolearmRender());
-		MinecraftForgeClient.registerItemRenderer(TFCMItems.warHammer_BlueSteel, new ItemPolearmRender());
-		MinecraftForgeClient.registerItemRenderer(TFCMItems.warHammer_Bronze, new ItemPolearmRender());
-		MinecraftForgeClient.registerItemRenderer(TFCMItems.warHammer_Copper, new ItemPolearmRender());
-		MinecraftForgeClient.registerItemRenderer(TFCMItems.warHammer_RedSteel, new ItemPolearmRender());
-		MinecraftForgeClient.registerItemRenderer(TFCMItems.warHammer_Steel, new ItemPolearmRender());
-		MinecraftForgeClient.registerItemRenderer(TFCMItems.warHammer_WroughtIron, new ItemPolearmRender());
-		//Tallow Candle
-			//Render Registering
-		TileEntitySpecialRenderer render = new TESRTallowCandle();
-		TileEntitySpecialRenderer render2 = new TESRTallowCandleItemIntial();
-			//Render to Tile Assigning
-		ClientRegistry.bindTileEntitySpecialRenderer(TETallowCandle.class, render);
-			//Held Item Rendering
-		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(TFCMBlocks.blockTallowCandle), new TESRTallowCandleItem(render2, new TETallowCandle()));
-		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(TFCMBlocks.blockTallowCandleOff), new TESRTallowCandleItem(render2, new TETallowCandle()));
-			//Screen Overlay for custom quiver
-		//MinecraftForge.EVENT_BUS.register(new RenderQuiverOverlayHandler());
-		
-		RenderingRegistry.registerBlockHandler(TFCMBlocks.cropRenderId = RenderingRegistry.getNextAvailableRenderId(), new CropRenderTFCM());
-	}
-	
-	@Override
-	public void registerTileEntities(boolean flag)
-	{
-		super.registerTileEntities(false);
-		
-		// TESR registers
-		ClientRegistry.registerTileEntity(TETallowCandle.class, "TallowCandleTESR", new TESRTallowCandle());
-		ClientRegistry.registerTileEntity(TEBrickOven.class, "BrickOvenTESR", new TESRBrickOven());
-		ClientRegistry.registerTileEntity(TEVat.class, "VatTESR", new TESRVat());
-	}
+    @Override
+    public boolean isRemote() {
+        return true;
+    }
 
-	@Override
-	public void uploadKeyBindingsToGame()
-	{
-	}
+    @Override
+    @SideOnly(Side.CLIENT)
+    public void loadOptions() {
+        //Load our settings from the server
+        TFCMOptions.loadSettings();
+    }
+
+    @Override
+    public void registerGuiHandler() {
+        NetworkRegistry.INSTANCE.registerGuiHandler(terramisc.TerraMisc.instance, new terramisc.handlers.client.GuiHandlerClientTFCM());
+    }
+
+    @Override
+    public void registerHandlers() {
+        MinecraftForge.EVENT_BUS.register(new FarmlandHighlightHandlerTFCM());
+    }
+
+    @Override
+    public void registerKeys() {
+        uploadKeyBindingsToGame();
+    }
+
+    @Override
+    public void registerKeyBindingHandler() {
+    }
+
+    @Override
+    @SideOnly(Side.CLIENT)
+    public void registerRenderInformation() {
+        //Other Items
+        MinecraftForgeClient.registerItemRenderer(TFCMItems.longBow, new ItemLongbowRender());
+        MinecraftForgeClient.registerItemRenderer(TFCMItems.crossBow, new ItemCrossbowRender());
+        //Halberds
+        MinecraftForgeClient.registerItemRenderer(TFCMItems.halberd_BismuthBronze, new ItemPolearmRender());
+        MinecraftForgeClient.registerItemRenderer(TFCMItems.halberd_BlackBronze, new ItemPolearmRender());
+        MinecraftForgeClient.registerItemRenderer(TFCMItems.halberd_BlackSteel, new ItemPolearmRender());
+        MinecraftForgeClient.registerItemRenderer(TFCMItems.halberd_BlueSteel, new ItemPolearmRender());
+        MinecraftForgeClient.registerItemRenderer(TFCMItems.halberd_Bronze, new ItemPolearmRender());
+        MinecraftForgeClient.registerItemRenderer(TFCMItems.halberd_Copper, new ItemPolearmRender());
+        MinecraftForgeClient.registerItemRenderer(TFCMItems.halberd_RedSteel, new ItemPolearmRender());
+        MinecraftForgeClient.registerItemRenderer(TFCMItems.halberd_Steel, new ItemPolearmRender());
+        MinecraftForgeClient.registerItemRenderer(TFCMItems.halberd_WroughtIron, new ItemPolearmRender());
+        //War Hammers
+        MinecraftForgeClient.registerItemRenderer(TFCMItems.warHammer_BismuthBronze, new ItemPolearmRender());
+        MinecraftForgeClient.registerItemRenderer(TFCMItems.warHammer_BlackBronze, new ItemPolearmRender());
+        MinecraftForgeClient.registerItemRenderer(TFCMItems.warHammer_BlackSteel, new ItemPolearmRender());
+        MinecraftForgeClient.registerItemRenderer(TFCMItems.warHammer_BlueSteel, new ItemPolearmRender());
+        MinecraftForgeClient.registerItemRenderer(TFCMItems.warHammer_Bronze, new ItemPolearmRender());
+        MinecraftForgeClient.registerItemRenderer(TFCMItems.warHammer_Copper, new ItemPolearmRender());
+        MinecraftForgeClient.registerItemRenderer(TFCMItems.warHammer_RedSteel, new ItemPolearmRender());
+        MinecraftForgeClient.registerItemRenderer(TFCMItems.warHammer_Steel, new ItemPolearmRender());
+        MinecraftForgeClient.registerItemRenderer(TFCMItems.warHammer_WroughtIron, new ItemPolearmRender());
+        //Tallow Candle
+        //Render Registering
+        TileEntitySpecialRenderer render = new TESRTallowCandle();
+        TileEntitySpecialRenderer render2 = new TESRTallowCandleItemIntial();
+        //Render to Tile Assigning
+        ClientRegistry.bindTileEntitySpecialRenderer(TETallowCandle.class, render);
+        //Held Item Rendering
+        MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(TFCMBlocks.blockTallowCandle), new TESRTallowCandleItem(render2, new TETallowCandle()));
+        MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(TFCMBlocks.blockTallowCandleOff), new TESRTallowCandleItem(render2, new TETallowCandle()));
+        //Screen Overlay for custom quiver
+        //MinecraftForge.EVENT_BUS.register(new RenderQuiverOverlayHandler());
+
+        RenderingRegistry.registerBlockHandler(TFCMBlocks.cropRenderId = RenderingRegistry.getNextAvailableRenderId(), new CropRenderTFCM());
+    }
+
+    @Override
+    public void registerTileEntities(boolean flag) {
+        super.registerTileEntities(false);
+
+        // TESR registers
+        ClientRegistry.registerTileEntity(TETallowCandle.class, "TallowCandleTESR", new TESRTallowCandle());
+        ClientRegistry.registerTileEntity(TEBrickOven.class, "BrickOvenTESR", new TESRBrickOven());
+        ClientRegistry.registerTileEntity(TEVat.class, "VatTESR", new TESRVat());
+    }
+
+    @Override
+    public void uploadKeyBindingsToGame() {
+    }
 }

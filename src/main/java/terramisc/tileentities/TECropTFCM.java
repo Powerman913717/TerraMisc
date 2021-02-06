@@ -1,7 +1,5 @@
 package terramisc.tileentities;
 
-import java.util.Random;
-
 import com.dunk.tfc.Blocks.BlockFarmland;
 import com.dunk.tfc.Core.TFC_Achievements;
 import com.dunk.tfc.Core.TFC_Climate;
@@ -10,10 +8,9 @@ import com.dunk.tfc.Core.TFC_Time;
 import com.dunk.tfc.TileEntities.NetworkTileEntity;
 import com.dunk.tfc.TileEntities.TEFarmland;
 import com.dunk.tfc.TileEntities.TEWorldItem;
+import com.dunk.tfc.api.Constant.Global;
 import com.dunk.tfc.api.TFCBlocks;
 import com.dunk.tfc.api.TFCOptions;
-import com.dunk.tfc.api.Constant.Global;
-
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
@@ -25,287 +22,249 @@ import net.minecraft.world.chunk.Chunk;
 import terramisc.api.crops.CropIndexTFCM;
 import terramisc.api.crops.CropManagerTFCM;
 
+import java.util.Random;
+
 //Cannot extend TECrop without creating a crash via TFC WailaData
-public class TECropTFCM extends NetworkTileEntity
-{
-	public float growth;
-	public String cropId;
-	private long growthTimer;//Tracks the time since the plant was planted
-	private long plantedTime;//Tracks the time when the plant was planted
-	private byte sunLevel;
-	private int killLevel;//We use this to make crop killing more and more likely if its cold
-	
-	public TECropTFCM()
-	{
-		growth = 0.1f;
-		plantedTime = TFC_Time.getTotalTicks();
-		growthTimer = TFC_Time.getTotalTicks();
-		sunLevel = 1;
-	}
-	
-	//Largely copied from TECrop.class
-	@Override
-	public void updateEntity()
-	{
-		Random r = new Random();
-		if(!worldObj.isRemote)
-		{
-			float timeMultiplier = 360f / TFC_Time.daysInYear;
-			CropIndexTFCM crop = CropManagerTFCM.getInstance().getCropFromName(cropId);
-			long time = TFC_Time.getTotalTicks();
-			//ChunkData cd = TFC_Core.getCDM(worldObj).getData(xCoord >> 4, zCoord >> 4);
-			if(crop != null && growthTimer < time && sunLevel > 0)
-			{
-				sunLevel--;
-				if(crop.needsSunlight && hasSunlight(worldObj, xCoord, yCoord, zCoord))
-				{
-					sunLevel++;
-					if(sunLevel > 30)
-						sunLevel = 30;
-				}
+public class TECropTFCM extends NetworkTileEntity {
+    public float growth;
+    public String cropId;
+    private long growthTimer;//Tracks the time since the plant was planted
+    private long plantedTime;//Tracks the time when the plant was planted
+    private byte sunLevel;
+    private int killLevel;//We use this to make crop killing more and more likely if its cold
 
-				TEFarmland tef = null;
-				TileEntity te = worldObj.getTileEntity(xCoord, yCoord - 1, zCoord);
-				if (te instanceof TEFarmland)
-					tef = (TEFarmland) te;
+    public TECropTFCM() {
+        growth = 0.1f;
+        plantedTime = TFC_Time.getTotalTicks();
+        growthTimer = TFC_Time.getTotalTicks();
+        sunLevel = 1;
+    }
 
-				float ambientTemp = TFC_Climate.getHeightAdjustedTempSpecificDay(worldObj, TFC_Time.getDayOfYearFromTick(growthTimer), xCoord, yCoord, zCoord);
-				float tempAdded = 0;
-				boolean isDormant = false;
-				
-				if(!crop.dormantInFrost && ambientTemp < crop.minGrowthTemp)
-					tempAdded = -0.03f * (crop.minGrowthTemp - ambientTemp);
-				else if(crop.dormantInFrost && ambientTemp < crop.minGrowthTemp)
-				{
-					if(growth > 1)
-						tempAdded = -0.03f * (crop.minGrowthTemp - ambientTemp);
-					isDormant = true;
-				}
-				else if(ambientTemp < 28)
-					tempAdded = ambientTemp * 0.00035f;
-				else if(ambientTemp < 37)
-					tempAdded = (28 - (ambientTemp-28)) * 0.0003f;
+    //Largely copied from TECrop.class
+    @Override
+    public void updateEntity() {
+        Random r = new Random();
+        if (!worldObj.isRemote) {
+            float timeMultiplier = 360f / TFC_Time.daysInYear;
+            CropIndexTFCM crop = CropManagerTFCM.getInstance().getCropFromName(cropId);
+            long time = TFC_Time.getTotalTicks();
+            //ChunkData cd = TFC_Core.getCDM(worldObj).getData(xCoord >> 4, zCoord >> 4);
+            if (crop != null && growthTimer < time && sunLevel > 0) {
+                sunLevel--;
+                if (crop.needsSunlight && hasSunlight(worldObj, xCoord, yCoord, zCoord)) {
+                    sunLevel++;
+                    if (sunLevel > 30)
+                        sunLevel = 30;
+                }
 
-				if(!crop.dormantInFrost && ambientTemp < crop.minAliveTemp)
-				{
-					int baseKillChance = 6;
-					if(this.worldObj.rand.nextInt(baseKillChance-this.killLevel) == 0)
-						killCrop(crop);
-					else
-					{
-						if(killLevel < baseKillChance-1)
-							this.killLevel++;
-					}
-				}
-				else if(crop.dormantInFrost && ambientTemp < crop.minAliveTemp)
-				{
-					if(growth > 1)
-					{
-						int baseKillChance = 6;
-						if(this.worldObj.rand.nextInt(baseKillChance-this.killLevel) == 0)
-							killCrop(crop);
-						else
-						{
-							if(killLevel < baseKillChance-1)
-								this.killLevel++;
-						}
-					}
-				}
-				else
-				{
-					this.killLevel = 0;
-				}
+                TEFarmland tef = null;
+                TileEntity te = worldObj.getTileEntity(xCoord, yCoord - 1, zCoord);
+                if (te instanceof TEFarmland)
+                    tef = (TEFarmland) te;
 
-				int nutriType = crop.cycleType;
-				int nutri = tef != null ? tef.nutrients[nutriType] : 18000;
-				int fert = tef != null ? tef.nutrients[3] : 0;
-				int soilMax = tef != null ? TEFarmland.getSoilMax() : 18000;
-				//waterBoost only helps if you are playing on a longer than default year length.
-				float waterBoost = BlockFarmland.isFreshWaterNearby(worldObj, xCoord, yCoord - 1, zCoord) == 1 ? 0.1f : 0;
+                float ambientTemp = TFC_Climate.getHeightAdjustedTempSpecificDay(worldObj, TFC_Time.getDayOfYearFromTick(growthTimer), xCoord, yCoord, zCoord);
+                float tempAdded = 0;
+                boolean isDormant = false;
 
-				//Allow the fertilizer to make up for lost nutrients
-				nutri = Math.min(nutri + fert, (int)(soilMax * 1.25f));
+                if (!crop.dormantInFrost && ambientTemp < crop.minGrowthTemp)
+                    tempAdded = -0.03f * (crop.minGrowthTemp - ambientTemp);
+                else if (crop.dormantInFrost && ambientTemp < crop.minGrowthTemp) {
+                    if (growth > 1)
+                        tempAdded = -0.03f * (crop.minGrowthTemp - ambientTemp);
+                    isDormant = true;
+                } else if (ambientTemp < 28)
+                    tempAdded = ambientTemp * 0.00035f;
+                else if (ambientTemp < 37)
+                    tempAdded = (28 - (ambientTemp - 28)) * 0.0003f;
 
-				float nutriMult = 0.2f + ((float) nutri / (float) soilMax) * 0.5f + waterBoost;
+                if (!crop.dormantInFrost && ambientTemp < crop.minAliveTemp) {
+                    int baseKillChance = 6;
+                    if (this.worldObj.rand.nextInt(baseKillChance - this.killLevel) == 0)
+                        killCrop(crop);
+                    else {
+                        if (killLevel < baseKillChance - 1)
+                            this.killLevel++;
+                    }
+                } else if (crop.dormantInFrost && ambientTemp < crop.minAliveTemp) {
+                    if (growth > 1) {
+                        int baseKillChance = 6;
+                        if (this.worldObj.rand.nextInt(baseKillChance - this.killLevel) == 0)
+                            killCrop(crop);
+                        else {
+                            if (killLevel < baseKillChance - 1)
+                                this.killLevel++;
+                        }
+                    }
+                } else {
+                    this.killLevel = 0;
+                }
 
-				if(tef != null && !isDormant)
-				{
-					if(tef.nutrients[nutriType] > 0)
-						tef.drainNutrients(nutriType, crop.nutrientUsageMult);
-					//Drain Fertilizer
-					if(tef.nutrients[3] > 0)
-						tef.drainNutrients(3, crop.nutrientUsageMult);
-				}
+                int nutriType = crop.cycleType;
+                int nutri = tef != null ? tef.nutrients[nutriType] : 18000;
+                int fert = tef != null ? tef.nutrients[3] : 0;
+                int soilMax = tef != null ? TEFarmland.getSoilMax() : 18000;
+                //waterBoost only helps if you are playing on a longer than default year length.
+                float waterBoost = BlockFarmland.isFreshWaterNearby(worldObj, xCoord, yCoord - 1, zCoord) == 1 ? 0.1f : 0;
 
-				float growthRate = Math.max(0.0f, (((crop.numGrowthStages / (crop.growthTime * TFC_Time.timeRatio96) + tempAdded) * nutriMult) * timeMultiplier) * TFCOptions.cropGrowthMultiplier);
-				if(tef!= null && tef.isInfested)
-					growthRate /= 2;
-				int oldGrowth = (int) Math.floor(growth);
+                //Allow the fertilizer to make up for lost nutrients
+                nutri = Math.min(nutri + fert, (int) (soilMax * 1.25f));
 
-				if(!isDormant)
-					growth += growthRate;
+                float nutriMult = 0.2f + ((float) nutri / (float) soilMax) * 0.5f + waterBoost;
 
-				if(oldGrowth < (int) Math.floor(growth))
-				{
-					//TerraFirmaCraft.log.info(xCoord+","+yCoord+","+zCoord);
-					worldObj.markBlockForUpdate(xCoord, yCoord, zCoord);
-				}
+                if (tef != null && !isDormant) {
+                    if (tef.nutrients[nutriType] > 0)
+                        tef.drainNutrients(nutriType, crop.nutrientUsageMult);
+                    //Drain Fertilizer
+                    if (tef.nutrients[3] > 0)
+                        tef.drainNutrients(3, crop.nutrientUsageMult);
+                }
 
-				// Wild crops will always die of old age, regardless of the config setting
-				if ((TFCOptions.enableCropsDie || !TFC_Core.isFarmland(worldObj.getBlock(xCoord, yCoord - 1, zCoord))) &&
-					(crop.maxLifespan == -1 && growth > crop.numGrowthStages + ((float) crop.numGrowthStages / 2)) || growth < 0)
-				{
-					killCrop(crop);
-				}
+                float growthRate = Math.max(0.0f, (((crop.numGrowthStages / (crop.growthTime * TFC_Time.timeRatio96) + tempAdded) * nutriMult) * timeMultiplier) * TFCOptions.cropGrowthMultiplier);
+                if (tef != null && tef.isInfested)
+                    growthRate /= 2;
+                int oldGrowth = (int) Math.floor(growth);
 
-				growthTimer += (r.nextInt(2) + 23) * TFC_Time.HOUR_LENGTH;
-			}
-			// Not enough sunlight
-			else if(crop != null && crop.needsSunlight && sunLevel <= 0)
-			{
-				killCrop(crop);
-			}
+                if (!isDormant)
+                    growth += growthRate;
 
-			// Snowing
-			if (TFC_Core.isExposedToRain(worldObj, xCoord, yCoord, zCoord) && TFC_Climate.getHeightAdjustedTemp(worldObj, xCoord, yCoord, zCoord) < 0)
-			{
-				if(crop != null && !crop.dormantInFrost || growth > 1)
-				{
-					assert crop != null;
-					killCrop(crop);
-				}
-			}
-		}
-	}
-	
-	//Largely copied from TECrop.class
-	public void onHarvest(World world, EntityPlayer player, boolean isBreaking)
-	{
-		if(!world.isRemote)
-		{
-			CropIndexTFCM crop = CropManagerTFCM.getInstance().getCropFromName(cropId);
+                if (oldGrowth < (int) Math.floor(growth)) {
+                    //TerraFirmaCraft.log.info(xCoord+","+yCoord+","+zCoord);
+                    worldObj.markBlockForUpdate(xCoord, yCoord, zCoord);
+                }
 
-			if (crop != null && growth >= crop.numGrowthStages - 1)
-			{
-				ItemStack is1 = crop.getOutput1(this);
-				ItemStack is2 = crop.getOutput2(this);
-				ItemStack seedStack = crop.getSeed();
+                // Wild crops will always die of old age, regardless of the config setting
+                if ((TFCOptions.enableCropsDie || !TFC_Core.isFarmland(worldObj.getBlock(xCoord, yCoord - 1, zCoord))) &&
+                        (crop.maxLifespan == -1 && growth > crop.numGrowthStages + ((float) crop.numGrowthStages / 2)) || growth < 0) {
+                    killCrop(crop);
+                }
 
-				if(is1 != null)
-					world.spawnEntityInWorld(new EntityItem(world, xCoord + 0.5, yCoord + 0.5, zCoord + 0.5, is1));
+                growthTimer += (r.nextInt(2) + 23) * TFC_Time.HOUR_LENGTH;
+            }
+            // Not enough sunlight
+            else if (crop != null && crop.needsSunlight && sunLevel <= 0) {
+                killCrop(crop);
+            }
 
-				if(is2 != null)
-					world.spawnEntityInWorld(new EntityItem(world, xCoord + 0.5, yCoord + 0.5, zCoord + 0.5, is2));
+            // Snowing
+            if (TFC_Core.isExposedToRain(worldObj, xCoord, yCoord, zCoord) && TFC_Climate.getHeightAdjustedTemp(worldObj, xCoord, yCoord, zCoord) < 0) {
+                if (crop != null && !crop.dormantInFrost || growth > 1) {
+                    assert crop != null;
+                    killCrop(crop);
+                }
+            }
+        }
+    }
 
-				int skill = 20 - (int) (20 * TFC_Core.getSkillStats(player).getSkillMultiplier(Global.SKILL_AGRICULTURE));
+    //Largely copied from TECrop.class
+    public void onHarvest(World world, EntityPlayer player, boolean isBreaking) {
+        if (!world.isRemote) {
+            CropIndexTFCM crop = CropManagerTFCM.getInstance().getCropFromName(cropId);
 
-				seedStack.stackSize = 1 + (world.rand.nextInt(1 + skill) == 0 ? 1 : 0);
-				if (isBreaking)
-					world.spawnEntityInWorld(new EntityItem(world, xCoord + 0.5, yCoord + 0.5, zCoord + 0.5, seedStack));
+            if (crop != null && growth >= crop.numGrowthStages - 1) {
+                ItemStack is1 = crop.getOutput1(this);
+                ItemStack is2 = crop.getOutput2(this);
+                ItemStack seedStack = crop.getSeed();
 
-				TFC_Core.getSkillStats(player).increaseSkill(Global.SKILL_AGRICULTURE, 1);
+                if (is1 != null)
+                    world.spawnEntityInWorld(new EntityItem(world, xCoord + 0.5, yCoord + 0.5, zCoord + 0.5, is1));
 
-				if (TFC_Core.isSoil(world.getBlock(xCoord, yCoord - 1, zCoord)))
-					player.addStat(TFC_Achievements.achWildVegetable, 1);
-			}
-			else if (crop != null)
-			{
-				ItemStack is = crop.getSeed();
-				is.stackSize = 1;
-				world.spawnEntityInWorld(new EntityItem(world, xCoord + 0.5, yCoord + 0.5, zCoord + 0.5, is));
-			}
-		}
-	}
-	
-	public static boolean hasSunlight(World world, int x, int y, int z)
-	{
-		Chunk chunk = world.getChunkFromBlockCoords(x, z);
-		int skylight = chunk.getSavedLightValue(EnumSkyBlock.Sky, x & 15, y, z & 15);
-		boolean sky = world.canBlockSeeTheSky(x, y + 1, z);
-		return sky || skylight > 13;
-	}
+                if (is2 != null)
+                    world.spawnEntityInWorld(new EntityItem(world, xCoord + 0.5, yCoord + 0.5, zCoord + 0.5, is2));
 
-	public float getEstimatedGrowth(CropIndexTFCM crop)
-	{
-		return ((float)crop.numGrowthStages / (growthTimer - plantedTime / TFC_Time.DAY_LENGTH)) * 1.5f;
-	}
+                int skill = 20 - (int) (20 * TFC_Core.getSkillStats(player).getSkillMultiplier(Global.SKILL_AGRICULTURE));
 
-	public void killCrop(CropIndexTFCM crop)
-	{
-		ItemStack is = crop.getSeed();
-		is.stackSize = 1;
-		if (TFC_Core.isFarmland(worldObj.getBlock(xCoord, yCoord - 1, zCoord)) && TFCOptions.enableSeedDrops)
-		{
-			if(worldObj.setBlock(xCoord, yCoord, zCoord, TFCBlocks.worldItem))
-			{
-				TEWorldItem te = (TEWorldItem) worldObj.getTileEntity(xCoord, yCoord, zCoord);
-				te.storage[0] = is;
-				worldObj.markBlockForUpdate(xCoord, yCoord, zCoord);
-			}				
-		}
-		else
-		{
-			worldObj.setBlockToAir(xCoord, yCoord, zCoord);
-		}
-	}
+                seedStack.stackSize = 1 + (world.rand.nextInt(1 + skill) == 0 ? 1 : 0);
+                if (isBreaking)
+                    world.spawnEntityInWorld(new EntityItem(world, xCoord + 0.5, yCoord + 0.5, zCoord + 0.5, seedStack));
 
-	/**
-	 * Reads a tile entity from NBT.
-	 */
-	@Override
-	public void readFromNBT(NBTTagCompound nbt)
-	{
-		super.readFromNBT(nbt);
-		growth = nbt.getFloat("growth");
-		cropId = nbt.getString("cropId");
-		growthTimer = nbt.getLong("growthTimer");
-		plantedTime = nbt.getLong("plantedTime");
-		killLevel = nbt.getInteger("killLevel");
-		sunLevel = nbt.getByte("sunLevel");
-	}
+                TFC_Core.getSkillStats(player).increaseSkill(Global.SKILL_AGRICULTURE, 1);
 
-	/**
-	 * Writes a tile entity to NBT.
-	 */
-	@Override
-	public void writeToNBT(NBTTagCompound nbt)
-	{
-		super.writeToNBT(nbt);
-		nbt.setFloat("growth", growth);
-		nbt.setString("cropId", cropId);
-		nbt.setLong("growthTimer", growthTimer);
-		nbt.setLong("plantedTime", plantedTime);
-		nbt.setInteger("killLevel", killLevel);
-		nbt.setByte("sunLevel", sunLevel);
-	}
+                if (TFC_Core.isSoil(world.getBlock(xCoord, yCoord - 1, zCoord)))
+                    player.addStat(TFC_Achievements.achWildVegetable, 1);
+            } else if (crop != null) {
+                ItemStack is = crop.getSeed();
+                is.stackSize = 1;
+                world.spawnEntityInWorld(new EntityItem(world, xCoord + 0.5, yCoord + 0.5, zCoord + 0.5, is));
+            }
+        }
+    }
 
-	@Override
-	public void handleInitPacket(NBTTagCompound nbt) 
-	{
-		growth = nbt.getFloat("growth");
-		cropId = nbt.getString("cropId");
-		worldObj.func_147479_m(xCoord, yCoord, zCoord);
-	}
+    public static boolean hasSunlight(World world, int x, int y, int z) {
+        Chunk chunk = world.getChunkFromBlockCoords(x, z);
+        int skylight = chunk.getSavedLightValue(EnumSkyBlock.Sky, x & 15, y, z & 15);
+        boolean sky = world.canBlockSeeTheSky(x, y + 1, z);
+        return sky || skylight > 13;
+    }
 
-	@Override
-	public void handleDataPacket(NBTTagCompound nbt) 
-	{
-		growth = nbt.getFloat("growth");
-		cropId = nbt.getString("cropId");
-		worldObj.func_147479_m(xCoord, yCoord, zCoord);
-	}
+    public float getEstimatedGrowth(CropIndexTFCM crop) {
+        return ((float) crop.numGrowthStages / (growthTimer - plantedTime / TFC_Time.DAY_LENGTH)) * 1.5f;
+    }
 
-	@Override
-	public void createDataNBT(NBTTagCompound nbt) 
-	{
-		nbt.setFloat("growth", growth);
-		nbt.setString("cropId", cropId);
-	}
+    public void killCrop(CropIndexTFCM crop) {
+        ItemStack is = crop.getSeed();
+        is.stackSize = 1;
+        if (TFC_Core.isFarmland(worldObj.getBlock(xCoord, yCoord - 1, zCoord)) && TFCOptions.enableSeedDrops) {
+            if (worldObj.setBlock(xCoord, yCoord, zCoord, TFCBlocks.worldItem)) {
+                TEWorldItem te = (TEWorldItem) worldObj.getTileEntity(xCoord, yCoord, zCoord);
+                te.storage[0] = is;
+                worldObj.markBlockForUpdate(xCoord, yCoord, zCoord);
+            }
+        } else {
+            worldObj.setBlockToAir(xCoord, yCoord, zCoord);
+        }
+    }
 
-	@Override
-	public void createInitNBT(NBTTagCompound nbt) 
-	{
-		nbt.setFloat("growth", growth);
-		nbt.setString("cropId", cropId);
-	}
+    /**
+     * Reads a tile entity from NBT.
+     */
+    @Override
+    public void readFromNBT(NBTTagCompound nbt) {
+        super.readFromNBT(nbt);
+        growth = nbt.getFloat("growth");
+        cropId = nbt.getString("cropId");
+        growthTimer = nbt.getLong("growthTimer");
+        plantedTime = nbt.getLong("plantedTime");
+        killLevel = nbt.getInteger("killLevel");
+        sunLevel = nbt.getByte("sunLevel");
+    }
+
+    /**
+     * Writes a tile entity to NBT.
+     */
+    @Override
+    public void writeToNBT(NBTTagCompound nbt) {
+        super.writeToNBT(nbt);
+        nbt.setFloat("growth", growth);
+        nbt.setString("cropId", cropId);
+        nbt.setLong("growthTimer", growthTimer);
+        nbt.setLong("plantedTime", plantedTime);
+        nbt.setInteger("killLevel", killLevel);
+        nbt.setByte("sunLevel", sunLevel);
+    }
+
+    @Override
+    public void handleInitPacket(NBTTagCompound nbt) {
+        growth = nbt.getFloat("growth");
+        cropId = nbt.getString("cropId");
+        worldObj.func_147479_m(xCoord, yCoord, zCoord);
+    }
+
+    @Override
+    public void handleDataPacket(NBTTagCompound nbt) {
+        growth = nbt.getFloat("growth");
+        cropId = nbt.getString("cropId");
+        worldObj.func_147479_m(xCoord, yCoord, zCoord);
+    }
+
+    @Override
+    public void createDataNBT(NBTTagCompound nbt) {
+        nbt.setFloat("growth", growth);
+        nbt.setString("cropId", cropId);
+    }
+
+    @Override
+    public void createInitNBT(NBTTagCompound nbt) {
+        nbt.setFloat("growth", growth);
+        nbt.setString("cropId", cropId);
+    }
 }

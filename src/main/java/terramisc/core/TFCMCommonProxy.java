@@ -1,9 +1,6 @@
 package terramisc.core;
 
-import java.io.File;
-
 import com.dunk.tfc.api.TFCItems;
-
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.event.FMLInterModComms;
 import cpw.mods.fml.common.network.NetworkRegistry;
@@ -22,127 +19,106 @@ import terramisc.tileentities.TEVat;
 import terramisc.tileentities.TEWetClay;
 import terramisc.worldGen.Generators.WorldGenGrowCropsTFCM;
 
-public class TFCMCommonProxy
-{
-	public String getCurrentLanguage()
-	{
-		return null;
-	}
+import java.io.File;
 
-	public World getCurrentWorld()
-	{
-		return MinecraftServer.getServer().getEntityWorld();
-	}
+public class TFCMCommonProxy {
+    public String getCurrentLanguage() {
+        return null;
+    }
 
-	public boolean getGraphicsLevel()
-	{
-		return false;
-	}
-	
-	public File getMinecraftDirectory()
-	{
-		return FMLCommonHandler.instance().getMinecraftServerInstance().getFile("");
-	}
+    public World getCurrentWorld() {
+        return MinecraftServer.getServer().getEntityWorld();
+    }
 
-	public void hideNEIItems()
-	{
-	}
-	
-	public boolean isRemote()
-	{
-		return false;
-	}
+    public boolean getGraphicsLevel() {
+        return false;
+    }
 
-	public void loadOptions()
-	{
-		//Load our settings from the Options file
-		TFCMOptions.loadSettings();
-	}
-	
-	public void onClientLogin()
-	{
-	}
+    public File getMinecraftDirectory() {
+        return FMLCommonHandler.instance().getMinecraftServerInstance().getFile("");
+    }
 
-	public void registerFluidIcons()
-	{
-	}
+    public void hideNEIItems() {
+    }
 
-	public void registerGuiHandler()
-	{
-		NetworkRegistry.INSTANCE.registerGuiHandler(terramisc.TerraMisc.instance, new terramisc.handlers.GuiHandlerTFCM());
-	}
+    public boolean isRemote() {
+        return false;
+    }
 
-	public void registerHandlers()
-	{
-	}
+    public void loadOptions() {
+        //Load our settings from the Options file
+        TFCMOptions.loadSettings();
+    }
 
-	public void registerKeys()
-	{
-	}
+    public void onClientLogin() {
+    }
 
-	public void registerKeyBindingHandler()
-	{
-	}
+    public void registerFluidIcons() {
+    }
 
-	public void registerRenderInformation()
-	{
-		// NOOP on server
-	}
+    public void registerGuiHandler() {
+        NetworkRegistry.INSTANCE.registerGuiHandler(terramisc.TerraMisc.instance, new terramisc.handlers.GuiHandlerTFCM());
+    }
 
-	public void registerSoundHandler()
-	{
-	}
+    public void registerHandlers() {
+    }
 
-	public void registerTickHandler()
-	{
-		FMLCommonHandler.instance().bus().register(new terramisc.handlers.ServerTickHandlerTFCM());
-	}
-	
-	public void registerWorldGen()
-	{
-		GameRegistry.registerWorldGenerator(new WorldGenGrowCropsTFCM(), 9);
-	}
-	
-	public void registerTileEntities(boolean flag)
-	{
-		// non TESR registers
-		GameRegistry.registerTileEntity(TEWetClay.class, "WetClay");
-		GameRegistry.registerTileEntity(TEFoodBlock.class, "FoodBlock");
-		GameRegistry.registerTileEntity(TECropTFCM.class, "CropTFCM");
-		GameRegistry.registerTileEntity(TEVat.class, "VatTFCM");
+    public void registerKeys() {
+    }
 
-		if (flag)
-		{
-			// TESR registers
-			GameRegistry.registerTileEntity(TETallowCandle.class, "TallowCandle");
-			GameRegistry.registerTileEntity(TEBrickOven.class, "BrickOven");
-		}
-	}
+    public void registerKeyBindingHandler() {
+    }
 
-	public void registerFluids()
-	{
-		FluidRegistry.registerFluid(TFCMFluids.SOYMILK);
-	}
-	
-	public void setupFluids()
-	{
-		FluidContainerRegistry.registerFluidContainer(new FluidStack(TFCMFluids.SOYMILK, 250), new ItemStack(TFCMItems.bottleSoyMilk), new ItemStack(TFCItems.glassBottle));
-	}
-	
-	public void registerToolClasses()
-	{
-	}
+    public void registerRenderInformation() {
+        // NOOP on server
+    }
 
-	public void registerWailaClasses()
-	{
-		System.out.println("[TerraMisc] Registering WAILA Classes (TFCM)");
-		
-		FMLInterModComms.sendMessage("Waila", "register", "terramisc.waila.TFCMWailaData.callbackRegister");
-		
-		System.out.println("[TerraMisc] Done Registering WAILA Classes (TFCM)");
-	}
+    public void registerSoundHandler() {
+    }
 
-	public void uploadKeyBindingsToGame()
-	{
-	}
+    public void registerTickHandler() {
+        FMLCommonHandler.instance().bus().register(new terramisc.handlers.ServerTickHandlerTFCM());
+    }
+
+    public void registerWorldGen() {
+        GameRegistry.registerWorldGenerator(new WorldGenGrowCropsTFCM(), 9);
+    }
+
+    public void registerTileEntities(boolean flag) {
+        // non TESR registers
+        GameRegistry.registerTileEntity(TEWetClay.class, "WetClay");
+        GameRegistry.registerTileEntity(TEFoodBlock.class, "FoodBlock");
+        GameRegistry.registerTileEntity(TECropTFCM.class, "CropTFCM");
+        GameRegistry.registerTileEntity(TEVat.class, "VatTFCM");
+
+        if (flag) {
+            // TESR registers
+            GameRegistry.registerTileEntity(TETallowCandle.class, "TallowCandle");
+            GameRegistry.registerTileEntity(TEBrickOven.class, "BrickOven");
+        }
+    }
+
+    public void registerFluids() {
+        FluidRegistry.registerFluid(TFCMFluids.SOYMILK);
+        FluidRegistry.registerFluid(TFCMFluids.BOILINGWATER);
+    }
+
+    public void setupFluids() {
+        FluidContainerRegistry.registerFluidContainer(new FluidStack(TFCMFluids.SOYMILK, 250), new ItemStack(TFCMItems.bottleSoyMilk), new ItemStack(TFCItems.glassBottle));
+        FluidContainerRegistry.registerFluidContainer(new FluidStack(TFCMFluids.BOILINGWATER, 1000), new ItemStack(TFCMItems.boilingWaterBucket), new ItemStack(TFCItems.woodenBucketEmpty));
+    }
+
+    public void registerToolClasses() {
+    }
+
+    public void registerWailaClasses() {
+        System.out.println("[TerraMisc] Registering WAILA Classes (TFCM)");
+
+        FMLInterModComms.sendMessage("Waila", "register", "terramisc.waila.TFCMWailaData.callbackRegister");
+
+        System.out.println("[TerraMisc] Done Registering WAILA Classes (TFCM)");
+    }
+
+    public void uploadKeyBindingsToGame() {
+    }
 }

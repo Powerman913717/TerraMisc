@@ -1,9 +1,6 @@
 package terramisc;
 
-import java.io.File;
-
 import com.dunk.tfc.TerraFirmaCraft;
-
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -31,6 +28,8 @@ import terramisc.handlers.PlayerInteractHandlerTFCM;
 import terramisc.handlers.network.TFCMCreateMealPacket;
 import terramisc.handlers.network.TFCMInitClientWorldPacket;
 import terramisc.plants.CropRegistry;
+
+import java.io.File;
 
 @Mod(modid = TFCMDetails.ModID, name = TFCMDetails.ModName, version = TFCMDetails.ModVersion, dependencies = TFCMDetails.ModDependencies)
 public class TerraMisc

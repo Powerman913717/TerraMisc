@@ -1,49 +1,41 @@
 package terramisc.api.crafting;
 
+import com.dunk.tfc.TileEntities.TEBarrel;
+import com.dunk.tfc.api.Crafting.BarrelRecipe;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fluids.FluidStack;
 
-import com.dunk.tfc.TileEntities.TEBarrel;
-import com.dunk.tfc.api.Crafting.BarrelRecipe;
+public class BarrelFermentationRecipe extends BarrelRecipe {
 
-public class BarrelFermentationRecipe extends BarrelRecipe
-{
+    public FluidStack inputfluid;
 
-	public FluidStack inputfluid;
-	
-	/**
-	This recipe is intended to convert one fluid to another after a certain period of time.
-	*/
-	public BarrelFermentationRecipe(FluidStack inputFluid, FluidStack outputFluid, int seal) 
-	{
-		super(null, inputFluid, null, outputFluid, seal);
-		this.inputfluid = inputFluid;
-	}
-	
-	@Override
-	public Boolean matches(ItemStack itemstack, FluidStack inFluid, TEBarrel te)
-	{
-		if(recipeFluid != null && recipeFluid.isFluidEqual(inFluid))
-		{
-			return true;
-		}
-		
-		return false;
-	}
-	
-	@Override
-	public FluidStack getResultFluid(ItemStack inIS, FluidStack inFS, int sealedTime, int fireTime)
-	{
-		if(recipeOutFluid != null)
-		{
-			return recipeOutFluid;
-		}
-		
-		return null;
-	}
+    /**
+     * This recipe is intended to convert one fluid to another after a certain period of time.
+     */
+    public BarrelFermentationRecipe(FluidStack inputFluid, FluidStack outputFluid, int seal) {
+        super(null, inputFluid, null, outputFluid, seal);
+        this.inputfluid = inputFluid;
+    }
 
-	public FluidStack getInputfluid()
-	{
-		return inputfluid;
-	}
+    @Override
+    public Boolean matches(ItemStack itemstack, FluidStack inFluid, TEBarrel te) {
+        if (recipeFluid != null && recipeFluid.isFluidEqual(inFluid)) {
+            return true;
+        }
+
+        return false;
+    }
+
+    @Override
+    public FluidStack getResultFluid(ItemStack inIS, FluidStack inFS, int sealedTime, int fireTime) {
+        if (recipeOutFluid != null) {
+            return recipeOutFluid;
+        }
+
+        return null;
+    }
+
+    public FluidStack getInputfluid() {
+        return inputfluid;
+    }
 }
