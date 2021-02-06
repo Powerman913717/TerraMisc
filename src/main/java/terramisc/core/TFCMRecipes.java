@@ -1944,6 +1944,10 @@ public class TFCMRecipes {
                 new ItemStack(TFCMItems.itemQuiver),
                 new ItemStack(TFCItems.quiver)
         );
+        GameRegistry.addShapelessRecipe(
+                new ItemStack(TFCItems.quiver),
+                new ItemStack(TFCMItems.itemQuiver)
+        );
 
         //Dyes
         GameRegistry.addShapelessRecipe(
