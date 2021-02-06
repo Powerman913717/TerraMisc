@@ -10,7 +10,6 @@ import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.particle.EffectRenderer;
-import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
@@ -28,8 +27,8 @@ import terramisc.tileentities.TEBrickOven;
 import java.util.ArrayList;
 
 public class BlockBrickOven extends BlockTerraContainer {
-    public static final int BLOOMERY_TO_STACK_MAP[][] = {{0, 1}, {-1, 0}, {0, -1}, {1, 0}};
-    public static final int SIDES_MAP[][] = {{1, 0}, {0, 1}, {1, 0}, {0, 1}};
+    public static final int[][] BLOOMERY_TO_STACK_MAP = {{0, 1}, {-1, 0}, {0, -1}, {1, 0}};
+    public static final int[][] SIDES_MAP = {{1, 0}, {0, 1}, {1, 0}, {0, 1}};
 
     public BlockBrickOven() {
         super(Material.rock);
@@ -94,19 +93,12 @@ public class BlockBrickOven extends BlockTerraContainer {
         eject(par1World, par2, par3, par4);
     }
 
-    //public void onBlockRemoval(World par1World, int par2, int par3, int par4) {Eject(par1World,par2,par3,par4);}
-
     public void eject(World par1World, int par2, int par3, int par4) {
         if (par1World.getTileEntity(par2, par3, par4) instanceof TEBrickOven) {
             TEBrickOven te = (TEBrickOven) par1World.getTileEntity(par2, par3, par4);
             te.ejectContents();
             par1World.removeTileEntity(par2, par3, par4);
         }
-    }
-
-    @Override
-    public ItemStack getPickBlock(MovingObjectPosition target, World world, int x, int y, int z) {
-        return null;
     }
 
     @Override
@@ -135,14 +127,12 @@ public class BlockBrickOven extends BlockTerraContainer {
 
             if (checkStack(world, x, y, z, dir)) {
                 if (checkVertical(world, x, y, z, flipped)) {
-                    if (checkHorizontal(world, x, y, z, flipped))
-                        return true;
+                    return checkHorizontal(world, x, y, z, flipped);
                 } else if (te != null && !flipped) {
                     this.tryFlip(world, x, y, z);
                     flipped = te.isFlipped;
                     if (checkVertical(world, x, y, z, flipped)) {
-                        if (checkHorizontal(world, x, y, z, flipped))
-                            return true;
+                        return checkHorizontal(world, x, y, z, flipped);
                     }
                 }
             }
@@ -157,9 +147,7 @@ public class BlockBrickOven extends BlockTerraContainer {
         if (isNorthStackValid(world, centerX, y, centerZ - 1) || centerX == x && centerZ - 1 == z) {
             if (isSouthStackValid(world, centerX, y, centerZ + 1) || centerX == x && centerZ + 1 == z) {
                 if (isEastStackValid(world, centerX - 1, y, centerZ) || centerX - 1 == x && centerZ == z) {
-                    if (isWestStackValid(world, centerX + 1, y, centerZ) || centerX + 1 == x && centerZ == z) {
-                        return true;
-                    }
+                    return isWestStackValid(world, centerX + 1, y, centerZ) || centerX + 1 == x && centerZ == z;
                 }
             }
         }
@@ -296,9 +284,6 @@ public class BlockBrickOven extends BlockTerraContainer {
                         b = true;
                     break;
             }
-
-			/*if(!TFC_Core.isTopFaceSolid(world, x, y - 1, z))
-				b = false; */
         }
 
         if ((world.getBlock(x, y + 1, z).getMaterial() == Material.rock || world.getBlock(x, y + 1, z).getMaterial() == Material.iron) && world.getBlock(x, y + 1, z).isOpaqueCube())
@@ -364,11 +349,10 @@ public class BlockBrickOven extends BlockTerraContainer {
     }
 
     public static int flipDir(int dir) {
-        int out = 0;
+        int out;
         if (dir - 2 >= 0)
             out = dir - 2;
-        else if (dir + 2 < 4)
-            out = dir + 2;
+        else out = dir + 2;
         return out;
     }
 
@@ -377,12 +361,6 @@ public class BlockBrickOven extends BlockTerraContainer {
         te.swapFlipped();
         return canBlockStay(world, x, y, z);
     }
-
-    /***********************************************************************************
-     *
-     * Client Only Code Below This Point
-     *
-     ***********************************************************************************/
 
     /**
      * Displays a flat icon image for an ItemStack containing the block, instead of a render. Using primarily for WAILA HUD.
@@ -397,12 +375,6 @@ public class BlockBrickOven extends BlockTerraContainer {
     @SideOnly(Side.CLIENT)
     public boolean addDestroyEffects(World world, int x, int y, int z, int meta, EffectRenderer effectRenderer) {
         return world.getBlock(x, y, z) == this;
-    }
-
-    @Override
-    @SideOnly(Side.CLIENT)
-    public void registerBlockIcons(IIconRegister iconRegisterer) {
-        this.blockIcon = iconRegisterer.registerIcon("tfcm:textures/models/BrickOven_off.png");
     }
 
     @Override
@@ -436,9 +408,6 @@ public class BlockBrickOven extends BlockTerraContainer {
 
     @Override
     @SideOnly(Side.CLIENT)
-    /**
-     * Returns the bounding box of the wired rectangular prism to render.
-     */
     public AxisAlignedBB getSelectedBoundingBoxFromPool(World world, int x, int y, int z) {
         this.setBlockBoundsBasedOnState(world, x, y, z);
         return super.getSelectedBoundingBoxFromPool(world, x, y, z);

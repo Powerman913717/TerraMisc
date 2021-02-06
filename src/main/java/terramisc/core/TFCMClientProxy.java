@@ -58,13 +58,9 @@ public class TFCMClientProxy extends TFCMCommonProxy {
     public void hideNEIItems() {
         if (Loader.isModLoaded(TFCMDetails.MODID_NEI) && TFCOptions.enableNEIHiding) {
             API.hideItem(new ItemStack(TFCMBlocks.blockTallowCandle));
-
-            API.hideItem(new ItemStack(TFCBlocks.pumpkin));
-            API.hideItem(new ItemStack(TFCBlocks.litPumpkin));
-
-            API.hideItem(new ItemStack(TFCMBlocks.blockPumpkinLantern));
-
             API.hideItem(new ItemStack(TFCMBlocks.blockCrops));
+            API.hideItem(new ItemStack(TFCMBlocks.blockBrickOven));
+            API.hideItem(new ItemStack(TFCMBlocks.vat));
         }
     }
 
