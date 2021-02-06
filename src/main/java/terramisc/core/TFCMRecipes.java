@@ -2,6 +2,7 @@ package terramisc.core;
 
 import com.dunk.tfc.Core.Recipes;
 import com.dunk.tfc.Food.ItemFoodTFC;
+import com.dunk.tfc.Items.ItemQuiver;
 import com.dunk.tfc.api.Constant.Global;
 import com.dunk.tfc.api.Crafting.AnvilManager;
 import com.dunk.tfc.api.Crafting.AnvilRecipe;
@@ -10,12 +11,15 @@ import com.dunk.tfc.api.Crafting.BarrelFireRecipe;
 import com.dunk.tfc.api.Crafting.BarrelLiquidToLiquidRecipe;
 import com.dunk.tfc.api.Crafting.BarrelManager;
 import com.dunk.tfc.api.Crafting.BarrelRecipe;
+import com.dunk.tfc.api.Crafting.ClothingManager;
 import com.dunk.tfc.api.Crafting.CraftingManagerTFC;
 import com.dunk.tfc.api.Crafting.KilnCraftingManager;
 import com.dunk.tfc.api.Crafting.KilnRecipe;
 import com.dunk.tfc.api.Crafting.PlanRecipe;
 import com.dunk.tfc.api.Crafting.QuernManager;
 import com.dunk.tfc.api.Crafting.QuernRecipe;
+import com.dunk.tfc.api.Crafting.SewingPattern;
+import com.dunk.tfc.api.Crafting.SewingRecipe;
 import com.dunk.tfc.api.Enums.RuleEnum;
 import com.dunk.tfc.api.HeatIndex;
 import com.dunk.tfc.api.HeatRaw;
@@ -71,6 +75,7 @@ public class TFCMRecipes {
         registerQuernRecipes();
         registerHeatingRecipes();
         registerVatRecipes();
+        registerClothingRecipes();
 
         System.out.println("[" + TFCMDetails.ModName + "] Done Registering Recipes");
     }
@@ -2511,6 +2516,44 @@ public class TFCMRecipes {
                         102,
                         1800
                 )
+        );
+    }
+
+    public static void registerClothingRecipes() {
+        ClothingManager manager = ClothingManager.getInstance();
+
+        int quiverRecipeIndex = -1;
+
+        for (int i = 0; i < manager.getRecipes().size(); i++) {
+            if (manager.getRecipes().get(i).getSewingPattern().getResultingItem() instanceof ItemQuiver) {
+                 quiverRecipeIndex = i;
+            }
+        }
+
+        if (quiverRecipeIndex > -1) {
+            manager.getRecipes().remove(quiverRecipeIndex);
+        }
+
+        manager.addRecipe(
+            new SewingRecipe(
+                new SewingPattern(
+                    new ItemStack(TFCMItems.itemQuiver, 1),
+                    new int[][][] {
+                            new int[][] {
+                                    new int[] { 47, 16 },
+                                    new int[] { 47, 54 },
+                                    new int[] { 53, 57 },
+                                    new int[] { 60, 53 },
+                                    new int[] { 60, 16 }
+                            }
+                    },
+                true),
+                new ItemStack[] {
+                    new ItemStack(TFCItems.quiverPiece, 1, 0),
+                    new ItemStack(TFCItems.quiverPiece, 1, 0),
+                    new ItemStack(TFCItems.leatherStrap, 1)
+                }
+            )
         );
     }
 }
