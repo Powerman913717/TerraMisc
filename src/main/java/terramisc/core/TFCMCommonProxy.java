@@ -100,12 +100,10 @@ public class TFCMCommonProxy {
 
     public void registerFluids() {
         FluidRegistry.registerFluid(TFCMFluids.SOYMILK);
-        FluidRegistry.registerFluid(TFCMFluids.BOILINGWATER);
     }
 
     public void setupFluids() {
         FluidContainerRegistry.registerFluidContainer(new FluidStack(TFCMFluids.SOYMILK, 250), new ItemStack(TFCMItems.bottleSoyMilk), new ItemStack(TFCItems.glassBottle));
-        FluidContainerRegistry.registerFluidContainer(new FluidStack(TFCMFluids.BOILINGWATER, 1000), new ItemStack(TFCMItems.boilingWaterBucket), new ItemStack(TFCItems.woodenBucketEmpty));
     }
 
     public void registerToolClasses() {

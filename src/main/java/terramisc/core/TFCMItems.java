@@ -478,7 +478,6 @@ public class TFCMItems {
         GameRegistry.registerItem(leadPewterSheet2x, leadPewterSheet2x.getUnlocalizedName());
 
         //Food Stuffs
-        GameRegistry.registerItem(boilingWaterBucket, boilingWaterBucket.getUnlocalizedName());
         GameRegistry.registerItem(bottleSoyMilk, bottleSoyMilk.getUnlocalizedName());
         GameRegistry.registerItem(soyPaste, soyPaste.getUnlocalizedName());
 

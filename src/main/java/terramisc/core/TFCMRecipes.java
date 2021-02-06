@@ -538,24 +538,24 @@ public class TFCMRecipes {
         );
 
         BarrelManager.getInstance().addRecipe(
-                new BarrelFireRecipe(
-                        ItemFoodTFC.createTag(
-                                new ItemStack(TFCMItems.soyPaste),
-                                160),
-                        new FluidStack(TFCFluids.FRESHWATER, 10000),
-                        null,
-                        new FluidStack(TFCMFluids.SOYMILK, 10000),
-                        2,
-                        750
-                ).setFireTicksScale(true).setSealedRecipe(false).setRemovesLiquid(false)
-        );
-
-        BarrelManager.getInstance().addRecipe(
                 new BarrelLiquidToLiquidRecipe(
                         new FluidStack(TFCMFluids.SOYMILK, 9000),
                         new FluidStack(TFCFluids.VINEGAR, 1000),
                         new FluidStack(TFCFluids.MILKVINEGAR, 10000)
                 ).setSealedRecipe(false).setMinTechLevel(0).setRemovesLiquid(false)
+        );
+
+        BarrelManager.getInstance().addRecipe(
+                new BarrelFireRecipe(
+                        ItemFoodTFC.createTag(
+                                new ItemStack(TFCMItems.soyPaste),
+                                160),
+                        new FluidStack(TFCFluids.FRESHWATER, 5000),
+                        null,
+                        new FluidStack(TFCMFluids.SOYMILK, 5000),
+                        2,
+                        750
+                ).setFireTicksScale(true).setSealedRecipe(true).setRemovesLiquid(true)
         );
 
         BarrelManager.getInstance().addRecipe(
@@ -566,7 +566,7 @@ public class TFCMRecipes {
                         null,
                         2,
                         750
-                ).setFireTicksScale(true).setSealedRecipe(false).setRemovesLiquid(false)
+                ).setFireTicksScale(true).setSealedRecipe(true).setRemovesLiquid(true)
         );
     }
 
