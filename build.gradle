@@ -19,7 +19,7 @@ buildscript {
 
 apply plugin: 'forge'
 
-version = "0.14.5"
+version = "0.14.6"
 group= "TerraMisc"
 archivesBaseName = "TFCM"
 
