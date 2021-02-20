@@ -223,6 +223,11 @@ public class ItemCustomArmor extends ItemArmor implements ISize, IEquipable, ICl
     }
 
     @Override
+    public boolean canGoInBackSlot(ItemStack itemStack) {
+        return false;
+    }
+
+    @Override
     public ResourceLocation getClothingTexture(Entity entity, ItemStack itemstack, int num) {
         return RenderBiped.getArmorResource(entity, itemstack, num, null);
     }
