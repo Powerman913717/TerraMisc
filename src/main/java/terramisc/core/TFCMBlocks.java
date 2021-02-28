@@ -37,12 +37,6 @@ public class TFCMBlocks {
     public static Block blockBrickOven;
     public static Block vat;
 
-    //Food blockCrops
-    public static Block blockPumpkin;
-    public static Block blockPumpkinCarved;
-    public static Block blockPumpkinLantern;
-    public static Block blockPumpkinLanternOff;
-
     public static Block blockCrops;
 
     //Decoration

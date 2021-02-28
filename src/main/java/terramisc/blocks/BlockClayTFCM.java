@@ -2,23 +2,20 @@ package terramisc.blocks;
 
 import com.dunk.tfc.Blocks.BlockTerraContainer;
 import com.dunk.tfc.Core.TFCTabs;
+import com.dunk.tfc.TileEntities.TEPottery;
 import com.dunk.tfc.api.TFCItems;
-import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
-import terramisc.tileentities.TEWetClay;
 
 import java.util.ArrayList;
 import java.util.Random;
 
 public class BlockClayTFCM extends BlockTerraContainer {
-    protected IIcon icon;
 
     public BlockClayTFCM() {
-        super(Material.clay);
+        super();
         this.setBlockTextureName("minecraft:clay");
         this.setCreativeTab(TFCTabs.TFC_BUILDING);
         this.setHardness(0.3F);
@@ -27,7 +24,7 @@ public class BlockClayTFCM extends BlockTerraContainer {
 
     @Override
     public TileEntity createNewTileEntity(World var1, int var2) {
-        return new TEWetClay();
+        return new TEPottery();
     }
 
     /**

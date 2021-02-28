@@ -1151,7 +1151,7 @@ public class TFCMRecipes {
         //Clay
         GameRegistry.addRecipe(
                 new ItemStack(TFCMBlocks.blockClay),
-                "CC", "CC",
+                "CCC", "CCC", "CCC",
                 'C', TFCItems.clayBall
         );
         GameRegistry.addRecipe(
@@ -1215,7 +1215,7 @@ public class TFCMRecipes {
                         new ItemStack(TFCMBlocks.blockStainedClay, 8, 8),
                         "CCC", "CDC", "CCC",
                         'C', TFCMBlocks.blockStainedClay,
-                        'D', "dyeSilver"
+                        'D', "dyeLightGray"
                 )
         );
         GameRegistry.addRecipe(
@@ -1325,7 +1325,7 @@ public class TFCMRecipes {
         GameRegistry.addRecipe(
                 new ShapelessOreRecipe(
                         new ItemStack(TFCMItems.tallowDye, 1, 7),
-                        "dyeSilver",
+                        "dyeLightGray",
                         TallowBowl
                 )
         );
@@ -2248,6 +2248,14 @@ public class TFCMRecipes {
                         new ItemStack(TFCItems.clayBucketWater, 1, 1)
                 )
         );
+
+        KilnCraftingManager.getInstance().addRecipe(
+                new KilnRecipe(
+                        new ItemStack(TFCMBlocks.blockClay, 1, 0),
+                        0,
+                        new ItemStack(TFCMBlocks.blockStainedClay, 1, 0)
+                )
+        );
     }
 
     //Mold Pouring
@@ -2559,5 +2567,8 @@ public class TFCMRecipes {
                 }
             )
         );
+
+        CraftingManagerTFC.getInstance().addRecipe(new ItemStack(TFCItems.quiverPiece, 1), new Object[] { " ### ", " ### ", " ### ", " ### ", " ### ", '#', TFCItems.flatLeather });
+        CraftingManagerTFC.getInstance().addRecipe(new ItemStack(TFCItems.quiverPiece, 1), new Object[] { "###  ", "###  ", "###  ", "###  ", "###  ", '#', TFCItems.flatLeather });
     }
 }
