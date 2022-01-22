@@ -112,7 +112,7 @@ public class TFCMItemsSetup extends TFCMItems {
         bowLimb = new ItemTFCM(EnumSize.LARGE, EnumWeight.MEDIUM).setUnlocalizedName("BowLimb");
 
         suet = new ItemTFCM(EnumSize.SMALL, EnumWeight.MEDIUM).setUnlocalizedName("Suet");
-        bowlSuet = new ItemTFCM(EnumSize.LARGE, EnumWeight.MEDIUM).setUnlocalizedName("BowlSuet").setMaxStackSize(1);
+        bowlSuet = new ItemTFCM(EnumSize.MEDIUM, EnumWeight.MEDIUM).setUnlocalizedName("BowlSuet").setMaxStackSize(1);
         bowlTallow = new ItemBowlTallow().setUnlocalizedName("BowlTallow");
 
         brownDye = new ItemTFCM(EnumSize.SMALL, EnumWeight.MEDIUM).setUnlocalizedName("BrownDye");

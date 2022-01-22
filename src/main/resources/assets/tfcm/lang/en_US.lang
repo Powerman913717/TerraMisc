@@ -378,7 +378,7 @@ gui.crossbow.loaded=Loaded
 gui.crossbow.unloaded=Unloaded
 gui.tallowcandle.color=Color:
 gui.clay.isBaking=Baking
-gui.clay.baking=Bake near open flames or lava.
+gui.clay.baking=Bake in a (pit) kiln.
 gui.pumpkinHarvesting=Break to harvest for food.
 
 #===========

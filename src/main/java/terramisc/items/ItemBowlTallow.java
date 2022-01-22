@@ -11,7 +11,7 @@ public class ItemBowlTallow extends ItemTFCM {
     private final IIcon[] icons = new IIcon[3];
 
     public ItemBowlTallow() {
-        super(EnumSize.LARGE, EnumWeight.MEDIUM);
+        super(EnumSize.MEDIUM, EnumWeight.MEDIUM);
         this.setMaxDamage(2);
         this.hasSubtypes = true;
         this.metaNames = new String[]{"0", "1", "2"};

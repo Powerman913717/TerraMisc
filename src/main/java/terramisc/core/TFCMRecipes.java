@@ -804,6 +804,7 @@ public class TFCMRecipes {
         ItemStack CeramicBowl = new ItemStack(TFCItems.potteryBowl, 1, 1);
         ItemStack TallowBowl = new ItemStack(TFCMItems.bowlTallow, 1, WILDCARD_VALUE);
 
+
         if (TFCMOptions.enableCraftingPiston = true) {
             removeRecipe(new ItemStack(Blocks.piston));
 
@@ -2189,13 +2190,13 @@ public class TFCMRecipes {
 
         BarrelManager.getInstance().addRecipe(
                 new BarrelFireRecipe(
-                        new ItemStack(TFCMItems.bowlSuet),
-                        new FluidStack(TFCFluids.FRESHWATER, 10000),
+                        new ItemStack(TFCMItems.bowlSuet, 1),
+                        new FluidStack(TFCFluids.FRESHWATER, 800),
                         new ItemStack(TFCMItems.bowlTallow),
-                        null,
-                        2,
+                        new FluidStack(TFCFluids.FRESHWATER, 400),
+                        4,
                         750
-                ).setFireTicksScale(true).setSealedRecipe(true).setRemovesLiquid(true)
+                )
         );
     }
 
